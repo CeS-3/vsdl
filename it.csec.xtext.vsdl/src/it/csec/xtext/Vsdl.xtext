@@ -10,7 +10,7 @@ ScenElem:
 	Node | 
 	Network;
 	
-Node:
+Node: 
 	'node' name=ID '{' constraints += NodeConstraint* '}';
 
 NodeConstraint:
@@ -45,8 +45,19 @@ NodeHardwareConstraintA returns NodeConstraint:
 	{Disk} =>'disk' op='larger' 'than' value=DiskSize |
 	{Disk} =>'disk' op='smaller' 'than' value=DiskSize |
 	{Disk} =>'disk' 'size' sameas ?='of' id=[Node] |
+	{Ram} =>'ram' 'size' op='equal' 'to' value=RamSize |
+    {Ram} =>'ram' op='larger' 'than' value=RamSize |
+    {Ram} =>'ram' op='smaller' 'than' value=RamSize |
+    {Ram} =>'ram' 'size' sameas ?='of' id=[Node] |
 	{Flavour} =>'flavour' profile=HardwareProfile;
 	
+NodeNetworkConstraintA returns NodeConstraint:
+    {IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
+    {IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA |
+    {IP} =>'ip' 'address' sameas ?='of' id=[Node] |
+    {IP} =>'ip' 'address' 'is' op='connected' |
+    {IP} =>'ip' 'address' 'has' op='IP' ip=IPAddress;
+    
 NodeSoftwareConstraintA returns NodeConstraint:
 	'node' {OS} =>'OS' 'is' version=OSVersionE |
 	'node' 'OS' {OSFamily} =>'family' 'is' family=OSFamilyE|
@@ -76,7 +87,16 @@ ConfigOptions:
 ConfigPair:
 	key=ID '=' value=STRING;
 
-    
+// Define IP as a part of your Node or Network
+//IP:
+//    'node' 'has' 'IP' 'address' ipAddress=IPAddress 
+//    ('op' op=IPOperation)?
+//    ('id' id=[Node])?; 
+//
+//Ram:
+//    'ram' 'size' size=RamSize;
+
+
 Network:
 	'network' name=ID '{' constraints += NetworkConstraint* '}';
 
@@ -126,7 +146,7 @@ UpdateTriggerConstraintA returns UpdateTriggerConstraint:
 	"(" UpdateTriggerConstraint ")" |
 	{At} =>"at" op="least" "after" variable=ID "=" texp=TimeExpr |
 	{At} =>"at" op="most" "before" variable=ID "=" texp=TimeExpr |
-	{Switch} =>"switch" "after" var=ID "=" texp=TimeExpr;
+	{Switch} =>"switch" "after" variable=ID "=" texp=TimeExpr;
 
 TimeExpr:
 	TimeExprAddition;
@@ -153,6 +173,10 @@ CPUFrequency:
 
 DiskSize:
 	value=INT unit=('MB' | 'GB' | 'TB');
+	
+RamSize:
+    value=INT unit=('MB' | 'GB' | 'TB');
+    
 
 IPAddress:
 	octet1=INT'.'octet2=INT'.'octet3=INT'.'octet4=INT;
@@ -170,13 +194,18 @@ OSVersionE:
     'Android-21' |
     'Android-19'; // 添加你需要的具体版本
 	
-enum OSFamilyE:
-	Microsoft |
-	Linux |
-	OSx |
-	iOS |
-	Android;
-	
+OSFamilyE:
+	'Microsoft' |
+	'Linux' |
+	'OSx' |
+	'iOS' |
+	'Android';
+
+// Define the operation for IP
+enum IPOperation:
+    connected |
+    notConnected;
+   
 enum HardwareProfile:
 		tiny |
 		medium |

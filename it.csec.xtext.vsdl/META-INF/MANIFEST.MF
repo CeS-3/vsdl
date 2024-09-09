@@ -6,23 +6,32 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: it.csec.xtext.vsdl; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext,
- org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.16.0",
- org.eclipse.emf.ecore,
- org.eclipse.xtext.xbase.lib;bundle-version="2.35.0",
- org.eclipse.emf.common,
- org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
-Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: it.csec.xtext,
- it.csec.xtext.validation,
- it.csec.xtext.generator,
- it.csec.xtext.vsdl.util,
- it.csec.xtext.vsdl.impl,
- it.csec.xtext.parser.antlr.internal,
- it.csec.xtext.serializer,
- it.csec.xtext.vsdl,
- it.csec.xtext.parser.antlr,
- it.csec.xtext.scoping,
- it.csec.xtext.services
-Import-Package: org.apache.log4j
+Require-Bundle: 
+    org.eclipse.xtext,
+    org.eclipse.xtext.xbase,
+    org.eclipse.equinox.common;bundle-version="3.16.0",   
+    org.eclipse.emf.ecore,
+    org.eclipse.xtext.xbase.lib;bundle-version="2.35.0",
+    org.eclipse.emf.common,
+    org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",     
+    org.eclipse.xtext.util,
+    org.eclipse.xtend.lib,
+    org.eclipse.ui,
+    org.eclipse.ui.console,
+    org.eclipse.core.resources;bundle-version="0.9.10"               
+Bundle-RequiredExecutionEnvironment: JavaSE-11           
+Export-Package: 
+    it.csec.xtext,
+    it.csec.xtext.validation,
+    it.csec.xtext.generator,
+    it.csec.xtext.vsdl.util,
+    it.csec.xtext.vsdl.impl,
+    it.csec.xtext.parser.antlr.internal,
+    it.csec.xtext.serializer,
+    it.csec.xtext.vsdl,
+    it.csec.xtext.parser.antlr,
+    it.csec.xtext.scoping,
+    it.csec.xtext.services
+Import-Package: 
+    org.apache.log4j
+Bundle-ClassPath: .,target/dependency/openstack4j-3.0.3-withdeps.jar, target/dependency/jSMTLIB.jar
