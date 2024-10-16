@@ -33,5 +33,10 @@ Export-Package:
     it.csec.xtext.scoping,
     it.csec.xtext.services
 Import-Package: 
-    org.apache.log4j
-Bundle-ClassPath: .,target/dependency/openstack4j-3.0.3-withdeps.jar, target/dependency/jSMTLIB.jar
+ org.apache.log4j
+Bundle-ClassPath: .,
+ target/dependency/openstack4j-3.0.3-withdeps.jar,
+ lib/jSMTLIB.jar,
+ lib/slf4j-api-1.7.5.jar,
+ lib/slf4j-simple-2.0.13.jar,
+ lib/openstack4j-3.12-withdeps.jar

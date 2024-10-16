@@ -17,9 +17,15 @@ Require-Bundle: it.csec.xtext.vsdl,
  org.eclipse.compare,
  org.eclipse.xtext.builder
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: it.csec.xtext.ui.contentassist,
+Bundle-RequiredExecutionEnvironment: JavaSE-11,
+ JavaSE-1.8
+Export-Package: it.csec.xtext.ui,
+ it.csec.xtext.ui.contentassist,
  it.csec.xtext.ui.quickfix,
  it.csec.xtext.vsdl.ui.internal
 Bundle-Activator: it.csec.xtext.vsdl.ui.internal.VsdlActivator
-Bundle-ClassPath: ., target/dependency/jSMTLIB.jar
+Bundle-ClassPath: .,
+ target/dependency/jSMTLIB.jar,
+ lib/openstack4j-3.0.3.jar,
+ lib/jSMTLIB.jar,
+ it.csec.xtext.vsdl.ui/lib/jSMTLIB.jar

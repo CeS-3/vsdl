@@ -21,6 +21,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="lib" path="C:/Users/marklee/.m2/repository/jSMTLIB/jSMTLIB.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
