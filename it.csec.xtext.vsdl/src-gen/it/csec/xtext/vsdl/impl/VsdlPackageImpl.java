@@ -234,6 +234,20 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass gatewayEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dnsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass osEClass = null;
 
   /**
@@ -249,13 +263,6 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   private EClass ipRangeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass gatewayEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -491,17 +498,6 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
   public EReference getNodeConstraint_Software()
   {
     return (EReference)nodeConstraintEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getNodeConstraint_VulnID()
-  {
-    return (EAttribute)nodeConstraintEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1302,9 +1298,9 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
-  public EAttribute getIP_Sameas()
+  public EReference getIP_Node()
   {
-    return (EAttribute)ipEClass.getEStructuralFeatures().get(3);
+    return (EReference)ipEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1313,9 +1309,9 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
-  public EReference getIP_Id()
+  public EClass getGateway()
   {
-    return (EReference)ipEClass.getEStructuralFeatures().get(4);
+    return gatewayEClass;
   }
 
   /**
@@ -1324,9 +1320,42 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
-  public EReference getIP_Ip()
+  public EReference getGateway_GatewayIP()
   {
-    return (EReference)ipEClass.getEStructuralFeatures().get(5);
+    return (EReference)gatewayEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGateway_Internet()
+  {
+    return (EAttribute)gatewayEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDNS()
+  {
+    return dnsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getDNS_DNSIP()
+  {
+    return (EReference)dnsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1393,28 +1422,6 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
   public EReference getIPRange_Range()
   {
     return (EReference)ipRangeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getGateway()
-  {
-    return gatewayEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getGateway_Internet()
-  {
-    return (EAttribute)gatewayEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1584,7 +1591,6 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     createEReference(nodeConstraintEClass, NODE_CONSTRAINT__TRIGGERCONSTRAINT);
     createEReference(nodeConstraintEClass, NODE_CONSTRAINT__NODECONSTRAINT);
     createEReference(nodeConstraintEClass, NODE_CONSTRAINT__SOFTWARE);
-    createEAttribute(nodeConstraintEClass, NODE_CONSTRAINT__VULN_ID);
 
     softwareInstallationEClass = createEClass(SOFTWARE_INSTALLATION);
     createEAttribute(softwareInstallationEClass, SOFTWARE_INSTALLATION__SOFTWARE_ID);
@@ -1678,9 +1684,14 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     createEAttribute(ipEClass, IP__OP);
     createEReference(ipEClass, IP__IP_ADDRESS);
     createEReference(ipEClass, IP__IP_RANGE);
-    createEAttribute(ipEClass, IP__SAMEAS);
-    createEReference(ipEClass, IP__ID);
-    createEReference(ipEClass, IP__IP);
+    createEReference(ipEClass, IP__NODE);
+
+    gatewayEClass = createEClass(GATEWAY);
+    createEReference(gatewayEClass, GATEWAY__GATEWAY_IP);
+    createEAttribute(gatewayEClass, GATEWAY__INTERNET);
+
+    dnsEClass = createEClass(DNS);
+    createEReference(dnsEClass, DNS__DNSIP);
 
     osEClass = createEClass(OS);
     createEAttribute(osEClass, OS__VERSION);
@@ -1690,9 +1701,6 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
 
     ipRangeEClass = createEClass(IP_RANGE);
     createEReference(ipRangeEClass, IP_RANGE__RANGE);
-
-    gatewayEClass = createEClass(GATEWAY);
-    createEAttribute(gatewayEClass, GATEWAY__INTERNET);
 
     atEClass = createEClass(AT);
     createEAttribute(atEClass, AT__OP);
@@ -1754,10 +1762,12 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     ramEClass.getESuperTypes().add(this.getNodeConstraint());
     flavourEClass.getESuperTypes().add(this.getNodeConstraint());
     ipEClass.getESuperTypes().add(this.getNodeConstraint());
+    gatewayEClass.getESuperTypes().add(this.getNodeConstraint());
+    gatewayEClass.getESuperTypes().add(this.getNetworkConstraint());
+    dnsEClass.getESuperTypes().add(this.getNodeConstraint());
     osEClass.getESuperTypes().add(this.getNodeConstraint());
     osFamilyEClass.getESuperTypes().add(this.getNodeConstraint());
     ipRangeEClass.getESuperTypes().add(this.getNetworkConstraint());
-    gatewayEClass.getESuperTypes().add(this.getNetworkConstraint());
     atEClass.getESuperTypes().add(this.getUpdateTriggerConstraint());
     switchEClass.getESuperTypes().add(this.getUpdateTriggerConstraint());
     plusMinusEClass.getESuperTypes().add(this.getTimeExpr());
@@ -1779,7 +1789,6 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     initEReference(getNodeConstraint_Triggerconstraint(), this.getUpdateTriggerConstraint(), null, "triggerconstraint", null, 0, 1, NodeConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNodeConstraint_Nodeconstraint(), this.getNodeConstraint(), null, "nodeconstraint", null, 0, 1, NodeConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNodeConstraint_Software(), this.getSoftwareInstallation(), null, "software", null, 0, 1, NodeConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeConstraint_VulnID(), ecorePackage.getEString(), "vulnID", null, 0, 1, NodeConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(softwareInstallationEClass, SoftwareInstallation.class, "SoftwareInstallation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSoftwareInstallation_SoftwareID(), ecorePackage.getEString(), "softwareID", null, 0, 1, SoftwareInstallation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1873,9 +1882,14 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     initEAttribute(getIP_Op(), ecorePackage.getEString(), "op", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIP_IpAddress(), this.getIPAddress(), null, "ipAddress", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIP_IpRange(), this.getIPRangeA(), null, "ipRange", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIP_Sameas(), ecorePackage.getEBoolean(), "sameas", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIP_Id(), this.getNode(), null, "id", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIP_Ip(), this.getIPAddress(), null, "ip", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIP_Node(), this.getNode(), null, "node", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gatewayEClass, Gateway.class, "Gateway", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGateway_GatewayIP(), this.getIPAddress(), null, "gatewayIP", null, 0, 1, Gateway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGateway_Internet(), ecorePackage.getEBoolean(), "internet", null, 0, 1, Gateway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dnsEClass, it.csec.xtext.vsdl.DNS.class, "DNS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDNS_DNSIP(), this.getIPAddress(), null, "DNSIP", null, 0, 1, it.csec.xtext.vsdl.DNS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(osEClass, it.csec.xtext.vsdl.OS.class, "OS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOS_Version(), ecorePackage.getEString(), "version", null, 0, 1, it.csec.xtext.vsdl.OS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1885,9 +1899,6 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
 
     initEClass(ipRangeEClass, IPRange.class, "IPRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getIPRange_Range(), this.getIPRangeA(), null, "range", null, 0, 1, IPRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(gatewayEClass, Gateway.class, "Gateway", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGateway_Internet(), ecorePackage.getEBoolean(), "internet", null, 0, 1, Gateway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atEClass, At.class, "At", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAt_Op(), ecorePackage.getEString(), "op", null, 0, 1, At.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

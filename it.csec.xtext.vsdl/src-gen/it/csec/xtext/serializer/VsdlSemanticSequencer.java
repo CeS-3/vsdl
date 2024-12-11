@@ -11,6 +11,7 @@ import it.csec.xtext.vsdl.CPU;
 import it.csec.xtext.vsdl.CPUFrequency;
 import it.csec.xtext.vsdl.ConfigOptions;
 import it.csec.xtext.vsdl.ConfigPair;
+import it.csec.xtext.vsdl.DNS;
 import it.csec.xtext.vsdl.Disk;
 import it.csec.xtext.vsdl.DiskSize;
 import it.csec.xtext.vsdl.Flavour;
@@ -105,6 +106,9 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case VsdlPackage.CONFIG_PAIR:
 				sequence_ConfigPair(context, (ConfigPair) semanticObject); 
 				return; 
+			case VsdlPackage.DNS:
+				sequence_NodeNetworkConstraintA(context, (DNS) semanticObject); 
+				return; 
 			case VsdlPackage.DISK:
 				sequence_NodeHardwareConstraintA(context, (Disk) semanticObject); 
 				return; 
@@ -115,8 +119,27 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_NodeHardwareConstraintA(context, (Flavour) semanticObject); 
 				return; 
 			case VsdlPackage.GATEWAY:
-				sequence_NetworkGatewayConstraint(context, (Gateway) semanticObject); 
-				return; 
+				if (rule == grammarAccess.getNetworkConstraintRule()
+						|| rule == grammarAccess.getSimpleNetworkConstraintRule()
+						|| rule == grammarAccess.getSimpleNetworkConstraintAndOrRule()
+						|| action == grammarAccess.getSimpleNetworkConstraintAndOrAccess().getAndOrLeftAction_1_0_0()
+						|| rule == grammarAccess.getSimpleNetworkConstraintNotRule()
+						|| rule == grammarAccess.getSimpleNetworkConstraintARule()
+						|| rule == grammarAccess.getNetworkGatewayConstraintRule()) {
+					sequence_NetworkGatewayConstraint(context, (Gateway) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getNodeConstraintRule()
+						|| rule == grammarAccess.getSimpleNodeConstraintRule()
+						|| rule == grammarAccess.getSimpleNodeConstraintAndOrRule()
+						|| action == grammarAccess.getSimpleNodeConstraintAndOrAccess().getAndOrLeftAction_1_0_0()
+						|| rule == grammarAccess.getSimpleNodeConstraintNotRule()
+						|| rule == grammarAccess.getSimpleNodeConstraintARule()
+						|| rule == grammarAccess.getNodeNetworkConstraintARule()) {
+					sequence_NodeNetworkConstraintA(context, (Gateway) semanticObject); 
+					return; 
+				}
+				else break;
 			case VsdlPackage.IP:
 				sequence_NodeNetworkConstraintA(context, (IP) semanticObject); 
 				return; 
@@ -377,7 +400,7 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     NodeConstraint returns NodeConstraint
 	 *
 	 * Constraint:
-	 *     ((triggerconstraint=UpdateTriggerConstraint nodeconstraint=SimpleNodeConstraint) | software=SoftwareInstallation | vulnID=VulnerabilityID)
+	 *     ((triggerconstraint=UpdateTriggerConstraint nodeconstraint=SimpleNodeConstraint) | software=SoftwareInstallation)
 	 * </pre>
 	 */
 	protected void sequence_GuardedNodeConstraint_NodeSoftwareConstraintA(ISerializationContext context, NodeConstraint semanticObject) {
@@ -626,10 +649,68 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     NodeConstraint returns DNS
+	 *     SimpleNodeConstraint returns DNS
+	 *     SimpleNodeConstraintAndOr returns DNS
+	 *     SimpleNodeConstraintAndOr.AndOr_1_0_0 returns DNS
+	 *     SimpleNodeConstraintNot returns DNS
+	 *     SimpleNodeConstraintA returns DNS
+	 *     NodeNetworkConstraintA returns DNS
+	 *
+	 * Constraint:
+	 *     DNSIP=IPAddress
+	 * </pre>
+	 */
+	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, DNS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VsdlPackage.Literals.DNS__DNSIP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VsdlPackage.Literals.DNS__DNSIP));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_3_0(), semanticObject.getDNSIP());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     NodeConstraint returns Gateway
+	 *     SimpleNodeConstraint returns Gateway
+	 *     SimpleNodeConstraintAndOr returns Gateway
+	 *     SimpleNodeConstraintAndOr.AndOr_1_0_0 returns Gateway
+	 *     SimpleNodeConstraintNot returns Gateway
+	 *     SimpleNodeConstraintA returns Gateway
+	 *     NodeNetworkConstraintA returns Gateway
+	 *
+	 * Constraint:
+	 *     gatewayIP=IPAddress
+	 * </pre>
+	 */
+	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, Gateway semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VsdlPackage.Literals.GATEWAY__GATEWAY_IP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VsdlPackage.Literals.GATEWAY__GATEWAY_IP));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNodeNetworkConstraintAAccess().getGatewayIPIPAddressParserRuleCall_3_3_0(), semanticObject.getGatewayIP());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     NodeConstraint returns IP
+	 *     SimpleNodeConstraint returns IP
+	 *     SimpleNodeConstraintAndOr returns IP
+	 *     SimpleNodeConstraintAndOr.AndOr_1_0_0 returns IP
+	 *     SimpleNodeConstraintNot returns IP
+	 *     SimpleNodeConstraintA returns IP
 	 *     NodeNetworkConstraintA returns IP
 	 *
 	 * Constraint:
-	 *     ((op='equal' ipAddress=IPAddress) | (op='in' ipRange=IPRangeA) | (sameas?='of' id=[Node|ID]) | op='connected' | (op='IP' ip=IPAddress))
+	 *     ((op='equal' ipAddress=IPAddress) | (op='in' ipRange=IPRangeA) | (op='connected' node=[Node|ID]))
 	 * </pre>
 	 */
 	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, IP semanticObject) {
@@ -648,11 +729,17 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     NodeSoftwareConstraintA returns NodeConstraint
 	 *
 	 * Constraint:
-	 *     (software=SoftwareInstallation | vulnID=VulnerabilityID)
+	 *     software=SoftwareInstallation
 	 * </pre>
 	 */
 	protected void sequence_NodeSoftwareConstraintA(ISerializationContext context, NodeConstraint semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VsdlPackage.Literals.NODE_CONSTRAINT__SOFTWARE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VsdlPackage.Literals.NODE_CONSTRAINT__SOFTWARE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNodeSoftwareConstraintAAccess().getSoftwareSoftwareInstallationParserRuleCall_2_2_0(), semanticObject.getSoftware());
+		feeder.finish();
 	}
 	
 	

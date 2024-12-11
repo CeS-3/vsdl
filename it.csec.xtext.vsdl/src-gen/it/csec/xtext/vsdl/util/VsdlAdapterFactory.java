@@ -201,6 +201,16 @@ public class VsdlAdapterFactory extends AdapterFactoryImpl
         return createIPAdapter();
       }
       @Override
+      public Adapter caseGateway(Gateway object)
+      {
+        return createGatewayAdapter();
+      }
+      @Override
+      public Adapter caseDNS(DNS object)
+      {
+        return createDNSAdapter();
+      }
+      @Override
       public Adapter caseOS(OS object)
       {
         return createOSAdapter();
@@ -214,11 +224,6 @@ public class VsdlAdapterFactory extends AdapterFactoryImpl
       public Adapter caseIPRange(IPRange object)
       {
         return createIPRangeAdapter();
-      }
-      @Override
-      public Adapter caseGateway(Gateway object)
-      {
-        return createGatewayAdapter();
       }
       @Override
       public Adapter caseAt(At object)
@@ -638,6 +643,36 @@ public class VsdlAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link it.csec.xtext.vsdl.Gateway <em>Gateway</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see it.csec.xtext.vsdl.Gateway
+   * @generated
+   */
+  public Adapter createGatewayAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link it.csec.xtext.vsdl.DNS <em>DNS</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see it.csec.xtext.vsdl.DNS
+   * @generated
+   */
+  public Adapter createDNSAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link it.csec.xtext.vsdl.OS <em>OS</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -678,21 +713,6 @@ public class VsdlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIPRangeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link it.csec.xtext.vsdl.Gateway <em>Gateway</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see it.csec.xtext.vsdl.Gateway
-   * @generated
-   */
-  public Adapter createGatewayAdapter()
   {
     return null;
   }

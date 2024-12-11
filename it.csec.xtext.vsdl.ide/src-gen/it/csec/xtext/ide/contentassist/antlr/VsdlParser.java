@@ -89,7 +89,6 @@ public class VsdlParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getGroup_0(), "rule__NodeSoftwareConstraintA__Group_0__0");
 			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getGroup_1(), "rule__NodeSoftwareConstraintA__Group_1__0");
 			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getGroup_2(), "rule__NodeSoftwareConstraintA__Group_2__0");
-			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getGroup_3(), "rule__NodeSoftwareConstraintA__Group_3__0");
 			builder.put(grammarAccess.getSoftwareInstallationAccess().getGroup(), "rule__SoftwareInstallation__Group__0");
 			builder.put(grammarAccess.getSoftwareInstallationAccess().getGroup_1(), "rule__SoftwareInstallation__Group_1__0");
 			builder.put(grammarAccess.getSoftwareInstallationAccess().getGroup_2(), "rule__SoftwareInstallation__Group_2__0");
@@ -172,15 +171,13 @@ public class VsdlParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressAssignment_0_5(), "rule__NodeNetworkConstraintA__IpAddressAssignment_0_5");
 			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_1_3(), "rule__NodeNetworkConstraintA__OpAssignment_1_3");
 			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeAssignment_1_5(), "rule__NodeNetworkConstraintA__IpRangeAssignment_1_5");
-			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getSameasAssignment_2_3(), "rule__NodeNetworkConstraintA__SameasAssignment_2_3");
-			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_2_4(), "rule__NodeNetworkConstraintA__IdAssignment_2_4");
-			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_3_4(), "rule__NodeNetworkConstraintA__OpAssignment_3_4");
-			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_4_4(), "rule__NodeNetworkConstraintA__OpAssignment_4_4");
-			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getIpAssignment_4_5(), "rule__NodeNetworkConstraintA__IpAssignment_4_5");
+			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_2_4(), "rule__NodeNetworkConstraintA__OpAssignment_2_4");
+			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getNodeAssignment_2_6(), "rule__NodeNetworkConstraintA__NodeAssignment_2_6");
+			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getGatewayIPAssignment_3_3(), "rule__NodeNetworkConstraintA__GatewayIPAssignment_3_3");
+			builder.put(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPAssignment_4_3(), "rule__NodeNetworkConstraintA__DNSIPAssignment_4_3");
 			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getVersionAssignment_0_4(), "rule__NodeSoftwareConstraintA__VersionAssignment_0_4");
 			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getFamilyAssignment_1_5(), "rule__NodeSoftwareConstraintA__FamilyAssignment_1_5");
 			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getSoftwareAssignment_2_2(), "rule__NodeSoftwareConstraintA__SoftwareAssignment_2_2");
-			builder.put(grammarAccess.getNodeSoftwareConstraintAAccess().getVulnIDAssignment_3_2(), "rule__NodeSoftwareConstraintA__VulnIDAssignment_3_2");
 			builder.put(grammarAccess.getSoftwareInstallationAccess().getSoftwareIDAssignment_0(), "rule__SoftwareInstallation__SoftwareIDAssignment_0");
 			builder.put(grammarAccess.getSoftwareInstallationAccess().getVersionAssignment_1_1(), "rule__SoftwareInstallation__VersionAssignment_1_1");
 			builder.put(grammarAccess.getSoftwareInstallationAccess().getDependenciesAssignment_2_1(), "rule__SoftwareInstallation__DependenciesAssignment_2_1");

@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalVsdlParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'scenario'", "'duration'", "'{'", "'}'", "'node'", "';'", "'['", "']'", "'->'", "'and'", "'or'", "'not'", "'('", "')'", "'cpu'", "'speed'", "'equal'", "'to'", "'faster'", "'than'", "'slower'", "'of'", "'disk'", "'size'", "'larger'", "'smaller'", "'ram'", "'flavour'", "'OS'", "'is'", "'family'", "'mounts'", "'software'", "'suffers'", "'from'", "'version'", "'with'", "','", "'config'", "'.'", "'='", "'network'", "'addresses'", "'range'", "'gateway'", "'has'", "'direct'", "'access'", "'the'", "'Internet'", "'connected'", "'IP'", "'at'", "'least'", "'after'", "'most'", "'before'", "'switch'", "'+'", "'-'", "'*'", "'MHz'", "'GHz'", "'THz'", "'MB'", "'GB'", "'TB'", "'/'", "'WindowsXP'", "'Windows7'", "'Windows8'", "'Windows10'", "'Ubuntu14'", "'Ubuntu16'", "'Android-21'", "'Android-19'", "'Microsoft'", "'Linux'", "'OSx'", "'iOS'", "'Android'", "'tiny'", "'medium'", "'large'", "'mobile'", "'wearable'", "'sensor'", "'server'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'scenario'", "'duration'", "'{'", "'}'", "'node'", "';'", "'['", "']'", "'->'", "'and'", "'or'", "'not'", "'('", "')'", "'cpu'", "'speed'", "'equal'", "'to'", "'faster'", "'than'", "'slower'", "'of'", "'disk'", "'size'", "'larger'", "'smaller'", "'ram'", "'flavour'", "'ip'", "'address'", "'in'", "'range'", "'is'", "'connected'", "'gateway'", "'DNS'", "'OS'", "'family'", "'mounts'", "'software'", "'version'", "'with'", "','", "'config'", "'.'", "'='", "'network'", "'addresses'", "'has'", "'direct'", "'access'", "'the'", "'Internet'", "'IP'", "'at'", "'least'", "'after'", "'most'", "'before'", "'switch'", "'+'", "'-'", "'*'", "'MHz'", "'GHz'", "'THz'", "'MB'", "'GB'", "'TB'", "'/'", "'WindowsXP'", "'Windows7'", "'Windows8'", "'Windows10'", "'Ubuntu14'", "'Ubuntu16'", "'Android-21'", "'Android-19'", "'Microsoft'", "'Linux'", "'OSx'", "'iOS'", "'Android'", "'tiny'", "'medium'", "'large'", "'mobile'", "'wearable'", "'sensor'", "'server'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -38,7 +38,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     public static final int T__60=60;
     public static final int T__61=61;
     public static final int RULE_ID=4;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=5;
     public static final int T__66=66;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__67=67;
@@ -69,6 +69,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     public static final int T__42=42;
     public static final int T__43=43;
     public static final int T__91=91;
+    public static final int T__100=100;
     public static final int T__92=92;
     public static final int T__93=93;
     public static final int T__94=94;
@@ -79,6 +80,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__11=11;
+    public static final int T__99=99;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
@@ -99,7 +101,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     public static final int T__70=70;
     public static final int T__71=71;
     public static final int T__72=72;
-    public static final int RULE_STRING=5;
+    public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__77=77;
     public static final int T__78=78;
@@ -332,7 +334,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==15||LA2_0==52) ) {
+                if ( (LA2_0==15||LA2_0==57) ) {
                     alt2=1;
                 }
 
@@ -473,7 +475,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             if ( (LA3_0==15) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==52) ) {
+            else if ( (LA3_0==57) ) {
                 alt3=2;
             }
             else {
@@ -662,7 +664,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==15||LA4_0==17||(LA4_0>=22 && LA4_0<=23)||LA4_0==25||LA4_0==33||(LA4_0>=37 && LA4_0<=38)||LA4_0==42||LA4_0==44) ) {
+                if ( (LA4_0==15||LA4_0==17||(LA4_0>=22 && LA4_0<=23)||LA4_0==25||LA4_0==33||(LA4_0>=37 && LA4_0<=39)||(LA4_0>=45 && LA4_0<=46)||LA4_0==49) ) {
                     alt4=1;
                 }
 
@@ -805,7 +807,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             if ( (LA5_0==17) ) {
                 alt5=1;
             }
-            else if ( (LA5_0==15||(LA5_0>=22 && LA5_0<=23)||LA5_0==25||LA5_0==33||(LA5_0>=37 && LA5_0<=38)||LA5_0==42||LA5_0==44) ) {
+            else if ( (LA5_0==15||(LA5_0>=22 && LA5_0<=23)||LA5_0==25||LA5_0==33||(LA5_0>=37 && LA5_0<=39)||(LA5_0>=45 && LA5_0<=46)||LA5_0==49) ) {
                 alt5=2;
             }
             else {
@@ -1493,7 +1495,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             if ( (LA8_0==22) ) {
                 alt8=1;
             }
-            else if ( (LA8_0==15||LA8_0==23||LA8_0==25||LA8_0==33||(LA8_0>=37 && LA8_0<=38)||LA8_0==42||LA8_0==44) ) {
+            else if ( (LA8_0==15||LA8_0==23||LA8_0==25||LA8_0==33||(LA8_0>=37 && LA8_0<=39)||(LA8_0>=45 && LA8_0<=46)||LA8_0==49) ) {
                 alt8=2;
             }
             else {
@@ -1663,7 +1665,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleNodeConstraintA"
-    // InternalVsdl.g:558:1: ruleSimpleNodeConstraintA returns [EObject current=null] : ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA ) ;
+    // InternalVsdl.g:558:1: ruleSimpleNodeConstraintA returns [EObject current=null] : ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA | this_NodeNetworkConstraintA_5= ruleNodeNetworkConstraintA ) ;
     public final EObject ruleSimpleNodeConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -1675,16 +1677,18 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
         EObject this_NodeSoftwareConstraintA_4 = null;
 
+        EObject this_NodeNetworkConstraintA_5 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalVsdl.g:564:2: ( ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA ) )
-            // InternalVsdl.g:565:2: ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA )
+            // InternalVsdl.g:564:2: ( ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA | this_NodeNetworkConstraintA_5= ruleNodeNetworkConstraintA ) )
+            // InternalVsdl.g:565:2: ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA | this_NodeNetworkConstraintA_5= ruleNodeNetworkConstraintA )
             {
-            // InternalVsdl.g:565:2: ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA )
-            int alt9=3;
+            // InternalVsdl.g:565:2: ( (otherlv_0= '(' this_SimpleNodeConstraint_1= ruleSimpleNodeConstraint otherlv_2= ')' ) | this_NodeHardwareConstraintA_3= ruleNodeHardwareConstraintA | this_NodeSoftwareConstraintA_4= ruleNodeSoftwareConstraintA | this_NodeNetworkConstraintA_5= ruleNodeNetworkConstraintA )
+            int alt9=4;
             switch ( input.LA(1) ) {
             case 23:
                 {
@@ -1700,10 +1704,16 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 15:
-            case 42:
-            case 44:
+            case 49:
                 {
                 alt9=3;
+                }
+                break;
+            case 39:
+            case 45:
+            case 46:
+                {
+                alt9=4;
                 }
                 break;
             default:
@@ -1799,6 +1809,28 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 4 :
+                    // InternalVsdl.g:603:3: this_NodeNetworkConstraintA_5= ruleNodeNetworkConstraintA
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getSimpleNodeConstraintAAccess().getNodeNetworkConstraintAParserRuleCall_3());
+                      		
+                    }
+                    pushFollow(FOLLOW_2);
+                    this_NodeNetworkConstraintA_5=ruleNodeNetworkConstraintA();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_NodeNetworkConstraintA_5;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
 
             }
 
@@ -1824,7 +1856,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNodeHardwareConstraintA"
-    // InternalVsdl.g:606:1: entryRuleNodeHardwareConstraintA returns [EObject current=null] : iv_ruleNodeHardwareConstraintA= ruleNodeHardwareConstraintA EOF ;
+    // InternalVsdl.g:615:1: entryRuleNodeHardwareConstraintA returns [EObject current=null] : iv_ruleNodeHardwareConstraintA= ruleNodeHardwareConstraintA EOF ;
     public final EObject entryRuleNodeHardwareConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -1832,8 +1864,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:606:64: (iv_ruleNodeHardwareConstraintA= ruleNodeHardwareConstraintA EOF )
-            // InternalVsdl.g:607:2: iv_ruleNodeHardwareConstraintA= ruleNodeHardwareConstraintA EOF
+            // InternalVsdl.g:615:64: (iv_ruleNodeHardwareConstraintA= ruleNodeHardwareConstraintA EOF )
+            // InternalVsdl.g:616:2: iv_ruleNodeHardwareConstraintA= ruleNodeHardwareConstraintA EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNodeHardwareConstraintARule()); 
@@ -1864,7 +1896,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNodeHardwareConstraintA"
-    // InternalVsdl.g:613:1: ruleNodeHardwareConstraintA returns [EObject current=null] : ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) ) ;
+    // InternalVsdl.g:622:1: ruleNodeHardwareConstraintA returns [EObject current=null] : ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) ) ;
     public final EObject ruleNodeHardwareConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -1936,21 +1968,21 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:619:2: ( ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) ) )
-            // InternalVsdl.g:620:2: ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) )
+            // InternalVsdl.g:628:2: ( ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) ) )
+            // InternalVsdl.g:629:2: ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) )
             {
-            // InternalVsdl.g:620:2: ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) )
+            // InternalVsdl.g:629:2: ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) )
             int alt10=13;
             alt10 = dfa10.predict(input);
             switch (alt10) {
                 case 1 :
-                    // InternalVsdl.g:621:3: ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) )
+                    // InternalVsdl.g:630:3: ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) )
                     {
-                    // InternalVsdl.g:621:3: ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) )
-                    // InternalVsdl.g:622:4: () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) )
+                    // InternalVsdl.g:630:3: ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) )
+                    // InternalVsdl.g:631:4: () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) )
                     {
-                    // InternalVsdl.g:622:4: ()
-                    // InternalVsdl.g:623:5: 
+                    // InternalVsdl.g:631:4: ()
+                    // InternalVsdl.g:632:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1962,8 +1994,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:629:4: ( ( 'cpu' )=>otherlv_1= 'cpu' )
-                    // InternalVsdl.g:630:5: ( 'cpu' )=>otherlv_1= 'cpu'
+                    // InternalVsdl.g:638:4: ( ( 'cpu' )=>otherlv_1= 'cpu' )
+                    // InternalVsdl.g:639:5: ( 'cpu' )=>otherlv_1= 'cpu'
                     {
                     otherlv_1=(Token)match(input,25,FOLLOW_16); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1980,11 +2012,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getNodeHardwareConstraintAAccess().getSpeedKeyword_0_2());
                       			
                     }
-                    // InternalVsdl.g:640:4: ( (lv_op_3_0= 'equal' ) )
-                    // InternalVsdl.g:641:5: (lv_op_3_0= 'equal' )
+                    // InternalVsdl.g:649:4: ( (lv_op_3_0= 'equal' ) )
+                    // InternalVsdl.g:650:5: (lv_op_3_0= 'equal' )
                     {
-                    // InternalVsdl.g:641:5: (lv_op_3_0= 'equal' )
-                    // InternalVsdl.g:642:6: lv_op_3_0= 'equal'
+                    // InternalVsdl.g:650:5: (lv_op_3_0= 'equal' )
+                    // InternalVsdl.g:651:6: lv_op_3_0= 'equal'
                     {
                     lv_op_3_0=(Token)match(input,27,FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2012,11 +2044,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_4, grammarAccess.getNodeHardwareConstraintAAccess().getToKeyword_0_4());
                       			
                     }
-                    // InternalVsdl.g:658:4: ( (lv_value_5_0= ruleCPUFrequency ) )
-                    // InternalVsdl.g:659:5: (lv_value_5_0= ruleCPUFrequency )
+                    // InternalVsdl.g:667:4: ( (lv_value_5_0= ruleCPUFrequency ) )
+                    // InternalVsdl.g:668:5: (lv_value_5_0= ruleCPUFrequency )
                     {
-                    // InternalVsdl.g:659:5: (lv_value_5_0= ruleCPUFrequency )
-                    // InternalVsdl.g:660:6: lv_value_5_0= ruleCPUFrequency
+                    // InternalVsdl.g:668:5: (lv_value_5_0= ruleCPUFrequency )
+                    // InternalVsdl.g:669:6: lv_value_5_0= ruleCPUFrequency
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2054,13 +2086,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:679:3: ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) )
+                    // InternalVsdl.g:688:3: ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) )
                     {
-                    // InternalVsdl.g:679:3: ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) )
-                    // InternalVsdl.g:680:4: () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) )
+                    // InternalVsdl.g:688:3: ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) )
+                    // InternalVsdl.g:689:4: () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) )
                     {
-                    // InternalVsdl.g:680:4: ()
-                    // InternalVsdl.g:681:5: 
+                    // InternalVsdl.g:689:4: ()
+                    // InternalVsdl.g:690:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2072,8 +2104,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:687:4: ( ( 'cpu' )=>otherlv_7= 'cpu' )
-                    // InternalVsdl.g:688:5: ( 'cpu' )=>otherlv_7= 'cpu'
+                    // InternalVsdl.g:696:4: ( ( 'cpu' )=>otherlv_7= 'cpu' )
+                    // InternalVsdl.g:697:5: ( 'cpu' )=>otherlv_7= 'cpu'
                     {
                     otherlv_7=(Token)match(input,25,FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2084,11 +2116,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:694:4: ( (lv_op_8_0= 'faster' ) )
-                    // InternalVsdl.g:695:5: (lv_op_8_0= 'faster' )
+                    // InternalVsdl.g:703:4: ( (lv_op_8_0= 'faster' ) )
+                    // InternalVsdl.g:704:5: (lv_op_8_0= 'faster' )
                     {
-                    // InternalVsdl.g:695:5: (lv_op_8_0= 'faster' )
-                    // InternalVsdl.g:696:6: lv_op_8_0= 'faster'
+                    // InternalVsdl.g:704:5: (lv_op_8_0= 'faster' )
+                    // InternalVsdl.g:705:6: lv_op_8_0= 'faster'
                     {
                     lv_op_8_0=(Token)match(input,29,FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2116,11 +2148,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_9, grammarAccess.getNodeHardwareConstraintAAccess().getThanKeyword_1_3());
                       			
                     }
-                    // InternalVsdl.g:712:4: ( (lv_value_10_0= ruleCPUFrequency ) )
-                    // InternalVsdl.g:713:5: (lv_value_10_0= ruleCPUFrequency )
+                    // InternalVsdl.g:721:4: ( (lv_value_10_0= ruleCPUFrequency ) )
+                    // InternalVsdl.g:722:5: (lv_value_10_0= ruleCPUFrequency )
                     {
-                    // InternalVsdl.g:713:5: (lv_value_10_0= ruleCPUFrequency )
-                    // InternalVsdl.g:714:6: lv_value_10_0= ruleCPUFrequency
+                    // InternalVsdl.g:722:5: (lv_value_10_0= ruleCPUFrequency )
+                    // InternalVsdl.g:723:6: lv_value_10_0= ruleCPUFrequency
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2158,13 +2190,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:733:3: ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) )
+                    // InternalVsdl.g:742:3: ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) )
                     {
-                    // InternalVsdl.g:733:3: ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) )
-                    // InternalVsdl.g:734:4: () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) )
+                    // InternalVsdl.g:742:3: ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) )
+                    // InternalVsdl.g:743:4: () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) )
                     {
-                    // InternalVsdl.g:734:4: ()
-                    // InternalVsdl.g:735:5: 
+                    // InternalVsdl.g:743:4: ()
+                    // InternalVsdl.g:744:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2176,8 +2208,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:741:4: ( ( 'cpu' )=>otherlv_12= 'cpu' )
-                    // InternalVsdl.g:742:5: ( 'cpu' )=>otherlv_12= 'cpu'
+                    // InternalVsdl.g:750:4: ( ( 'cpu' )=>otherlv_12= 'cpu' )
+                    // InternalVsdl.g:751:5: ( 'cpu' )=>otherlv_12= 'cpu'
                     {
                     otherlv_12=(Token)match(input,25,FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2188,11 +2220,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:748:4: ( (lv_op_13_0= 'slower' ) )
-                    // InternalVsdl.g:749:5: (lv_op_13_0= 'slower' )
+                    // InternalVsdl.g:757:4: ( (lv_op_13_0= 'slower' ) )
+                    // InternalVsdl.g:758:5: (lv_op_13_0= 'slower' )
                     {
-                    // InternalVsdl.g:749:5: (lv_op_13_0= 'slower' )
-                    // InternalVsdl.g:750:6: lv_op_13_0= 'slower'
+                    // InternalVsdl.g:758:5: (lv_op_13_0= 'slower' )
+                    // InternalVsdl.g:759:6: lv_op_13_0= 'slower'
                     {
                     lv_op_13_0=(Token)match(input,31,FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2220,11 +2252,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getNodeHardwareConstraintAAccess().getThanKeyword_2_3());
                       			
                     }
-                    // InternalVsdl.g:766:4: ( (lv_value_15_0= ruleCPUFrequency ) )
-                    // InternalVsdl.g:767:5: (lv_value_15_0= ruleCPUFrequency )
+                    // InternalVsdl.g:775:4: ( (lv_value_15_0= ruleCPUFrequency ) )
+                    // InternalVsdl.g:776:5: (lv_value_15_0= ruleCPUFrequency )
                     {
-                    // InternalVsdl.g:767:5: (lv_value_15_0= ruleCPUFrequency )
-                    // InternalVsdl.g:768:6: lv_value_15_0= ruleCPUFrequency
+                    // InternalVsdl.g:776:5: (lv_value_15_0= ruleCPUFrequency )
+                    // InternalVsdl.g:777:6: lv_value_15_0= ruleCPUFrequency
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2262,13 +2294,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalVsdl.g:787:3: ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) )
+                    // InternalVsdl.g:796:3: ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) )
                     {
-                    // InternalVsdl.g:787:3: ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) )
-                    // InternalVsdl.g:788:4: () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) )
+                    // InternalVsdl.g:796:3: ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) )
+                    // InternalVsdl.g:797:4: () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) )
                     {
-                    // InternalVsdl.g:788:4: ()
-                    // InternalVsdl.g:789:5: 
+                    // InternalVsdl.g:797:4: ()
+                    // InternalVsdl.g:798:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2280,8 +2312,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:795:4: ( ( 'cpu' )=>otherlv_17= 'cpu' )
-                    // InternalVsdl.g:796:5: ( 'cpu' )=>otherlv_17= 'cpu'
+                    // InternalVsdl.g:804:4: ( ( 'cpu' )=>otherlv_17= 'cpu' )
+                    // InternalVsdl.g:805:5: ( 'cpu' )=>otherlv_17= 'cpu'
                     {
                     otherlv_17=(Token)match(input,25,FOLLOW_16); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2298,11 +2330,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getNodeHardwareConstraintAAccess().getSpeedKeyword_3_2());
                       			
                     }
-                    // InternalVsdl.g:806:4: ( (lv_sameas_19_0= 'of' ) )
-                    // InternalVsdl.g:807:5: (lv_sameas_19_0= 'of' )
+                    // InternalVsdl.g:815:4: ( (lv_sameas_19_0= 'of' ) )
+                    // InternalVsdl.g:816:5: (lv_sameas_19_0= 'of' )
                     {
-                    // InternalVsdl.g:807:5: (lv_sameas_19_0= 'of' )
-                    // InternalVsdl.g:808:6: lv_sameas_19_0= 'of'
+                    // InternalVsdl.g:816:5: (lv_sameas_19_0= 'of' )
+                    // InternalVsdl.g:817:6: lv_sameas_19_0= 'of'
                     {
                     lv_sameas_19_0=(Token)match(input,32,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2324,11 +2356,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:820:4: ( (otherlv_20= RULE_ID ) )
-                    // InternalVsdl.g:821:5: (otherlv_20= RULE_ID )
+                    // InternalVsdl.g:829:4: ( (otherlv_20= RULE_ID ) )
+                    // InternalVsdl.g:830:5: (otherlv_20= RULE_ID )
                     {
-                    // InternalVsdl.g:821:5: (otherlv_20= RULE_ID )
-                    // InternalVsdl.g:822:6: otherlv_20= RULE_ID
+                    // InternalVsdl.g:830:5: (otherlv_20= RULE_ID )
+                    // InternalVsdl.g:831:6: otherlv_20= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2356,13 +2388,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalVsdl.g:835:3: ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) )
+                    // InternalVsdl.g:844:3: ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) )
                     {
-                    // InternalVsdl.g:835:3: ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) )
-                    // InternalVsdl.g:836:4: () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) )
+                    // InternalVsdl.g:844:3: ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) )
+                    // InternalVsdl.g:845:4: () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) )
                     {
-                    // InternalVsdl.g:836:4: ()
-                    // InternalVsdl.g:837:5: 
+                    // InternalVsdl.g:845:4: ()
+                    // InternalVsdl.g:846:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2374,8 +2406,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:843:4: ( ( 'disk' )=>otherlv_22= 'disk' )
-                    // InternalVsdl.g:844:5: ( 'disk' )=>otherlv_22= 'disk'
+                    // InternalVsdl.g:852:4: ( ( 'disk' )=>otherlv_22= 'disk' )
+                    // InternalVsdl.g:853:5: ( 'disk' )=>otherlv_22= 'disk'
                     {
                     otherlv_22=(Token)match(input,33,FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2392,11 +2424,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_23, grammarAccess.getNodeHardwareConstraintAAccess().getSizeKeyword_4_2());
                       			
                     }
-                    // InternalVsdl.g:854:4: ( (lv_op_24_0= 'equal' ) )
-                    // InternalVsdl.g:855:5: (lv_op_24_0= 'equal' )
+                    // InternalVsdl.g:863:4: ( (lv_op_24_0= 'equal' ) )
+                    // InternalVsdl.g:864:5: (lv_op_24_0= 'equal' )
                     {
-                    // InternalVsdl.g:855:5: (lv_op_24_0= 'equal' )
-                    // InternalVsdl.g:856:6: lv_op_24_0= 'equal'
+                    // InternalVsdl.g:864:5: (lv_op_24_0= 'equal' )
+                    // InternalVsdl.g:865:6: lv_op_24_0= 'equal'
                     {
                     lv_op_24_0=(Token)match(input,27,FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2424,11 +2456,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_25, grammarAccess.getNodeHardwareConstraintAAccess().getToKeyword_4_4());
                       			
                     }
-                    // InternalVsdl.g:872:4: ( (lv_value_26_0= ruleDiskSize ) )
-                    // InternalVsdl.g:873:5: (lv_value_26_0= ruleDiskSize )
+                    // InternalVsdl.g:881:4: ( (lv_value_26_0= ruleDiskSize ) )
+                    // InternalVsdl.g:882:5: (lv_value_26_0= ruleDiskSize )
                     {
-                    // InternalVsdl.g:873:5: (lv_value_26_0= ruleDiskSize )
-                    // InternalVsdl.g:874:6: lv_value_26_0= ruleDiskSize
+                    // InternalVsdl.g:882:5: (lv_value_26_0= ruleDiskSize )
+                    // InternalVsdl.g:883:6: lv_value_26_0= ruleDiskSize
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2466,13 +2498,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalVsdl.g:893:3: ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) )
+                    // InternalVsdl.g:902:3: ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) )
                     {
-                    // InternalVsdl.g:893:3: ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) )
-                    // InternalVsdl.g:894:4: () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) )
+                    // InternalVsdl.g:902:3: ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) )
+                    // InternalVsdl.g:903:4: () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) )
                     {
-                    // InternalVsdl.g:894:4: ()
-                    // InternalVsdl.g:895:5: 
+                    // InternalVsdl.g:903:4: ()
+                    // InternalVsdl.g:904:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2484,8 +2516,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:901:4: ( ( 'disk' )=>otherlv_28= 'disk' )
-                    // InternalVsdl.g:902:5: ( 'disk' )=>otherlv_28= 'disk'
+                    // InternalVsdl.g:910:4: ( ( 'disk' )=>otherlv_28= 'disk' )
+                    // InternalVsdl.g:911:5: ( 'disk' )=>otherlv_28= 'disk'
                     {
                     otherlv_28=(Token)match(input,33,FOLLOW_24); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2496,11 +2528,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:908:4: ( (lv_op_29_0= 'larger' ) )
-                    // InternalVsdl.g:909:5: (lv_op_29_0= 'larger' )
+                    // InternalVsdl.g:917:4: ( (lv_op_29_0= 'larger' ) )
+                    // InternalVsdl.g:918:5: (lv_op_29_0= 'larger' )
                     {
-                    // InternalVsdl.g:909:5: (lv_op_29_0= 'larger' )
-                    // InternalVsdl.g:910:6: lv_op_29_0= 'larger'
+                    // InternalVsdl.g:918:5: (lv_op_29_0= 'larger' )
+                    // InternalVsdl.g:919:6: lv_op_29_0= 'larger'
                     {
                     lv_op_29_0=(Token)match(input,35,FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2528,11 +2560,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_30, grammarAccess.getNodeHardwareConstraintAAccess().getThanKeyword_5_3());
                       			
                     }
-                    // InternalVsdl.g:926:4: ( (lv_value_31_0= ruleDiskSize ) )
-                    // InternalVsdl.g:927:5: (lv_value_31_0= ruleDiskSize )
+                    // InternalVsdl.g:935:4: ( (lv_value_31_0= ruleDiskSize ) )
+                    // InternalVsdl.g:936:5: (lv_value_31_0= ruleDiskSize )
                     {
-                    // InternalVsdl.g:927:5: (lv_value_31_0= ruleDiskSize )
-                    // InternalVsdl.g:928:6: lv_value_31_0= ruleDiskSize
+                    // InternalVsdl.g:936:5: (lv_value_31_0= ruleDiskSize )
+                    // InternalVsdl.g:937:6: lv_value_31_0= ruleDiskSize
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2570,13 +2602,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalVsdl.g:947:3: ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) )
+                    // InternalVsdl.g:956:3: ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) )
                     {
-                    // InternalVsdl.g:947:3: ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) )
-                    // InternalVsdl.g:948:4: () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) )
+                    // InternalVsdl.g:956:3: ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) )
+                    // InternalVsdl.g:957:4: () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) )
                     {
-                    // InternalVsdl.g:948:4: ()
-                    // InternalVsdl.g:949:5: 
+                    // InternalVsdl.g:957:4: ()
+                    // InternalVsdl.g:958:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2588,8 +2620,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:955:4: ( ( 'disk' )=>otherlv_33= 'disk' )
-                    // InternalVsdl.g:956:5: ( 'disk' )=>otherlv_33= 'disk'
+                    // InternalVsdl.g:964:4: ( ( 'disk' )=>otherlv_33= 'disk' )
+                    // InternalVsdl.g:965:5: ( 'disk' )=>otherlv_33= 'disk'
                     {
                     otherlv_33=(Token)match(input,33,FOLLOW_25); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2600,11 +2632,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:962:4: ( (lv_op_34_0= 'smaller' ) )
-                    // InternalVsdl.g:963:5: (lv_op_34_0= 'smaller' )
+                    // InternalVsdl.g:971:4: ( (lv_op_34_0= 'smaller' ) )
+                    // InternalVsdl.g:972:5: (lv_op_34_0= 'smaller' )
                     {
-                    // InternalVsdl.g:963:5: (lv_op_34_0= 'smaller' )
-                    // InternalVsdl.g:964:6: lv_op_34_0= 'smaller'
+                    // InternalVsdl.g:972:5: (lv_op_34_0= 'smaller' )
+                    // InternalVsdl.g:973:6: lv_op_34_0= 'smaller'
                     {
                     lv_op_34_0=(Token)match(input,36,FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2632,11 +2664,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_35, grammarAccess.getNodeHardwareConstraintAAccess().getThanKeyword_6_3());
                       			
                     }
-                    // InternalVsdl.g:980:4: ( (lv_value_36_0= ruleDiskSize ) )
-                    // InternalVsdl.g:981:5: (lv_value_36_0= ruleDiskSize )
+                    // InternalVsdl.g:989:4: ( (lv_value_36_0= ruleDiskSize ) )
+                    // InternalVsdl.g:990:5: (lv_value_36_0= ruleDiskSize )
                     {
-                    // InternalVsdl.g:981:5: (lv_value_36_0= ruleDiskSize )
-                    // InternalVsdl.g:982:6: lv_value_36_0= ruleDiskSize
+                    // InternalVsdl.g:990:5: (lv_value_36_0= ruleDiskSize )
+                    // InternalVsdl.g:991:6: lv_value_36_0= ruleDiskSize
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2674,13 +2706,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalVsdl.g:1001:3: ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) )
+                    // InternalVsdl.g:1010:3: ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) )
                     {
-                    // InternalVsdl.g:1001:3: ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) )
-                    // InternalVsdl.g:1002:4: () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) )
+                    // InternalVsdl.g:1010:3: ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) )
+                    // InternalVsdl.g:1011:4: () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) )
                     {
-                    // InternalVsdl.g:1002:4: ()
-                    // InternalVsdl.g:1003:5: 
+                    // InternalVsdl.g:1011:4: ()
+                    // InternalVsdl.g:1012:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2692,8 +2724,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1009:4: ( ( 'disk' )=>otherlv_38= 'disk' )
-                    // InternalVsdl.g:1010:5: ( 'disk' )=>otherlv_38= 'disk'
+                    // InternalVsdl.g:1018:4: ( ( 'disk' )=>otherlv_38= 'disk' )
+                    // InternalVsdl.g:1019:5: ( 'disk' )=>otherlv_38= 'disk'
                     {
                     otherlv_38=(Token)match(input,33,FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2710,11 +2742,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_39, grammarAccess.getNodeHardwareConstraintAAccess().getSizeKeyword_7_2());
                       			
                     }
-                    // InternalVsdl.g:1020:4: ( (lv_sameas_40_0= 'of' ) )
-                    // InternalVsdl.g:1021:5: (lv_sameas_40_0= 'of' )
+                    // InternalVsdl.g:1029:4: ( (lv_sameas_40_0= 'of' ) )
+                    // InternalVsdl.g:1030:5: (lv_sameas_40_0= 'of' )
                     {
-                    // InternalVsdl.g:1021:5: (lv_sameas_40_0= 'of' )
-                    // InternalVsdl.g:1022:6: lv_sameas_40_0= 'of'
+                    // InternalVsdl.g:1030:5: (lv_sameas_40_0= 'of' )
+                    // InternalVsdl.g:1031:6: lv_sameas_40_0= 'of'
                     {
                     lv_sameas_40_0=(Token)match(input,32,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2736,11 +2768,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1034:4: ( (otherlv_41= RULE_ID ) )
-                    // InternalVsdl.g:1035:5: (otherlv_41= RULE_ID )
+                    // InternalVsdl.g:1043:4: ( (otherlv_41= RULE_ID ) )
+                    // InternalVsdl.g:1044:5: (otherlv_41= RULE_ID )
                     {
-                    // InternalVsdl.g:1035:5: (otherlv_41= RULE_ID )
-                    // InternalVsdl.g:1036:6: otherlv_41= RULE_ID
+                    // InternalVsdl.g:1044:5: (otherlv_41= RULE_ID )
+                    // InternalVsdl.g:1045:6: otherlv_41= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2768,13 +2800,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalVsdl.g:1049:3: ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) )
+                    // InternalVsdl.g:1058:3: ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) )
                     {
-                    // InternalVsdl.g:1049:3: ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) )
-                    // InternalVsdl.g:1050:4: () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) )
+                    // InternalVsdl.g:1058:3: ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) )
+                    // InternalVsdl.g:1059:4: () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) )
                     {
-                    // InternalVsdl.g:1050:4: ()
-                    // InternalVsdl.g:1051:5: 
+                    // InternalVsdl.g:1059:4: ()
+                    // InternalVsdl.g:1060:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2786,8 +2818,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1057:4: ( ( 'ram' )=>otherlv_43= 'ram' )
-                    // InternalVsdl.g:1058:5: ( 'ram' )=>otherlv_43= 'ram'
+                    // InternalVsdl.g:1066:4: ( ( 'ram' )=>otherlv_43= 'ram' )
+                    // InternalVsdl.g:1067:5: ( 'ram' )=>otherlv_43= 'ram'
                     {
                     otherlv_43=(Token)match(input,37,FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2804,11 +2836,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_44, grammarAccess.getNodeHardwareConstraintAAccess().getSizeKeyword_8_2());
                       			
                     }
-                    // InternalVsdl.g:1068:4: ( (lv_op_45_0= 'equal' ) )
-                    // InternalVsdl.g:1069:5: (lv_op_45_0= 'equal' )
+                    // InternalVsdl.g:1077:4: ( (lv_op_45_0= 'equal' ) )
+                    // InternalVsdl.g:1078:5: (lv_op_45_0= 'equal' )
                     {
-                    // InternalVsdl.g:1069:5: (lv_op_45_0= 'equal' )
-                    // InternalVsdl.g:1070:6: lv_op_45_0= 'equal'
+                    // InternalVsdl.g:1078:5: (lv_op_45_0= 'equal' )
+                    // InternalVsdl.g:1079:6: lv_op_45_0= 'equal'
                     {
                     lv_op_45_0=(Token)match(input,27,FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2836,11 +2868,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_46, grammarAccess.getNodeHardwareConstraintAAccess().getToKeyword_8_4());
                       			
                     }
-                    // InternalVsdl.g:1086:4: ( (lv_value_47_0= ruleRamSize ) )
-                    // InternalVsdl.g:1087:5: (lv_value_47_0= ruleRamSize )
+                    // InternalVsdl.g:1095:4: ( (lv_value_47_0= ruleRamSize ) )
+                    // InternalVsdl.g:1096:5: (lv_value_47_0= ruleRamSize )
                     {
-                    // InternalVsdl.g:1087:5: (lv_value_47_0= ruleRamSize )
-                    // InternalVsdl.g:1088:6: lv_value_47_0= ruleRamSize
+                    // InternalVsdl.g:1096:5: (lv_value_47_0= ruleRamSize )
+                    // InternalVsdl.g:1097:6: lv_value_47_0= ruleRamSize
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2878,13 +2910,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalVsdl.g:1107:3: ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) )
+                    // InternalVsdl.g:1116:3: ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) )
                     {
-                    // InternalVsdl.g:1107:3: ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) )
-                    // InternalVsdl.g:1108:4: () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) )
+                    // InternalVsdl.g:1116:3: ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) )
+                    // InternalVsdl.g:1117:4: () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) )
                     {
-                    // InternalVsdl.g:1108:4: ()
-                    // InternalVsdl.g:1109:5: 
+                    // InternalVsdl.g:1117:4: ()
+                    // InternalVsdl.g:1118:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2896,8 +2928,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1115:4: ( ( 'ram' )=>otherlv_49= 'ram' )
-                    // InternalVsdl.g:1116:5: ( 'ram' )=>otherlv_49= 'ram'
+                    // InternalVsdl.g:1124:4: ( ( 'ram' )=>otherlv_49= 'ram' )
+                    // InternalVsdl.g:1125:5: ( 'ram' )=>otherlv_49= 'ram'
                     {
                     otherlv_49=(Token)match(input,37,FOLLOW_24); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2908,11 +2940,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1122:4: ( (lv_op_50_0= 'larger' ) )
-                    // InternalVsdl.g:1123:5: (lv_op_50_0= 'larger' )
+                    // InternalVsdl.g:1131:4: ( (lv_op_50_0= 'larger' ) )
+                    // InternalVsdl.g:1132:5: (lv_op_50_0= 'larger' )
                     {
-                    // InternalVsdl.g:1123:5: (lv_op_50_0= 'larger' )
-                    // InternalVsdl.g:1124:6: lv_op_50_0= 'larger'
+                    // InternalVsdl.g:1132:5: (lv_op_50_0= 'larger' )
+                    // InternalVsdl.g:1133:6: lv_op_50_0= 'larger'
                     {
                     lv_op_50_0=(Token)match(input,35,FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2940,11 +2972,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_51, grammarAccess.getNodeHardwareConstraintAAccess().getThanKeyword_9_3());
                       			
                     }
-                    // InternalVsdl.g:1140:4: ( (lv_value_52_0= ruleRamSize ) )
-                    // InternalVsdl.g:1141:5: (lv_value_52_0= ruleRamSize )
+                    // InternalVsdl.g:1149:4: ( (lv_value_52_0= ruleRamSize ) )
+                    // InternalVsdl.g:1150:5: (lv_value_52_0= ruleRamSize )
                     {
-                    // InternalVsdl.g:1141:5: (lv_value_52_0= ruleRamSize )
-                    // InternalVsdl.g:1142:6: lv_value_52_0= ruleRamSize
+                    // InternalVsdl.g:1150:5: (lv_value_52_0= ruleRamSize )
+                    // InternalVsdl.g:1151:6: lv_value_52_0= ruleRamSize
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2982,13 +3014,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalVsdl.g:1161:3: ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) )
+                    // InternalVsdl.g:1170:3: ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) )
                     {
-                    // InternalVsdl.g:1161:3: ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) )
-                    // InternalVsdl.g:1162:4: () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) )
+                    // InternalVsdl.g:1170:3: ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) )
+                    // InternalVsdl.g:1171:4: () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) )
                     {
-                    // InternalVsdl.g:1162:4: ()
-                    // InternalVsdl.g:1163:5: 
+                    // InternalVsdl.g:1171:4: ()
+                    // InternalVsdl.g:1172:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3000,8 +3032,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1169:4: ( ( 'ram' )=>otherlv_54= 'ram' )
-                    // InternalVsdl.g:1170:5: ( 'ram' )=>otherlv_54= 'ram'
+                    // InternalVsdl.g:1178:4: ( ( 'ram' )=>otherlv_54= 'ram' )
+                    // InternalVsdl.g:1179:5: ( 'ram' )=>otherlv_54= 'ram'
                     {
                     otherlv_54=(Token)match(input,37,FOLLOW_25); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3012,11 +3044,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1176:4: ( (lv_op_55_0= 'smaller' ) )
-                    // InternalVsdl.g:1177:5: (lv_op_55_0= 'smaller' )
+                    // InternalVsdl.g:1185:4: ( (lv_op_55_0= 'smaller' ) )
+                    // InternalVsdl.g:1186:5: (lv_op_55_0= 'smaller' )
                     {
-                    // InternalVsdl.g:1177:5: (lv_op_55_0= 'smaller' )
-                    // InternalVsdl.g:1178:6: lv_op_55_0= 'smaller'
+                    // InternalVsdl.g:1186:5: (lv_op_55_0= 'smaller' )
+                    // InternalVsdl.g:1187:6: lv_op_55_0= 'smaller'
                     {
                     lv_op_55_0=(Token)match(input,36,FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3044,11 +3076,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_56, grammarAccess.getNodeHardwareConstraintAAccess().getThanKeyword_10_3());
                       			
                     }
-                    // InternalVsdl.g:1194:4: ( (lv_value_57_0= ruleRamSize ) )
-                    // InternalVsdl.g:1195:5: (lv_value_57_0= ruleRamSize )
+                    // InternalVsdl.g:1203:4: ( (lv_value_57_0= ruleRamSize ) )
+                    // InternalVsdl.g:1204:5: (lv_value_57_0= ruleRamSize )
                     {
-                    // InternalVsdl.g:1195:5: (lv_value_57_0= ruleRamSize )
-                    // InternalVsdl.g:1196:6: lv_value_57_0= ruleRamSize
+                    // InternalVsdl.g:1204:5: (lv_value_57_0= ruleRamSize )
+                    // InternalVsdl.g:1205:6: lv_value_57_0= ruleRamSize
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3086,13 +3118,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalVsdl.g:1215:3: ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) )
+                    // InternalVsdl.g:1224:3: ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) )
                     {
-                    // InternalVsdl.g:1215:3: ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) )
-                    // InternalVsdl.g:1216:4: () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) )
+                    // InternalVsdl.g:1224:3: ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) )
+                    // InternalVsdl.g:1225:4: () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) )
                     {
-                    // InternalVsdl.g:1216:4: ()
-                    // InternalVsdl.g:1217:5: 
+                    // InternalVsdl.g:1225:4: ()
+                    // InternalVsdl.g:1226:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3104,8 +3136,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1223:4: ( ( 'ram' )=>otherlv_59= 'ram' )
-                    // InternalVsdl.g:1224:5: ( 'ram' )=>otherlv_59= 'ram'
+                    // InternalVsdl.g:1232:4: ( ( 'ram' )=>otherlv_59= 'ram' )
+                    // InternalVsdl.g:1233:5: ( 'ram' )=>otherlv_59= 'ram'
                     {
                     otherlv_59=(Token)match(input,37,FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3122,11 +3154,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_60, grammarAccess.getNodeHardwareConstraintAAccess().getSizeKeyword_11_2());
                       			
                     }
-                    // InternalVsdl.g:1234:4: ( (lv_sameas_61_0= 'of' ) )
-                    // InternalVsdl.g:1235:5: (lv_sameas_61_0= 'of' )
+                    // InternalVsdl.g:1243:4: ( (lv_sameas_61_0= 'of' ) )
+                    // InternalVsdl.g:1244:5: (lv_sameas_61_0= 'of' )
                     {
-                    // InternalVsdl.g:1235:5: (lv_sameas_61_0= 'of' )
-                    // InternalVsdl.g:1236:6: lv_sameas_61_0= 'of'
+                    // InternalVsdl.g:1244:5: (lv_sameas_61_0= 'of' )
+                    // InternalVsdl.g:1245:6: lv_sameas_61_0= 'of'
                     {
                     lv_sameas_61_0=(Token)match(input,32,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3148,11 +3180,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1248:4: ( (otherlv_62= RULE_ID ) )
-                    // InternalVsdl.g:1249:5: (otherlv_62= RULE_ID )
+                    // InternalVsdl.g:1257:4: ( (otherlv_62= RULE_ID ) )
+                    // InternalVsdl.g:1258:5: (otherlv_62= RULE_ID )
                     {
-                    // InternalVsdl.g:1249:5: (otherlv_62= RULE_ID )
-                    // InternalVsdl.g:1250:6: otherlv_62= RULE_ID
+                    // InternalVsdl.g:1258:5: (otherlv_62= RULE_ID )
+                    // InternalVsdl.g:1259:6: otherlv_62= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3180,13 +3212,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalVsdl.g:1263:3: ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) )
+                    // InternalVsdl.g:1272:3: ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) )
                     {
-                    // InternalVsdl.g:1263:3: ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) )
-                    // InternalVsdl.g:1264:4: () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) )
+                    // InternalVsdl.g:1272:3: ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) )
+                    // InternalVsdl.g:1273:4: () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) )
                     {
-                    // InternalVsdl.g:1264:4: ()
-                    // InternalVsdl.g:1265:5: 
+                    // InternalVsdl.g:1273:4: ()
+                    // InternalVsdl.g:1274:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3198,8 +3230,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1271:4: ( ( 'flavour' )=>otherlv_64= 'flavour' )
-                    // InternalVsdl.g:1272:5: ( 'flavour' )=>otherlv_64= 'flavour'
+                    // InternalVsdl.g:1280:4: ( ( 'flavour' )=>otherlv_64= 'flavour' )
+                    // InternalVsdl.g:1281:5: ( 'flavour' )=>otherlv_64= 'flavour'
                     {
                     otherlv_64=(Token)match(input,38,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3210,11 +3242,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1278:4: ( (lv_profile_65_0= ruleHardwareProfile ) )
-                    // InternalVsdl.g:1279:5: (lv_profile_65_0= ruleHardwareProfile )
+                    // InternalVsdl.g:1287:4: ( (lv_profile_65_0= ruleHardwareProfile ) )
+                    // InternalVsdl.g:1288:5: (lv_profile_65_0= ruleHardwareProfile )
                     {
-                    // InternalVsdl.g:1279:5: (lv_profile_65_0= ruleHardwareProfile )
-                    // InternalVsdl.g:1280:6: lv_profile_65_0= ruleHardwareProfile
+                    // InternalVsdl.g:1288:5: (lv_profile_65_0= ruleHardwareProfile )
+                    // InternalVsdl.g:1289:6: lv_profile_65_0= ruleHardwareProfile
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3275,8 +3307,654 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleNodeHardwareConstraintA"
 
 
+    // $ANTLR start "entryRuleNodeNetworkConstraintA"
+    // InternalVsdl.g:1311:1: entryRuleNodeNetworkConstraintA returns [EObject current=null] : iv_ruleNodeNetworkConstraintA= ruleNodeNetworkConstraintA EOF ;
+    public final EObject entryRuleNodeNetworkConstraintA() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleNodeNetworkConstraintA = null;
+
+
+        try {
+            // InternalVsdl.g:1311:63: (iv_ruleNodeNetworkConstraintA= ruleNodeNetworkConstraintA EOF )
+            // InternalVsdl.g:1312:2: iv_ruleNodeNetworkConstraintA= ruleNodeNetworkConstraintA EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getNodeNetworkConstraintARule()); 
+            }
+            pushFollow(FOLLOW_1);
+            iv_ruleNodeNetworkConstraintA=ruleNodeNetworkConstraintA();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleNodeNetworkConstraintA; 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleNodeNetworkConstraintA"
+
+
+    // $ANTLR start "ruleNodeNetworkConstraintA"
+    // InternalVsdl.g:1318:1: ruleNodeNetworkConstraintA returns [EObject current=null] : ( ( () ( ( 'ip' )=>otherlv_1= 'ip' ) otherlv_2= 'address' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_ipAddress_5_0= ruleIPAddress ) ) ) | ( () ( ( 'ip' )=>otherlv_7= 'ip' ) otherlv_8= 'address' ( (lv_op_9_0= 'in' ) ) otherlv_10= 'range' ( (lv_ipRange_11_0= ruleIPRangeA ) ) ) | ( () ( ( 'ip' )=>otherlv_13= 'ip' ) otherlv_14= 'address' otherlv_15= 'is' ( (lv_op_16_0= 'connected' ) ) otherlv_17= 'to' ( (otherlv_18= RULE_ID ) ) ) | ( () ( ( 'gateway' )=>otherlv_20= 'gateway' ) otherlv_21= 'is' ( (lv_gatewayIP_22_0= ruleIPAddress ) ) ) | ( () ( ( 'DNS' )=>otherlv_24= 'DNS' ) otherlv_25= 'is' ( (lv_DNSIP_26_0= ruleIPAddress ) ) ) ) ;
+    public final EObject ruleNodeNetworkConstraintA() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token lv_op_3_0=null;
+        Token otherlv_4=null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
+        Token lv_op_9_0=null;
+        Token otherlv_10=null;
+        Token otherlv_13=null;
+        Token otherlv_14=null;
+        Token otherlv_15=null;
+        Token lv_op_16_0=null;
+        Token otherlv_17=null;
+        Token otherlv_18=null;
+        Token otherlv_20=null;
+        Token otherlv_21=null;
+        Token otherlv_24=null;
+        Token otherlv_25=null;
+        EObject lv_ipAddress_5_0 = null;
+
+        EObject lv_ipRange_11_0 = null;
+
+        EObject lv_gatewayIP_22_0 = null;
+
+        EObject lv_DNSIP_26_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalVsdl.g:1324:2: ( ( ( () ( ( 'ip' )=>otherlv_1= 'ip' ) otherlv_2= 'address' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_ipAddress_5_0= ruleIPAddress ) ) ) | ( () ( ( 'ip' )=>otherlv_7= 'ip' ) otherlv_8= 'address' ( (lv_op_9_0= 'in' ) ) otherlv_10= 'range' ( (lv_ipRange_11_0= ruleIPRangeA ) ) ) | ( () ( ( 'ip' )=>otherlv_13= 'ip' ) otherlv_14= 'address' otherlv_15= 'is' ( (lv_op_16_0= 'connected' ) ) otherlv_17= 'to' ( (otherlv_18= RULE_ID ) ) ) | ( () ( ( 'gateway' )=>otherlv_20= 'gateway' ) otherlv_21= 'is' ( (lv_gatewayIP_22_0= ruleIPAddress ) ) ) | ( () ( ( 'DNS' )=>otherlv_24= 'DNS' ) otherlv_25= 'is' ( (lv_DNSIP_26_0= ruleIPAddress ) ) ) ) )
+            // InternalVsdl.g:1325:2: ( ( () ( ( 'ip' )=>otherlv_1= 'ip' ) otherlv_2= 'address' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_ipAddress_5_0= ruleIPAddress ) ) ) | ( () ( ( 'ip' )=>otherlv_7= 'ip' ) otherlv_8= 'address' ( (lv_op_9_0= 'in' ) ) otherlv_10= 'range' ( (lv_ipRange_11_0= ruleIPRangeA ) ) ) | ( () ( ( 'ip' )=>otherlv_13= 'ip' ) otherlv_14= 'address' otherlv_15= 'is' ( (lv_op_16_0= 'connected' ) ) otherlv_17= 'to' ( (otherlv_18= RULE_ID ) ) ) | ( () ( ( 'gateway' )=>otherlv_20= 'gateway' ) otherlv_21= 'is' ( (lv_gatewayIP_22_0= ruleIPAddress ) ) ) | ( () ( ( 'DNS' )=>otherlv_24= 'DNS' ) otherlv_25= 'is' ( (lv_DNSIP_26_0= ruleIPAddress ) ) ) )
+            {
+            // InternalVsdl.g:1325:2: ( ( () ( ( 'ip' )=>otherlv_1= 'ip' ) otherlv_2= 'address' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_ipAddress_5_0= ruleIPAddress ) ) ) | ( () ( ( 'ip' )=>otherlv_7= 'ip' ) otherlv_8= 'address' ( (lv_op_9_0= 'in' ) ) otherlv_10= 'range' ( (lv_ipRange_11_0= ruleIPRangeA ) ) ) | ( () ( ( 'ip' )=>otherlv_13= 'ip' ) otherlv_14= 'address' otherlv_15= 'is' ( (lv_op_16_0= 'connected' ) ) otherlv_17= 'to' ( (otherlv_18= RULE_ID ) ) ) | ( () ( ( 'gateway' )=>otherlv_20= 'gateway' ) otherlv_21= 'is' ( (lv_gatewayIP_22_0= ruleIPAddress ) ) ) | ( () ( ( 'DNS' )=>otherlv_24= 'DNS' ) otherlv_25= 'is' ( (lv_DNSIP_26_0= ruleIPAddress ) ) ) )
+            int alt11=5;
+            switch ( input.LA(1) ) {
+            case 39:
+                {
+                int LA11_1 = input.LA(2);
+
+                if ( (LA11_1==40) ) {
+                    switch ( input.LA(3) ) {
+                    case 27:
+                        {
+                        alt11=1;
+                        }
+                        break;
+                    case 41:
+                        {
+                        alt11=2;
+                        }
+                        break;
+                    case 43:
+                        {
+                        alt11=3;
+                        }
+                        break;
+                    default:
+                        if (state.backtracking>0) {state.failed=true; return current;}
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 11, 4, input);
+
+                        throw nvae;
+                    }
+
+                }
+                else {
+                    if (state.backtracking>0) {state.failed=true; return current;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 11, 1, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case 45:
+                {
+                alt11=4;
+                }
+                break;
+            case 46:
+                {
+                alt11=5;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 11, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt11) {
+                case 1 :
+                    // InternalVsdl.g:1326:3: ( () ( ( 'ip' )=>otherlv_1= 'ip' ) otherlv_2= 'address' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_ipAddress_5_0= ruleIPAddress ) ) )
+                    {
+                    // InternalVsdl.g:1326:3: ( () ( ( 'ip' )=>otherlv_1= 'ip' ) otherlv_2= 'address' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_ipAddress_5_0= ruleIPAddress ) ) )
+                    // InternalVsdl.g:1327:4: () ( ( 'ip' )=>otherlv_1= 'ip' ) otherlv_2= 'address' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_ipAddress_5_0= ruleIPAddress ) )
+                    {
+                    // InternalVsdl.g:1327:4: ()
+                    // InternalVsdl.g:1328:5: 
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      					current = forceCreateModelElement(
+                      						grammarAccess.getNodeNetworkConstraintAAccess().getIPAction_0_0(),
+                      						current);
+                      				
+                    }
+
+                    }
+
+                    // InternalVsdl.g:1334:4: ( ( 'ip' )=>otherlv_1= 'ip' )
+                    // InternalVsdl.g:1335:5: ( 'ip' )=>otherlv_1= 'ip'
+                    {
+                    otherlv_1=(Token)match(input,39,FOLLOW_27); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(otherlv_1, grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_0_1());
+                      				
+                    }
+
+                    }
+
+                    otherlv_2=(Token)match(input,40,FOLLOW_17); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_2, grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_0_2());
+                      			
+                    }
+                    // InternalVsdl.g:1345:4: ( (lv_op_3_0= 'equal' ) )
+                    // InternalVsdl.g:1346:5: (lv_op_3_0= 'equal' )
+                    {
+                    // InternalVsdl.g:1346:5: (lv_op_3_0= 'equal' )
+                    // InternalVsdl.g:1347:6: lv_op_3_0= 'equal'
+                    {
+                    lv_op_3_0=(Token)match(input,27,FOLLOW_18); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						newLeafNode(lv_op_3_0, grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_3_0());
+                      					
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      						setWithLastConsumed(current, "op", lv_op_3_0, "equal");
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_4=(Token)match(input,28,FOLLOW_5); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_4, grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_0_4());
+                      			
+                    }
+                    // InternalVsdl.g:1363:4: ( (lv_ipAddress_5_0= ruleIPAddress ) )
+                    // InternalVsdl.g:1364:5: (lv_ipAddress_5_0= ruleIPAddress )
+                    {
+                    // InternalVsdl.g:1364:5: (lv_ipAddress_5_0= ruleIPAddress )
+                    // InternalVsdl.g:1365:6: lv_ipAddress_5_0= ruleIPAddress
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressIPAddressParserRuleCall_0_5_0());
+                      					
+                    }
+                    pushFollow(FOLLOW_2);
+                    lv_ipAddress_5_0=ruleIPAddress();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      						set(
+                      							current,
+                      							"ipAddress",
+                      							lv_ipAddress_5_0,
+                      							"it.csec.xtext.Vsdl.IPAddress");
+                      						afterParserOrEnumRuleCall();
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalVsdl.g:1384:3: ( () ( ( 'ip' )=>otherlv_7= 'ip' ) otherlv_8= 'address' ( (lv_op_9_0= 'in' ) ) otherlv_10= 'range' ( (lv_ipRange_11_0= ruleIPRangeA ) ) )
+                    {
+                    // InternalVsdl.g:1384:3: ( () ( ( 'ip' )=>otherlv_7= 'ip' ) otherlv_8= 'address' ( (lv_op_9_0= 'in' ) ) otherlv_10= 'range' ( (lv_ipRange_11_0= ruleIPRangeA ) ) )
+                    // InternalVsdl.g:1385:4: () ( ( 'ip' )=>otherlv_7= 'ip' ) otherlv_8= 'address' ( (lv_op_9_0= 'in' ) ) otherlv_10= 'range' ( (lv_ipRange_11_0= ruleIPRangeA ) )
+                    {
+                    // InternalVsdl.g:1385:4: ()
+                    // InternalVsdl.g:1386:5: 
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      					current = forceCreateModelElement(
+                      						grammarAccess.getNodeNetworkConstraintAAccess().getIPAction_1_0(),
+                      						current);
+                      				
+                    }
+
+                    }
+
+                    // InternalVsdl.g:1392:4: ( ( 'ip' )=>otherlv_7= 'ip' )
+                    // InternalVsdl.g:1393:5: ( 'ip' )=>otherlv_7= 'ip'
+                    {
+                    otherlv_7=(Token)match(input,39,FOLLOW_27); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(otherlv_7, grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_1_1());
+                      				
+                    }
+
+                    }
+
+                    otherlv_8=(Token)match(input,40,FOLLOW_28); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_8, grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_1_2());
+                      			
+                    }
+                    // InternalVsdl.g:1403:4: ( (lv_op_9_0= 'in' ) )
+                    // InternalVsdl.g:1404:5: (lv_op_9_0= 'in' )
+                    {
+                    // InternalVsdl.g:1404:5: (lv_op_9_0= 'in' )
+                    // InternalVsdl.g:1405:6: lv_op_9_0= 'in'
+                    {
+                    lv_op_9_0=(Token)match(input,41,FOLLOW_29); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						newLeafNode(lv_op_9_0, grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_3_0());
+                      					
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      						setWithLastConsumed(current, "op", lv_op_9_0, "in");
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_10=(Token)match(input,42,FOLLOW_5); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_10, grammarAccess.getNodeNetworkConstraintAAccess().getRangeKeyword_1_4());
+                      			
+                    }
+                    // InternalVsdl.g:1421:4: ( (lv_ipRange_11_0= ruleIPRangeA ) )
+                    // InternalVsdl.g:1422:5: (lv_ipRange_11_0= ruleIPRangeA )
+                    {
+                    // InternalVsdl.g:1422:5: (lv_ipRange_11_0= ruleIPRangeA )
+                    // InternalVsdl.g:1423:6: lv_ipRange_11_0= ruleIPRangeA
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeIPRangeAParserRuleCall_1_5_0());
+                      					
+                    }
+                    pushFollow(FOLLOW_2);
+                    lv_ipRange_11_0=ruleIPRangeA();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      						set(
+                      							current,
+                      							"ipRange",
+                      							lv_ipRange_11_0,
+                      							"it.csec.xtext.Vsdl.IPRangeA");
+                      						afterParserOrEnumRuleCall();
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalVsdl.g:1442:3: ( () ( ( 'ip' )=>otherlv_13= 'ip' ) otherlv_14= 'address' otherlv_15= 'is' ( (lv_op_16_0= 'connected' ) ) otherlv_17= 'to' ( (otherlv_18= RULE_ID ) ) )
+                    {
+                    // InternalVsdl.g:1442:3: ( () ( ( 'ip' )=>otherlv_13= 'ip' ) otherlv_14= 'address' otherlv_15= 'is' ( (lv_op_16_0= 'connected' ) ) otherlv_17= 'to' ( (otherlv_18= RULE_ID ) ) )
+                    // InternalVsdl.g:1443:4: () ( ( 'ip' )=>otherlv_13= 'ip' ) otherlv_14= 'address' otherlv_15= 'is' ( (lv_op_16_0= 'connected' ) ) otherlv_17= 'to' ( (otherlv_18= RULE_ID ) )
+                    {
+                    // InternalVsdl.g:1443:4: ()
+                    // InternalVsdl.g:1444:5: 
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      					current = forceCreateModelElement(
+                      						grammarAccess.getNodeNetworkConstraintAAccess().getIPAction_2_0(),
+                      						current);
+                      				
+                    }
+
+                    }
+
+                    // InternalVsdl.g:1450:4: ( ( 'ip' )=>otherlv_13= 'ip' )
+                    // InternalVsdl.g:1451:5: ( 'ip' )=>otherlv_13= 'ip'
+                    {
+                    otherlv_13=(Token)match(input,39,FOLLOW_27); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(otherlv_13, grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_2_1());
+                      				
+                    }
+
+                    }
+
+                    otherlv_14=(Token)match(input,40,FOLLOW_30); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_14, grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_2_2());
+                      			
+                    }
+                    otherlv_15=(Token)match(input,43,FOLLOW_31); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_15, grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_2_3());
+                      			
+                    }
+                    // InternalVsdl.g:1465:4: ( (lv_op_16_0= 'connected' ) )
+                    // InternalVsdl.g:1466:5: (lv_op_16_0= 'connected' )
+                    {
+                    // InternalVsdl.g:1466:5: (lv_op_16_0= 'connected' )
+                    // InternalVsdl.g:1467:6: lv_op_16_0= 'connected'
+                    {
+                    lv_op_16_0=(Token)match(input,44,FOLLOW_18); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						newLeafNode(lv_op_16_0, grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_4_0());
+                      					
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      						setWithLastConsumed(current, "op", lv_op_16_0, "connected");
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_17=(Token)match(input,28,FOLLOW_3); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_17, grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_2_5());
+                      			
+                    }
+                    // InternalVsdl.g:1483:4: ( (otherlv_18= RULE_ID ) )
+                    // InternalVsdl.g:1484:5: (otherlv_18= RULE_ID )
+                    {
+                    // InternalVsdl.g:1484:5: (otherlv_18= RULE_ID )
+                    // InternalVsdl.g:1485:6: otherlv_18= RULE_ID
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      					
+                    }
+                    otherlv_18=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						newLeafNode(otherlv_18, grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeCrossReference_2_6_0());
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // InternalVsdl.g:1498:3: ( () ( ( 'gateway' )=>otherlv_20= 'gateway' ) otherlv_21= 'is' ( (lv_gatewayIP_22_0= ruleIPAddress ) ) )
+                    {
+                    // InternalVsdl.g:1498:3: ( () ( ( 'gateway' )=>otherlv_20= 'gateway' ) otherlv_21= 'is' ( (lv_gatewayIP_22_0= ruleIPAddress ) ) )
+                    // InternalVsdl.g:1499:4: () ( ( 'gateway' )=>otherlv_20= 'gateway' ) otherlv_21= 'is' ( (lv_gatewayIP_22_0= ruleIPAddress ) )
+                    {
+                    // InternalVsdl.g:1499:4: ()
+                    // InternalVsdl.g:1500:5: 
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      					current = forceCreateModelElement(
+                      						grammarAccess.getNodeNetworkConstraintAAccess().getGatewayAction_3_0(),
+                      						current);
+                      				
+                    }
+
+                    }
+
+                    // InternalVsdl.g:1506:4: ( ( 'gateway' )=>otherlv_20= 'gateway' )
+                    // InternalVsdl.g:1507:5: ( 'gateway' )=>otherlv_20= 'gateway'
+                    {
+                    otherlv_20=(Token)match(input,45,FOLLOW_30); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(otherlv_20, grammarAccess.getNodeNetworkConstraintAAccess().getGatewayKeyword_3_1());
+                      				
+                    }
+
+                    }
+
+                    otherlv_21=(Token)match(input,43,FOLLOW_5); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_21, grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_3_2());
+                      			
+                    }
+                    // InternalVsdl.g:1517:4: ( (lv_gatewayIP_22_0= ruleIPAddress ) )
+                    // InternalVsdl.g:1518:5: (lv_gatewayIP_22_0= ruleIPAddress )
+                    {
+                    // InternalVsdl.g:1518:5: (lv_gatewayIP_22_0= ruleIPAddress )
+                    // InternalVsdl.g:1519:6: lv_gatewayIP_22_0= ruleIPAddress
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getGatewayIPIPAddressParserRuleCall_3_3_0());
+                      					
+                    }
+                    pushFollow(FOLLOW_2);
+                    lv_gatewayIP_22_0=ruleIPAddress();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      						set(
+                      							current,
+                      							"gatewayIP",
+                      							lv_gatewayIP_22_0,
+                      							"it.csec.xtext.Vsdl.IPAddress");
+                      						afterParserOrEnumRuleCall();
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // InternalVsdl.g:1538:3: ( () ( ( 'DNS' )=>otherlv_24= 'DNS' ) otherlv_25= 'is' ( (lv_DNSIP_26_0= ruleIPAddress ) ) )
+                    {
+                    // InternalVsdl.g:1538:3: ( () ( ( 'DNS' )=>otherlv_24= 'DNS' ) otherlv_25= 'is' ( (lv_DNSIP_26_0= ruleIPAddress ) ) )
+                    // InternalVsdl.g:1539:4: () ( ( 'DNS' )=>otherlv_24= 'DNS' ) otherlv_25= 'is' ( (lv_DNSIP_26_0= ruleIPAddress ) )
+                    {
+                    // InternalVsdl.g:1539:4: ()
+                    // InternalVsdl.g:1540:5: 
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      					current = forceCreateModelElement(
+                      						grammarAccess.getNodeNetworkConstraintAAccess().getDNSAction_4_0(),
+                      						current);
+                      				
+                    }
+
+                    }
+
+                    // InternalVsdl.g:1546:4: ( ( 'DNS' )=>otherlv_24= 'DNS' )
+                    // InternalVsdl.g:1547:5: ( 'DNS' )=>otherlv_24= 'DNS'
+                    {
+                    otherlv_24=(Token)match(input,46,FOLLOW_30); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      					newLeafNode(otherlv_24, grammarAccess.getNodeNetworkConstraintAAccess().getDNSKeyword_4_1());
+                      				
+                    }
+
+                    }
+
+                    otherlv_25=(Token)match(input,43,FOLLOW_5); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_25, grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_4_2());
+                      			
+                    }
+                    // InternalVsdl.g:1557:4: ( (lv_DNSIP_26_0= ruleIPAddress ) )
+                    // InternalVsdl.g:1558:5: (lv_DNSIP_26_0= ruleIPAddress )
+                    {
+                    // InternalVsdl.g:1558:5: (lv_DNSIP_26_0= ruleIPAddress )
+                    // InternalVsdl.g:1559:6: lv_DNSIP_26_0= ruleIPAddress
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_3_0());
+                      					
+                    }
+                    pushFollow(FOLLOW_2);
+                    lv_DNSIP_26_0=ruleIPAddress();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+                      						}
+                      						set(
+                      							current,
+                      							"DNSIP",
+                      							lv_DNSIP_26_0,
+                      							"it.csec.xtext.Vsdl.IPAddress");
+                      						afterParserOrEnumRuleCall();
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleNodeNetworkConstraintA"
+
+
     // $ANTLR start "entryRuleNodeSoftwareConstraintA"
-    // InternalVsdl.g:1302:1: entryRuleNodeSoftwareConstraintA returns [EObject current=null] : iv_ruleNodeSoftwareConstraintA= ruleNodeSoftwareConstraintA EOF ;
+    // InternalVsdl.g:1581:1: entryRuleNodeSoftwareConstraintA returns [EObject current=null] : iv_ruleNodeSoftwareConstraintA= ruleNodeSoftwareConstraintA EOF ;
     public final EObject entryRuleNodeSoftwareConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -3284,8 +3962,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1302:64: (iv_ruleNodeSoftwareConstraintA= ruleNodeSoftwareConstraintA EOF )
-            // InternalVsdl.g:1303:2: iv_ruleNodeSoftwareConstraintA= ruleNodeSoftwareConstraintA EOF
+            // InternalVsdl.g:1581:64: (iv_ruleNodeSoftwareConstraintA= ruleNodeSoftwareConstraintA EOF )
+            // InternalVsdl.g:1582:2: iv_ruleNodeSoftwareConstraintA= ruleNodeSoftwareConstraintA EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNodeSoftwareConstraintARule()); 
@@ -3316,7 +3994,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNodeSoftwareConstraintA"
-    // InternalVsdl.g:1309:1: ruleNodeSoftwareConstraintA returns [EObject current=null] : ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) | (otherlv_14= 'suffers' otherlv_15= 'from' ( (lv_vulnID_16_0= ruleVulnerabilityID ) ) ) ) ;
+    // InternalVsdl.g:1588:1: ruleNodeSoftwareConstraintA returns [EObject current=null] : ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) ) ;
     public final EObject ruleNodeSoftwareConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -3329,44 +4007,40 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         Token otherlv_9=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        Token otherlv_14=null;
-        Token otherlv_15=null;
         AntlrDatatypeRuleToken lv_version_4_0 = null;
 
         AntlrDatatypeRuleToken lv_family_10_0 = null;
 
         EObject lv_software_13_0 = null;
 
-        AntlrDatatypeRuleToken lv_vulnID_16_0 = null;
-
 
 
         	enterRule();
 
         try {
-            // InternalVsdl.g:1315:2: ( ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) | (otherlv_14= 'suffers' otherlv_15= 'from' ( (lv_vulnID_16_0= ruleVulnerabilityID ) ) ) ) )
-            // InternalVsdl.g:1316:2: ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) | (otherlv_14= 'suffers' otherlv_15= 'from' ( (lv_vulnID_16_0= ruleVulnerabilityID ) ) ) )
+            // InternalVsdl.g:1594:2: ( ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) ) )
+            // InternalVsdl.g:1595:2: ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) )
             {
-            // InternalVsdl.g:1316:2: ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) | (otherlv_14= 'suffers' otherlv_15= 'from' ( (lv_vulnID_16_0= ruleVulnerabilityID ) ) ) )
-            int alt11=4;
-            switch ( input.LA(1) ) {
-            case 15:
-                {
-                int LA11_1 = input.LA(2);
+            // InternalVsdl.g:1595:2: ( (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) ) | (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) ) | (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) ) )
+            int alt12=3;
+            int LA12_0 = input.LA(1);
 
-                if ( (LA11_1==39) ) {
-                    int LA11_4 = input.LA(3);
+            if ( (LA12_0==15) ) {
+                int LA12_1 = input.LA(2);
 
-                    if ( (LA11_4==40) ) {
-                        alt11=1;
+                if ( (LA12_1==47) ) {
+                    int LA12_3 = input.LA(3);
+
+                    if ( (LA12_3==43) ) {
+                        alt12=1;
                     }
-                    else if ( (LA11_4==41) ) {
-                        alt11=2;
+                    else if ( (LA12_3==48) ) {
+                        alt12=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 11, 4, input);
+                            new NoViableAltException("", 12, 3, input);
 
                         throw nvae;
                     }
@@ -3374,45 +4048,36 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 11, 1, input);
+                        new NoViableAltException("", 12, 1, input);
 
                     throw nvae;
                 }
-                }
-                break;
-            case 42:
-                {
-                alt11=3;
-                }
-                break;
-            case 44:
-                {
-                alt11=4;
-                }
-                break;
-            default:
+            }
+            else if ( (LA12_0==49) ) {
+                alt12=3;
+            }
+            else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
-
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // InternalVsdl.g:1317:3: (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) )
+                    // InternalVsdl.g:1596:3: (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) )
                     {
-                    // InternalVsdl.g:1317:3: (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) )
-                    // InternalVsdl.g:1318:4: otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) )
+                    // InternalVsdl.g:1596:3: (otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) ) )
+                    // InternalVsdl.g:1597:4: otherlv_0= 'node' () ( ( 'OS' )=>otherlv_2= 'OS' ) otherlv_3= 'is' ( (lv_version_4_0= ruleOSVersionE ) )
                     {
-                    otherlv_0=(Token)match(input,15,FOLLOW_27); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,15,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_0, grammarAccess.getNodeSoftwareConstraintAAccess().getNodeKeyword_0_0());
                       			
                     }
-                    // InternalVsdl.g:1322:4: ()
-                    // InternalVsdl.g:1323:5: 
+                    // InternalVsdl.g:1601:4: ()
+                    // InternalVsdl.g:1602:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3424,10 +4089,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1329:4: ( ( 'OS' )=>otherlv_2= 'OS' )
-                    // InternalVsdl.g:1330:5: ( 'OS' )=>otherlv_2= 'OS'
+                    // InternalVsdl.g:1608:4: ( ( 'OS' )=>otherlv_2= 'OS' )
+                    // InternalVsdl.g:1609:5: ( 'OS' )=>otherlv_2= 'OS'
                     {
-                    otherlv_2=(Token)match(input,39,FOLLOW_28); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,47,FOLLOW_30); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_2, grammarAccess.getNodeSoftwareConstraintAAccess().getOSKeyword_0_2());
@@ -3436,17 +4101,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,40,FOLLOW_29); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,43,FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_3, grammarAccess.getNodeSoftwareConstraintAAccess().getIsKeyword_0_3());
                       			
                     }
-                    // InternalVsdl.g:1340:4: ( (lv_version_4_0= ruleOSVersionE ) )
-                    // InternalVsdl.g:1341:5: (lv_version_4_0= ruleOSVersionE )
+                    // InternalVsdl.g:1619:4: ( (lv_version_4_0= ruleOSVersionE ) )
+                    // InternalVsdl.g:1620:5: (lv_version_4_0= ruleOSVersionE )
                     {
-                    // InternalVsdl.g:1341:5: (lv_version_4_0= ruleOSVersionE )
-                    // InternalVsdl.g:1342:6: lv_version_4_0= ruleOSVersionE
+                    // InternalVsdl.g:1620:5: (lv_version_4_0= ruleOSVersionE )
+                    // InternalVsdl.g:1621:6: lv_version_4_0= ruleOSVersionE
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3484,25 +4149,25 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:1361:3: (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) )
+                    // InternalVsdl.g:1640:3: (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) )
                     {
-                    // InternalVsdl.g:1361:3: (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) )
-                    // InternalVsdl.g:1362:4: otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) )
+                    // InternalVsdl.g:1640:3: (otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) ) )
+                    // InternalVsdl.g:1641:4: otherlv_5= 'node' otherlv_6= 'OS' () ( ( 'family' )=>otherlv_8= 'family' ) otherlv_9= 'is' ( (lv_family_10_0= ruleOSFamilyE ) )
                     {
-                    otherlv_5=(Token)match(input,15,FOLLOW_27); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,15,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_5, grammarAccess.getNodeSoftwareConstraintAAccess().getNodeKeyword_1_0());
                       			
                     }
-                    otherlv_6=(Token)match(input,39,FOLLOW_30); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,47,FOLLOW_34); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_6, grammarAccess.getNodeSoftwareConstraintAAccess().getOSKeyword_1_1());
                       			
                     }
-                    // InternalVsdl.g:1370:4: ()
-                    // InternalVsdl.g:1371:5: 
+                    // InternalVsdl.g:1649:4: ()
+                    // InternalVsdl.g:1650:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3514,10 +4179,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1377:4: ( ( 'family' )=>otherlv_8= 'family' )
-                    // InternalVsdl.g:1378:5: ( 'family' )=>otherlv_8= 'family'
+                    // InternalVsdl.g:1656:4: ( ( 'family' )=>otherlv_8= 'family' )
+                    // InternalVsdl.g:1657:5: ( 'family' )=>otherlv_8= 'family'
                     {
-                    otherlv_8=(Token)match(input,41,FOLLOW_28); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,48,FOLLOW_30); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_8, grammarAccess.getNodeSoftwareConstraintAAccess().getFamilyKeyword_1_3());
@@ -3526,17 +4191,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,40,FOLLOW_31); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,43,FOLLOW_35); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_9, grammarAccess.getNodeSoftwareConstraintAAccess().getIsKeyword_1_4());
                       			
                     }
-                    // InternalVsdl.g:1388:4: ( (lv_family_10_0= ruleOSFamilyE ) )
-                    // InternalVsdl.g:1389:5: (lv_family_10_0= ruleOSFamilyE )
+                    // InternalVsdl.g:1667:4: ( (lv_family_10_0= ruleOSFamilyE ) )
+                    // InternalVsdl.g:1668:5: (lv_family_10_0= ruleOSFamilyE )
                     {
-                    // InternalVsdl.g:1389:5: (lv_family_10_0= ruleOSFamilyE )
-                    // InternalVsdl.g:1390:6: lv_family_10_0= ruleOSFamilyE
+                    // InternalVsdl.g:1668:5: (lv_family_10_0= ruleOSFamilyE )
+                    // InternalVsdl.g:1669:6: lv_family_10_0= ruleOSFamilyE
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3574,28 +4239,28 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:1409:3: (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) )
+                    // InternalVsdl.g:1688:3: (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) )
                     {
-                    // InternalVsdl.g:1409:3: (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) )
-                    // InternalVsdl.g:1410:4: otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) )
+                    // InternalVsdl.g:1688:3: (otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) ) )
+                    // InternalVsdl.g:1689:4: otherlv_11= 'mounts' otherlv_12= 'software' ( (lv_software_13_0= ruleSoftwareInstallation ) )
                     {
-                    otherlv_11=(Token)match(input,42,FOLLOW_32); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,49,FOLLOW_36); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getNodeSoftwareConstraintAAccess().getMountsKeyword_2_0());
                       			
                     }
-                    otherlv_12=(Token)match(input,43,FOLLOW_3); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,50,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_12, grammarAccess.getNodeSoftwareConstraintAAccess().getSoftwareKeyword_2_1());
                       			
                     }
-                    // InternalVsdl.g:1418:4: ( (lv_software_13_0= ruleSoftwareInstallation ) )
-                    // InternalVsdl.g:1419:5: (lv_software_13_0= ruleSoftwareInstallation )
+                    // InternalVsdl.g:1697:4: ( (lv_software_13_0= ruleSoftwareInstallation ) )
+                    // InternalVsdl.g:1698:5: (lv_software_13_0= ruleSoftwareInstallation )
                     {
-                    // InternalVsdl.g:1419:5: (lv_software_13_0= ruleSoftwareInstallation )
-                    // InternalVsdl.g:1420:6: lv_software_13_0= ruleSoftwareInstallation
+                    // InternalVsdl.g:1698:5: (lv_software_13_0= ruleSoftwareInstallation )
+                    // InternalVsdl.g:1699:6: lv_software_13_0= ruleSoftwareInstallation
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3617,65 +4282,6 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       							"software",
                       							lv_software_13_0,
                       							"it.csec.xtext.Vsdl.SoftwareInstallation");
-                      						afterParserOrEnumRuleCall();
-                      					
-                    }
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 4 :
-                    // InternalVsdl.g:1439:3: (otherlv_14= 'suffers' otherlv_15= 'from' ( (lv_vulnID_16_0= ruleVulnerabilityID ) ) )
-                    {
-                    // InternalVsdl.g:1439:3: (otherlv_14= 'suffers' otherlv_15= 'from' ( (lv_vulnID_16_0= ruleVulnerabilityID ) ) )
-                    // InternalVsdl.g:1440:4: otherlv_14= 'suffers' otherlv_15= 'from' ( (lv_vulnID_16_0= ruleVulnerabilityID ) )
-                    {
-                    otherlv_14=(Token)match(input,44,FOLLOW_33); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      				newLeafNode(otherlv_14, grammarAccess.getNodeSoftwareConstraintAAccess().getSuffersKeyword_3_0());
-                      			
-                    }
-                    otherlv_15=(Token)match(input,45,FOLLOW_34); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      				newLeafNode(otherlv_15, grammarAccess.getNodeSoftwareConstraintAAccess().getFromKeyword_3_1());
-                      			
-                    }
-                    // InternalVsdl.g:1448:4: ( (lv_vulnID_16_0= ruleVulnerabilityID ) )
-                    // InternalVsdl.g:1449:5: (lv_vulnID_16_0= ruleVulnerabilityID )
-                    {
-                    // InternalVsdl.g:1449:5: (lv_vulnID_16_0= ruleVulnerabilityID )
-                    // InternalVsdl.g:1450:6: lv_vulnID_16_0= ruleVulnerabilityID
-                    {
-                    if ( state.backtracking==0 ) {
-
-                      						newCompositeNode(grammarAccess.getNodeSoftwareConstraintAAccess().getVulnIDVulnerabilityIDParserRuleCall_3_2_0());
-                      					
-                    }
-                    pushFollow(FOLLOW_2);
-                    lv_vulnID_16_0=ruleVulnerabilityID();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getNodeSoftwareConstraintARule());
-                      						}
-                      						set(
-                      							current,
-                      							"vulnID",
-                      							lv_vulnID_16_0,
-                      							"it.csec.xtext.Vsdl.VulnerabilityID");
                       						afterParserOrEnumRuleCall();
                       					
                     }
@@ -3715,94 +4321,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleNodeSoftwareConstraintA"
 
 
-    // $ANTLR start "entryRuleVulnerabilityID"
-    // InternalVsdl.g:1472:1: entryRuleVulnerabilityID returns [String current=null] : iv_ruleVulnerabilityID= ruleVulnerabilityID EOF ;
-    public final String entryRuleVulnerabilityID() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleVulnerabilityID = null;
-
-
-        try {
-            // InternalVsdl.g:1472:55: (iv_ruleVulnerabilityID= ruleVulnerabilityID EOF )
-            // InternalVsdl.g:1473:2: iv_ruleVulnerabilityID= ruleVulnerabilityID EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getVulnerabilityIDRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            iv_ruleVulnerabilityID=ruleVulnerabilityID();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleVulnerabilityID.getText(); 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return current;
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleVulnerabilityID"
-
-
-    // $ANTLR start "ruleVulnerabilityID"
-    // InternalVsdl.g:1479:1: ruleVulnerabilityID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
-    public final AntlrDatatypeRuleToken ruleVulnerabilityID() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token this_STRING_0=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalVsdl.g:1485:2: (this_STRING_0= RULE_STRING )
-            // InternalVsdl.g:1486:2: this_STRING_0= RULE_STRING
-            {
-            this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              		current.merge(this_STRING_0);
-              	
-            }
-            if ( state.backtracking==0 ) {
-
-              		newLeafNode(this_STRING_0, grammarAccess.getVulnerabilityIDAccess().getSTRINGTerminalRuleCall());
-              	
-            }
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleVulnerabilityID"
-
-
     // $ANTLR start "entryRuleSoftwareInstallation"
-    // InternalVsdl.g:1496:1: entryRuleSoftwareInstallation returns [EObject current=null] : iv_ruleSoftwareInstallation= ruleSoftwareInstallation EOF ;
+    // InternalVsdl.g:1721:1: entryRuleSoftwareInstallation returns [EObject current=null] : iv_ruleSoftwareInstallation= ruleSoftwareInstallation EOF ;
     public final EObject entryRuleSoftwareInstallation() throws RecognitionException {
         EObject current = null;
 
@@ -3810,8 +4330,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1496:61: (iv_ruleSoftwareInstallation= ruleSoftwareInstallation EOF )
-            // InternalVsdl.g:1497:2: iv_ruleSoftwareInstallation= ruleSoftwareInstallation EOF
+            // InternalVsdl.g:1721:61: (iv_ruleSoftwareInstallation= ruleSoftwareInstallation EOF )
+            // InternalVsdl.g:1722:2: iv_ruleSoftwareInstallation= ruleSoftwareInstallation EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSoftwareInstallationRule()); 
@@ -3842,7 +4362,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSoftwareInstallation"
-    // InternalVsdl.g:1503:1: ruleSoftwareInstallation returns [EObject current=null] : ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? ) ;
+    // InternalVsdl.g:1728:1: ruleSoftwareInstallation returns [EObject current=null] : ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? ) ;
     public final EObject ruleSoftwareInstallation() throws RecognitionException {
         EObject current = null;
 
@@ -3864,19 +4384,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1509:2: ( ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? ) )
-            // InternalVsdl.g:1510:2: ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? )
+            // InternalVsdl.g:1734:2: ( ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? ) )
+            // InternalVsdl.g:1735:2: ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? )
             {
-            // InternalVsdl.g:1510:2: ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? )
-            // InternalVsdl.g:1511:3: ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )?
+            // InternalVsdl.g:1735:2: ( ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )? )
+            // InternalVsdl.g:1736:3: ( (lv_softwareID_0_0= RULE_ID ) ) (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )? (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )? (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )?
             {
-            // InternalVsdl.g:1511:3: ( (lv_softwareID_0_0= RULE_ID ) )
-            // InternalVsdl.g:1512:4: (lv_softwareID_0_0= RULE_ID )
+            // InternalVsdl.g:1736:3: ( (lv_softwareID_0_0= RULE_ID ) )
+            // InternalVsdl.g:1737:4: (lv_softwareID_0_0= RULE_ID )
             {
-            // InternalVsdl.g:1512:4: (lv_softwareID_0_0= RULE_ID )
-            // InternalVsdl.g:1513:5: lv_softwareID_0_0= RULE_ID
+            // InternalVsdl.g:1737:4: (lv_softwareID_0_0= RULE_ID )
+            // InternalVsdl.g:1738:5: lv_softwareID_0_0= RULE_ID
             {
-            lv_softwareID_0_0=(Token)match(input,RULE_ID,FOLLOW_35); if (state.failed) return current;
+            lv_softwareID_0_0=(Token)match(input,RULE_ID,FOLLOW_37); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_softwareID_0_0, grammarAccess.getSoftwareInstallationAccess().getSoftwareIDIDTerminalRuleCall_0_0());
@@ -3900,35 +4420,35 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVsdl.g:1529:3: (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalVsdl.g:1754:3: (otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) ) )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==46) ) {
-                alt12=1;
+            if ( (LA13_0==51) ) {
+                alt13=1;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // InternalVsdl.g:1530:4: otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) )
+                    // InternalVsdl.g:1755:4: otherlv_1= 'version' ( (lv_version_2_0= ruleVersionNumber ) )
                     {
-                    otherlv_1=(Token)match(input,46,FOLLOW_5); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,51,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_1, grammarAccess.getSoftwareInstallationAccess().getVersionKeyword_1_0());
                       			
                     }
-                    // InternalVsdl.g:1534:4: ( (lv_version_2_0= ruleVersionNumber ) )
-                    // InternalVsdl.g:1535:5: (lv_version_2_0= ruleVersionNumber )
+                    // InternalVsdl.g:1759:4: ( (lv_version_2_0= ruleVersionNumber ) )
+                    // InternalVsdl.g:1760:5: (lv_version_2_0= ruleVersionNumber )
                     {
-                    // InternalVsdl.g:1535:5: (lv_version_2_0= ruleVersionNumber )
-                    // InternalVsdl.g:1536:6: lv_version_2_0= ruleVersionNumber
+                    // InternalVsdl.g:1760:5: (lv_version_2_0= ruleVersionNumber )
+                    // InternalVsdl.g:1761:6: lv_version_2_0= ruleVersionNumber
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getSoftwareInstallationAccess().getVersionVersionNumberParserRuleCall_1_1_0());
                       					
                     }
-                    pushFollow(FOLLOW_36);
+                    pushFollow(FOLLOW_38);
                     lv_version_2_0=ruleVersionNumber();
 
                     state._fsp--;
@@ -3958,35 +4478,35 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVsdl.g:1554:3: (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalVsdl.g:1779:3: (otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )* )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==47) ) {
-                alt14=1;
+            if ( (LA15_0==52) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalVsdl.g:1555:4: otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )*
+                    // InternalVsdl.g:1780:4: otherlv_3= 'with' ( (lv_dependencies_4_0= ruleSoftwareDependency ) ) (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )*
                     {
-                    otherlv_3=(Token)match(input,47,FOLLOW_3); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,52,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_3, grammarAccess.getSoftwareInstallationAccess().getWithKeyword_2_0());
                       			
                     }
-                    // InternalVsdl.g:1559:4: ( (lv_dependencies_4_0= ruleSoftwareDependency ) )
-                    // InternalVsdl.g:1560:5: (lv_dependencies_4_0= ruleSoftwareDependency )
+                    // InternalVsdl.g:1784:4: ( (lv_dependencies_4_0= ruleSoftwareDependency ) )
+                    // InternalVsdl.g:1785:5: (lv_dependencies_4_0= ruleSoftwareDependency )
                     {
-                    // InternalVsdl.g:1560:5: (lv_dependencies_4_0= ruleSoftwareDependency )
-                    // InternalVsdl.g:1561:6: lv_dependencies_4_0= ruleSoftwareDependency
+                    // InternalVsdl.g:1785:5: (lv_dependencies_4_0= ruleSoftwareDependency )
+                    // InternalVsdl.g:1786:6: lv_dependencies_4_0= ruleSoftwareDependency
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getSoftwareInstallationAccess().getDependenciesSoftwareDependencyParserRuleCall_2_1_0());
                       					
                     }
-                    pushFollow(FOLLOW_37);
+                    pushFollow(FOLLOW_39);
                     lv_dependencies_4_0=ruleSoftwareDependency();
 
                     state._fsp--;
@@ -4010,39 +4530,39 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:1578:4: (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )*
-                    loop13:
+                    // InternalVsdl.g:1803:4: (otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) ) )*
+                    loop14:
                     do {
-                        int alt13=2;
-                        int LA13_0 = input.LA(1);
+                        int alt14=2;
+                        int LA14_0 = input.LA(1);
 
-                        if ( (LA13_0==48) ) {
-                            alt13=1;
+                        if ( (LA14_0==53) ) {
+                            alt14=1;
                         }
 
 
-                        switch (alt13) {
+                        switch (alt14) {
                     	case 1 :
-                    	    // InternalVsdl.g:1579:5: otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) )
+                    	    // InternalVsdl.g:1804:5: otherlv_5= ',' ( (lv_dependencies_6_0= ruleSoftwareDependency ) )
                     	    {
-                    	    otherlv_5=(Token)match(input,48,FOLLOW_3); if (state.failed) return current;
+                    	    otherlv_5=(Token)match(input,53,FOLLOW_3); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      					newLeafNode(otherlv_5, grammarAccess.getSoftwareInstallationAccess().getCommaKeyword_2_2_0());
                     	      				
                     	    }
-                    	    // InternalVsdl.g:1583:5: ( (lv_dependencies_6_0= ruleSoftwareDependency ) )
-                    	    // InternalVsdl.g:1584:6: (lv_dependencies_6_0= ruleSoftwareDependency )
+                    	    // InternalVsdl.g:1808:5: ( (lv_dependencies_6_0= ruleSoftwareDependency ) )
+                    	    // InternalVsdl.g:1809:6: (lv_dependencies_6_0= ruleSoftwareDependency )
                     	    {
-                    	    // InternalVsdl.g:1584:6: (lv_dependencies_6_0= ruleSoftwareDependency )
-                    	    // InternalVsdl.g:1585:7: lv_dependencies_6_0= ruleSoftwareDependency
+                    	    // InternalVsdl.g:1809:6: (lv_dependencies_6_0= ruleSoftwareDependency )
+                    	    // InternalVsdl.g:1810:7: lv_dependencies_6_0= ruleSoftwareDependency
                     	    {
                     	    if ( state.backtracking==0 ) {
 
                     	      							newCompositeNode(grammarAccess.getSoftwareInstallationAccess().getDependenciesSoftwareDependencyParserRuleCall_2_2_1_0());
                     	      						
                     	    }
-                    	    pushFollow(FOLLOW_37);
+                    	    pushFollow(FOLLOW_39);
                     	    lv_dependencies_6_0=ruleSoftwareDependency();
 
                     	    state._fsp--;
@@ -4071,7 +4591,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop13;
+                    	    break loop14;
                         }
                     } while (true);
 
@@ -4081,28 +4601,28 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVsdl.g:1604:3: (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalVsdl.g:1829:3: (otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==49) ) {
-                alt15=1;
+            if ( (LA16_0==54) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // InternalVsdl.g:1605:4: otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) )
+                    // InternalVsdl.g:1830:4: otherlv_7= 'config' ( (lv_config_8_0= ruleConfigOptions ) )
                     {
-                    otherlv_7=(Token)match(input,49,FOLLOW_6); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,54,FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_7, grammarAccess.getSoftwareInstallationAccess().getConfigKeyword_3_0());
                       			
                     }
-                    // InternalVsdl.g:1609:4: ( (lv_config_8_0= ruleConfigOptions ) )
-                    // InternalVsdl.g:1610:5: (lv_config_8_0= ruleConfigOptions )
+                    // InternalVsdl.g:1834:4: ( (lv_config_8_0= ruleConfigOptions ) )
+                    // InternalVsdl.g:1835:5: (lv_config_8_0= ruleConfigOptions )
                     {
-                    // InternalVsdl.g:1610:5: (lv_config_8_0= ruleConfigOptions )
-                    // InternalVsdl.g:1611:6: lv_config_8_0= ruleConfigOptions
+                    // InternalVsdl.g:1835:5: (lv_config_8_0= ruleConfigOptions )
+                    // InternalVsdl.g:1836:6: lv_config_8_0= ruleConfigOptions
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4164,7 +4684,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionNumber"
-    // InternalVsdl.g:1633:1: entryRuleVersionNumber returns [String current=null] : iv_ruleVersionNumber= ruleVersionNumber EOF ;
+    // InternalVsdl.g:1858:1: entryRuleVersionNumber returns [String current=null] : iv_ruleVersionNumber= ruleVersionNumber EOF ;
     public final String entryRuleVersionNumber() throws RecognitionException {
         String current = null;
 
@@ -4172,8 +4692,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1633:53: (iv_ruleVersionNumber= ruleVersionNumber EOF )
-            // InternalVsdl.g:1634:2: iv_ruleVersionNumber= ruleVersionNumber EOF
+            // InternalVsdl.g:1858:53: (iv_ruleVersionNumber= ruleVersionNumber EOF )
+            // InternalVsdl.g:1859:2: iv_ruleVersionNumber= ruleVersionNumber EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionNumberRule()); 
@@ -4204,7 +4724,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionNumber"
-    // InternalVsdl.g:1640:1: ruleVersionNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* ) ;
+    // InternalVsdl.g:1865:1: ruleVersionNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* ) ;
     public final AntlrDatatypeRuleToken ruleVersionNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4216,13 +4736,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1646:2: ( (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* ) )
-            // InternalVsdl.g:1647:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* )
+            // InternalVsdl.g:1871:2: ( (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* ) )
+            // InternalVsdl.g:1872:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* )
             {
-            // InternalVsdl.g:1647:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* )
-            // InternalVsdl.g:1648:3: this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )*
+            // InternalVsdl.g:1872:2: (this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )* )
+            // InternalVsdl.g:1873:3: this_INT_0= RULE_INT (kw= '.' this_INT_2= RULE_INT )*
             {
-            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_38); if (state.failed) return current;
+            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_40); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_INT_0);
@@ -4233,29 +4753,29 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_INT_0, grammarAccess.getVersionNumberAccess().getINTTerminalRuleCall_0());
               		
             }
-            // InternalVsdl.g:1655:3: (kw= '.' this_INT_2= RULE_INT )*
-            loop16:
+            // InternalVsdl.g:1880:3: (kw= '.' this_INT_2= RULE_INT )*
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==50) ) {
-                    alt16=1;
+                if ( (LA17_0==55) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
-            	    // InternalVsdl.g:1656:4: kw= '.' this_INT_2= RULE_INT
+            	    // InternalVsdl.g:1881:4: kw= '.' this_INT_2= RULE_INT
             	    {
-            	    kw=(Token)match(input,50,FOLLOW_5); if (state.failed) return current;
+            	    kw=(Token)match(input,55,FOLLOW_5); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getVersionNumberAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_38); if (state.failed) return current;
+            	    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_40); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_INT_2);
@@ -4271,7 +4791,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
@@ -4300,7 +4820,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSoftwareDependency"
-    // InternalVsdl.g:1673:1: entryRuleSoftwareDependency returns [EObject current=null] : iv_ruleSoftwareDependency= ruleSoftwareDependency EOF ;
+    // InternalVsdl.g:1898:1: entryRuleSoftwareDependency returns [EObject current=null] : iv_ruleSoftwareDependency= ruleSoftwareDependency EOF ;
     public final EObject entryRuleSoftwareDependency() throws RecognitionException {
         EObject current = null;
 
@@ -4308,8 +4828,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1673:59: (iv_ruleSoftwareDependency= ruleSoftwareDependency EOF )
-            // InternalVsdl.g:1674:2: iv_ruleSoftwareDependency= ruleSoftwareDependency EOF
+            // InternalVsdl.g:1898:59: (iv_ruleSoftwareDependency= ruleSoftwareDependency EOF )
+            // InternalVsdl.g:1899:2: iv_ruleSoftwareDependency= ruleSoftwareDependency EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSoftwareDependencyRule()); 
@@ -4340,7 +4860,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSoftwareDependency"
-    // InternalVsdl.g:1680:1: ruleSoftwareDependency returns [EObject current=null] : ( (lv_dependencyID_0_0= RULE_ID ) ) ;
+    // InternalVsdl.g:1905:1: ruleSoftwareDependency returns [EObject current=null] : ( (lv_dependencyID_0_0= RULE_ID ) ) ;
     public final EObject ruleSoftwareDependency() throws RecognitionException {
         EObject current = null;
 
@@ -4350,14 +4870,14 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1686:2: ( ( (lv_dependencyID_0_0= RULE_ID ) ) )
-            // InternalVsdl.g:1687:2: ( (lv_dependencyID_0_0= RULE_ID ) )
+            // InternalVsdl.g:1911:2: ( ( (lv_dependencyID_0_0= RULE_ID ) ) )
+            // InternalVsdl.g:1912:2: ( (lv_dependencyID_0_0= RULE_ID ) )
             {
-            // InternalVsdl.g:1687:2: ( (lv_dependencyID_0_0= RULE_ID ) )
-            // InternalVsdl.g:1688:3: (lv_dependencyID_0_0= RULE_ID )
+            // InternalVsdl.g:1912:2: ( (lv_dependencyID_0_0= RULE_ID ) )
+            // InternalVsdl.g:1913:3: (lv_dependencyID_0_0= RULE_ID )
             {
-            // InternalVsdl.g:1688:3: (lv_dependencyID_0_0= RULE_ID )
-            // InternalVsdl.g:1689:4: lv_dependencyID_0_0= RULE_ID
+            // InternalVsdl.g:1913:3: (lv_dependencyID_0_0= RULE_ID )
+            // InternalVsdl.g:1914:4: lv_dependencyID_0_0= RULE_ID
             {
             lv_dependencyID_0_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4405,7 +4925,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConfigOptions"
-    // InternalVsdl.g:1708:1: entryRuleConfigOptions returns [EObject current=null] : iv_ruleConfigOptions= ruleConfigOptions EOF ;
+    // InternalVsdl.g:1933:1: entryRuleConfigOptions returns [EObject current=null] : iv_ruleConfigOptions= ruleConfigOptions EOF ;
     public final EObject entryRuleConfigOptions() throws RecognitionException {
         EObject current = null;
 
@@ -4413,8 +4933,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1708:54: (iv_ruleConfigOptions= ruleConfigOptions EOF )
-            // InternalVsdl.g:1709:2: iv_ruleConfigOptions= ruleConfigOptions EOF
+            // InternalVsdl.g:1933:54: (iv_ruleConfigOptions= ruleConfigOptions EOF )
+            // InternalVsdl.g:1934:2: iv_ruleConfigOptions= ruleConfigOptions EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConfigOptionsRule()); 
@@ -4445,7 +4965,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConfigOptions"
-    // InternalVsdl.g:1715:1: ruleConfigOptions returns [EObject current=null] : (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' ) ;
+    // InternalVsdl.g:1940:1: ruleConfigOptions returns [EObject current=null] : (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' ) ;
     public final EObject ruleConfigOptions() throws RecognitionException {
         EObject current = null;
 
@@ -4461,11 +4981,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1721:2: ( (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' ) )
-            // InternalVsdl.g:1722:2: (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' )
+            // InternalVsdl.g:1946:2: ( (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' ) )
+            // InternalVsdl.g:1947:2: (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' )
             {
-            // InternalVsdl.g:1722:2: (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' )
-            // InternalVsdl.g:1723:3: otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}'
+            // InternalVsdl.g:1947:2: (otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}' )
+            // InternalVsdl.g:1948:3: otherlv_0= '{' ( (lv_configPairs_1_0= ruleConfigPair ) ) (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )* otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,13,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4473,18 +4993,18 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getConfigOptionsAccess().getLeftCurlyBracketKeyword_0());
               		
             }
-            // InternalVsdl.g:1727:3: ( (lv_configPairs_1_0= ruleConfigPair ) )
-            // InternalVsdl.g:1728:4: (lv_configPairs_1_0= ruleConfigPair )
+            // InternalVsdl.g:1952:3: ( (lv_configPairs_1_0= ruleConfigPair ) )
+            // InternalVsdl.g:1953:4: (lv_configPairs_1_0= ruleConfigPair )
             {
-            // InternalVsdl.g:1728:4: (lv_configPairs_1_0= ruleConfigPair )
-            // InternalVsdl.g:1729:5: lv_configPairs_1_0= ruleConfigPair
+            // InternalVsdl.g:1953:4: (lv_configPairs_1_0= ruleConfigPair )
+            // InternalVsdl.g:1954:5: lv_configPairs_1_0= ruleConfigPair
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getConfigOptionsAccess().getConfigPairsConfigPairParserRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_41);
             lv_configPairs_1_0=ruleConfigPair();
 
             state._fsp--;
@@ -4508,39 +5028,39 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVsdl.g:1746:3: (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )*
-            loop17:
+            // InternalVsdl.g:1971:3: (otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) ) )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==48) ) {
-                    alt17=1;
+                if ( (LA18_0==53) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // InternalVsdl.g:1747:4: otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) )
+            	    // InternalVsdl.g:1972:4: otherlv_2= ',' ( (lv_configPairs_3_0= ruleConfigPair ) )
             	    {
-            	    otherlv_2=(Token)match(input,48,FOLLOW_3); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,53,FOLLOW_3); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				newLeafNode(otherlv_2, grammarAccess.getConfigOptionsAccess().getCommaKeyword_2_0());
             	      			
             	    }
-            	    // InternalVsdl.g:1751:4: ( (lv_configPairs_3_0= ruleConfigPair ) )
-            	    // InternalVsdl.g:1752:5: (lv_configPairs_3_0= ruleConfigPair )
+            	    // InternalVsdl.g:1976:4: ( (lv_configPairs_3_0= ruleConfigPair ) )
+            	    // InternalVsdl.g:1977:5: (lv_configPairs_3_0= ruleConfigPair )
             	    {
-            	    // InternalVsdl.g:1752:5: (lv_configPairs_3_0= ruleConfigPair )
-            	    // InternalVsdl.g:1753:6: lv_configPairs_3_0= ruleConfigPair
+            	    // InternalVsdl.g:1977:5: (lv_configPairs_3_0= ruleConfigPair )
+            	    // InternalVsdl.g:1978:6: lv_configPairs_3_0= ruleConfigPair
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getConfigOptionsAccess().getConfigPairsConfigPairParserRuleCall_2_1_0());
             	      					
             	    }
-            	    pushFollow(FOLLOW_39);
+            	    pushFollow(FOLLOW_41);
             	    lv_configPairs_3_0=ruleConfigPair();
 
             	    state._fsp--;
@@ -4569,7 +5089,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
@@ -4604,7 +5124,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConfigPair"
-    // InternalVsdl.g:1779:1: entryRuleConfigPair returns [EObject current=null] : iv_ruleConfigPair= ruleConfigPair EOF ;
+    // InternalVsdl.g:2004:1: entryRuleConfigPair returns [EObject current=null] : iv_ruleConfigPair= ruleConfigPair EOF ;
     public final EObject entryRuleConfigPair() throws RecognitionException {
         EObject current = null;
 
@@ -4612,8 +5132,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1779:51: (iv_ruleConfigPair= ruleConfigPair EOF )
-            // InternalVsdl.g:1780:2: iv_ruleConfigPair= ruleConfigPair EOF
+            // InternalVsdl.g:2004:51: (iv_ruleConfigPair= ruleConfigPair EOF )
+            // InternalVsdl.g:2005:2: iv_ruleConfigPair= ruleConfigPair EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConfigPairRule()); 
@@ -4644,7 +5164,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConfigPair"
-    // InternalVsdl.g:1786:1: ruleConfigPair returns [EObject current=null] : ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) ;
+    // InternalVsdl.g:2011:1: ruleConfigPair returns [EObject current=null] : ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) ;
     public final EObject ruleConfigPair() throws RecognitionException {
         EObject current = null;
 
@@ -4656,19 +5176,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1792:2: ( ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) )
-            // InternalVsdl.g:1793:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
+            // InternalVsdl.g:2017:2: ( ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) )
+            // InternalVsdl.g:2018:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
             {
-            // InternalVsdl.g:1793:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
-            // InternalVsdl.g:1794:3: ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) )
+            // InternalVsdl.g:2018:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
+            // InternalVsdl.g:2019:3: ( (lv_key_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) )
             {
-            // InternalVsdl.g:1794:3: ( (lv_key_0_0= RULE_ID ) )
-            // InternalVsdl.g:1795:4: (lv_key_0_0= RULE_ID )
+            // InternalVsdl.g:2019:3: ( (lv_key_0_0= RULE_ID ) )
+            // InternalVsdl.g:2020:4: (lv_key_0_0= RULE_ID )
             {
-            // InternalVsdl.g:1795:4: (lv_key_0_0= RULE_ID )
-            // InternalVsdl.g:1796:5: lv_key_0_0= RULE_ID
+            // InternalVsdl.g:2020:4: (lv_key_0_0= RULE_ID )
+            // InternalVsdl.g:2021:5: lv_key_0_0= RULE_ID
             {
-            lv_key_0_0=(Token)match(input,RULE_ID,FOLLOW_40); if (state.failed) return current;
+            lv_key_0_0=(Token)match(input,RULE_ID,FOLLOW_42); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_key_0_0, grammarAccess.getConfigPairAccess().getKeyIDTerminalRuleCall_0_0());
@@ -4692,17 +5212,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,51,FOLLOW_34); if (state.failed) return current;
+            otherlv_1=(Token)match(input,56,FOLLOW_43); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getConfigPairAccess().getEqualsSignKeyword_1());
               		
             }
-            // InternalVsdl.g:1816:3: ( (lv_value_2_0= RULE_STRING ) )
-            // InternalVsdl.g:1817:4: (lv_value_2_0= RULE_STRING )
+            // InternalVsdl.g:2041:3: ( (lv_value_2_0= RULE_STRING ) )
+            // InternalVsdl.g:2042:4: (lv_value_2_0= RULE_STRING )
             {
-            // InternalVsdl.g:1817:4: (lv_value_2_0= RULE_STRING )
-            // InternalVsdl.g:1818:5: lv_value_2_0= RULE_STRING
+            // InternalVsdl.g:2042:4: (lv_value_2_0= RULE_STRING )
+            // InternalVsdl.g:2043:5: lv_value_2_0= RULE_STRING
             {
             lv_value_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4753,7 +5273,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNetwork"
-    // InternalVsdl.g:1838:1: entryRuleNetwork returns [EObject current=null] : iv_ruleNetwork= ruleNetwork EOF ;
+    // InternalVsdl.g:2063:1: entryRuleNetwork returns [EObject current=null] : iv_ruleNetwork= ruleNetwork EOF ;
     public final EObject entryRuleNetwork() throws RecognitionException {
         EObject current = null;
 
@@ -4761,8 +5281,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1838:48: (iv_ruleNetwork= ruleNetwork EOF )
-            // InternalVsdl.g:1839:2: iv_ruleNetwork= ruleNetwork EOF
+            // InternalVsdl.g:2063:48: (iv_ruleNetwork= ruleNetwork EOF )
+            // InternalVsdl.g:2064:2: iv_ruleNetwork= ruleNetwork EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNetworkRule()); 
@@ -4793,7 +5313,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNetwork"
-    // InternalVsdl.g:1845:1: ruleNetwork returns [EObject current=null] : (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' ) ;
+    // InternalVsdl.g:2070:1: ruleNetwork returns [EObject current=null] : (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' ) ;
     public final EObject ruleNetwork() throws RecognitionException {
         EObject current = null;
 
@@ -4808,23 +5328,23 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1851:2: ( (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' ) )
-            // InternalVsdl.g:1852:2: (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' )
+            // InternalVsdl.g:2076:2: ( (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' ) )
+            // InternalVsdl.g:2077:2: (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' )
             {
-            // InternalVsdl.g:1852:2: (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' )
-            // InternalVsdl.g:1853:3: otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}'
+            // InternalVsdl.g:2077:2: (otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}' )
+            // InternalVsdl.g:2078:3: otherlv_0= 'network' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_constraints_3_0= ruleNetworkConstraint ) )* otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,52,FOLLOW_3); if (state.failed) return current;
+            otherlv_0=(Token)match(input,57,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getNetworkAccess().getNetworkKeyword_0());
               		
             }
-            // InternalVsdl.g:1857:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalVsdl.g:1858:4: (lv_name_1_0= RULE_ID )
+            // InternalVsdl.g:2082:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalVsdl.g:2083:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalVsdl.g:1858:4: (lv_name_1_0= RULE_ID )
-            // InternalVsdl.g:1859:5: lv_name_1_0= RULE_ID
+            // InternalVsdl.g:2083:4: (lv_name_1_0= RULE_ID )
+            // InternalVsdl.g:2084:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4850,36 +5370,36 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_41); if (state.failed) return current;
+            otherlv_2=(Token)match(input,13,FOLLOW_44); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getNetworkAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalVsdl.g:1879:3: ( (lv_constraints_3_0= ruleNetworkConstraint ) )*
-            loop18:
+            // InternalVsdl.g:2104:3: ( (lv_constraints_3_0= ruleNetworkConstraint ) )*
+            loop19:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA18_0==15||LA18_0==17||(LA18_0>=22 && LA18_0<=23)||LA18_0==53||LA18_0==55) ) {
-                    alt18=1;
+                if ( (LA19_0==15||LA19_0==17||(LA19_0>=22 && LA19_0<=23)||LA19_0==45||LA19_0==58) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt19) {
             	case 1 :
-            	    // InternalVsdl.g:1880:4: (lv_constraints_3_0= ruleNetworkConstraint )
+            	    // InternalVsdl.g:2105:4: (lv_constraints_3_0= ruleNetworkConstraint )
             	    {
-            	    // InternalVsdl.g:1880:4: (lv_constraints_3_0= ruleNetworkConstraint )
-            	    // InternalVsdl.g:1881:5: lv_constraints_3_0= ruleNetworkConstraint
+            	    // InternalVsdl.g:2105:4: (lv_constraints_3_0= ruleNetworkConstraint )
+            	    // InternalVsdl.g:2106:5: lv_constraints_3_0= ruleNetworkConstraint
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      					newCompositeNode(grammarAccess.getNetworkAccess().getConstraintsNetworkConstraintParserRuleCall_3_0());
             	      				
             	    }
-            	    pushFollow(FOLLOW_41);
+            	    pushFollow(FOLLOW_44);
             	    lv_constraints_3_0=ruleNetworkConstraint();
 
             	    state._fsp--;
@@ -4905,7 +5425,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop18;
+            	    break loop19;
                 }
             } while (true);
 
@@ -4940,7 +5460,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNetworkConstraint"
-    // InternalVsdl.g:1906:1: entryRuleNetworkConstraint returns [EObject current=null] : iv_ruleNetworkConstraint= ruleNetworkConstraint EOF ;
+    // InternalVsdl.g:2131:1: entryRuleNetworkConstraint returns [EObject current=null] : iv_ruleNetworkConstraint= ruleNetworkConstraint EOF ;
     public final EObject entryRuleNetworkConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -4948,8 +5468,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1906:58: (iv_ruleNetworkConstraint= ruleNetworkConstraint EOF )
-            // InternalVsdl.g:1907:2: iv_ruleNetworkConstraint= ruleNetworkConstraint EOF
+            // InternalVsdl.g:2131:58: (iv_ruleNetworkConstraint= ruleNetworkConstraint EOF )
+            // InternalVsdl.g:2132:2: iv_ruleNetworkConstraint= ruleNetworkConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNetworkConstraintRule()); 
@@ -4980,7 +5500,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNetworkConstraint"
-    // InternalVsdl.g:1913:1: ruleNetworkConstraint returns [EObject current=null] : ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) ) ;
+    // InternalVsdl.g:2138:1: ruleNetworkConstraint returns [EObject current=null] : ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) ) ;
     public final EObject ruleNetworkConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -4995,32 +5515,32 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1919:2: ( ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) ) )
-            // InternalVsdl.g:1920:2: ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) )
+            // InternalVsdl.g:2144:2: ( ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) ) )
+            // InternalVsdl.g:2145:2: ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) )
             {
-            // InternalVsdl.g:1920:2: ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // InternalVsdl.g:2145:2: ( (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' ) | (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' ) )
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==17) ) {
-                alt19=1;
+            if ( (LA20_0==17) ) {
+                alt20=1;
             }
-            else if ( (LA19_0==15||(LA19_0>=22 && LA19_0<=23)||LA19_0==53||LA19_0==55) ) {
-                alt19=2;
+            else if ( (LA20_0==15||(LA20_0>=22 && LA20_0<=23)||LA20_0==45||LA20_0==58) ) {
+                alt20=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
-                    // InternalVsdl.g:1921:3: (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' )
+                    // InternalVsdl.g:2146:3: (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' )
                     {
-                    // InternalVsdl.g:1921:3: (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' )
-                    // InternalVsdl.g:1922:4: this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';'
+                    // InternalVsdl.g:2146:3: (this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';' )
+                    // InternalVsdl.g:2147:4: this_GuardedNetworkConstraint_0= ruleGuardedNetworkConstraint otherlv_1= ';'
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5051,10 +5571,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:1936:3: (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' )
+                    // InternalVsdl.g:2161:3: (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' )
                     {
-                    // InternalVsdl.g:1936:3: (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' )
-                    // InternalVsdl.g:1937:4: this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';'
+                    // InternalVsdl.g:2161:3: (this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';' )
+                    // InternalVsdl.g:2162:4: this_SimpleNetworkConstraint_2= ruleSimpleNetworkConstraint otherlv_3= ';'
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5109,7 +5629,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGuardedNetworkConstraint"
-    // InternalVsdl.g:1954:1: entryRuleGuardedNetworkConstraint returns [EObject current=null] : iv_ruleGuardedNetworkConstraint= ruleGuardedNetworkConstraint EOF ;
+    // InternalVsdl.g:2179:1: entryRuleGuardedNetworkConstraint returns [EObject current=null] : iv_ruleGuardedNetworkConstraint= ruleGuardedNetworkConstraint EOF ;
     public final EObject entryRuleGuardedNetworkConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -5117,8 +5637,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:1954:65: (iv_ruleGuardedNetworkConstraint= ruleGuardedNetworkConstraint EOF )
-            // InternalVsdl.g:1955:2: iv_ruleGuardedNetworkConstraint= ruleGuardedNetworkConstraint EOF
+            // InternalVsdl.g:2179:65: (iv_ruleGuardedNetworkConstraint= ruleGuardedNetworkConstraint EOF )
+            // InternalVsdl.g:2180:2: iv_ruleGuardedNetworkConstraint= ruleGuardedNetworkConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGuardedNetworkConstraintRule()); 
@@ -5149,7 +5669,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGuardedNetworkConstraint"
-    // InternalVsdl.g:1961:1: ruleGuardedNetworkConstraint returns [EObject current=null] : (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) ) ;
+    // InternalVsdl.g:2186:1: ruleGuardedNetworkConstraint returns [EObject current=null] : (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) ) ;
     public final EObject ruleGuardedNetworkConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -5165,11 +5685,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:1967:2: ( (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) ) )
-            // InternalVsdl.g:1968:2: (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) )
+            // InternalVsdl.g:2192:2: ( (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) ) )
+            // InternalVsdl.g:2193:2: (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) )
             {
-            // InternalVsdl.g:1968:2: (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) )
-            // InternalVsdl.g:1969:3: otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) )
+            // InternalVsdl.g:2193:2: (otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) ) )
+            // InternalVsdl.g:2194:3: otherlv_0= '[' ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) ) otherlv_2= ']' otherlv_3= '->' ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) )
             {
             otherlv_0=(Token)match(input,17,FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5177,11 +5697,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGuardedNetworkConstraintAccess().getLeftSquareBracketKeyword_0());
               		
             }
-            // InternalVsdl.g:1973:3: ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) )
-            // InternalVsdl.g:1974:4: (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint )
+            // InternalVsdl.g:2198:3: ( (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint ) )
+            // InternalVsdl.g:2199:4: (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint )
             {
-            // InternalVsdl.g:1974:4: (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint )
-            // InternalVsdl.g:1975:5: lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint
+            // InternalVsdl.g:2199:4: (lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint )
+            // InternalVsdl.g:2200:5: lv_networktriggerconstraint_1_0= ruleUpdateTriggerConstraint
             {
             if ( state.backtracking==0 ) {
 
@@ -5218,17 +5738,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGuardedNetworkConstraintAccess().getRightSquareBracketKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,19,FOLLOW_42); if (state.failed) return current;
+            otherlv_3=(Token)match(input,19,FOLLOW_45); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGuardedNetworkConstraintAccess().getHyphenMinusGreaterThanSignKeyword_3());
               		
             }
-            // InternalVsdl.g:2000:3: ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) )
-            // InternalVsdl.g:2001:4: (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint )
+            // InternalVsdl.g:2225:3: ( (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint ) )
+            // InternalVsdl.g:2226:4: (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint )
             {
-            // InternalVsdl.g:2001:4: (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint )
-            // InternalVsdl.g:2002:5: lv_networkconstraint_4_0= ruleSimpleNetworkConstraint
+            // InternalVsdl.g:2226:4: (lv_networkconstraint_4_0= ruleSimpleNetworkConstraint )
+            // InternalVsdl.g:2227:5: lv_networkconstraint_4_0= ruleSimpleNetworkConstraint
             {
             if ( state.backtracking==0 ) {
 
@@ -5284,7 +5804,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleNetworkConstraint"
-    // InternalVsdl.g:2023:1: entryRuleSimpleNetworkConstraint returns [EObject current=null] : iv_ruleSimpleNetworkConstraint= ruleSimpleNetworkConstraint EOF ;
+    // InternalVsdl.g:2248:1: entryRuleSimpleNetworkConstraint returns [EObject current=null] : iv_ruleSimpleNetworkConstraint= ruleSimpleNetworkConstraint EOF ;
     public final EObject entryRuleSimpleNetworkConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -5292,8 +5812,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2023:64: (iv_ruleSimpleNetworkConstraint= ruleSimpleNetworkConstraint EOF )
-            // InternalVsdl.g:2024:2: iv_ruleSimpleNetworkConstraint= ruleSimpleNetworkConstraint EOF
+            // InternalVsdl.g:2248:64: (iv_ruleSimpleNetworkConstraint= ruleSimpleNetworkConstraint EOF )
+            // InternalVsdl.g:2249:2: iv_ruleSimpleNetworkConstraint= ruleSimpleNetworkConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSimpleNetworkConstraintRule()); 
@@ -5324,7 +5844,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleNetworkConstraint"
-    // InternalVsdl.g:2030:1: ruleSimpleNetworkConstraint returns [EObject current=null] : this_SimpleNetworkConstraintAndOr_0= ruleSimpleNetworkConstraintAndOr ;
+    // InternalVsdl.g:2255:1: ruleSimpleNetworkConstraint returns [EObject current=null] : this_SimpleNetworkConstraintAndOr_0= ruleSimpleNetworkConstraintAndOr ;
     public final EObject ruleSimpleNetworkConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -5335,8 +5855,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2036:2: (this_SimpleNetworkConstraintAndOr_0= ruleSimpleNetworkConstraintAndOr )
-            // InternalVsdl.g:2037:2: this_SimpleNetworkConstraintAndOr_0= ruleSimpleNetworkConstraintAndOr
+            // InternalVsdl.g:2261:2: (this_SimpleNetworkConstraintAndOr_0= ruleSimpleNetworkConstraintAndOr )
+            // InternalVsdl.g:2262:2: this_SimpleNetworkConstraintAndOr_0= ruleSimpleNetworkConstraintAndOr
             {
             if ( state.backtracking==0 ) {
 
@@ -5376,7 +5896,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleNetworkConstraintAndOr"
-    // InternalVsdl.g:2048:1: entryRuleSimpleNetworkConstraintAndOr returns [EObject current=null] : iv_ruleSimpleNetworkConstraintAndOr= ruleSimpleNetworkConstraintAndOr EOF ;
+    // InternalVsdl.g:2273:1: entryRuleSimpleNetworkConstraintAndOr returns [EObject current=null] : iv_ruleSimpleNetworkConstraintAndOr= ruleSimpleNetworkConstraintAndOr EOF ;
     public final EObject entryRuleSimpleNetworkConstraintAndOr() throws RecognitionException {
         EObject current = null;
 
@@ -5384,8 +5904,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2048:69: (iv_ruleSimpleNetworkConstraintAndOr= ruleSimpleNetworkConstraintAndOr EOF )
-            // InternalVsdl.g:2049:2: iv_ruleSimpleNetworkConstraintAndOr= ruleSimpleNetworkConstraintAndOr EOF
+            // InternalVsdl.g:2273:69: (iv_ruleSimpleNetworkConstraintAndOr= ruleSimpleNetworkConstraintAndOr EOF )
+            // InternalVsdl.g:2274:2: iv_ruleSimpleNetworkConstraintAndOr= ruleSimpleNetworkConstraintAndOr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSimpleNetworkConstraintAndOrRule()); 
@@ -5416,7 +5936,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleNetworkConstraintAndOr"
-    // InternalVsdl.g:2055:1: ruleSimpleNetworkConstraintAndOr returns [EObject current=null] : (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* ) ;
+    // InternalVsdl.g:2280:1: ruleSimpleNetworkConstraintAndOr returns [EObject current=null] : (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* ) ;
     public final EObject ruleSimpleNetworkConstraintAndOr() throws RecognitionException {
         EObject current = null;
 
@@ -5431,11 +5951,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2061:2: ( (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* ) )
-            // InternalVsdl.g:2062:2: (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* )
+            // InternalVsdl.g:2286:2: ( (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* ) )
+            // InternalVsdl.g:2287:2: (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* )
             {
-            // InternalVsdl.g:2062:2: (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* )
-            // InternalVsdl.g:2063:3: this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )*
+            // InternalVsdl.g:2287:2: (this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )* )
+            // InternalVsdl.g:2288:3: this_SimpleNetworkConstraintNot_0= ruleSimpleNetworkConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )*
             {
             if ( state.backtracking==0 ) {
 
@@ -5453,26 +5973,26 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalVsdl.g:2071:3: ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )*
-            loop21:
+            // InternalVsdl.g:2296:3: ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) ) )*
+            loop22:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( ((LA21_0>=20 && LA21_0<=21)) ) {
-                    alt21=1;
+                if ( ((LA22_0>=20 && LA22_0<=21)) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt22) {
             	case 1 :
-            	    // InternalVsdl.g:2072:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) )
+            	    // InternalVsdl.g:2297:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) )
             	    {
-            	    // InternalVsdl.g:2072:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) )
-            	    // InternalVsdl.g:2073:5: () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
+            	    // InternalVsdl.g:2297:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) )
+            	    // InternalVsdl.g:2298:5: () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
             	    {
-            	    // InternalVsdl.g:2073:5: ()
-            	    // InternalVsdl.g:2074:6: 
+            	    // InternalVsdl.g:2298:5: ()
+            	    // InternalVsdl.g:2299:6: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5484,34 +6004,34 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVsdl.g:2080:5: ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
-            	    // InternalVsdl.g:2081:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
+            	    // InternalVsdl.g:2305:5: ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
+            	    // InternalVsdl.g:2306:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
             	    {
-            	    // InternalVsdl.g:2081:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
-            	    // InternalVsdl.g:2082:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
+            	    // InternalVsdl.g:2306:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
+            	    // InternalVsdl.g:2307:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
             	    {
-            	    // InternalVsdl.g:2082:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
-            	    int alt20=2;
-            	    int LA20_0 = input.LA(1);
+            	    // InternalVsdl.g:2307:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
+            	    int alt21=2;
+            	    int LA21_0 = input.LA(1);
 
-            	    if ( (LA20_0==20) ) {
-            	        alt20=1;
+            	    if ( (LA21_0==20) ) {
+            	        alt21=1;
             	    }
-            	    else if ( (LA20_0==21) ) {
-            	        alt20=2;
+            	    else if ( (LA21_0==21) ) {
+            	        alt21=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 20, 0, input);
+            	            new NoViableAltException("", 21, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt20) {
+            	    switch (alt21) {
             	        case 1 :
-            	            // InternalVsdl.g:2083:8: lv_op_2_1= 'and'
+            	            // InternalVsdl.g:2308:8: lv_op_2_1= 'and'
             	            {
-            	            lv_op_2_1=(Token)match(input,20,FOLLOW_42); if (state.failed) return current;
+            	            lv_op_2_1=(Token)match(input,20,FOLLOW_45); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              								newLeafNode(lv_op_2_1, grammarAccess.getSimpleNetworkConstraintAndOrAccess().getOpAndKeyword_1_0_1_0_0());
@@ -5529,9 +6049,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalVsdl.g:2094:8: lv_op_2_2= 'or'
+            	            // InternalVsdl.g:2319:8: lv_op_2_2= 'or'
             	            {
-            	            lv_op_2_2=(Token)match(input,21,FOLLOW_42); if (state.failed) return current;
+            	            lv_op_2_2=(Token)match(input,21,FOLLOW_45); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              								newLeafNode(lv_op_2_2, grammarAccess.getSimpleNetworkConstraintAndOrAccess().getOpOrKeyword_1_0_1_0_1());
@@ -5560,11 +6080,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVsdl.g:2108:4: ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) )
-            	    // InternalVsdl.g:2109:5: (lv_right_3_0= ruleSimpleNetworkConstraintNot )
+            	    // InternalVsdl.g:2333:4: ( (lv_right_3_0= ruleSimpleNetworkConstraintNot ) )
+            	    // InternalVsdl.g:2334:5: (lv_right_3_0= ruleSimpleNetworkConstraintNot )
             	    {
-            	    // InternalVsdl.g:2109:5: (lv_right_3_0= ruleSimpleNetworkConstraintNot )
-            	    // InternalVsdl.g:2110:6: lv_right_3_0= ruleSimpleNetworkConstraintNot
+            	    // InternalVsdl.g:2334:5: (lv_right_3_0= ruleSimpleNetworkConstraintNot )
+            	    // InternalVsdl.g:2335:6: lv_right_3_0= ruleSimpleNetworkConstraintNot
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5600,7 +6120,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop22;
                 }
             } while (true);
 
@@ -5629,7 +6149,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleNetworkConstraintNot"
-    // InternalVsdl.g:2132:1: entryRuleSimpleNetworkConstraintNot returns [EObject current=null] : iv_ruleSimpleNetworkConstraintNot= ruleSimpleNetworkConstraintNot EOF ;
+    // InternalVsdl.g:2357:1: entryRuleSimpleNetworkConstraintNot returns [EObject current=null] : iv_ruleSimpleNetworkConstraintNot= ruleSimpleNetworkConstraintNot EOF ;
     public final EObject entryRuleSimpleNetworkConstraintNot() throws RecognitionException {
         EObject current = null;
 
@@ -5637,8 +6157,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2132:67: (iv_ruleSimpleNetworkConstraintNot= ruleSimpleNetworkConstraintNot EOF )
-            // InternalVsdl.g:2133:2: iv_ruleSimpleNetworkConstraintNot= ruleSimpleNetworkConstraintNot EOF
+            // InternalVsdl.g:2357:67: (iv_ruleSimpleNetworkConstraintNot= ruleSimpleNetworkConstraintNot EOF )
+            // InternalVsdl.g:2358:2: iv_ruleSimpleNetworkConstraintNot= ruleSimpleNetworkConstraintNot EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSimpleNetworkConstraintNotRule()); 
@@ -5669,7 +6189,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleNetworkConstraintNot"
-    // InternalVsdl.g:2139:1: ruleSimpleNetworkConstraintNot returns [EObject current=null] : ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA ) ;
+    // InternalVsdl.g:2364:1: ruleSimpleNetworkConstraintNot returns [EObject current=null] : ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA ) ;
     public final EObject ruleSimpleNetworkConstraintNot() throws RecognitionException {
         EObject current = null;
 
@@ -5683,35 +6203,35 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2145:2: ( ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA ) )
-            // InternalVsdl.g:2146:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA )
+            // InternalVsdl.g:2370:2: ( ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA ) )
+            // InternalVsdl.g:2371:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA )
             {
-            // InternalVsdl.g:2146:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA )
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // InternalVsdl.g:2371:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) ) | this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA )
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==22) ) {
-                alt22=1;
+            if ( (LA23_0==22) ) {
+                alt23=1;
             }
-            else if ( (LA22_0==15||LA22_0==23||LA22_0==53||LA22_0==55) ) {
-                alt22=2;
+            else if ( (LA23_0==15||LA23_0==23||LA23_0==45||LA23_0==58) ) {
+                alt23=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // InternalVsdl.g:2147:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) )
+                    // InternalVsdl.g:2372:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) )
                     {
-                    // InternalVsdl.g:2147:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) )
-                    // InternalVsdl.g:2148:4: () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) )
+                    // InternalVsdl.g:2372:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) ) )
+                    // InternalVsdl.g:2373:4: () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) )
                     {
-                    // InternalVsdl.g:2148:4: ()
-                    // InternalVsdl.g:2149:5: 
+                    // InternalVsdl.g:2373:4: ()
+                    // InternalVsdl.g:2374:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5723,10 +6243,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2155:4: ( ( 'not' )=>otherlv_1= 'not' )
-                    // InternalVsdl.g:2156:5: ( 'not' )=>otherlv_1= 'not'
+                    // InternalVsdl.g:2380:4: ( ( 'not' )=>otherlv_1= 'not' )
+                    // InternalVsdl.g:2381:5: ( 'not' )=>otherlv_1= 'not'
                     {
-                    otherlv_1=(Token)match(input,22,FOLLOW_42); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,22,FOLLOW_45); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_1, grammarAccess.getSimpleNetworkConstraintNotAccess().getNotKeyword_0_1());
@@ -5735,11 +6255,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2162:4: ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) )
-                    // InternalVsdl.g:2163:5: (lv_constraint_2_0= ruleSimpleNetworkConstraintA )
+                    // InternalVsdl.g:2387:4: ( (lv_constraint_2_0= ruleSimpleNetworkConstraintA ) )
+                    // InternalVsdl.g:2388:5: (lv_constraint_2_0= ruleSimpleNetworkConstraintA )
                     {
-                    // InternalVsdl.g:2163:5: (lv_constraint_2_0= ruleSimpleNetworkConstraintA )
-                    // InternalVsdl.g:2164:6: lv_constraint_2_0= ruleSimpleNetworkConstraintA
+                    // InternalVsdl.g:2388:5: (lv_constraint_2_0= ruleSimpleNetworkConstraintA )
+                    // InternalVsdl.g:2389:6: lv_constraint_2_0= ruleSimpleNetworkConstraintA
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5777,7 +6297,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:2183:3: this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA
+                    // InternalVsdl.g:2408:3: this_SimpleNetworkConstraintA_3= ruleSimpleNetworkConstraintA
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5823,7 +6343,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleNetworkConstraintA"
-    // InternalVsdl.g:2195:1: entryRuleSimpleNetworkConstraintA returns [EObject current=null] : iv_ruleSimpleNetworkConstraintA= ruleSimpleNetworkConstraintA EOF ;
+    // InternalVsdl.g:2420:1: entryRuleSimpleNetworkConstraintA returns [EObject current=null] : iv_ruleSimpleNetworkConstraintA= ruleSimpleNetworkConstraintA EOF ;
     public final EObject entryRuleSimpleNetworkConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -5831,8 +6351,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2195:65: (iv_ruleSimpleNetworkConstraintA= ruleSimpleNetworkConstraintA EOF )
-            // InternalVsdl.g:2196:2: iv_ruleSimpleNetworkConstraintA= ruleSimpleNetworkConstraintA EOF
+            // InternalVsdl.g:2420:65: (iv_ruleSimpleNetworkConstraintA= ruleSimpleNetworkConstraintA EOF )
+            // InternalVsdl.g:2421:2: iv_ruleSimpleNetworkConstraintA= ruleSimpleNetworkConstraintA EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSimpleNetworkConstraintARule()); 
@@ -5863,7 +6383,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleNetworkConstraintA"
-    // InternalVsdl.g:2202:1: ruleSimpleNetworkConstraintA returns [EObject current=null] : ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint ) ;
+    // InternalVsdl.g:2427:1: ruleSimpleNetworkConstraintA returns [EObject current=null] : ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint ) ;
     public final EObject ruleSimpleNetworkConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -5880,44 +6400,44 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2208:2: ( ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint ) )
-            // InternalVsdl.g:2209:2: ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint )
+            // InternalVsdl.g:2433:2: ( ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint ) )
+            // InternalVsdl.g:2434:2: ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint )
             {
-            // InternalVsdl.g:2209:2: ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint )
-            int alt23=3;
+            // InternalVsdl.g:2434:2: ( (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' ) | this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint | this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint )
+            int alt24=3;
             switch ( input.LA(1) ) {
             case 23:
                 {
-                alt23=1;
+                alt24=1;
                 }
                 break;
-            case 53:
-            case 55:
+            case 45:
+            case 58:
                 {
-                alt23=2;
+                alt24=2;
                 }
                 break;
             case 15:
                 {
-                alt23=3;
+                alt24=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // InternalVsdl.g:2210:3: (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' )
+                    // InternalVsdl.g:2435:3: (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' )
                     {
-                    // InternalVsdl.g:2210:3: (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' )
-                    // InternalVsdl.g:2211:4: otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')'
+                    // InternalVsdl.g:2435:3: (otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')' )
+                    // InternalVsdl.g:2436:4: otherlv_0= '(' this_SimpleNetworkConstraint_1= ruleSimpleNetworkConstraint otherlv_2= ')'
                     {
-                    otherlv_0=(Token)match(input,23,FOLLOW_42); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,23,FOLLOW_45); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_0, grammarAccess.getSimpleNetworkConstraintAAccess().getLeftParenthesisKeyword_0_0());
@@ -5952,7 +6472,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:2229:3: this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint
+                    // InternalVsdl.g:2454:3: this_NetworkGatewayConstraint_3= ruleNetworkGatewayConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5974,7 +6494,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:2238:3: this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint
+                    // InternalVsdl.g:2463:3: this_NetworkParticipantsConstraint_4= ruleNetworkParticipantsConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6020,7 +6540,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNetworkGatewayConstraint"
-    // InternalVsdl.g:2250:1: entryRuleNetworkGatewayConstraint returns [EObject current=null] : iv_ruleNetworkGatewayConstraint= ruleNetworkGatewayConstraint EOF ;
+    // InternalVsdl.g:2475:1: entryRuleNetworkGatewayConstraint returns [EObject current=null] : iv_ruleNetworkGatewayConstraint= ruleNetworkGatewayConstraint EOF ;
     public final EObject entryRuleNetworkGatewayConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -6028,8 +6548,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2250:65: (iv_ruleNetworkGatewayConstraint= ruleNetworkGatewayConstraint EOF )
-            // InternalVsdl.g:2251:2: iv_ruleNetworkGatewayConstraint= ruleNetworkGatewayConstraint EOF
+            // InternalVsdl.g:2475:65: (iv_ruleNetworkGatewayConstraint= ruleNetworkGatewayConstraint EOF )
+            // InternalVsdl.g:2476:2: iv_ruleNetworkGatewayConstraint= ruleNetworkGatewayConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNetworkGatewayConstraintRule()); 
@@ -6060,7 +6580,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNetworkGatewayConstraint"
-    // InternalVsdl.g:2257:1: ruleNetworkGatewayConstraint returns [EObject current=null] : ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) ) ;
+    // InternalVsdl.g:2482:1: ruleNetworkGatewayConstraint returns [EObject current=null] : ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) ) ;
     public final EObject ruleNetworkGatewayConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -6081,35 +6601,35 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2263:2: ( ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) ) )
-            // InternalVsdl.g:2264:2: ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) )
+            // InternalVsdl.g:2488:2: ( ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) ) )
+            // InternalVsdl.g:2489:2: ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) )
             {
-            // InternalVsdl.g:2264:2: ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // InternalVsdl.g:2489:2: ( ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) ) | ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) ) )
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0==53) ) {
-                alt24=1;
+            if ( (LA25_0==58) ) {
+                alt25=1;
             }
-            else if ( (LA24_0==55) ) {
-                alt24=2;
+            else if ( (LA25_0==45) ) {
+                alt25=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // InternalVsdl.g:2265:3: ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) )
+                    // InternalVsdl.g:2490:3: ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) )
                     {
-                    // InternalVsdl.g:2265:3: ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) )
-                    // InternalVsdl.g:2266:4: () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) )
+                    // InternalVsdl.g:2490:3: ( () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) ) )
+                    // InternalVsdl.g:2491:4: () ( ( 'addresses' )=>otherlv_1= 'addresses' ) otherlv_2= 'range' otherlv_3= 'is' ( (lv_range_4_0= ruleIPRangeA ) )
                     {
-                    // InternalVsdl.g:2266:4: ()
-                    // InternalVsdl.g:2267:5: 
+                    // InternalVsdl.g:2491:4: ()
+                    // InternalVsdl.g:2492:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6121,10 +6641,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2273:4: ( ( 'addresses' )=>otherlv_1= 'addresses' )
-                    // InternalVsdl.g:2274:5: ( 'addresses' )=>otherlv_1= 'addresses'
+                    // InternalVsdl.g:2498:4: ( ( 'addresses' )=>otherlv_1= 'addresses' )
+                    // InternalVsdl.g:2499:5: ( 'addresses' )=>otherlv_1= 'addresses'
                     {
-                    otherlv_1=(Token)match(input,53,FOLLOW_43); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,58,FOLLOW_29); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_1, grammarAccess.getNetworkGatewayConstraintAccess().getAddressesKeyword_0_1());
@@ -6133,23 +6653,23 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,54,FOLLOW_28); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,42,FOLLOW_30); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_2, grammarAccess.getNetworkGatewayConstraintAccess().getRangeKeyword_0_2());
                       			
                     }
-                    otherlv_3=(Token)match(input,40,FOLLOW_5); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,43,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_3, grammarAccess.getNetworkGatewayConstraintAccess().getIsKeyword_0_3());
                       			
                     }
-                    // InternalVsdl.g:2288:4: ( (lv_range_4_0= ruleIPRangeA ) )
-                    // InternalVsdl.g:2289:5: (lv_range_4_0= ruleIPRangeA )
+                    // InternalVsdl.g:2513:4: ( (lv_range_4_0= ruleIPRangeA ) )
+                    // InternalVsdl.g:2514:5: (lv_range_4_0= ruleIPRangeA )
                     {
-                    // InternalVsdl.g:2289:5: (lv_range_4_0= ruleIPRangeA )
-                    // InternalVsdl.g:2290:6: lv_range_4_0= ruleIPRangeA
+                    // InternalVsdl.g:2514:5: (lv_range_4_0= ruleIPRangeA )
+                    // InternalVsdl.g:2515:6: lv_range_4_0= ruleIPRangeA
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6187,13 +6707,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:2309:3: ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) )
+                    // InternalVsdl.g:2534:3: ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) )
                     {
-                    // InternalVsdl.g:2309:3: ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) )
-                    // InternalVsdl.g:2310:4: () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) )
+                    // InternalVsdl.g:2534:3: ( () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) ) )
+                    // InternalVsdl.g:2535:4: () ( ( 'gateway' )=>otherlv_6= 'gateway' ) otherlv_7= 'has' otherlv_8= 'direct' otherlv_9= 'access' otherlv_10= 'to' otherlv_11= 'the' ( (lv_internet_12_0= 'Internet' ) )
                     {
-                    // InternalVsdl.g:2310:4: ()
-                    // InternalVsdl.g:2311:5: 
+                    // InternalVsdl.g:2535:4: ()
+                    // InternalVsdl.g:2536:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6205,10 +6725,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2317:4: ( ( 'gateway' )=>otherlv_6= 'gateway' )
-                    // InternalVsdl.g:2318:5: ( 'gateway' )=>otherlv_6= 'gateway'
+                    // InternalVsdl.g:2542:4: ( ( 'gateway' )=>otherlv_6= 'gateway' )
+                    // InternalVsdl.g:2543:5: ( 'gateway' )=>otherlv_6= 'gateway'
                     {
-                    otherlv_6=(Token)match(input,55,FOLLOW_44); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,45,FOLLOW_46); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_6, grammarAccess.getNetworkGatewayConstraintAccess().getGatewayKeyword_1_1());
@@ -6217,43 +6737,43 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,56,FOLLOW_45); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,59,FOLLOW_47); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_7, grammarAccess.getNetworkGatewayConstraintAccess().getHasKeyword_1_2());
                       			
                     }
-                    otherlv_8=(Token)match(input,57,FOLLOW_46); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,60,FOLLOW_48); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_8, grammarAccess.getNetworkGatewayConstraintAccess().getDirectKeyword_1_3());
                       			
                     }
-                    otherlv_9=(Token)match(input,58,FOLLOW_18); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,61,FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_9, grammarAccess.getNetworkGatewayConstraintAccess().getAccessKeyword_1_4());
                       			
                     }
-                    otherlv_10=(Token)match(input,28,FOLLOW_47); if (state.failed) return current;
+                    otherlv_10=(Token)match(input,28,FOLLOW_49); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_10, grammarAccess.getNetworkGatewayConstraintAccess().getToKeyword_1_5());
                       			
                     }
-                    otherlv_11=(Token)match(input,59,FOLLOW_48); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,62,FOLLOW_50); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getNetworkGatewayConstraintAccess().getTheKeyword_1_6());
                       			
                     }
-                    // InternalVsdl.g:2344:4: ( (lv_internet_12_0= 'Internet' ) )
-                    // InternalVsdl.g:2345:5: (lv_internet_12_0= 'Internet' )
+                    // InternalVsdl.g:2569:4: ( (lv_internet_12_0= 'Internet' ) )
+                    // InternalVsdl.g:2570:5: (lv_internet_12_0= 'Internet' )
                     {
-                    // InternalVsdl.g:2345:5: (lv_internet_12_0= 'Internet' )
-                    // InternalVsdl.g:2346:6: lv_internet_12_0= 'Internet'
+                    // InternalVsdl.g:2570:5: (lv_internet_12_0= 'Internet' )
+                    // InternalVsdl.g:2571:6: lv_internet_12_0= 'Internet'
                     {
-                    lv_internet_12_0=(Token)match(input,60,FOLLOW_2); if (state.failed) return current;
+                    lv_internet_12_0=(Token)match(input,63,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_internet_12_0, grammarAccess.getNetworkGatewayConstraintAccess().getInternetInternetKeyword_1_7_0());
@@ -6304,7 +6824,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNetworkParticipantsConstraint"
-    // InternalVsdl.g:2363:1: entryRuleNetworkParticipantsConstraint returns [EObject current=null] : iv_ruleNetworkParticipantsConstraint= ruleNetworkParticipantsConstraint EOF ;
+    // InternalVsdl.g:2588:1: entryRuleNetworkParticipantsConstraint returns [EObject current=null] : iv_ruleNetworkParticipantsConstraint= ruleNetworkParticipantsConstraint EOF ;
     public final EObject entryRuleNetworkParticipantsConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -6312,8 +6832,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2363:70: (iv_ruleNetworkParticipantsConstraint= ruleNetworkParticipantsConstraint EOF )
-            // InternalVsdl.g:2364:2: iv_ruleNetworkParticipantsConstraint= ruleNetworkParticipantsConstraint EOF
+            // InternalVsdl.g:2588:70: (iv_ruleNetworkParticipantsConstraint= ruleNetworkParticipantsConstraint EOF )
+            // InternalVsdl.g:2589:2: iv_ruleNetworkParticipantsConstraint= ruleNetworkParticipantsConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNetworkParticipantsConstraintRule()); 
@@ -6344,7 +6864,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNetworkParticipantsConstraint"
-    // InternalVsdl.g:2370:1: ruleNetworkParticipantsConstraint returns [EObject current=null] : ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) ) ;
+    // InternalVsdl.g:2595:1: ruleNetworkParticipantsConstraint returns [EObject current=null] : ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) ) ;
     public final EObject ruleNetworkParticipantsConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -6363,29 +6883,29 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2376:2: ( ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) ) )
-            // InternalVsdl.g:2377:2: ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) )
+            // InternalVsdl.g:2601:2: ( ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) ) )
+            // InternalVsdl.g:2602:2: ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) )
             {
-            // InternalVsdl.g:2377:2: ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) )
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // InternalVsdl.g:2602:2: ( (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) ) | (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) ) )
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA25_0==15) ) {
-                int LA25_1 = input.LA(2);
+            if ( (LA26_0==15) ) {
+                int LA26_1 = input.LA(2);
 
-                if ( (LA25_1==RULE_ID) ) {
-                    int LA25_2 = input.LA(3);
+                if ( (LA26_1==RULE_ID) ) {
+                    int LA26_2 = input.LA(3);
 
-                    if ( (LA25_2==56) ) {
-                        alt25=2;
+                    if ( (LA26_2==59) ) {
+                        alt26=2;
                     }
-                    else if ( (LA25_2==40) ) {
-                        alt25=1;
+                    else if ( (LA26_2==43) ) {
+                        alt26=1;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 25, 2, input);
+                            new NoViableAltException("", 26, 2, input);
 
                         throw nvae;
                     }
@@ -6393,7 +6913,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 25, 1, input);
+                        new NoViableAltException("", 26, 1, input);
 
                     throw nvae;
                 }
@@ -6401,16 +6921,16 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
             }
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
-                    // InternalVsdl.g:2378:3: (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) )
+                    // InternalVsdl.g:2603:3: (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) )
                     {
-                    // InternalVsdl.g:2378:3: (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) )
-                    // InternalVsdl.g:2379:4: otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) )
+                    // InternalVsdl.g:2603:3: (otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) ) )
+                    // InternalVsdl.g:2604:4: otherlv_0= 'node' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'is' ( (lv_op_3_0= 'connected' ) )
                     {
                     otherlv_0=(Token)match(input,15,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6418,11 +6938,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_0, grammarAccess.getNetworkParticipantsConstraintAccess().getNodeKeyword_0_0());
                       			
                     }
-                    // InternalVsdl.g:2383:4: ( (otherlv_1= RULE_ID ) )
-                    // InternalVsdl.g:2384:5: (otherlv_1= RULE_ID )
+                    // InternalVsdl.g:2608:4: ( (otherlv_1= RULE_ID ) )
+                    // InternalVsdl.g:2609:5: (otherlv_1= RULE_ID )
                     {
-                    // InternalVsdl.g:2384:5: (otherlv_1= RULE_ID )
-                    // InternalVsdl.g:2385:6: otherlv_1= RULE_ID
+                    // InternalVsdl.g:2609:5: (otherlv_1= RULE_ID )
+                    // InternalVsdl.g:2610:6: otherlv_1= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6431,7 +6951,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       						}
                       					
                     }
-                    otherlv_1=(Token)match(input,RULE_ID,FOLLOW_28); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,RULE_ID,FOLLOW_30); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(otherlv_1, grammarAccess.getNetworkParticipantsConstraintAccess().getIdNodeCrossReference_0_1_0());
@@ -6443,19 +6963,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,40,FOLLOW_49); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,43,FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_2, grammarAccess.getNetworkParticipantsConstraintAccess().getIsKeyword_0_2());
                       			
                     }
-                    // InternalVsdl.g:2400:4: ( (lv_op_3_0= 'connected' ) )
-                    // InternalVsdl.g:2401:5: (lv_op_3_0= 'connected' )
+                    // InternalVsdl.g:2625:4: ( (lv_op_3_0= 'connected' ) )
+                    // InternalVsdl.g:2626:5: (lv_op_3_0= 'connected' )
                     {
-                    // InternalVsdl.g:2401:5: (lv_op_3_0= 'connected' )
-                    // InternalVsdl.g:2402:6: lv_op_3_0= 'connected'
+                    // InternalVsdl.g:2626:5: (lv_op_3_0= 'connected' )
+                    // InternalVsdl.g:2627:6: lv_op_3_0= 'connected'
                     {
-                    lv_op_3_0=(Token)match(input,61,FOLLOW_2); if (state.failed) return current;
+                    lv_op_3_0=(Token)match(input,44,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_op_3_0, grammarAccess.getNetworkParticipantsConstraintAccess().getOpConnectedKeyword_0_3_0());
@@ -6482,10 +7002,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:2416:3: (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) )
+                    // InternalVsdl.g:2641:3: (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) )
                     {
-                    // InternalVsdl.g:2416:3: (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) )
-                    // InternalVsdl.g:2417:4: otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) )
+                    // InternalVsdl.g:2641:3: (otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) ) )
+                    // InternalVsdl.g:2642:4: otherlv_4= 'node' ( (otherlv_5= RULE_ID ) ) otherlv_6= 'has' ( (lv_op_7_0= 'IP' ) ) ( (lv_ip_8_0= ruleIPAddress ) )
                     {
                     otherlv_4=(Token)match(input,15,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6493,11 +7013,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_4, grammarAccess.getNetworkParticipantsConstraintAccess().getNodeKeyword_1_0());
                       			
                     }
-                    // InternalVsdl.g:2421:4: ( (otherlv_5= RULE_ID ) )
-                    // InternalVsdl.g:2422:5: (otherlv_5= RULE_ID )
+                    // InternalVsdl.g:2646:4: ( (otherlv_5= RULE_ID ) )
+                    // InternalVsdl.g:2647:5: (otherlv_5= RULE_ID )
                     {
-                    // InternalVsdl.g:2422:5: (otherlv_5= RULE_ID )
-                    // InternalVsdl.g:2423:6: otherlv_5= RULE_ID
+                    // InternalVsdl.g:2647:5: (otherlv_5= RULE_ID )
+                    // InternalVsdl.g:2648:6: otherlv_5= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6506,7 +7026,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                       						}
                       					
                     }
-                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_44); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_46); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(otherlv_5, grammarAccess.getNetworkParticipantsConstraintAccess().getIdNodeCrossReference_1_1_0());
@@ -6518,19 +7038,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,56,FOLLOW_50); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,59,FOLLOW_51); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_6, grammarAccess.getNetworkParticipantsConstraintAccess().getHasKeyword_1_2());
                       			
                     }
-                    // InternalVsdl.g:2438:4: ( (lv_op_7_0= 'IP' ) )
-                    // InternalVsdl.g:2439:5: (lv_op_7_0= 'IP' )
+                    // InternalVsdl.g:2663:4: ( (lv_op_7_0= 'IP' ) )
+                    // InternalVsdl.g:2664:5: (lv_op_7_0= 'IP' )
                     {
-                    // InternalVsdl.g:2439:5: (lv_op_7_0= 'IP' )
-                    // InternalVsdl.g:2440:6: lv_op_7_0= 'IP'
+                    // InternalVsdl.g:2664:5: (lv_op_7_0= 'IP' )
+                    // InternalVsdl.g:2665:6: lv_op_7_0= 'IP'
                     {
-                    lv_op_7_0=(Token)match(input,62,FOLLOW_5); if (state.failed) return current;
+                    lv_op_7_0=(Token)match(input,64,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_op_7_0, grammarAccess.getNetworkParticipantsConstraintAccess().getOpIPKeyword_1_3_0());
@@ -6550,11 +7070,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2452:4: ( (lv_ip_8_0= ruleIPAddress ) )
-                    // InternalVsdl.g:2453:5: (lv_ip_8_0= ruleIPAddress )
+                    // InternalVsdl.g:2677:4: ( (lv_ip_8_0= ruleIPAddress ) )
+                    // InternalVsdl.g:2678:5: (lv_ip_8_0= ruleIPAddress )
                     {
-                    // InternalVsdl.g:2453:5: (lv_ip_8_0= ruleIPAddress )
-                    // InternalVsdl.g:2454:6: lv_ip_8_0= ruleIPAddress
+                    // InternalVsdl.g:2678:5: (lv_ip_8_0= ruleIPAddress )
+                    // InternalVsdl.g:2679:6: lv_ip_8_0= ruleIPAddress
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6616,7 +7136,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUpdateTriggerConstraint"
-    // InternalVsdl.g:2476:1: entryRuleUpdateTriggerConstraint returns [EObject current=null] : iv_ruleUpdateTriggerConstraint= ruleUpdateTriggerConstraint EOF ;
+    // InternalVsdl.g:2701:1: entryRuleUpdateTriggerConstraint returns [EObject current=null] : iv_ruleUpdateTriggerConstraint= ruleUpdateTriggerConstraint EOF ;
     public final EObject entryRuleUpdateTriggerConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -6624,8 +7144,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2476:64: (iv_ruleUpdateTriggerConstraint= ruleUpdateTriggerConstraint EOF )
-            // InternalVsdl.g:2477:2: iv_ruleUpdateTriggerConstraint= ruleUpdateTriggerConstraint EOF
+            // InternalVsdl.g:2701:64: (iv_ruleUpdateTriggerConstraint= ruleUpdateTriggerConstraint EOF )
+            // InternalVsdl.g:2702:2: iv_ruleUpdateTriggerConstraint= ruleUpdateTriggerConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUpdateTriggerConstraintRule()); 
@@ -6656,7 +7176,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUpdateTriggerConstraint"
-    // InternalVsdl.g:2483:1: ruleUpdateTriggerConstraint returns [EObject current=null] : this_UpdateTriggerConstraintAndOr_0= ruleUpdateTriggerConstraintAndOr ;
+    // InternalVsdl.g:2708:1: ruleUpdateTriggerConstraint returns [EObject current=null] : this_UpdateTriggerConstraintAndOr_0= ruleUpdateTriggerConstraintAndOr ;
     public final EObject ruleUpdateTriggerConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -6667,8 +7187,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2489:2: (this_UpdateTriggerConstraintAndOr_0= ruleUpdateTriggerConstraintAndOr )
-            // InternalVsdl.g:2490:2: this_UpdateTriggerConstraintAndOr_0= ruleUpdateTriggerConstraintAndOr
+            // InternalVsdl.g:2714:2: (this_UpdateTriggerConstraintAndOr_0= ruleUpdateTriggerConstraintAndOr )
+            // InternalVsdl.g:2715:2: this_UpdateTriggerConstraintAndOr_0= ruleUpdateTriggerConstraintAndOr
             {
             if ( state.backtracking==0 ) {
 
@@ -6708,7 +7228,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUpdateTriggerConstraintAndOr"
-    // InternalVsdl.g:2501:1: entryRuleUpdateTriggerConstraintAndOr returns [EObject current=null] : iv_ruleUpdateTriggerConstraintAndOr= ruleUpdateTriggerConstraintAndOr EOF ;
+    // InternalVsdl.g:2726:1: entryRuleUpdateTriggerConstraintAndOr returns [EObject current=null] : iv_ruleUpdateTriggerConstraintAndOr= ruleUpdateTriggerConstraintAndOr EOF ;
     public final EObject entryRuleUpdateTriggerConstraintAndOr() throws RecognitionException {
         EObject current = null;
 
@@ -6716,8 +7236,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2501:69: (iv_ruleUpdateTriggerConstraintAndOr= ruleUpdateTriggerConstraintAndOr EOF )
-            // InternalVsdl.g:2502:2: iv_ruleUpdateTriggerConstraintAndOr= ruleUpdateTriggerConstraintAndOr EOF
+            // InternalVsdl.g:2726:69: (iv_ruleUpdateTriggerConstraintAndOr= ruleUpdateTriggerConstraintAndOr EOF )
+            // InternalVsdl.g:2727:2: iv_ruleUpdateTriggerConstraintAndOr= ruleUpdateTriggerConstraintAndOr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUpdateTriggerConstraintAndOrRule()); 
@@ -6748,7 +7268,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUpdateTriggerConstraintAndOr"
-    // InternalVsdl.g:2508:1: ruleUpdateTriggerConstraintAndOr returns [EObject current=null] : (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* ) ;
+    // InternalVsdl.g:2733:1: ruleUpdateTriggerConstraintAndOr returns [EObject current=null] : (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* ) ;
     public final EObject ruleUpdateTriggerConstraintAndOr() throws RecognitionException {
         EObject current = null;
 
@@ -6763,11 +7283,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2514:2: ( (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* ) )
-            // InternalVsdl.g:2515:2: (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* )
+            // InternalVsdl.g:2739:2: ( (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* ) )
+            // InternalVsdl.g:2740:2: (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* )
             {
-            // InternalVsdl.g:2515:2: (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* )
-            // InternalVsdl.g:2516:3: this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )*
+            // InternalVsdl.g:2740:2: (this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )* )
+            // InternalVsdl.g:2741:3: this_UpdateTriggerConstraintNot_0= ruleUpdateTriggerConstraintNot ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )*
             {
             if ( state.backtracking==0 ) {
 
@@ -6785,26 +7305,26 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalVsdl.g:2524:3: ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )*
-            loop27:
+            // InternalVsdl.g:2749:3: ( ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) ) )*
+            loop28:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( ((LA27_0>=20 && LA27_0<=21)) ) {
-                    alt27=1;
+                if ( ((LA28_0>=20 && LA28_0<=21)) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt27) {
+                switch (alt28) {
             	case 1 :
-            	    // InternalVsdl.g:2525:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) )
+            	    // InternalVsdl.g:2750:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) ) ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) )
             	    {
-            	    // InternalVsdl.g:2525:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) )
-            	    // InternalVsdl.g:2526:5: () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
+            	    // InternalVsdl.g:2750:4: ( () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) ) )
+            	    // InternalVsdl.g:2751:5: () ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
             	    {
-            	    // InternalVsdl.g:2526:5: ()
-            	    // InternalVsdl.g:2527:6: 
+            	    // InternalVsdl.g:2751:5: ()
+            	    // InternalVsdl.g:2752:6: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6816,32 +7336,32 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVsdl.g:2533:5: ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
-            	    // InternalVsdl.g:2534:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
+            	    // InternalVsdl.g:2758:5: ( ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) ) )
+            	    // InternalVsdl.g:2759:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
             	    {
-            	    // InternalVsdl.g:2534:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
-            	    // InternalVsdl.g:2535:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
+            	    // InternalVsdl.g:2759:6: ( (lv_op_2_1= 'and' | lv_op_2_2= 'or' ) )
+            	    // InternalVsdl.g:2760:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
             	    {
-            	    // InternalVsdl.g:2535:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
-            	    int alt26=2;
-            	    int LA26_0 = input.LA(1);
+            	    // InternalVsdl.g:2760:7: (lv_op_2_1= 'and' | lv_op_2_2= 'or' )
+            	    int alt27=2;
+            	    int LA27_0 = input.LA(1);
 
-            	    if ( (LA26_0==20) ) {
-            	        alt26=1;
+            	    if ( (LA27_0==20) ) {
+            	        alt27=1;
             	    }
-            	    else if ( (LA26_0==21) ) {
-            	        alt26=2;
+            	    else if ( (LA27_0==21) ) {
+            	        alt27=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 26, 0, input);
+            	            new NoViableAltException("", 27, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt26) {
+            	    switch (alt27) {
             	        case 1 :
-            	            // InternalVsdl.g:2536:8: lv_op_2_1= 'and'
+            	            // InternalVsdl.g:2761:8: lv_op_2_1= 'and'
             	            {
             	            lv_op_2_1=(Token)match(input,20,FOLLOW_10); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -6861,7 +7381,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalVsdl.g:2547:8: lv_op_2_2= 'or'
+            	            // InternalVsdl.g:2772:8: lv_op_2_2= 'or'
             	            {
             	            lv_op_2_2=(Token)match(input,21,FOLLOW_10); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -6892,11 +7412,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVsdl.g:2561:4: ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) )
-            	    // InternalVsdl.g:2562:5: (lv_right_3_0= ruleUpdateTriggerConstraintNot )
+            	    // InternalVsdl.g:2786:4: ( (lv_right_3_0= ruleUpdateTriggerConstraintNot ) )
+            	    // InternalVsdl.g:2787:5: (lv_right_3_0= ruleUpdateTriggerConstraintNot )
             	    {
-            	    // InternalVsdl.g:2562:5: (lv_right_3_0= ruleUpdateTriggerConstraintNot )
-            	    // InternalVsdl.g:2563:6: lv_right_3_0= ruleUpdateTriggerConstraintNot
+            	    // InternalVsdl.g:2787:5: (lv_right_3_0= ruleUpdateTriggerConstraintNot )
+            	    // InternalVsdl.g:2788:6: lv_right_3_0= ruleUpdateTriggerConstraintNot
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6932,7 +7452,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop28;
                 }
             } while (true);
 
@@ -6961,7 +7481,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUpdateTriggerConstraintNot"
-    // InternalVsdl.g:2585:1: entryRuleUpdateTriggerConstraintNot returns [EObject current=null] : iv_ruleUpdateTriggerConstraintNot= ruleUpdateTriggerConstraintNot EOF ;
+    // InternalVsdl.g:2810:1: entryRuleUpdateTriggerConstraintNot returns [EObject current=null] : iv_ruleUpdateTriggerConstraintNot= ruleUpdateTriggerConstraintNot EOF ;
     public final EObject entryRuleUpdateTriggerConstraintNot() throws RecognitionException {
         EObject current = null;
 
@@ -6969,8 +7489,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2585:67: (iv_ruleUpdateTriggerConstraintNot= ruleUpdateTriggerConstraintNot EOF )
-            // InternalVsdl.g:2586:2: iv_ruleUpdateTriggerConstraintNot= ruleUpdateTriggerConstraintNot EOF
+            // InternalVsdl.g:2810:67: (iv_ruleUpdateTriggerConstraintNot= ruleUpdateTriggerConstraintNot EOF )
+            // InternalVsdl.g:2811:2: iv_ruleUpdateTriggerConstraintNot= ruleUpdateTriggerConstraintNot EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUpdateTriggerConstraintNotRule()); 
@@ -7001,7 +7521,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUpdateTriggerConstraintNot"
-    // InternalVsdl.g:2592:1: ruleUpdateTriggerConstraintNot returns [EObject current=null] : ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA ) ;
+    // InternalVsdl.g:2817:1: ruleUpdateTriggerConstraintNot returns [EObject current=null] : ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA ) ;
     public final EObject ruleUpdateTriggerConstraintNot() throws RecognitionException {
         EObject current = null;
 
@@ -7015,35 +7535,35 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2598:2: ( ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA ) )
-            // InternalVsdl.g:2599:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA )
+            // InternalVsdl.g:2823:2: ( ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA ) )
+            // InternalVsdl.g:2824:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA )
             {
-            // InternalVsdl.g:2599:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA )
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // InternalVsdl.g:2824:2: ( ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) ) | this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA28_0==22) ) {
-                alt28=1;
+            if ( (LA29_0==22) ) {
+                alt29=1;
             }
-            else if ( (LA28_0==23||LA28_0==63||LA28_0==68) ) {
-                alt28=2;
+            else if ( (LA29_0==23||LA29_0==65||LA29_0==70) ) {
+                alt29=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
-            switch (alt28) {
+            switch (alt29) {
                 case 1 :
-                    // InternalVsdl.g:2600:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) )
+                    // InternalVsdl.g:2825:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) )
                     {
-                    // InternalVsdl.g:2600:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) )
-                    // InternalVsdl.g:2601:4: () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) )
+                    // InternalVsdl.g:2825:3: ( () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) ) )
+                    // InternalVsdl.g:2826:4: () ( ( 'not' )=>otherlv_1= 'not' ) ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) )
                     {
-                    // InternalVsdl.g:2601:4: ()
-                    // InternalVsdl.g:2602:5: 
+                    // InternalVsdl.g:2826:4: ()
+                    // InternalVsdl.g:2827:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7055,8 +7575,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2608:4: ( ( 'not' )=>otherlv_1= 'not' )
-                    // InternalVsdl.g:2609:5: ( 'not' )=>otherlv_1= 'not'
+                    // InternalVsdl.g:2833:4: ( ( 'not' )=>otherlv_1= 'not' )
+                    // InternalVsdl.g:2834:5: ( 'not' )=>otherlv_1= 'not'
                     {
                     otherlv_1=(Token)match(input,22,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7067,11 +7587,11 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2615:4: ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) )
-                    // InternalVsdl.g:2616:5: (lv_constraint_2_0= ruleUpdateTriggerConstraintA )
+                    // InternalVsdl.g:2840:4: ( (lv_constraint_2_0= ruleUpdateTriggerConstraintA ) )
+                    // InternalVsdl.g:2841:5: (lv_constraint_2_0= ruleUpdateTriggerConstraintA )
                     {
-                    // InternalVsdl.g:2616:5: (lv_constraint_2_0= ruleUpdateTriggerConstraintA )
-                    // InternalVsdl.g:2617:6: lv_constraint_2_0= ruleUpdateTriggerConstraintA
+                    // InternalVsdl.g:2841:5: (lv_constraint_2_0= ruleUpdateTriggerConstraintA )
+                    // InternalVsdl.g:2842:6: lv_constraint_2_0= ruleUpdateTriggerConstraintA
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7109,7 +7629,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:2636:3: this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA
+                    // InternalVsdl.g:2861:3: this_UpdateTriggerConstraintA_3= ruleUpdateTriggerConstraintA
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7155,7 +7675,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUpdateTriggerConstraintA"
-    // InternalVsdl.g:2648:1: entryRuleUpdateTriggerConstraintA returns [EObject current=null] : iv_ruleUpdateTriggerConstraintA= ruleUpdateTriggerConstraintA EOF ;
+    // InternalVsdl.g:2873:1: entryRuleUpdateTriggerConstraintA returns [EObject current=null] : iv_ruleUpdateTriggerConstraintA= ruleUpdateTriggerConstraintA EOF ;
     public final EObject entryRuleUpdateTriggerConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -7163,8 +7683,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2648:65: (iv_ruleUpdateTriggerConstraintA= ruleUpdateTriggerConstraintA EOF )
-            // InternalVsdl.g:2649:2: iv_ruleUpdateTriggerConstraintA= ruleUpdateTriggerConstraintA EOF
+            // InternalVsdl.g:2873:65: (iv_ruleUpdateTriggerConstraintA= ruleUpdateTriggerConstraintA EOF )
+            // InternalVsdl.g:2874:2: iv_ruleUpdateTriggerConstraintA= ruleUpdateTriggerConstraintA EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUpdateTriggerConstraintARule()); 
@@ -7195,7 +7715,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUpdateTriggerConstraintA"
-    // InternalVsdl.g:2655:1: ruleUpdateTriggerConstraintA returns [EObject current=null] : ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) ) ;
+    // InternalVsdl.g:2880:1: ruleUpdateTriggerConstraintA returns [EObject current=null] : ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) ) ;
     public final EObject ruleUpdateTriggerConstraintA() throws RecognitionException {
         EObject current = null;
 
@@ -7228,55 +7748,55 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2661:2: ( ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) ) )
-            // InternalVsdl.g:2662:2: ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) )
+            // InternalVsdl.g:2886:2: ( ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) ) )
+            // InternalVsdl.g:2887:2: ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) )
             {
-            // InternalVsdl.g:2662:2: ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) )
-            int alt29=4;
+            // InternalVsdl.g:2887:2: ( (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' ) | ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) ) | ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) ) | ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) ) )
+            int alt30=4;
             switch ( input.LA(1) ) {
             case 23:
                 {
-                alt29=1;
+                alt30=1;
                 }
                 break;
-            case 63:
+            case 65:
                 {
-                int LA29_2 = input.LA(2);
+                int LA30_2 = input.LA(2);
 
-                if ( (LA29_2==66) ) {
-                    alt29=3;
+                if ( (LA30_2==66) ) {
+                    alt30=2;
                 }
-                else if ( (LA29_2==64) ) {
-                    alt29=2;
+                else if ( (LA30_2==68) ) {
+                    alt30=3;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 29, 2, input);
+                        new NoViableAltException("", 30, 2, input);
 
                     throw nvae;
                 }
                 }
                 break;
-            case 68:
+            case 70:
                 {
-                alt29=4;
+                alt30=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
-                    // InternalVsdl.g:2663:3: (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' )
+                    // InternalVsdl.g:2888:3: (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' )
                     {
-                    // InternalVsdl.g:2663:3: (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' )
-                    // InternalVsdl.g:2664:4: otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')'
+                    // InternalVsdl.g:2888:3: (otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')' )
+                    // InternalVsdl.g:2889:4: otherlv_0= '(' this_UpdateTriggerConstraint_1= ruleUpdateTriggerConstraint otherlv_2= ')'
                     {
                     otherlv_0=(Token)match(input,23,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7313,13 +7833,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:2682:3: ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) )
+                    // InternalVsdl.g:2907:3: ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) )
                     {
-                    // InternalVsdl.g:2682:3: ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) )
-                    // InternalVsdl.g:2683:4: () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) )
+                    // InternalVsdl.g:2907:3: ( () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) ) )
+                    // InternalVsdl.g:2908:4: () ( ( 'at' )=>otherlv_4= 'at' ) ( (lv_op_5_0= 'least' ) ) otherlv_6= 'after' ( (lv_variable_7_0= RULE_ID ) ) otherlv_8= '=' ( (lv_texp_9_0= ruleTimeExpr ) )
                     {
-                    // InternalVsdl.g:2683:4: ()
-                    // InternalVsdl.g:2684:5: 
+                    // InternalVsdl.g:2908:4: ()
+                    // InternalVsdl.g:2909:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7331,10 +7851,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2690:4: ( ( 'at' )=>otherlv_4= 'at' )
-                    // InternalVsdl.g:2691:5: ( 'at' )=>otherlv_4= 'at'
+                    // InternalVsdl.g:2915:4: ( ( 'at' )=>otherlv_4= 'at' )
+                    // InternalVsdl.g:2916:5: ( 'at' )=>otherlv_4= 'at'
                     {
-                    otherlv_4=(Token)match(input,63,FOLLOW_51); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,65,FOLLOW_52); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_4, grammarAccess.getUpdateTriggerConstraintAAccess().getAtKeyword_1_1());
@@ -7343,13 +7863,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2697:4: ( (lv_op_5_0= 'least' ) )
-                    // InternalVsdl.g:2698:5: (lv_op_5_0= 'least' )
+                    // InternalVsdl.g:2922:4: ( (lv_op_5_0= 'least' ) )
+                    // InternalVsdl.g:2923:5: (lv_op_5_0= 'least' )
                     {
-                    // InternalVsdl.g:2698:5: (lv_op_5_0= 'least' )
-                    // InternalVsdl.g:2699:6: lv_op_5_0= 'least'
+                    // InternalVsdl.g:2923:5: (lv_op_5_0= 'least' )
+                    // InternalVsdl.g:2924:6: lv_op_5_0= 'least'
                     {
-                    lv_op_5_0=(Token)match(input,64,FOLLOW_52); if (state.failed) return current;
+                    lv_op_5_0=(Token)match(input,66,FOLLOW_53); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_op_5_0, grammarAccess.getUpdateTriggerConstraintAAccess().getOpLeastKeyword_1_2_0());
@@ -7369,19 +7889,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,65,FOLLOW_3); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,67,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_6, grammarAccess.getUpdateTriggerConstraintAAccess().getAfterKeyword_1_3());
                       			
                     }
-                    // InternalVsdl.g:2715:4: ( (lv_variable_7_0= RULE_ID ) )
-                    // InternalVsdl.g:2716:5: (lv_variable_7_0= RULE_ID )
+                    // InternalVsdl.g:2940:4: ( (lv_variable_7_0= RULE_ID ) )
+                    // InternalVsdl.g:2941:5: (lv_variable_7_0= RULE_ID )
                     {
-                    // InternalVsdl.g:2716:5: (lv_variable_7_0= RULE_ID )
-                    // InternalVsdl.g:2717:6: lv_variable_7_0= RULE_ID
+                    // InternalVsdl.g:2941:5: (lv_variable_7_0= RULE_ID )
+                    // InternalVsdl.g:2942:6: lv_variable_7_0= RULE_ID
                     {
-                    lv_variable_7_0=(Token)match(input,RULE_ID,FOLLOW_40); if (state.failed) return current;
+                    lv_variable_7_0=(Token)match(input,RULE_ID,FOLLOW_42); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_variable_7_0, grammarAccess.getUpdateTriggerConstraintAAccess().getVariableIDTerminalRuleCall_1_4_0());
@@ -7405,17 +7925,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,51,FOLLOW_53); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,56,FOLLOW_54); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_8, grammarAccess.getUpdateTriggerConstraintAAccess().getEqualsSignKeyword_1_5());
                       			
                     }
-                    // InternalVsdl.g:2737:4: ( (lv_texp_9_0= ruleTimeExpr ) )
-                    // InternalVsdl.g:2738:5: (lv_texp_9_0= ruleTimeExpr )
+                    // InternalVsdl.g:2962:4: ( (lv_texp_9_0= ruleTimeExpr ) )
+                    // InternalVsdl.g:2963:5: (lv_texp_9_0= ruleTimeExpr )
                     {
-                    // InternalVsdl.g:2738:5: (lv_texp_9_0= ruleTimeExpr )
-                    // InternalVsdl.g:2739:6: lv_texp_9_0= ruleTimeExpr
+                    // InternalVsdl.g:2963:5: (lv_texp_9_0= ruleTimeExpr )
+                    // InternalVsdl.g:2964:6: lv_texp_9_0= ruleTimeExpr
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7453,13 +7973,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:2758:3: ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) )
+                    // InternalVsdl.g:2983:3: ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) )
                     {
-                    // InternalVsdl.g:2758:3: ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) )
-                    // InternalVsdl.g:2759:4: () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) )
+                    // InternalVsdl.g:2983:3: ( () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) ) )
+                    // InternalVsdl.g:2984:4: () ( ( 'at' )=>otherlv_11= 'at' ) ( (lv_op_12_0= 'most' ) ) otherlv_13= 'before' ( (lv_variable_14_0= RULE_ID ) ) otherlv_15= '=' ( (lv_texp_16_0= ruleTimeExpr ) )
                     {
-                    // InternalVsdl.g:2759:4: ()
-                    // InternalVsdl.g:2760:5: 
+                    // InternalVsdl.g:2984:4: ()
+                    // InternalVsdl.g:2985:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7471,10 +7991,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2766:4: ( ( 'at' )=>otherlv_11= 'at' )
-                    // InternalVsdl.g:2767:5: ( 'at' )=>otherlv_11= 'at'
+                    // InternalVsdl.g:2991:4: ( ( 'at' )=>otherlv_11= 'at' )
+                    // InternalVsdl.g:2992:5: ( 'at' )=>otherlv_11= 'at'
                     {
-                    otherlv_11=(Token)match(input,63,FOLLOW_54); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,65,FOLLOW_55); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_11, grammarAccess.getUpdateTriggerConstraintAAccess().getAtKeyword_2_1());
@@ -7483,13 +8003,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2773:4: ( (lv_op_12_0= 'most' ) )
-                    // InternalVsdl.g:2774:5: (lv_op_12_0= 'most' )
+                    // InternalVsdl.g:2998:4: ( (lv_op_12_0= 'most' ) )
+                    // InternalVsdl.g:2999:5: (lv_op_12_0= 'most' )
                     {
-                    // InternalVsdl.g:2774:5: (lv_op_12_0= 'most' )
-                    // InternalVsdl.g:2775:6: lv_op_12_0= 'most'
+                    // InternalVsdl.g:2999:5: (lv_op_12_0= 'most' )
+                    // InternalVsdl.g:3000:6: lv_op_12_0= 'most'
                     {
-                    lv_op_12_0=(Token)match(input,66,FOLLOW_55); if (state.failed) return current;
+                    lv_op_12_0=(Token)match(input,68,FOLLOW_56); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_op_12_0, grammarAccess.getUpdateTriggerConstraintAAccess().getOpMostKeyword_2_2_0());
@@ -7509,19 +8029,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,67,FOLLOW_3); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,69,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getUpdateTriggerConstraintAAccess().getBeforeKeyword_2_3());
                       			
                     }
-                    // InternalVsdl.g:2791:4: ( (lv_variable_14_0= RULE_ID ) )
-                    // InternalVsdl.g:2792:5: (lv_variable_14_0= RULE_ID )
+                    // InternalVsdl.g:3016:4: ( (lv_variable_14_0= RULE_ID ) )
+                    // InternalVsdl.g:3017:5: (lv_variable_14_0= RULE_ID )
                     {
-                    // InternalVsdl.g:2792:5: (lv_variable_14_0= RULE_ID )
-                    // InternalVsdl.g:2793:6: lv_variable_14_0= RULE_ID
+                    // InternalVsdl.g:3017:5: (lv_variable_14_0= RULE_ID )
+                    // InternalVsdl.g:3018:6: lv_variable_14_0= RULE_ID
                     {
-                    lv_variable_14_0=(Token)match(input,RULE_ID,FOLLOW_40); if (state.failed) return current;
+                    lv_variable_14_0=(Token)match(input,RULE_ID,FOLLOW_42); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_variable_14_0, grammarAccess.getUpdateTriggerConstraintAAccess().getVariableIDTerminalRuleCall_2_4_0());
@@ -7545,17 +8065,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_15=(Token)match(input,51,FOLLOW_53); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,56,FOLLOW_54); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getUpdateTriggerConstraintAAccess().getEqualsSignKeyword_2_5());
                       			
                     }
-                    // InternalVsdl.g:2813:4: ( (lv_texp_16_0= ruleTimeExpr ) )
-                    // InternalVsdl.g:2814:5: (lv_texp_16_0= ruleTimeExpr )
+                    // InternalVsdl.g:3038:4: ( (lv_texp_16_0= ruleTimeExpr ) )
+                    // InternalVsdl.g:3039:5: (lv_texp_16_0= ruleTimeExpr )
                     {
-                    // InternalVsdl.g:2814:5: (lv_texp_16_0= ruleTimeExpr )
-                    // InternalVsdl.g:2815:6: lv_texp_16_0= ruleTimeExpr
+                    // InternalVsdl.g:3039:5: (lv_texp_16_0= ruleTimeExpr )
+                    // InternalVsdl.g:3040:6: lv_texp_16_0= ruleTimeExpr
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7593,13 +8113,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalVsdl.g:2834:3: ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) )
+                    // InternalVsdl.g:3059:3: ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) )
                     {
-                    // InternalVsdl.g:2834:3: ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) )
-                    // InternalVsdl.g:2835:4: () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) )
+                    // InternalVsdl.g:3059:3: ( () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) ) )
+                    // InternalVsdl.g:3060:4: () ( ( 'switch' )=>otherlv_18= 'switch' ) otherlv_19= 'after' ( (lv_variable_20_0= RULE_ID ) ) otherlv_21= '=' ( (lv_texp_22_0= ruleTimeExpr ) )
                     {
-                    // InternalVsdl.g:2835:4: ()
-                    // InternalVsdl.g:2836:5: 
+                    // InternalVsdl.g:3060:4: ()
+                    // InternalVsdl.g:3061:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7611,10 +8131,10 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalVsdl.g:2842:4: ( ( 'switch' )=>otherlv_18= 'switch' )
-                    // InternalVsdl.g:2843:5: ( 'switch' )=>otherlv_18= 'switch'
+                    // InternalVsdl.g:3067:4: ( ( 'switch' )=>otherlv_18= 'switch' )
+                    // InternalVsdl.g:3068:5: ( 'switch' )=>otherlv_18= 'switch'
                     {
-                    otherlv_18=(Token)match(input,68,FOLLOW_52); if (state.failed) return current;
+                    otherlv_18=(Token)match(input,70,FOLLOW_53); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					newLeafNode(otherlv_18, grammarAccess.getUpdateTriggerConstraintAAccess().getSwitchKeyword_3_1());
@@ -7623,19 +8143,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_19=(Token)match(input,65,FOLLOW_3); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,67,FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getUpdateTriggerConstraintAAccess().getAfterKeyword_3_2());
                       			
                     }
-                    // InternalVsdl.g:2853:4: ( (lv_variable_20_0= RULE_ID ) )
-                    // InternalVsdl.g:2854:5: (lv_variable_20_0= RULE_ID )
+                    // InternalVsdl.g:3078:4: ( (lv_variable_20_0= RULE_ID ) )
+                    // InternalVsdl.g:3079:5: (lv_variable_20_0= RULE_ID )
                     {
-                    // InternalVsdl.g:2854:5: (lv_variable_20_0= RULE_ID )
-                    // InternalVsdl.g:2855:6: lv_variable_20_0= RULE_ID
+                    // InternalVsdl.g:3079:5: (lv_variable_20_0= RULE_ID )
+                    // InternalVsdl.g:3080:6: lv_variable_20_0= RULE_ID
                     {
-                    lv_variable_20_0=(Token)match(input,RULE_ID,FOLLOW_40); if (state.failed) return current;
+                    lv_variable_20_0=(Token)match(input,RULE_ID,FOLLOW_42); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_variable_20_0, grammarAccess.getUpdateTriggerConstraintAAccess().getVariableIDTerminalRuleCall_3_3_0());
@@ -7659,17 +8179,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,51,FOLLOW_53); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,56,FOLLOW_54); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getUpdateTriggerConstraintAAccess().getEqualsSignKeyword_3_4());
                       			
                     }
-                    // InternalVsdl.g:2875:4: ( (lv_texp_22_0= ruleTimeExpr ) )
-                    // InternalVsdl.g:2876:5: (lv_texp_22_0= ruleTimeExpr )
+                    // InternalVsdl.g:3100:4: ( (lv_texp_22_0= ruleTimeExpr ) )
+                    // InternalVsdl.g:3101:5: (lv_texp_22_0= ruleTimeExpr )
                     {
-                    // InternalVsdl.g:2876:5: (lv_texp_22_0= ruleTimeExpr )
-                    // InternalVsdl.g:2877:6: lv_texp_22_0= ruleTimeExpr
+                    // InternalVsdl.g:3101:5: (lv_texp_22_0= ruleTimeExpr )
+                    // InternalVsdl.g:3102:6: lv_texp_22_0= ruleTimeExpr
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7731,7 +8251,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTimeExpr"
-    // InternalVsdl.g:2899:1: entryRuleTimeExpr returns [EObject current=null] : iv_ruleTimeExpr= ruleTimeExpr EOF ;
+    // InternalVsdl.g:3124:1: entryRuleTimeExpr returns [EObject current=null] : iv_ruleTimeExpr= ruleTimeExpr EOF ;
     public final EObject entryRuleTimeExpr() throws RecognitionException {
         EObject current = null;
 
@@ -7739,8 +8259,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2899:49: (iv_ruleTimeExpr= ruleTimeExpr EOF )
-            // InternalVsdl.g:2900:2: iv_ruleTimeExpr= ruleTimeExpr EOF
+            // InternalVsdl.g:3124:49: (iv_ruleTimeExpr= ruleTimeExpr EOF )
+            // InternalVsdl.g:3125:2: iv_ruleTimeExpr= ruleTimeExpr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTimeExprRule()); 
@@ -7771,7 +8291,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTimeExpr"
-    // InternalVsdl.g:2906:1: ruleTimeExpr returns [EObject current=null] : this_TimeExprAddition_0= ruleTimeExprAddition ;
+    // InternalVsdl.g:3131:1: ruleTimeExpr returns [EObject current=null] : this_TimeExprAddition_0= ruleTimeExprAddition ;
     public final EObject ruleTimeExpr() throws RecognitionException {
         EObject current = null;
 
@@ -7782,8 +8302,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2912:2: (this_TimeExprAddition_0= ruleTimeExprAddition )
-            // InternalVsdl.g:2913:2: this_TimeExprAddition_0= ruleTimeExprAddition
+            // InternalVsdl.g:3137:2: (this_TimeExprAddition_0= ruleTimeExprAddition )
+            // InternalVsdl.g:3138:2: this_TimeExprAddition_0= ruleTimeExprAddition
             {
             if ( state.backtracking==0 ) {
 
@@ -7823,7 +8343,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTimeExprAddition"
-    // InternalVsdl.g:2924:1: entryRuleTimeExprAddition returns [EObject current=null] : iv_ruleTimeExprAddition= ruleTimeExprAddition EOF ;
+    // InternalVsdl.g:3149:1: entryRuleTimeExprAddition returns [EObject current=null] : iv_ruleTimeExprAddition= ruleTimeExprAddition EOF ;
     public final EObject entryRuleTimeExprAddition() throws RecognitionException {
         EObject current = null;
 
@@ -7831,8 +8351,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:2924:57: (iv_ruleTimeExprAddition= ruleTimeExprAddition EOF )
-            // InternalVsdl.g:2925:2: iv_ruleTimeExprAddition= ruleTimeExprAddition EOF
+            // InternalVsdl.g:3149:57: (iv_ruleTimeExprAddition= ruleTimeExprAddition EOF )
+            // InternalVsdl.g:3150:2: iv_ruleTimeExprAddition= ruleTimeExprAddition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTimeExprAdditionRule()); 
@@ -7863,7 +8383,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTimeExprAddition"
-    // InternalVsdl.g:2931:1: ruleTimeExprAddition returns [EObject current=null] : (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* ) ;
+    // InternalVsdl.g:3156:1: ruleTimeExprAddition returns [EObject current=null] : (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* ) ;
     public final EObject ruleTimeExprAddition() throws RecognitionException {
         EObject current = null;
 
@@ -7878,18 +8398,18 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:2937:2: ( (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* ) )
-            // InternalVsdl.g:2938:2: (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* )
+            // InternalVsdl.g:3162:2: ( (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* ) )
+            // InternalVsdl.g:3163:2: (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* )
             {
-            // InternalVsdl.g:2938:2: (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* )
-            // InternalVsdl.g:2939:3: this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )*
+            // InternalVsdl.g:3163:2: (this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )* )
+            // InternalVsdl.g:3164:3: this_TimeExprMultiplication_0= ruleTimeExprMultiplication ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )*
             {
             if ( state.backtracking==0 ) {
 
               			newCompositeNode(grammarAccess.getTimeExprAdditionAccess().getTimeExprMultiplicationParserRuleCall_0());
               		
             }
-            pushFollow(FOLLOW_56);
+            pushFollow(FOLLOW_57);
             this_TimeExprMultiplication_0=ruleTimeExprMultiplication();
 
             state._fsp--;
@@ -7900,26 +8420,26 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalVsdl.g:2947:3: ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )*
-            loop31:
+            // InternalVsdl.g:3172:3: ( ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) ) )*
+            loop32:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( ((LA31_0>=69 && LA31_0<=70)) ) {
-                    alt31=1;
+                if ( ((LA32_0>=71 && LA32_0<=72)) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt32) {
             	case 1 :
-            	    // InternalVsdl.g:2948:4: ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) )
+            	    // InternalVsdl.g:3173:4: ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) ) ( (lv_right_3_0= ruleTimeExprMultiplication ) )
             	    {
-            	    // InternalVsdl.g:2948:4: ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) )
-            	    // InternalVsdl.g:2949:5: () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) )
+            	    // InternalVsdl.g:3173:4: ( () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) ) )
+            	    // InternalVsdl.g:3174:5: () ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) )
             	    {
-            	    // InternalVsdl.g:2949:5: ()
-            	    // InternalVsdl.g:2950:6: 
+            	    // InternalVsdl.g:3174:5: ()
+            	    // InternalVsdl.g:3175:6: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -7931,34 +8451,34 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVsdl.g:2956:5: ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) )
-            	    // InternalVsdl.g:2957:6: ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) )
+            	    // InternalVsdl.g:3181:5: ( ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) ) )
+            	    // InternalVsdl.g:3182:6: ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) )
             	    {
-            	    // InternalVsdl.g:2957:6: ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) )
-            	    // InternalVsdl.g:2958:7: (lv_op_2_1= '+' | lv_op_2_2= '-' )
+            	    // InternalVsdl.g:3182:6: ( (lv_op_2_1= '+' | lv_op_2_2= '-' ) )
+            	    // InternalVsdl.g:3183:7: (lv_op_2_1= '+' | lv_op_2_2= '-' )
             	    {
-            	    // InternalVsdl.g:2958:7: (lv_op_2_1= '+' | lv_op_2_2= '-' )
-            	    int alt30=2;
-            	    int LA30_0 = input.LA(1);
+            	    // InternalVsdl.g:3183:7: (lv_op_2_1= '+' | lv_op_2_2= '-' )
+            	    int alt31=2;
+            	    int LA31_0 = input.LA(1);
 
-            	    if ( (LA30_0==69) ) {
-            	        alt30=1;
+            	    if ( (LA31_0==71) ) {
+            	        alt31=1;
             	    }
-            	    else if ( (LA30_0==70) ) {
-            	        alt30=2;
+            	    else if ( (LA31_0==72) ) {
+            	        alt31=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 30, 0, input);
+            	            new NoViableAltException("", 31, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt30) {
+            	    switch (alt31) {
             	        case 1 :
-            	            // InternalVsdl.g:2959:8: lv_op_2_1= '+'
+            	            // InternalVsdl.g:3184:8: lv_op_2_1= '+'
             	            {
-            	            lv_op_2_1=(Token)match(input,69,FOLLOW_53); if (state.failed) return current;
+            	            lv_op_2_1=(Token)match(input,71,FOLLOW_54); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              								newLeafNode(lv_op_2_1, grammarAccess.getTimeExprAdditionAccess().getOpPlusSignKeyword_1_0_1_0_0());
@@ -7976,9 +8496,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalVsdl.g:2970:8: lv_op_2_2= '-'
+            	            // InternalVsdl.g:3195:8: lv_op_2_2= '-'
             	            {
-            	            lv_op_2_2=(Token)match(input,70,FOLLOW_53); if (state.failed) return current;
+            	            lv_op_2_2=(Token)match(input,72,FOLLOW_54); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              								newLeafNode(lv_op_2_2, grammarAccess.getTimeExprAdditionAccess().getOpHyphenMinusKeyword_1_0_1_0_1());
@@ -8007,18 +8527,18 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVsdl.g:2984:4: ( (lv_right_3_0= ruleTimeExprMultiplication ) )
-            	    // InternalVsdl.g:2985:5: (lv_right_3_0= ruleTimeExprMultiplication )
+            	    // InternalVsdl.g:3209:4: ( (lv_right_3_0= ruleTimeExprMultiplication ) )
+            	    // InternalVsdl.g:3210:5: (lv_right_3_0= ruleTimeExprMultiplication )
             	    {
-            	    // InternalVsdl.g:2985:5: (lv_right_3_0= ruleTimeExprMultiplication )
-            	    // InternalVsdl.g:2986:6: lv_right_3_0= ruleTimeExprMultiplication
+            	    // InternalVsdl.g:3210:5: (lv_right_3_0= ruleTimeExprMultiplication )
+            	    // InternalVsdl.g:3211:6: lv_right_3_0= ruleTimeExprMultiplication
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getTimeExprAdditionAccess().getRightTimeExprMultiplicationParserRuleCall_1_1_0());
             	      					
             	    }
-            	    pushFollow(FOLLOW_56);
+            	    pushFollow(FOLLOW_57);
             	    lv_right_3_0=ruleTimeExprMultiplication();
 
             	    state._fsp--;
@@ -8033,211 +8553,6 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             	      							"right",
             	      							lv_right_3_0,
             	      							"it.csec.xtext.Vsdl.TimeExprMultiplication");
-            	      						afterParserOrEnumRuleCall();
-            	      					
-            	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop31;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleTimeExprAddition"
-
-
-    // $ANTLR start "entryRuleTimeExprMultiplication"
-    // InternalVsdl.g:3008:1: entryRuleTimeExprMultiplication returns [EObject current=null] : iv_ruleTimeExprMultiplication= ruleTimeExprMultiplication EOF ;
-    public final EObject entryRuleTimeExprMultiplication() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleTimeExprMultiplication = null;
-
-
-        try {
-            // InternalVsdl.g:3008:63: (iv_ruleTimeExprMultiplication= ruleTimeExprMultiplication EOF )
-            // InternalVsdl.g:3009:2: iv_ruleTimeExprMultiplication= ruleTimeExprMultiplication EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getTimeExprMultiplicationRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            iv_ruleTimeExprMultiplication=ruleTimeExprMultiplication();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleTimeExprMultiplication; 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return current;
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleTimeExprMultiplication"
-
-
-    // $ANTLR start "ruleTimeExprMultiplication"
-    // InternalVsdl.g:3015:1: ruleTimeExprMultiplication returns [EObject current=null] : (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* ) ;
-    public final EObject ruleTimeExprMultiplication() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_op_2_0=null;
-        EObject this_TimeExprA_0 = null;
-
-        EObject lv_right_3_0 = null;
-
-
-
-        	enterRule();
-
-        try {
-            // InternalVsdl.g:3021:2: ( (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* ) )
-            // InternalVsdl.g:3022:2: (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* )
-            {
-            // InternalVsdl.g:3022:2: (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* )
-            // InternalVsdl.g:3023:3: this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )*
-            {
-            if ( state.backtracking==0 ) {
-
-              			newCompositeNode(grammarAccess.getTimeExprMultiplicationAccess().getTimeExprAParserRuleCall_0());
-              		
-            }
-            pushFollow(FOLLOW_57);
-            this_TimeExprA_0=ruleTimeExprA();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              			current = this_TimeExprA_0;
-              			afterParserOrEnumRuleCall();
-              		
-            }
-            // InternalVsdl.g:3031:3: ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )*
-            loop32:
-            do {
-                int alt32=2;
-                int LA32_0 = input.LA(1);
-
-                if ( (LA32_0==71) ) {
-                    alt32=1;
-                }
-
-
-                switch (alt32) {
-            	case 1 :
-            	    // InternalVsdl.g:3032:4: ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) )
-            	    {
-            	    // InternalVsdl.g:3032:4: ( () ( (lv_op_2_0= '*' ) ) )
-            	    // InternalVsdl.g:3033:5: () ( (lv_op_2_0= '*' ) )
-            	    {
-            	    // InternalVsdl.g:3033:5: ()
-            	    // InternalVsdl.g:3034:6: 
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						current = forceCreateModelElementAndSet(
-            	      							grammarAccess.getTimeExprMultiplicationAccess().getMultiplicationLeftAction_1_0_0(),
-            	      							current);
-            	      					
-            	    }
-
-            	    }
-
-            	    // InternalVsdl.g:3040:5: ( (lv_op_2_0= '*' ) )
-            	    // InternalVsdl.g:3041:6: (lv_op_2_0= '*' )
-            	    {
-            	    // InternalVsdl.g:3041:6: (lv_op_2_0= '*' )
-            	    // InternalVsdl.g:3042:7: lv_op_2_0= '*'
-            	    {
-            	    lv_op_2_0=(Token)match(input,71,FOLLOW_53); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      							newLeafNode(lv_op_2_0, grammarAccess.getTimeExprMultiplicationAccess().getOpAsteriskKeyword_1_0_1_0());
-            	      						
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      							if (current==null) {
-            	      								current = createModelElement(grammarAccess.getTimeExprMultiplicationRule());
-            	      							}
-            	      							setWithLastConsumed(current, "op", lv_op_2_0, "*");
-            	      						
-            	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-            	    // InternalVsdl.g:3055:4: ( (lv_right_3_0= ruleTimeExprA ) )
-            	    // InternalVsdl.g:3056:5: (lv_right_3_0= ruleTimeExprA )
-            	    {
-            	    // InternalVsdl.g:3056:5: (lv_right_3_0= ruleTimeExprA )
-            	    // InternalVsdl.g:3057:6: lv_right_3_0= ruleTimeExprA
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						newCompositeNode(grammarAccess.getTimeExprMultiplicationAccess().getRightTimeExprAParserRuleCall_1_1_0());
-            	      					
-            	    }
-            	    pushFollow(FOLLOW_57);
-            	    lv_right_3_0=ruleTimeExprA();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getTimeExprMultiplicationRule());
-            	      						}
-            	      						set(
-            	      							current,
-            	      							"right",
-            	      							lv_right_3_0,
-            	      							"it.csec.xtext.Vsdl.TimeExprA");
             	      						afterParserOrEnumRuleCall();
             	      					
             	    }
@@ -8277,11 +8592,216 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
+    // $ANTLR end "ruleTimeExprAddition"
+
+
+    // $ANTLR start "entryRuleTimeExprMultiplication"
+    // InternalVsdl.g:3233:1: entryRuleTimeExprMultiplication returns [EObject current=null] : iv_ruleTimeExprMultiplication= ruleTimeExprMultiplication EOF ;
+    public final EObject entryRuleTimeExprMultiplication() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleTimeExprMultiplication = null;
+
+
+        try {
+            // InternalVsdl.g:3233:63: (iv_ruleTimeExprMultiplication= ruleTimeExprMultiplication EOF )
+            // InternalVsdl.g:3234:2: iv_ruleTimeExprMultiplication= ruleTimeExprMultiplication EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getTimeExprMultiplicationRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            iv_ruleTimeExprMultiplication=ruleTimeExprMultiplication();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleTimeExprMultiplication; 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleTimeExprMultiplication"
+
+
+    // $ANTLR start "ruleTimeExprMultiplication"
+    // InternalVsdl.g:3240:1: ruleTimeExprMultiplication returns [EObject current=null] : (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* ) ;
+    public final EObject ruleTimeExprMultiplication() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_op_2_0=null;
+        EObject this_TimeExprA_0 = null;
+
+        EObject lv_right_3_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalVsdl.g:3246:2: ( (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* ) )
+            // InternalVsdl.g:3247:2: (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* )
+            {
+            // InternalVsdl.g:3247:2: (this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )* )
+            // InternalVsdl.g:3248:3: this_TimeExprA_0= ruleTimeExprA ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )*
+            {
+            if ( state.backtracking==0 ) {
+
+              			newCompositeNode(grammarAccess.getTimeExprMultiplicationAccess().getTimeExprAParserRuleCall_0());
+              		
+            }
+            pushFollow(FOLLOW_58);
+            this_TimeExprA_0=ruleTimeExprA();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			current = this_TimeExprA_0;
+              			afterParserOrEnumRuleCall();
+              		
+            }
+            // InternalVsdl.g:3256:3: ( ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) ) )*
+            loop33:
+            do {
+                int alt33=2;
+                int LA33_0 = input.LA(1);
+
+                if ( (LA33_0==73) ) {
+                    alt33=1;
+                }
+
+
+                switch (alt33) {
+            	case 1 :
+            	    // InternalVsdl.g:3257:4: ( () ( (lv_op_2_0= '*' ) ) ) ( (lv_right_3_0= ruleTimeExprA ) )
+            	    {
+            	    // InternalVsdl.g:3257:4: ( () ( (lv_op_2_0= '*' ) ) )
+            	    // InternalVsdl.g:3258:5: () ( (lv_op_2_0= '*' ) )
+            	    {
+            	    // InternalVsdl.g:3258:5: ()
+            	    // InternalVsdl.g:3259:6: 
+            	    {
+            	    if ( state.backtracking==0 ) {
+
+            	      						current = forceCreateModelElementAndSet(
+            	      							grammarAccess.getTimeExprMultiplicationAccess().getMultiplicationLeftAction_1_0_0(),
+            	      							current);
+            	      					
+            	    }
+
+            	    }
+
+            	    // InternalVsdl.g:3265:5: ( (lv_op_2_0= '*' ) )
+            	    // InternalVsdl.g:3266:6: (lv_op_2_0= '*' )
+            	    {
+            	    // InternalVsdl.g:3266:6: (lv_op_2_0= '*' )
+            	    // InternalVsdl.g:3267:7: lv_op_2_0= '*'
+            	    {
+            	    lv_op_2_0=(Token)match(input,73,FOLLOW_54); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      							newLeafNode(lv_op_2_0, grammarAccess.getTimeExprMultiplicationAccess().getOpAsteriskKeyword_1_0_1_0());
+            	      						
+            	    }
+            	    if ( state.backtracking==0 ) {
+
+            	      							if (current==null) {
+            	      								current = createModelElement(grammarAccess.getTimeExprMultiplicationRule());
+            	      							}
+            	      							setWithLastConsumed(current, "op", lv_op_2_0, "*");
+            	      						
+            	    }
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+
+            	    // InternalVsdl.g:3280:4: ( (lv_right_3_0= ruleTimeExprA ) )
+            	    // InternalVsdl.g:3281:5: (lv_right_3_0= ruleTimeExprA )
+            	    {
+            	    // InternalVsdl.g:3281:5: (lv_right_3_0= ruleTimeExprA )
+            	    // InternalVsdl.g:3282:6: lv_right_3_0= ruleTimeExprA
+            	    {
+            	    if ( state.backtracking==0 ) {
+
+            	      						newCompositeNode(grammarAccess.getTimeExprMultiplicationAccess().getRightTimeExprAParserRuleCall_1_1_0());
+            	      					
+            	    }
+            	    pushFollow(FOLLOW_58);
+            	    lv_right_3_0=ruleTimeExprA();
+
+            	    state._fsp--;
+            	    if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      						if (current==null) {
+            	      							current = createModelElementForParent(grammarAccess.getTimeExprMultiplicationRule());
+            	      						}
+            	      						set(
+            	      							current,
+            	      							"right",
+            	      							lv_right_3_0,
+            	      							"it.csec.xtext.Vsdl.TimeExprA");
+            	      						afterParserOrEnumRuleCall();
+            	      					
+            	    }
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop33;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
     // $ANTLR end "ruleTimeExprMultiplication"
 
 
     // $ANTLR start "entryRuleTimeExprA"
-    // InternalVsdl.g:3079:1: entryRuleTimeExprA returns [EObject current=null] : iv_ruleTimeExprA= ruleTimeExprA EOF ;
+    // InternalVsdl.g:3304:1: entryRuleTimeExprA returns [EObject current=null] : iv_ruleTimeExprA= ruleTimeExprA EOF ;
     public final EObject entryRuleTimeExprA() throws RecognitionException {
         EObject current = null;
 
@@ -8289,8 +8809,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3079:50: (iv_ruleTimeExprA= ruleTimeExprA EOF )
-            // InternalVsdl.g:3080:2: iv_ruleTimeExprA= ruleTimeExprA EOF
+            // InternalVsdl.g:3304:50: (iv_ruleTimeExprA= ruleTimeExprA EOF )
+            // InternalVsdl.g:3305:2: iv_ruleTimeExprA= ruleTimeExprA EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTimeExprARule()); 
@@ -8321,7 +8841,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTimeExprA"
-    // InternalVsdl.g:3086:1: ruleTimeExprA returns [EObject current=null] : ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) ) ;
+    // InternalVsdl.g:3311:1: ruleTimeExprA returns [EObject current=null] : ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) ) ;
     public final EObject ruleTimeExprA() throws RecognitionException {
         EObject current = null;
 
@@ -8337,43 +8857,43 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3092:2: ( ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) ) )
-            // InternalVsdl.g:3093:2: ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) )
+            // InternalVsdl.g:3317:2: ( ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) ) )
+            // InternalVsdl.g:3318:2: ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) )
             {
-            // InternalVsdl.g:3093:2: ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) )
-            int alt33=3;
+            // InternalVsdl.g:3318:2: ( (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' ) | ( (lv_variable_3_0= RULE_ID ) ) | ( (lv_interval_4_0= ruleTimeInterval ) ) )
+            int alt34=3;
             switch ( input.LA(1) ) {
             case 23:
                 {
-                alt33=1;
+                alt34=1;
                 }
                 break;
             case RULE_ID:
                 {
-                alt33=2;
+                alt34=2;
                 }
                 break;
             case RULE_INT:
                 {
-                alt33=3;
+                alt34=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 34, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
-                    // InternalVsdl.g:3094:3: (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' )
+                    // InternalVsdl.g:3319:3: (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' )
                     {
-                    // InternalVsdl.g:3094:3: (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' )
-                    // InternalVsdl.g:3095:4: otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')'
+                    // InternalVsdl.g:3319:3: (otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')' )
+                    // InternalVsdl.g:3320:4: otherlv_0= '(' this_TimeExpr_1= ruleTimeExpr otherlv_2= ')'
                     {
-                    otherlv_0=(Token)match(input,23,FOLLOW_53); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,23,FOLLOW_54); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_0, grammarAccess.getTimeExprAAccess().getLeftParenthesisKeyword_0_0());
@@ -8408,13 +8928,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:3113:3: ( (lv_variable_3_0= RULE_ID ) )
+                    // InternalVsdl.g:3338:3: ( (lv_variable_3_0= RULE_ID ) )
                     {
-                    // InternalVsdl.g:3113:3: ( (lv_variable_3_0= RULE_ID ) )
-                    // InternalVsdl.g:3114:4: (lv_variable_3_0= RULE_ID )
+                    // InternalVsdl.g:3338:3: ( (lv_variable_3_0= RULE_ID ) )
+                    // InternalVsdl.g:3339:4: (lv_variable_3_0= RULE_ID )
                     {
-                    // InternalVsdl.g:3114:4: (lv_variable_3_0= RULE_ID )
-                    // InternalVsdl.g:3115:5: lv_variable_3_0= RULE_ID
+                    // InternalVsdl.g:3339:4: (lv_variable_3_0= RULE_ID )
+                    // InternalVsdl.g:3340:5: lv_variable_3_0= RULE_ID
                     {
                     lv_variable_3_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8444,13 +8964,13 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:3132:3: ( (lv_interval_4_0= ruleTimeInterval ) )
+                    // InternalVsdl.g:3357:3: ( (lv_interval_4_0= ruleTimeInterval ) )
                     {
-                    // InternalVsdl.g:3132:3: ( (lv_interval_4_0= ruleTimeInterval ) )
-                    // InternalVsdl.g:3133:4: (lv_interval_4_0= ruleTimeInterval )
+                    // InternalVsdl.g:3357:3: ( (lv_interval_4_0= ruleTimeInterval ) )
+                    // InternalVsdl.g:3358:4: (lv_interval_4_0= ruleTimeInterval )
                     {
-                    // InternalVsdl.g:3133:4: (lv_interval_4_0= ruleTimeInterval )
-                    // InternalVsdl.g:3134:5: lv_interval_4_0= ruleTimeInterval
+                    // InternalVsdl.g:3358:4: (lv_interval_4_0= ruleTimeInterval )
+                    // InternalVsdl.g:3359:5: lv_interval_4_0= ruleTimeInterval
                     {
                     if ( state.backtracking==0 ) {
 
@@ -8509,7 +9029,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTimeInterval"
-    // InternalVsdl.g:3155:1: entryRuleTimeInterval returns [EObject current=null] : iv_ruleTimeInterval= ruleTimeInterval EOF ;
+    // InternalVsdl.g:3380:1: entryRuleTimeInterval returns [EObject current=null] : iv_ruleTimeInterval= ruleTimeInterval EOF ;
     public final EObject entryRuleTimeInterval() throws RecognitionException {
         EObject current = null;
 
@@ -8517,8 +9037,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3155:53: (iv_ruleTimeInterval= ruleTimeInterval EOF )
-            // InternalVsdl.g:3156:2: iv_ruleTimeInterval= ruleTimeInterval EOF
+            // InternalVsdl.g:3380:53: (iv_ruleTimeInterval= ruleTimeInterval EOF )
+            // InternalVsdl.g:3381:2: iv_ruleTimeInterval= ruleTimeInterval EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTimeIntervalRule()); 
@@ -8549,7 +9069,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTimeInterval"
-    // InternalVsdl.g:3162:1: ruleTimeInterval returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
+    // InternalVsdl.g:3387:1: ruleTimeInterval returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
     public final EObject ruleTimeInterval() throws RecognitionException {
         EObject current = null;
 
@@ -8559,14 +9079,14 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3168:2: ( ( (lv_value_0_0= RULE_INT ) ) )
-            // InternalVsdl.g:3169:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalVsdl.g:3393:2: ( ( (lv_value_0_0= RULE_INT ) ) )
+            // InternalVsdl.g:3394:2: ( (lv_value_0_0= RULE_INT ) )
             {
-            // InternalVsdl.g:3169:2: ( (lv_value_0_0= RULE_INT ) )
-            // InternalVsdl.g:3170:3: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3394:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalVsdl.g:3395:3: (lv_value_0_0= RULE_INT )
             {
-            // InternalVsdl.g:3170:3: (lv_value_0_0= RULE_INT )
-            // InternalVsdl.g:3171:4: lv_value_0_0= RULE_INT
+            // InternalVsdl.g:3395:3: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3396:4: lv_value_0_0= RULE_INT
             {
             lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8614,7 +9134,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCPUFrequency"
-    // InternalVsdl.g:3190:1: entryRuleCPUFrequency returns [EObject current=null] : iv_ruleCPUFrequency= ruleCPUFrequency EOF ;
+    // InternalVsdl.g:3415:1: entryRuleCPUFrequency returns [EObject current=null] : iv_ruleCPUFrequency= ruleCPUFrequency EOF ;
     public final EObject entryRuleCPUFrequency() throws RecognitionException {
         EObject current = null;
 
@@ -8622,8 +9142,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3190:53: (iv_ruleCPUFrequency= ruleCPUFrequency EOF )
-            // InternalVsdl.g:3191:2: iv_ruleCPUFrequency= ruleCPUFrequency EOF
+            // InternalVsdl.g:3415:53: (iv_ruleCPUFrequency= ruleCPUFrequency EOF )
+            // InternalVsdl.g:3416:2: iv_ruleCPUFrequency= ruleCPUFrequency EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCPUFrequencyRule()); 
@@ -8654,7 +9174,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCPUFrequency"
-    // InternalVsdl.g:3197:1: ruleCPUFrequency returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) ) ;
+    // InternalVsdl.g:3422:1: ruleCPUFrequency returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) ) ;
     public final EObject ruleCPUFrequency() throws RecognitionException {
         EObject current = null;
 
@@ -8667,19 +9187,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3203:2: ( ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) ) )
-            // InternalVsdl.g:3204:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) )
+            // InternalVsdl.g:3428:2: ( ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) ) )
+            // InternalVsdl.g:3429:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) )
             {
-            // InternalVsdl.g:3204:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) )
-            // InternalVsdl.g:3205:3: ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) )
+            // InternalVsdl.g:3429:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) ) )
+            // InternalVsdl.g:3430:3: ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) )
             {
-            // InternalVsdl.g:3205:3: ( (lv_value_0_0= RULE_INT ) )
-            // InternalVsdl.g:3206:4: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3430:3: ( (lv_value_0_0= RULE_INT ) )
+            // InternalVsdl.g:3431:4: (lv_value_0_0= RULE_INT )
             {
-            // InternalVsdl.g:3206:4: (lv_value_0_0= RULE_INT )
-            // InternalVsdl.g:3207:5: lv_value_0_0= RULE_INT
+            // InternalVsdl.g:3431:4: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3432:5: lv_value_0_0= RULE_INT
             {
-            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_58); if (state.failed) return current;
+            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_59); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_value_0_0, grammarAccess.getCPUFrequencyAccess().getValueINTTerminalRuleCall_0_0());
@@ -8703,43 +9223,43 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVsdl.g:3223:3: ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) )
-            // InternalVsdl.g:3224:4: ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) )
+            // InternalVsdl.g:3448:3: ( ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) ) )
+            // InternalVsdl.g:3449:4: ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) )
             {
-            // InternalVsdl.g:3224:4: ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) )
-            // InternalVsdl.g:3225:5: (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' )
+            // InternalVsdl.g:3449:4: ( (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' ) )
+            // InternalVsdl.g:3450:5: (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' )
             {
-            // InternalVsdl.g:3225:5: (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' )
-            int alt34=3;
+            // InternalVsdl.g:3450:5: (lv_unit_1_1= 'MHz' | lv_unit_1_2= 'GHz' | lv_unit_1_3= 'THz' )
+            int alt35=3;
             switch ( input.LA(1) ) {
-            case 72:
-                {
-                alt34=1;
-                }
-                break;
-            case 73:
-                {
-                alt34=2;
-                }
-                break;
             case 74:
                 {
-                alt34=3;
+                alt35=1;
+                }
+                break;
+            case 75:
+                {
+                alt35=2;
+                }
+                break;
+            case 76:
+                {
+                alt35=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 34, 0, input);
+                    new NoViableAltException("", 35, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // InternalVsdl.g:3226:6: lv_unit_1_1= 'MHz'
+                    // InternalVsdl.g:3451:6: lv_unit_1_1= 'MHz'
                     {
-                    lv_unit_1_1=(Token)match(input,72,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_1=(Token)match(input,74,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_1, grammarAccess.getCPUFrequencyAccess().getUnitMHzKeyword_1_0_0());
@@ -8757,9 +9277,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:3237:6: lv_unit_1_2= 'GHz'
+                    // InternalVsdl.g:3462:6: lv_unit_1_2= 'GHz'
                     {
-                    lv_unit_1_2=(Token)match(input,73,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_2=(Token)match(input,75,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_2, grammarAccess.getCPUFrequencyAccess().getUnitGHzKeyword_1_0_1());
@@ -8777,9 +9297,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:3248:6: lv_unit_1_3= 'THz'
+                    // InternalVsdl.g:3473:6: lv_unit_1_3= 'THz'
                     {
-                    lv_unit_1_3=(Token)match(input,74,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_3=(Token)match(input,76,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_3, grammarAccess.getCPUFrequencyAccess().getUnitTHzKeyword_1_0_2());
@@ -8830,7 +9350,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDiskSize"
-    // InternalVsdl.g:3265:1: entryRuleDiskSize returns [EObject current=null] : iv_ruleDiskSize= ruleDiskSize EOF ;
+    // InternalVsdl.g:3490:1: entryRuleDiskSize returns [EObject current=null] : iv_ruleDiskSize= ruleDiskSize EOF ;
     public final EObject entryRuleDiskSize() throws RecognitionException {
         EObject current = null;
 
@@ -8838,8 +9358,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3265:49: (iv_ruleDiskSize= ruleDiskSize EOF )
-            // InternalVsdl.g:3266:2: iv_ruleDiskSize= ruleDiskSize EOF
+            // InternalVsdl.g:3490:49: (iv_ruleDiskSize= ruleDiskSize EOF )
+            // InternalVsdl.g:3491:2: iv_ruleDiskSize= ruleDiskSize EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDiskSizeRule()); 
@@ -8870,7 +9390,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDiskSize"
-    // InternalVsdl.g:3272:1: ruleDiskSize returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) ;
+    // InternalVsdl.g:3497:1: ruleDiskSize returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) ;
     public final EObject ruleDiskSize() throws RecognitionException {
         EObject current = null;
 
@@ -8883,19 +9403,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3278:2: ( ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) )
-            // InternalVsdl.g:3279:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
+            // InternalVsdl.g:3503:2: ( ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) )
+            // InternalVsdl.g:3504:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
             {
-            // InternalVsdl.g:3279:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
-            // InternalVsdl.g:3280:3: ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
+            // InternalVsdl.g:3504:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
+            // InternalVsdl.g:3505:3: ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
             {
-            // InternalVsdl.g:3280:3: ( (lv_value_0_0= RULE_INT ) )
-            // InternalVsdl.g:3281:4: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3505:3: ( (lv_value_0_0= RULE_INT ) )
+            // InternalVsdl.g:3506:4: (lv_value_0_0= RULE_INT )
             {
-            // InternalVsdl.g:3281:4: (lv_value_0_0= RULE_INT )
-            // InternalVsdl.g:3282:5: lv_value_0_0= RULE_INT
+            // InternalVsdl.g:3506:4: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3507:5: lv_value_0_0= RULE_INT
             {
-            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_59); if (state.failed) return current;
+            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_60); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_value_0_0, grammarAccess.getDiskSizeAccess().getValueINTTerminalRuleCall_0_0());
@@ -8919,43 +9439,43 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVsdl.g:3298:3: ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
-            // InternalVsdl.g:3299:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
+            // InternalVsdl.g:3523:3: ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
+            // InternalVsdl.g:3524:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
             {
-            // InternalVsdl.g:3299:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
-            // InternalVsdl.g:3300:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
+            // InternalVsdl.g:3524:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
+            // InternalVsdl.g:3525:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
             {
-            // InternalVsdl.g:3300:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
-            int alt35=3;
+            // InternalVsdl.g:3525:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
+            int alt36=3;
             switch ( input.LA(1) ) {
-            case 75:
-                {
-                alt35=1;
-                }
-                break;
-            case 76:
-                {
-                alt35=2;
-                }
-                break;
             case 77:
                 {
-                alt35=3;
+                alt36=1;
+                }
+                break;
+            case 78:
+                {
+                alt36=2;
+                }
+                break;
+            case 79:
+                {
+                alt36=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 35, 0, input);
+                    new NoViableAltException("", 36, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // InternalVsdl.g:3301:6: lv_unit_1_1= 'MB'
+                    // InternalVsdl.g:3526:6: lv_unit_1_1= 'MB'
                     {
-                    lv_unit_1_1=(Token)match(input,75,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_1=(Token)match(input,77,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_1, grammarAccess.getDiskSizeAccess().getUnitMBKeyword_1_0_0());
@@ -8973,9 +9493,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:3312:6: lv_unit_1_2= 'GB'
+                    // InternalVsdl.g:3537:6: lv_unit_1_2= 'GB'
                     {
-                    lv_unit_1_2=(Token)match(input,76,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_2=(Token)match(input,78,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_2, grammarAccess.getDiskSizeAccess().getUnitGBKeyword_1_0_1());
@@ -8993,9 +9513,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:3323:6: lv_unit_1_3= 'TB'
+                    // InternalVsdl.g:3548:6: lv_unit_1_3= 'TB'
                     {
-                    lv_unit_1_3=(Token)match(input,77,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_3=(Token)match(input,79,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_3, grammarAccess.getDiskSizeAccess().getUnitTBKeyword_1_0_2());
@@ -9046,7 +9566,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRamSize"
-    // InternalVsdl.g:3340:1: entryRuleRamSize returns [EObject current=null] : iv_ruleRamSize= ruleRamSize EOF ;
+    // InternalVsdl.g:3565:1: entryRuleRamSize returns [EObject current=null] : iv_ruleRamSize= ruleRamSize EOF ;
     public final EObject entryRuleRamSize() throws RecognitionException {
         EObject current = null;
 
@@ -9054,8 +9574,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3340:48: (iv_ruleRamSize= ruleRamSize EOF )
-            // InternalVsdl.g:3341:2: iv_ruleRamSize= ruleRamSize EOF
+            // InternalVsdl.g:3565:48: (iv_ruleRamSize= ruleRamSize EOF )
+            // InternalVsdl.g:3566:2: iv_ruleRamSize= ruleRamSize EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRamSizeRule()); 
@@ -9086,7 +9606,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRamSize"
-    // InternalVsdl.g:3347:1: ruleRamSize returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) ;
+    // InternalVsdl.g:3572:1: ruleRamSize returns [EObject current=null] : ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) ;
     public final EObject ruleRamSize() throws RecognitionException {
         EObject current = null;
 
@@ -9099,19 +9619,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3353:2: ( ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) )
-            // InternalVsdl.g:3354:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
+            // InternalVsdl.g:3578:2: ( ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) ) )
+            // InternalVsdl.g:3579:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
             {
-            // InternalVsdl.g:3354:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
-            // InternalVsdl.g:3355:3: ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
+            // InternalVsdl.g:3579:2: ( ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) ) )
+            // InternalVsdl.g:3580:3: ( (lv_value_0_0= RULE_INT ) ) ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
             {
-            // InternalVsdl.g:3355:3: ( (lv_value_0_0= RULE_INT ) )
-            // InternalVsdl.g:3356:4: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3580:3: ( (lv_value_0_0= RULE_INT ) )
+            // InternalVsdl.g:3581:4: (lv_value_0_0= RULE_INT )
             {
-            // InternalVsdl.g:3356:4: (lv_value_0_0= RULE_INT )
-            // InternalVsdl.g:3357:5: lv_value_0_0= RULE_INT
+            // InternalVsdl.g:3581:4: (lv_value_0_0= RULE_INT )
+            // InternalVsdl.g:3582:5: lv_value_0_0= RULE_INT
             {
-            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_59); if (state.failed) return current;
+            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_60); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_value_0_0, grammarAccess.getRamSizeAccess().getValueINTTerminalRuleCall_0_0());
@@ -9135,43 +9655,43 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVsdl.g:3373:3: ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
-            // InternalVsdl.g:3374:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
+            // InternalVsdl.g:3598:3: ( ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) ) )
+            // InternalVsdl.g:3599:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
             {
-            // InternalVsdl.g:3374:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
-            // InternalVsdl.g:3375:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
+            // InternalVsdl.g:3599:4: ( (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' ) )
+            // InternalVsdl.g:3600:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
             {
-            // InternalVsdl.g:3375:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
-            int alt36=3;
+            // InternalVsdl.g:3600:5: (lv_unit_1_1= 'MB' | lv_unit_1_2= 'GB' | lv_unit_1_3= 'TB' )
+            int alt37=3;
             switch ( input.LA(1) ) {
-            case 75:
-                {
-                alt36=1;
-                }
-                break;
-            case 76:
-                {
-                alt36=2;
-                }
-                break;
             case 77:
                 {
-                alt36=3;
+                alt37=1;
+                }
+                break;
+            case 78:
+                {
+                alt37=2;
+                }
+                break;
+            case 79:
+                {
+                alt37=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 36, 0, input);
+                    new NoViableAltException("", 37, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt36) {
+            switch (alt37) {
                 case 1 :
-                    // InternalVsdl.g:3376:6: lv_unit_1_1= 'MB'
+                    // InternalVsdl.g:3601:6: lv_unit_1_1= 'MB'
                     {
-                    lv_unit_1_1=(Token)match(input,75,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_1=(Token)match(input,77,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_1, grammarAccess.getRamSizeAccess().getUnitMBKeyword_1_0_0());
@@ -9189,9 +9709,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:3387:6: lv_unit_1_2= 'GB'
+                    // InternalVsdl.g:3612:6: lv_unit_1_2= 'GB'
                     {
-                    lv_unit_1_2=(Token)match(input,76,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_2=(Token)match(input,78,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_2, grammarAccess.getRamSizeAccess().getUnitGBKeyword_1_0_1());
@@ -9209,9 +9729,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:3398:6: lv_unit_1_3= 'TB'
+                    // InternalVsdl.g:3623:6: lv_unit_1_3= 'TB'
                     {
-                    lv_unit_1_3=(Token)match(input,77,FOLLOW_2); if (state.failed) return current;
+                    lv_unit_1_3=(Token)match(input,79,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_unit_1_3, grammarAccess.getRamSizeAccess().getUnitTBKeyword_1_0_2());
@@ -9262,7 +9782,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIPAddress"
-    // InternalVsdl.g:3415:1: entryRuleIPAddress returns [EObject current=null] : iv_ruleIPAddress= ruleIPAddress EOF ;
+    // InternalVsdl.g:3640:1: entryRuleIPAddress returns [EObject current=null] : iv_ruleIPAddress= ruleIPAddress EOF ;
     public final EObject entryRuleIPAddress() throws RecognitionException {
         EObject current = null;
 
@@ -9270,8 +9790,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3415:50: (iv_ruleIPAddress= ruleIPAddress EOF )
-            // InternalVsdl.g:3416:2: iv_ruleIPAddress= ruleIPAddress EOF
+            // InternalVsdl.g:3640:50: (iv_ruleIPAddress= ruleIPAddress EOF )
+            // InternalVsdl.g:3641:2: iv_ruleIPAddress= ruleIPAddress EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIPAddressRule()); 
@@ -9302,7 +9822,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIPAddress"
-    // InternalVsdl.g:3422:1: ruleIPAddress returns [EObject current=null] : ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) ) ;
+    // InternalVsdl.g:3647:1: ruleIPAddress returns [EObject current=null] : ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) ) ;
     public final EObject ruleIPAddress() throws RecognitionException {
         EObject current = null;
 
@@ -9318,19 +9838,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3428:2: ( ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) ) )
-            // InternalVsdl.g:3429:2: ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) )
+            // InternalVsdl.g:3653:2: ( ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) ) )
+            // InternalVsdl.g:3654:2: ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) )
             {
-            // InternalVsdl.g:3429:2: ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) )
-            // InternalVsdl.g:3430:3: ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) )
+            // InternalVsdl.g:3654:2: ( ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) ) )
+            // InternalVsdl.g:3655:3: ( (lv_octet1_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_octet2_2_0= RULE_INT ) ) otherlv_3= '.' ( (lv_octet3_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_octet4_6_0= RULE_INT ) )
             {
-            // InternalVsdl.g:3430:3: ( (lv_octet1_0_0= RULE_INT ) )
-            // InternalVsdl.g:3431:4: (lv_octet1_0_0= RULE_INT )
+            // InternalVsdl.g:3655:3: ( (lv_octet1_0_0= RULE_INT ) )
+            // InternalVsdl.g:3656:4: (lv_octet1_0_0= RULE_INT )
             {
-            // InternalVsdl.g:3431:4: (lv_octet1_0_0= RULE_INT )
-            // InternalVsdl.g:3432:5: lv_octet1_0_0= RULE_INT
+            // InternalVsdl.g:3656:4: (lv_octet1_0_0= RULE_INT )
+            // InternalVsdl.g:3657:5: lv_octet1_0_0= RULE_INT
             {
-            lv_octet1_0_0=(Token)match(input,RULE_INT,FOLLOW_60); if (state.failed) return current;
+            lv_octet1_0_0=(Token)match(input,RULE_INT,FOLLOW_61); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_octet1_0_0, grammarAccess.getIPAddressAccess().getOctet1INTTerminalRuleCall_0_0());
@@ -9354,19 +9874,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,50,FOLLOW_5); if (state.failed) return current;
+            otherlv_1=(Token)match(input,55,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getIPAddressAccess().getFullStopKeyword_1());
               		
             }
-            // InternalVsdl.g:3452:3: ( (lv_octet2_2_0= RULE_INT ) )
-            // InternalVsdl.g:3453:4: (lv_octet2_2_0= RULE_INT )
+            // InternalVsdl.g:3677:3: ( (lv_octet2_2_0= RULE_INT ) )
+            // InternalVsdl.g:3678:4: (lv_octet2_2_0= RULE_INT )
             {
-            // InternalVsdl.g:3453:4: (lv_octet2_2_0= RULE_INT )
-            // InternalVsdl.g:3454:5: lv_octet2_2_0= RULE_INT
+            // InternalVsdl.g:3678:4: (lv_octet2_2_0= RULE_INT )
+            // InternalVsdl.g:3679:5: lv_octet2_2_0= RULE_INT
             {
-            lv_octet2_2_0=(Token)match(input,RULE_INT,FOLLOW_60); if (state.failed) return current;
+            lv_octet2_2_0=(Token)match(input,RULE_INT,FOLLOW_61); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_octet2_2_0, grammarAccess.getIPAddressAccess().getOctet2INTTerminalRuleCall_2_0());
@@ -9390,19 +9910,19 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,50,FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,55,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getIPAddressAccess().getFullStopKeyword_3());
               		
             }
-            // InternalVsdl.g:3474:3: ( (lv_octet3_4_0= RULE_INT ) )
-            // InternalVsdl.g:3475:4: (lv_octet3_4_0= RULE_INT )
+            // InternalVsdl.g:3699:3: ( (lv_octet3_4_0= RULE_INT ) )
+            // InternalVsdl.g:3700:4: (lv_octet3_4_0= RULE_INT )
             {
-            // InternalVsdl.g:3475:4: (lv_octet3_4_0= RULE_INT )
-            // InternalVsdl.g:3476:5: lv_octet3_4_0= RULE_INT
+            // InternalVsdl.g:3700:4: (lv_octet3_4_0= RULE_INT )
+            // InternalVsdl.g:3701:5: lv_octet3_4_0= RULE_INT
             {
-            lv_octet3_4_0=(Token)match(input,RULE_INT,FOLLOW_60); if (state.failed) return current;
+            lv_octet3_4_0=(Token)match(input,RULE_INT,FOLLOW_61); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_octet3_4_0, grammarAccess.getIPAddressAccess().getOctet3INTTerminalRuleCall_4_0());
@@ -9426,17 +9946,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,50,FOLLOW_5); if (state.failed) return current;
+            otherlv_5=(Token)match(input,55,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getIPAddressAccess().getFullStopKeyword_5());
               		
             }
-            // InternalVsdl.g:3496:3: ( (lv_octet4_6_0= RULE_INT ) )
-            // InternalVsdl.g:3497:4: (lv_octet4_6_0= RULE_INT )
+            // InternalVsdl.g:3721:3: ( (lv_octet4_6_0= RULE_INT ) )
+            // InternalVsdl.g:3722:4: (lv_octet4_6_0= RULE_INT )
             {
-            // InternalVsdl.g:3497:4: (lv_octet4_6_0= RULE_INT )
-            // InternalVsdl.g:3498:5: lv_octet4_6_0= RULE_INT
+            // InternalVsdl.g:3722:4: (lv_octet4_6_0= RULE_INT )
+            // InternalVsdl.g:3723:5: lv_octet4_6_0= RULE_INT
             {
             lv_octet4_6_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9487,7 +10007,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIPRangeA"
-    // InternalVsdl.g:3518:1: entryRuleIPRangeA returns [EObject current=null] : iv_ruleIPRangeA= ruleIPRangeA EOF ;
+    // InternalVsdl.g:3743:1: entryRuleIPRangeA returns [EObject current=null] : iv_ruleIPRangeA= ruleIPRangeA EOF ;
     public final EObject entryRuleIPRangeA() throws RecognitionException {
         EObject current = null;
 
@@ -9495,8 +10015,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3518:49: (iv_ruleIPRangeA= ruleIPRangeA EOF )
-            // InternalVsdl.g:3519:2: iv_ruleIPRangeA= ruleIPRangeA EOF
+            // InternalVsdl.g:3743:49: (iv_ruleIPRangeA= ruleIPRangeA EOF )
+            // InternalVsdl.g:3744:2: iv_ruleIPRangeA= ruleIPRangeA EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIPRangeARule()); 
@@ -9527,7 +10047,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIPRangeA"
-    // InternalVsdl.g:3525:1: ruleIPRangeA returns [EObject current=null] : ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) ) ;
+    // InternalVsdl.g:3750:1: ruleIPRangeA returns [EObject current=null] : ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) ) ;
     public final EObject ruleIPRangeA() throws RecognitionException {
         EObject current = null;
 
@@ -9540,24 +10060,24 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3531:2: ( ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) ) )
-            // InternalVsdl.g:3532:2: ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) )
+            // InternalVsdl.g:3756:2: ( ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) ) )
+            // InternalVsdl.g:3757:2: ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) )
             {
-            // InternalVsdl.g:3532:2: ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) )
-            // InternalVsdl.g:3533:3: ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) )
+            // InternalVsdl.g:3757:2: ( ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) ) )
+            // InternalVsdl.g:3758:3: ( (lv_address_0_0= ruleIPAddress ) ) otherlv_1= '/' ( (lv_bitmask_2_0= RULE_INT ) )
             {
-            // InternalVsdl.g:3533:3: ( (lv_address_0_0= ruleIPAddress ) )
-            // InternalVsdl.g:3534:4: (lv_address_0_0= ruleIPAddress )
+            // InternalVsdl.g:3758:3: ( (lv_address_0_0= ruleIPAddress ) )
+            // InternalVsdl.g:3759:4: (lv_address_0_0= ruleIPAddress )
             {
-            // InternalVsdl.g:3534:4: (lv_address_0_0= ruleIPAddress )
-            // InternalVsdl.g:3535:5: lv_address_0_0= ruleIPAddress
+            // InternalVsdl.g:3759:4: (lv_address_0_0= ruleIPAddress )
+            // InternalVsdl.g:3760:5: lv_address_0_0= ruleIPAddress
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getIPRangeAAccess().getAddressIPAddressParserRuleCall_0_0());
               				
             }
-            pushFollow(FOLLOW_61);
+            pushFollow(FOLLOW_62);
             lv_address_0_0=ruleIPAddress();
 
             state._fsp--;
@@ -9581,17 +10101,17 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,78,FOLLOW_5); if (state.failed) return current;
+            otherlv_1=(Token)match(input,80,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getIPRangeAAccess().getSolidusKeyword_1());
               		
             }
-            // InternalVsdl.g:3556:3: ( (lv_bitmask_2_0= RULE_INT ) )
-            // InternalVsdl.g:3557:4: (lv_bitmask_2_0= RULE_INT )
+            // InternalVsdl.g:3781:3: ( (lv_bitmask_2_0= RULE_INT ) )
+            // InternalVsdl.g:3782:4: (lv_bitmask_2_0= RULE_INT )
             {
-            // InternalVsdl.g:3557:4: (lv_bitmask_2_0= RULE_INT )
-            // InternalVsdl.g:3558:5: lv_bitmask_2_0= RULE_INT
+            // InternalVsdl.g:3782:4: (lv_bitmask_2_0= RULE_INT )
+            // InternalVsdl.g:3783:5: lv_bitmask_2_0= RULE_INT
             {
             lv_bitmask_2_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9642,7 +10162,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOSVersionE"
-    // InternalVsdl.g:3578:1: entryRuleOSVersionE returns [String current=null] : iv_ruleOSVersionE= ruleOSVersionE EOF ;
+    // InternalVsdl.g:3803:1: entryRuleOSVersionE returns [String current=null] : iv_ruleOSVersionE= ruleOSVersionE EOF ;
     public final String entryRuleOSVersionE() throws RecognitionException {
         String current = null;
 
@@ -9650,8 +10170,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3578:50: (iv_ruleOSVersionE= ruleOSVersionE EOF )
-            // InternalVsdl.g:3579:2: iv_ruleOSVersionE= ruleOSVersionE EOF
+            // InternalVsdl.g:3803:50: (iv_ruleOSVersionE= ruleOSVersionE EOF )
+            // InternalVsdl.g:3804:2: iv_ruleOSVersionE= ruleOSVersionE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOSVersionERule()); 
@@ -9682,7 +10202,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOSVersionE"
-    // InternalVsdl.g:3585:1: ruleOSVersionE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' ) ;
+    // InternalVsdl.g:3810:1: ruleOSVersionE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' ) ;
     public final AntlrDatatypeRuleToken ruleOSVersionE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9692,65 +10212,65 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3591:2: ( (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' ) )
-            // InternalVsdl.g:3592:2: (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' )
+            // InternalVsdl.g:3816:2: ( (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' ) )
+            // InternalVsdl.g:3817:2: (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' )
             {
-            // InternalVsdl.g:3592:2: (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' )
-            int alt37=8;
+            // InternalVsdl.g:3817:2: (kw= 'WindowsXP' | kw= 'Windows7' | kw= 'Windows8' | kw= 'Windows10' | kw= 'Ubuntu14' | kw= 'Ubuntu16' | kw= 'Android-21' | kw= 'Android-19' )
+            int alt38=8;
             switch ( input.LA(1) ) {
-            case 79:
-                {
-                alt37=1;
-                }
-                break;
-            case 80:
-                {
-                alt37=2;
-                }
-                break;
             case 81:
                 {
-                alt37=3;
+                alt38=1;
                 }
                 break;
             case 82:
                 {
-                alt37=4;
+                alt38=2;
                 }
                 break;
             case 83:
                 {
-                alt37=5;
+                alt38=3;
                 }
                 break;
             case 84:
                 {
-                alt37=6;
+                alt38=4;
                 }
                 break;
             case 85:
                 {
-                alt37=7;
+                alt38=5;
                 }
                 break;
             case 86:
                 {
-                alt37=8;
+                alt38=6;
+                }
+                break;
+            case 87:
+                {
+                alt38=7;
+                }
+                break;
+            case 88:
+                {
+                alt38=8;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 37, 0, input);
+                    new NoViableAltException("", 38, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt37) {
+            switch (alt38) {
                 case 1 :
-                    // InternalVsdl.g:3593:3: kw= 'WindowsXP'
+                    // InternalVsdl.g:3818:3: kw= 'WindowsXP'
                     {
-                    kw=(Token)match(input,79,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,81,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9761,9 +10281,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:3599:3: kw= 'Windows7'
+                    // InternalVsdl.g:3824:3: kw= 'Windows7'
                     {
-                    kw=(Token)match(input,80,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,82,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9774,9 +10294,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:3605:3: kw= 'Windows8'
+                    // InternalVsdl.g:3830:3: kw= 'Windows8'
                     {
-                    kw=(Token)match(input,81,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,83,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9787,9 +10307,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalVsdl.g:3611:3: kw= 'Windows10'
+                    // InternalVsdl.g:3836:3: kw= 'Windows10'
                     {
-                    kw=(Token)match(input,82,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,84,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9800,9 +10320,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalVsdl.g:3617:3: kw= 'Ubuntu14'
+                    // InternalVsdl.g:3842:3: kw= 'Ubuntu14'
                     {
-                    kw=(Token)match(input,83,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,85,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9813,9 +10333,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalVsdl.g:3623:3: kw= 'Ubuntu16'
+                    // InternalVsdl.g:3848:3: kw= 'Ubuntu16'
                     {
-                    kw=(Token)match(input,84,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,86,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9826,9 +10346,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalVsdl.g:3629:3: kw= 'Android-21'
+                    // InternalVsdl.g:3854:3: kw= 'Android-21'
                     {
-                    kw=(Token)match(input,85,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,87,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9839,9 +10359,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalVsdl.g:3635:3: kw= 'Android-19'
+                    // InternalVsdl.g:3860:3: kw= 'Android-19'
                     {
-                    kw=(Token)match(input,86,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,88,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9876,7 +10396,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOSFamilyE"
-    // InternalVsdl.g:3644:1: entryRuleOSFamilyE returns [String current=null] : iv_ruleOSFamilyE= ruleOSFamilyE EOF ;
+    // InternalVsdl.g:3869:1: entryRuleOSFamilyE returns [String current=null] : iv_ruleOSFamilyE= ruleOSFamilyE EOF ;
     public final String entryRuleOSFamilyE() throws RecognitionException {
         String current = null;
 
@@ -9884,8 +10404,8 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVsdl.g:3644:49: (iv_ruleOSFamilyE= ruleOSFamilyE EOF )
-            // InternalVsdl.g:3645:2: iv_ruleOSFamilyE= ruleOSFamilyE EOF
+            // InternalVsdl.g:3869:49: (iv_ruleOSFamilyE= ruleOSFamilyE EOF )
+            // InternalVsdl.g:3870:2: iv_ruleOSFamilyE= ruleOSFamilyE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOSFamilyERule()); 
@@ -9916,7 +10436,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOSFamilyE"
-    // InternalVsdl.g:3651:1: ruleOSFamilyE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' ) ;
+    // InternalVsdl.g:3876:1: ruleOSFamilyE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' ) ;
     public final AntlrDatatypeRuleToken ruleOSFamilyE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9926,50 +10446,50 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3657:2: ( (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' ) )
-            // InternalVsdl.g:3658:2: (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' )
+            // InternalVsdl.g:3882:2: ( (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' ) )
+            // InternalVsdl.g:3883:2: (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' )
             {
-            // InternalVsdl.g:3658:2: (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' )
-            int alt38=5;
+            // InternalVsdl.g:3883:2: (kw= 'Microsoft' | kw= 'Linux' | kw= 'OSx' | kw= 'iOS' | kw= 'Android' )
+            int alt39=5;
             switch ( input.LA(1) ) {
-            case 87:
-                {
-                alt38=1;
-                }
-                break;
-            case 88:
-                {
-                alt38=2;
-                }
-                break;
             case 89:
                 {
-                alt38=3;
+                alt39=1;
                 }
                 break;
             case 90:
                 {
-                alt38=4;
+                alt39=2;
                 }
                 break;
             case 91:
                 {
-                alt38=5;
+                alt39=3;
+                }
+                break;
+            case 92:
+                {
+                alt39=4;
+                }
+                break;
+            case 93:
+                {
+                alt39=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 38, 0, input);
+                    new NoViableAltException("", 39, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt38) {
+            switch (alt39) {
                 case 1 :
-                    // InternalVsdl.g:3659:3: kw= 'Microsoft'
+                    // InternalVsdl.g:3884:3: kw= 'Microsoft'
                     {
-                    kw=(Token)match(input,87,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,89,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9980,9 +10500,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:3665:3: kw= 'Linux'
+                    // InternalVsdl.g:3890:3: kw= 'Linux'
                     {
-                    kw=(Token)match(input,88,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,90,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -9993,9 +10513,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:3671:3: kw= 'OSx'
+                    // InternalVsdl.g:3896:3: kw= 'OSx'
                     {
-                    kw=(Token)match(input,89,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,91,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -10006,9 +10526,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalVsdl.g:3677:3: kw= 'iOS'
+                    // InternalVsdl.g:3902:3: kw= 'iOS'
                     {
-                    kw=(Token)match(input,90,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,92,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -10019,9 +10539,9 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalVsdl.g:3683:3: kw= 'Android'
+                    // InternalVsdl.g:3908:3: kw= 'Android'
                     {
-                    kw=(Token)match(input,91,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,93,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			current.merge(kw);
@@ -10056,7 +10576,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHardwareProfile"
-    // InternalVsdl.g:3692:1: ruleHardwareProfile returns [Enumerator current=null] : ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) ) ;
+    // InternalVsdl.g:3917:1: ruleHardwareProfile returns [Enumerator current=null] : ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) ) ;
     public final Enumerator ruleHardwareProfile() throws RecognitionException {
         Enumerator current = null;
 
@@ -10072,63 +10592,63 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVsdl.g:3698:2: ( ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) ) )
-            // InternalVsdl.g:3699:2: ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) )
+            // InternalVsdl.g:3923:2: ( ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) ) )
+            // InternalVsdl.g:3924:2: ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) )
             {
-            // InternalVsdl.g:3699:2: ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) )
-            int alt39=7;
+            // InternalVsdl.g:3924:2: ( (enumLiteral_0= 'tiny' ) | (enumLiteral_1= 'medium' ) | (enumLiteral_2= 'large' ) | (enumLiteral_3= 'mobile' ) | (enumLiteral_4= 'wearable' ) | (enumLiteral_5= 'sensor' ) | (enumLiteral_6= 'server' ) )
+            int alt40=7;
             switch ( input.LA(1) ) {
-            case 92:
-                {
-                alt39=1;
-                }
-                break;
-            case 93:
-                {
-                alt39=2;
-                }
-                break;
             case 94:
                 {
-                alt39=3;
+                alt40=1;
                 }
                 break;
             case 95:
                 {
-                alt39=4;
+                alt40=2;
                 }
                 break;
             case 96:
                 {
-                alt39=5;
+                alt40=3;
                 }
                 break;
             case 97:
                 {
-                alt39=6;
+                alt40=4;
                 }
                 break;
             case 98:
                 {
-                alt39=7;
+                alt40=5;
+                }
+                break;
+            case 99:
+                {
+                alt40=6;
+                }
+                break;
+            case 100:
+                {
+                alt40=7;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 39, 0, input);
+                    new NoViableAltException("", 40, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
-                    // InternalVsdl.g:3700:3: (enumLiteral_0= 'tiny' )
+                    // InternalVsdl.g:3925:3: (enumLiteral_0= 'tiny' )
                     {
-                    // InternalVsdl.g:3700:3: (enumLiteral_0= 'tiny' )
-                    // InternalVsdl.g:3701:4: enumLiteral_0= 'tiny'
+                    // InternalVsdl.g:3925:3: (enumLiteral_0= 'tiny' )
+                    // InternalVsdl.g:3926:4: enumLiteral_0= 'tiny'
                     {
-                    enumLiteral_0=(Token)match(input,92,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,94,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getHardwareProfileAccess().getTinyEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -10142,12 +10662,12 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVsdl.g:3708:3: (enumLiteral_1= 'medium' )
+                    // InternalVsdl.g:3933:3: (enumLiteral_1= 'medium' )
                     {
-                    // InternalVsdl.g:3708:3: (enumLiteral_1= 'medium' )
-                    // InternalVsdl.g:3709:4: enumLiteral_1= 'medium'
+                    // InternalVsdl.g:3933:3: (enumLiteral_1= 'medium' )
+                    // InternalVsdl.g:3934:4: enumLiteral_1= 'medium'
                     {
-                    enumLiteral_1=(Token)match(input,93,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,95,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getHardwareProfileAccess().getMediumEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -10161,12 +10681,12 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVsdl.g:3716:3: (enumLiteral_2= 'large' )
+                    // InternalVsdl.g:3941:3: (enumLiteral_2= 'large' )
                     {
-                    // InternalVsdl.g:3716:3: (enumLiteral_2= 'large' )
-                    // InternalVsdl.g:3717:4: enumLiteral_2= 'large'
+                    // InternalVsdl.g:3941:3: (enumLiteral_2= 'large' )
+                    // InternalVsdl.g:3942:4: enumLiteral_2= 'large'
                     {
-                    enumLiteral_2=(Token)match(input,94,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,96,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getHardwareProfileAccess().getLargeEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -10180,12 +10700,12 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalVsdl.g:3724:3: (enumLiteral_3= 'mobile' )
+                    // InternalVsdl.g:3949:3: (enumLiteral_3= 'mobile' )
                     {
-                    // InternalVsdl.g:3724:3: (enumLiteral_3= 'mobile' )
-                    // InternalVsdl.g:3725:4: enumLiteral_3= 'mobile'
+                    // InternalVsdl.g:3949:3: (enumLiteral_3= 'mobile' )
+                    // InternalVsdl.g:3950:4: enumLiteral_3= 'mobile'
                     {
-                    enumLiteral_3=(Token)match(input,95,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,97,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getHardwareProfileAccess().getMobileEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -10199,12 +10719,12 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalVsdl.g:3732:3: (enumLiteral_4= 'wearable' )
+                    // InternalVsdl.g:3957:3: (enumLiteral_4= 'wearable' )
                     {
-                    // InternalVsdl.g:3732:3: (enumLiteral_4= 'wearable' )
-                    // InternalVsdl.g:3733:4: enumLiteral_4= 'wearable'
+                    // InternalVsdl.g:3957:3: (enumLiteral_4= 'wearable' )
+                    // InternalVsdl.g:3958:4: enumLiteral_4= 'wearable'
                     {
-                    enumLiteral_4=(Token)match(input,96,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,98,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getHardwareProfileAccess().getWearableEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -10218,12 +10738,12 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalVsdl.g:3740:3: (enumLiteral_5= 'sensor' )
+                    // InternalVsdl.g:3965:3: (enumLiteral_5= 'sensor' )
                     {
-                    // InternalVsdl.g:3740:3: (enumLiteral_5= 'sensor' )
-                    // InternalVsdl.g:3741:4: enumLiteral_5= 'sensor'
+                    // InternalVsdl.g:3965:3: (enumLiteral_5= 'sensor' )
+                    // InternalVsdl.g:3966:4: enumLiteral_5= 'sensor'
                     {
-                    enumLiteral_5=(Token)match(input,97,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,99,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getHardwareProfileAccess().getSensorEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -10237,12 +10757,12 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalVsdl.g:3748:3: (enumLiteral_6= 'server' )
+                    // InternalVsdl.g:3973:3: (enumLiteral_6= 'server' )
                     {
-                    // InternalVsdl.g:3748:3: (enumLiteral_6= 'server' )
-                    // InternalVsdl.g:3749:4: enumLiteral_6= 'server'
+                    // InternalVsdl.g:3973:3: (enumLiteral_6= 'server' )
+                    // InternalVsdl.g:3974:4: enumLiteral_6= 'server'
                     {
-                    enumLiteral_6=(Token)match(input,98,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_6=(Token)match(input,100,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getHardwareProfileAccess().getServerEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
@@ -10331,7 +10851,7 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
             this.transition = dfa_6;
         }
         public String getDescription() {
-            return "620:2: ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) )";
+            return "629:2: ( ( () ( ( 'cpu' )=>otherlv_1= 'cpu' ) otherlv_2= 'speed' ( (lv_op_3_0= 'equal' ) ) otherlv_4= 'to' ( (lv_value_5_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_7= 'cpu' ) ( (lv_op_8_0= 'faster' ) ) otherlv_9= 'than' ( (lv_value_10_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_12= 'cpu' ) ( (lv_op_13_0= 'slower' ) ) otherlv_14= 'than' ( (lv_value_15_0= ruleCPUFrequency ) ) ) | ( () ( ( 'cpu' )=>otherlv_17= 'cpu' ) otherlv_18= 'speed' ( (lv_sameas_19_0= 'of' ) ) ( (otherlv_20= RULE_ID ) ) ) | ( () ( ( 'disk' )=>otherlv_22= 'disk' ) otherlv_23= 'size' ( (lv_op_24_0= 'equal' ) ) otherlv_25= 'to' ( (lv_value_26_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_28= 'disk' ) ( (lv_op_29_0= 'larger' ) ) otherlv_30= 'than' ( (lv_value_31_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_33= 'disk' ) ( (lv_op_34_0= 'smaller' ) ) otherlv_35= 'than' ( (lv_value_36_0= ruleDiskSize ) ) ) | ( () ( ( 'disk' )=>otherlv_38= 'disk' ) otherlv_39= 'size' ( (lv_sameas_40_0= 'of' ) ) ( (otherlv_41= RULE_ID ) ) ) | ( () ( ( 'ram' )=>otherlv_43= 'ram' ) otherlv_44= 'size' ( (lv_op_45_0= 'equal' ) ) otherlv_46= 'to' ( (lv_value_47_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_49= 'ram' ) ( (lv_op_50_0= 'larger' ) ) otherlv_51= 'than' ( (lv_value_52_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_54= 'ram' ) ( (lv_op_55_0= 'smaller' ) ) otherlv_56= 'than' ( (lv_value_57_0= ruleRamSize ) ) ) | ( () ( ( 'ram' )=>otherlv_59= 'ram' ) otherlv_60= 'size' ( (lv_sameas_61_0= 'of' ) ) ( (otherlv_62= RULE_ID ) ) ) | ( () ( ( 'flavour' )=>otherlv_64= 'flavour' ) ( (lv_profile_65_0= ruleHardwareProfile ) ) ) )";
         }
     }
  
@@ -10340,15 +10860,15 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x001000000000C000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000146202C2C000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x020000000000C000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x000260E202C2C000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x8000000000C00000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000C00000L,0x0000000000000042L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000146202C28000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000260E202C28000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000300002L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000004000000L});
@@ -10361,41 +10881,42 @@ public class InternalVsdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000000000L,0x00000007F0000000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0x00000000007F8000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000000L,0x000000000F800000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0002C00000000002L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0002800000000002L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0003000000000002L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0004000000000002L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0001000000004000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x00A0000000C2C000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x00A0000000C28000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x4000000000000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000000000L,0x0000001FC0000000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000000000000L,0x0000000001FE0000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000000L,0x000000003E000000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0058000000000002L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0050000000000002L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0060000000000002L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0020000000004000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0400200000C2C000L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0400200000C28000L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x4000000000000000L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x8000000000000000L});
     public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000800050L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000060L});
-    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
-    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000700L});
-    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000000L,0x0000000000003800L});
-    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000800030L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000180L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000200L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001C00L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x000000000000E000L});
+    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
 
 }

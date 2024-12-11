@@ -34,7 +34,8 @@ SimpleNodeConstraintNot returns NodeConstraint:
 SimpleNodeConstraintA returns NodeConstraint:
 	"(" SimpleNodeConstraint ")" |
 	NodeHardwareConstraintA |
-	NodeSoftwareConstraintA;
+	NodeSoftwareConstraintA |
+	NodeNetworkConstraintA;
 
 NodeHardwareConstraintA returns NodeConstraint:	
 	{CPU} =>'cpu' 'speed' op='equal' 'to' value=CPUFrequency |
@@ -50,25 +51,23 @@ NodeHardwareConstraintA returns NodeConstraint:
     {Ram} =>'ram' op='smaller' 'than' value=RamSize |
     {Ram} =>'ram' 'size' sameas ?='of' id=[Node] |
 	{Flavour} =>'flavour' profile=HardwareProfile;
-	
+
+// 节点网络约束
 NodeNetworkConstraintA returns NodeConstraint:
     {IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
     {IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA |
-    {IP} =>'ip' 'address' sameas ?='of' id=[Node] |
-    {IP} =>'ip' 'address' 'is' op='connected' |
-    {IP} =>'ip' 'address' 'has' op='IP' ip=IPAddress;
+    {IP} =>'ip' 'address' 'is' op='connected' 'to' node=[Node]|
+	{Gateway} =>"gateway" 'is' gatewayIP = IPAddress|
+    {DNS} => 'DNS' 'is' DNSIP = IPAddress;
     
 NodeSoftwareConstraintA returns NodeConstraint:
 	'node' {OS} =>'OS' 'is' version=OSVersionE |
 	'node' 'OS' {OSFamily} =>'family' 'is' family=OSFamilyE|
-//NodeSoftwareConstraintA returns NodeConstraint:
-//    'OS' 'is' version=OSVersionE |
-//    'OS' 'family' 'is' family=OSFamilyE|
-	'mounts' 'software' software=SoftwareInstallation|
-	'suffers' 'from' vulnID=VulnerabilityID;
-//
-VulnerabilityID:
-    STRING;
+	'mounts' 'software' software=SoftwareInstallation;
+//	'suffers' 'from' vulnID=VulnerabilityID;
+////
+//VulnerabilityID:
+//    STRING;
 	
 SoftwareInstallation:
 	softwareID=ID ('version' version=VersionNumber)? 
@@ -93,9 +92,6 @@ ConfigPair:
 //    ('op' op=IPOperation)?
 //    ('id' id=[Node])?; 
 //
-//Ram:
-//    'ram' 'size' size=RamSize;
-
 
 Network:
 	'network' name=ID '{' constraints += NetworkConstraint* '}';

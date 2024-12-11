@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link it.csec.xtext.vsdl.NodeConstraint#getTriggerconstraint <em>Triggerconstraint</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.NodeConstraint#getNodeconstraint <em>Nodeconstraint</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.NodeConstraint#getSoftware <em>Software</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.NodeConstraint#getVulnID <em>Vuln ID</em>}</li>
  * </ul>
  *
  * @see it.csec.xtext.vsdl.VsdlPackage#getNodeConstraint()
@@ -91,27 +90,5 @@ public interface NodeConstraint extends EObject
    * @generated
    */
   void setSoftware(SoftwareInstallation value);
-
-  /**
-   * Returns the value of the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Vuln ID</em>' attribute.
-   * @see #setVulnID(String)
-   * @see it.csec.xtext.vsdl.VsdlPackage#getNodeConstraint_VulnID()
-   * @model
-   * @generated
-   */
-  String getVulnID();
-
-  /**
-   * Sets the value of the '{@link it.csec.xtext.vsdl.NodeConstraint#getVulnID <em>Vuln ID</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vuln ID</em>' attribute.
-   * @see #getVulnID()
-   * @generated
-   */
-  void setVulnID(String value);
 
 } // NodeConstraint

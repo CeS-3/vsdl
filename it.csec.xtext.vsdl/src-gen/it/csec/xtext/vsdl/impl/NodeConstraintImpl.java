@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link it.csec.xtext.vsdl.impl.NodeConstraintImpl#getTriggerconstraint <em>Triggerconstraint</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.impl.NodeConstraintImpl#getNodeconstraint <em>Nodeconstraint</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.impl.NodeConstraintImpl#getSoftware <em>Software</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.NodeConstraintImpl#getVulnID <em>Vuln ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,26 +63,6 @@ public class NodeConstraintImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected SoftwareInstallation software;
-
-  /**
-   * The default value of the '{@link #getVulnID() <em>Vuln ID</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVulnID()
-   * @generated
-   * @ordered
-   */
-  protected static final String VULN_ID_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getVulnID() <em>Vuln ID</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVulnID()
-   * @generated
-   * @ordered
-   */
-  protected String vulnID = VULN_ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -262,31 +241,6 @@ public class NodeConstraintImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    */
   @Override
-  public String getVulnID()
-  {
-    return vulnID;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setVulnID(String newVulnID)
-  {
-    String oldVulnID = vulnID;
-    vulnID = newVulnID;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.NODE_CONSTRAINT__VULN_ID, oldVulnID, vulnID));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -317,8 +271,6 @@ public class NodeConstraintImpl extends MinimalEObjectImpl.Container implements 
         return getNodeconstraint();
       case VsdlPackage.NODE_CONSTRAINT__SOFTWARE:
         return getSoftware();
-      case VsdlPackage.NODE_CONSTRAINT__VULN_ID:
-        return getVulnID();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -341,9 +293,6 @@ public class NodeConstraintImpl extends MinimalEObjectImpl.Container implements 
         return;
       case VsdlPackage.NODE_CONSTRAINT__SOFTWARE:
         setSoftware((SoftwareInstallation)newValue);
-        return;
-      case VsdlPackage.NODE_CONSTRAINT__VULN_ID:
-        setVulnID((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -368,9 +317,6 @@ public class NodeConstraintImpl extends MinimalEObjectImpl.Container implements 
       case VsdlPackage.NODE_CONSTRAINT__SOFTWARE:
         setSoftware((SoftwareInstallation)null);
         return;
-      case VsdlPackage.NODE_CONSTRAINT__VULN_ID:
-        setVulnID(VULN_ID_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -391,27 +337,8 @@ public class NodeConstraintImpl extends MinimalEObjectImpl.Container implements 
         return nodeconstraint != null;
       case VsdlPackage.NODE_CONSTRAINT__SOFTWARE:
         return software != null;
-      case VsdlPackage.NODE_CONSTRAINT__VULN_ID:
-        return VULN_ID_EDEFAULT == null ? vulnID != null : !VULN_ID_EDEFAULT.equals(vulnID);
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (vulnID: ");
-    result.append(vulnID);
-    result.append(')');
-    return result.toString();
   }
 
 } //NodeConstraintImpl

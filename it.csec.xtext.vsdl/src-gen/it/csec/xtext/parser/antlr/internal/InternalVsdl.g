@@ -599,6 +599,15 @@ ruleSimpleNodeConstraintA returns [EObject current=null]
 			$current = $this_NodeSoftwareConstraintA_4.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSimpleNodeConstraintAAccess().getNodeNetworkConstraintAParserRuleCall_3());
+		}
+		this_NodeNetworkConstraintA_5=ruleNodeNetworkConstraintA
+		{
+			$current = $this_NodeNetworkConstraintA_5.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -1298,6 +1307,276 @@ ruleNodeHardwareConstraintA returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleNodeNetworkConstraintA
+entryRuleNodeNetworkConstraintA returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getNodeNetworkConstraintARule()); }
+	iv_ruleNodeNetworkConstraintA=ruleNodeNetworkConstraintA
+	{ $current=$iv_ruleNodeNetworkConstraintA.current; }
+	EOF;
+
+// Rule NodeNetworkConstraintA
+ruleNodeNetworkConstraintA returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getNodeNetworkConstraintAAccess().getIPAction_0_0(),
+						$current);
+				}
+			)
+			(
+				('ip')=>
+				otherlv_1='ip'
+				{
+					newLeafNode(otherlv_1, grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_0_1());
+				}
+			)
+			otherlv_2='address'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_0_2());
+			}
+			(
+				(
+					lv_op_3_0='equal'
+					{
+						newLeafNode(lv_op_3_0, grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+						}
+						setWithLastConsumed($current, "op", lv_op_3_0, "equal");
+					}
+				)
+			)
+			otherlv_4='to'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_0_4());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressIPAddressParserRuleCall_0_5_0());
+					}
+					lv_ipAddress_5_0=ruleIPAddress
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+						}
+						set(
+							$current,
+							"ipAddress",
+							lv_ipAddress_5_0,
+							"it.csec.xtext.Vsdl.IPAddress");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getNodeNetworkConstraintAAccess().getIPAction_1_0(),
+						$current);
+				}
+			)
+			(
+				('ip')=>
+				otherlv_7='ip'
+				{
+					newLeafNode(otherlv_7, grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_1_1());
+				}
+			)
+			otherlv_8='address'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_1_2());
+			}
+			(
+				(
+					lv_op_9_0='in'
+					{
+						newLeafNode(lv_op_9_0, grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+						}
+						setWithLastConsumed($current, "op", lv_op_9_0, "in");
+					}
+				)
+			)
+			otherlv_10='range'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getNodeNetworkConstraintAAccess().getRangeKeyword_1_4());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeIPRangeAParserRuleCall_1_5_0());
+					}
+					lv_ipRange_11_0=ruleIPRangeA
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+						}
+						set(
+							$current,
+							"ipRange",
+							lv_ipRange_11_0,
+							"it.csec.xtext.Vsdl.IPRangeA");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getNodeNetworkConstraintAAccess().getIPAction_2_0(),
+						$current);
+				}
+			)
+			(
+				('ip')=>
+				otherlv_13='ip'
+				{
+					newLeafNode(otherlv_13, grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_2_1());
+				}
+			)
+			otherlv_14='address'
+			{
+				newLeafNode(otherlv_14, grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_2_2());
+			}
+			otherlv_15='is'
+			{
+				newLeafNode(otherlv_15, grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_2_3());
+			}
+			(
+				(
+					lv_op_16_0='connected'
+					{
+						newLeafNode(lv_op_16_0, grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_4_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+						}
+						setWithLastConsumed($current, "op", lv_op_16_0, "connected");
+					}
+				)
+			)
+			otherlv_17='to'
+			{
+				newLeafNode(otherlv_17, grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_2_5());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getNodeNetworkConstraintARule());
+						}
+					}
+					otherlv_18=RULE_ID
+					{
+						newLeafNode(otherlv_18, grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeCrossReference_2_6_0());
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getNodeNetworkConstraintAAccess().getGatewayAction_3_0(),
+						$current);
+				}
+			)
+			(
+				('gateway')=>
+				otherlv_20='gateway'
+				{
+					newLeafNode(otherlv_20, grammarAccess.getNodeNetworkConstraintAAccess().getGatewayKeyword_3_1());
+				}
+			)
+			otherlv_21='is'
+			{
+				newLeafNode(otherlv_21, grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_3_2());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getGatewayIPIPAddressParserRuleCall_3_3_0());
+					}
+					lv_gatewayIP_22_0=ruleIPAddress
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+						}
+						set(
+							$current,
+							"gatewayIP",
+							lv_gatewayIP_22_0,
+							"it.csec.xtext.Vsdl.IPAddress");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getNodeNetworkConstraintAAccess().getDNSAction_4_0(),
+						$current);
+				}
+			)
+			(
+				('DNS')=>
+				otherlv_24='DNS'
+				{
+					newLeafNode(otherlv_24, grammarAccess.getNodeNetworkConstraintAAccess().getDNSKeyword_4_1());
+				}
+			)
+			otherlv_25='is'
+			{
+				newLeafNode(otherlv_25, grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_4_2());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_3_0());
+					}
+					lv_DNSIP_26_0=ruleIPAddress
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getNodeNetworkConstraintARule());
+						}
+						set(
+							$current,
+							"DNSIP",
+							lv_DNSIP_26_0,
+							"it.csec.xtext.Vsdl.IPAddress");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+	)
+;
+
 // Entry rule entryRuleNodeSoftwareConstraintA
 entryRuleNodeSoftwareConstraintA returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getNodeSoftwareConstraintARule()); }
@@ -1435,61 +1714,7 @@ ruleNodeSoftwareConstraintA returns [EObject current=null]
 				)
 			)
 		)
-		    |
-		(
-			otherlv_14='suffers'
-			{
-				newLeafNode(otherlv_14, grammarAccess.getNodeSoftwareConstraintAAccess().getSuffersKeyword_3_0());
-			}
-			otherlv_15='from'
-			{
-				newLeafNode(otherlv_15, grammarAccess.getNodeSoftwareConstraintAAccess().getFromKeyword_3_1());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getNodeSoftwareConstraintAAccess().getVulnIDVulnerabilityIDParserRuleCall_3_2_0());
-					}
-					lv_vulnID_16_0=ruleVulnerabilityID
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getNodeSoftwareConstraintARule());
-						}
-						set(
-							$current,
-							"vulnID",
-							lv_vulnID_16_0,
-							"it.csec.xtext.Vsdl.VulnerabilityID");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)
 	)
-;
-
-// Entry rule entryRuleVulnerabilityID
-entryRuleVulnerabilityID returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getVulnerabilityIDRule()); }
-	iv_ruleVulnerabilityID=ruleVulnerabilityID
-	{ $current=$iv_ruleVulnerabilityID.current.getText(); }
-	EOF;
-
-// Rule VulnerabilityID
-ruleVulnerabilityID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	this_STRING_0=RULE_STRING
-	{
-		$current.merge(this_STRING_0);
-	}
-	{
-		newLeafNode(this_STRING_0, grammarAccess.getVulnerabilityIDAccess().getSTRINGTerminalRuleCall());
-	}
 ;
 
 // Entry rule entryRuleSoftwareInstallation

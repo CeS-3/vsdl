@@ -113,6 +113,7 @@ public class VsdlSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) 'DNS' 'is' DNSIP=IPAddress
 	 *     (rule start) (ambiguity) 'cpu' 'speed' op='equal'
 	 *     (rule start) (ambiguity) 'cpu' 'speed' sameas?='of'
 	 *     (rule start) (ambiguity) 'cpu' op='faster'
@@ -122,6 +123,10 @@ public class VsdlSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) 'disk' op='larger'
 	 *     (rule start) (ambiguity) 'disk' op='smaller'
 	 *     (rule start) (ambiguity) 'flavour' profile=HardwareProfile
+	 *     (rule start) (ambiguity) 'gateway' 'is' gatewayIP=IPAddress
+	 *     (rule start) (ambiguity) 'ip' 'address' 'is' op='connected'
+	 *     (rule start) (ambiguity) 'ip' 'address' op='equal'
+	 *     (rule start) (ambiguity) 'ip' 'address' op='in'
 	 *     (rule start) (ambiguity) 'mounts' 'software' software=SoftwareInstallation
 	 *     (rule start) (ambiguity) 'node' 'OS' 'family' 'is' family=OSFamilyE
 	 *     (rule start) (ambiguity) 'node' 'OS' 'is' version=OSVersionE
@@ -130,7 +135,6 @@ public class VsdlSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) 'ram' 'size' sameas?='of'
 	 *     (rule start) (ambiguity) 'ram' op='larger'
 	 *     (rule start) (ambiguity) 'ram' op='smaller'
-	 *     (rule start) (ambiguity) 'suffers' 'from' vulnID=VulnerabilityID
 	 *     (rule start) (ambiguity) {AndOr.left=}
 	 
 	 * </pre>

@@ -207,22 +207,13 @@ public interface VsdlPackage extends EPackage
   int NODE_CONSTRAINT__SOFTWARE = 2;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE_CONSTRAINT__VULN_ID = 3;
-
-  /**
    * The number of structural features of the '<em>Node Constraint</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_CONSTRAINT_FEATURE_COUNT = 4;
+  int NODE_CONSTRAINT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link it.csec.xtext.vsdl.impl.SoftwareInstallationImpl <em>Software Installation</em>}' class.
@@ -825,15 +816,6 @@ public interface VsdlPackage extends EPackage
   int AND_OR__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_OR__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Networktriggerconstraint</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -943,15 +925,6 @@ public interface VsdlPackage extends EPackage
   int NOT__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NOT__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Networktriggerconstraint</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1052,15 +1025,6 @@ public interface VsdlPackage extends EPackage
   int CPU__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CPU__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1141,15 +1105,6 @@ public interface VsdlPackage extends EPackage
    * @ordered
    */
   int DISK__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
-
-  /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISK__VULN_ID = NODE_CONSTRAINT__VULN_ID;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1234,15 +1189,6 @@ public interface VsdlPackage extends EPackage
   int RAM__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RAM__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1325,15 +1271,6 @@ public interface VsdlPackage extends EPackage
   int FLAVOUR__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FLAVOUR__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Profile</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1389,15 +1326,6 @@ public interface VsdlPackage extends EPackage
   int IP__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IP__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1425,31 +1353,13 @@ public interface VsdlPackage extends EPackage
   int IP__IP_RANGE = NODE_CONSTRAINT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Sameas</b></em>' attribute.
+   * The feature id for the '<em><b>Node</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IP__SAMEAS = NODE_CONSTRAINT_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Id</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IP__ID = NODE_CONSTRAINT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Ip</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IP__IP = NODE_CONSTRAINT_FEATURE_COUNT + 5;
+  int IP__NODE = NODE_CONSTRAINT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>IP</em>' class.
@@ -1458,7 +1368,171 @@ public interface VsdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IP_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 6;
+  int IP_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link it.csec.xtext.vsdl.impl.GatewayImpl <em>Gateway</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see it.csec.xtext.vsdl.impl.GatewayImpl
+   * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getGateway()
+   * @generated
+   */
+  int GATEWAY = 25;
+
+  /**
+   * The feature id for the '<em><b>Triggerconstraint</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__TRIGGERCONSTRAINT = NODE_CONSTRAINT__TRIGGERCONSTRAINT;
+
+  /**
+   * The feature id for the '<em><b>Nodeconstraint</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__NODECONSTRAINT = NODE_CONSTRAINT__NODECONSTRAINT;
+
+  /**
+   * The feature id for the '<em><b>Software</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
+
+  /**
+   * The feature id for the '<em><b>Networktriggerconstraint</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__NETWORKTRIGGERCONSTRAINT = NODE_CONSTRAINT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Networkconstraint</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__NETWORKCONSTRAINT = NODE_CONSTRAINT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__ID = NODE_CONSTRAINT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__OP = NODE_CONSTRAINT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Ip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__IP = NODE_CONSTRAINT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Gateway IP</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__GATEWAY_IP = NODE_CONSTRAINT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Internet</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY__INTERNET = NODE_CONSTRAINT_FEATURE_COUNT + 6;
+
+  /**
+   * The number of structural features of the '<em>Gateway</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GATEWAY_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 7;
+
+  /**
+   * The meta object id for the '{@link it.csec.xtext.vsdl.impl.DNSImpl <em>DNS</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see it.csec.xtext.vsdl.impl.DNSImpl
+   * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getDNS()
+   * @generated
+   */
+  int DNS = 26;
+
+  /**
+   * The feature id for the '<em><b>Triggerconstraint</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNS__TRIGGERCONSTRAINT = NODE_CONSTRAINT__TRIGGERCONSTRAINT;
+
+  /**
+   * The feature id for the '<em><b>Nodeconstraint</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNS__NODECONSTRAINT = NODE_CONSTRAINT__NODECONSTRAINT;
+
+  /**
+   * The feature id for the '<em><b>Software</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNS__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
+
+  /**
+   * The feature id for the '<em><b>DNSIP</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNS__DNSIP = NODE_CONSTRAINT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>DNS</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNS_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link it.csec.xtext.vsdl.impl.OSImpl <em>OS</em>}' class.
@@ -1468,7 +1542,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getOS()
    * @generated
    */
-  int OS = 25;
+  int OS = 27;
 
   /**
    * The feature id for the '<em><b>Triggerconstraint</b></em>' containment reference.
@@ -1498,15 +1572,6 @@ public interface VsdlPackage extends EPackage
   int OS__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OS__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Version</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1532,7 +1597,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getOSFamily()
    * @generated
    */
-  int OS_FAMILY = 26;
+  int OS_FAMILY = 28;
 
   /**
    * The feature id for the '<em><b>Triggerconstraint</b></em>' containment reference.
@@ -1562,15 +1627,6 @@ public interface VsdlPackage extends EPackage
   int OS_FAMILY__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
-   * The feature id for the '<em><b>Vuln ID</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OS_FAMILY__VULN_ID = NODE_CONSTRAINT__VULN_ID;
-
-  /**
    * The feature id for the '<em><b>Family</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1596,7 +1652,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getIPRange()
    * @generated
    */
-  int IP_RANGE = 27;
+  int IP_RANGE = 29;
 
   /**
    * The feature id for the '<em><b>Networktriggerconstraint</b></em>' containment reference.
@@ -1662,79 +1718,6 @@ public interface VsdlPackage extends EPackage
   int IP_RANGE_FEATURE_COUNT = NETWORK_CONSTRAINT_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.csec.xtext.vsdl.impl.GatewayImpl <em>Gateway</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see it.csec.xtext.vsdl.impl.GatewayImpl
-   * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getGateway()
-   * @generated
-   */
-  int GATEWAY = 28;
-
-  /**
-   * The feature id for the '<em><b>Networktriggerconstraint</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GATEWAY__NETWORKTRIGGERCONSTRAINT = NETWORK_CONSTRAINT__NETWORKTRIGGERCONSTRAINT;
-
-  /**
-   * The feature id for the '<em><b>Networkconstraint</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GATEWAY__NETWORKCONSTRAINT = NETWORK_CONSTRAINT__NETWORKCONSTRAINT;
-
-  /**
-   * The feature id for the '<em><b>Id</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GATEWAY__ID = NETWORK_CONSTRAINT__ID;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GATEWAY__OP = NETWORK_CONSTRAINT__OP;
-
-  /**
-   * The feature id for the '<em><b>Ip</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GATEWAY__IP = NETWORK_CONSTRAINT__IP;
-
-  /**
-   * The feature id for the '<em><b>Internet</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GATEWAY__INTERNET = NETWORK_CONSTRAINT_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Gateway</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GATEWAY_FEATURE_COUNT = NETWORK_CONSTRAINT_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link it.csec.xtext.vsdl.impl.AtImpl <em>At</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1742,7 +1725,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getAt()
    * @generated
    */
-  int AT = 29;
+  int AT = 30;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1788,7 +1771,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getSwitch()
    * @generated
    */
-  int SWITCH = 30;
+  int SWITCH = 31;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' attribute.
@@ -1825,7 +1808,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getPlusMinus()
    * @generated
    */
-  int PLUS_MINUS = 31;
+  int PLUS_MINUS = 32;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' attribute.
@@ -1889,7 +1872,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getMultiplication()
    * @generated
    */
-  int MULTIPLICATION = 32;
+  int MULTIPLICATION = 33;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' attribute.
@@ -1953,7 +1936,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getIPOperation()
    * @generated
    */
-  int IP_OPERATION = 33;
+  int IP_OPERATION = 34;
 
   /**
    * The meta object id for the '{@link it.csec.xtext.vsdl.HardwareProfile <em>Hardware Profile</em>}' enum.
@@ -1963,7 +1946,7 @@ public interface VsdlPackage extends EPackage
    * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getHardwareProfile()
    * @generated
    */
-  int HARDWARE_PROFILE = 34;
+  int HARDWARE_PROFILE = 35;
 
 
   /**
@@ -2093,17 +2076,6 @@ public interface VsdlPackage extends EPackage
    * @generated
    */
   EReference getNodeConstraint_Software();
-
-  /**
-   * Returns the meta object for the attribute '{@link it.csec.xtext.vsdl.NodeConstraint#getVulnID <em>Vuln ID</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Vuln ID</em>'.
-   * @see it.csec.xtext.vsdl.NodeConstraint#getVulnID()
-   * @see #getNodeConstraint()
-   * @generated
-   */
-  EAttribute getNodeConstraint_VulnID();
 
   /**
    * Returns the meta object for class '{@link it.csec.xtext.vsdl.SoftwareInstallation <em>Software Installation</em>}'.
@@ -2877,37 +2849,68 @@ public interface VsdlPackage extends EPackage
   EReference getIP_IpRange();
 
   /**
-   * Returns the meta object for the attribute '{@link it.csec.xtext.vsdl.IP#isSameas <em>Sameas</em>}'.
+   * Returns the meta object for the reference '{@link it.csec.xtext.vsdl.IP#getNode <em>Node</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Sameas</em>'.
-   * @see it.csec.xtext.vsdl.IP#isSameas()
+   * @return the meta object for the reference '<em>Node</em>'.
+   * @see it.csec.xtext.vsdl.IP#getNode()
    * @see #getIP()
    * @generated
    */
-  EAttribute getIP_Sameas();
+  EReference getIP_Node();
 
   /**
-   * Returns the meta object for the reference '{@link it.csec.xtext.vsdl.IP#getId <em>Id</em>}'.
+   * Returns the meta object for class '{@link it.csec.xtext.vsdl.Gateway <em>Gateway</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Id</em>'.
-   * @see it.csec.xtext.vsdl.IP#getId()
-   * @see #getIP()
+   * @return the meta object for class '<em>Gateway</em>'.
+   * @see it.csec.xtext.vsdl.Gateway
    * @generated
    */
-  EReference getIP_Id();
+  EClass getGateway();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.csec.xtext.vsdl.IP#getIp <em>Ip</em>}'.
+   * Returns the meta object for the containment reference '{@link it.csec.xtext.vsdl.Gateway#getGatewayIP <em>Gateway IP</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ip</em>'.
-   * @see it.csec.xtext.vsdl.IP#getIp()
-   * @see #getIP()
+   * @return the meta object for the containment reference '<em>Gateway IP</em>'.
+   * @see it.csec.xtext.vsdl.Gateway#getGatewayIP()
+   * @see #getGateway()
    * @generated
    */
-  EReference getIP_Ip();
+  EReference getGateway_GatewayIP();
+
+  /**
+   * Returns the meta object for the attribute '{@link it.csec.xtext.vsdl.Gateway#isInternet <em>Internet</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Internet</em>'.
+   * @see it.csec.xtext.vsdl.Gateway#isInternet()
+   * @see #getGateway()
+   * @generated
+   */
+  EAttribute getGateway_Internet();
+
+  /**
+   * Returns the meta object for class '{@link it.csec.xtext.vsdl.DNS <em>DNS</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>DNS</em>'.
+   * @see it.csec.xtext.vsdl.DNS
+   * @generated
+   */
+  EClass getDNS();
+
+  /**
+   * Returns the meta object for the containment reference '{@link it.csec.xtext.vsdl.DNS#getDNSIP <em>DNSIP</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>DNSIP</em>'.
+   * @see it.csec.xtext.vsdl.DNS#getDNSIP()
+   * @see #getDNS()
+   * @generated
+   */
+  EReference getDNS_DNSIP();
 
   /**
    * Returns the meta object for class '{@link it.csec.xtext.vsdl.OS <em>OS</em>}'.
@@ -2971,27 +2974,6 @@ public interface VsdlPackage extends EPackage
    * @generated
    */
   EReference getIPRange_Range();
-
-  /**
-   * Returns the meta object for class '{@link it.csec.xtext.vsdl.Gateway <em>Gateway</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Gateway</em>'.
-   * @see it.csec.xtext.vsdl.Gateway
-   * @generated
-   */
-  EClass getGateway();
-
-  /**
-   * Returns the meta object for the attribute '{@link it.csec.xtext.vsdl.Gateway#isInternet <em>Internet</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Internet</em>'.
-   * @see it.csec.xtext.vsdl.Gateway#isInternet()
-   * @see #getGateway()
-   * @generated
-   */
-  EAttribute getGateway_Internet();
 
   /**
    * Returns the meta object for class '{@link it.csec.xtext.vsdl.At <em>At</em>}'.
@@ -3234,14 +3216,6 @@ public interface VsdlPackage extends EPackage
      * @generated
      */
     EReference NODE_CONSTRAINT__SOFTWARE = eINSTANCE.getNodeConstraint_Software();
-
-    /**
-     * The meta object literal for the '<em><b>Vuln ID</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE_CONSTRAINT__VULN_ID = eINSTANCE.getNodeConstraint_VulnID();
 
     /**
      * The meta object literal for the '{@link it.csec.xtext.vsdl.impl.SoftwareInstallationImpl <em>Software Installation</em>}' class.
@@ -3862,28 +3836,56 @@ public interface VsdlPackage extends EPackage
     EReference IP__IP_RANGE = eINSTANCE.getIP_IpRange();
 
     /**
-     * The meta object literal for the '<em><b>Sameas</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Node</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute IP__SAMEAS = eINSTANCE.getIP_Sameas();
+    EReference IP__NODE = eINSTANCE.getIP_Node();
 
     /**
-     * The meta object literal for the '<em><b>Id</b></em>' reference feature.
+     * The meta object literal for the '{@link it.csec.xtext.vsdl.impl.GatewayImpl <em>Gateway</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see it.csec.xtext.vsdl.impl.GatewayImpl
+     * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getGateway()
      * @generated
      */
-    EReference IP__ID = eINSTANCE.getIP_Id();
+    EClass GATEWAY = eINSTANCE.getGateway();
 
     /**
-     * The meta object literal for the '<em><b>Ip</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Gateway IP</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference IP__IP = eINSTANCE.getIP_Ip();
+    EReference GATEWAY__GATEWAY_IP = eINSTANCE.getGateway_GatewayIP();
+
+    /**
+     * The meta object literal for the '<em><b>Internet</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GATEWAY__INTERNET = eINSTANCE.getGateway_Internet();
+
+    /**
+     * The meta object literal for the '{@link it.csec.xtext.vsdl.impl.DNSImpl <em>DNS</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see it.csec.xtext.vsdl.impl.DNSImpl
+     * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getDNS()
+     * @generated
+     */
+    EClass DNS = eINSTANCE.getDNS();
+
+    /**
+     * The meta object literal for the '<em><b>DNSIP</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DNS__DNSIP = eINSTANCE.getDNS_DNSIP();
 
     /**
      * The meta object literal for the '{@link it.csec.xtext.vsdl.impl.OSImpl <em>OS</em>}' class.
@@ -3938,24 +3940,6 @@ public interface VsdlPackage extends EPackage
      * @generated
      */
     EReference IP_RANGE__RANGE = eINSTANCE.getIPRange_Range();
-
-    /**
-     * The meta object literal for the '{@link it.csec.xtext.vsdl.impl.GatewayImpl <em>Gateway</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see it.csec.xtext.vsdl.impl.GatewayImpl
-     * @see it.csec.xtext.vsdl.impl.VsdlPackageImpl#getGateway()
-     * @generated
-     */
-    EClass GATEWAY = eINSTANCE.getGateway();
-
-    /**
-     * The meta object literal for the '<em><b>Internet</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GATEWAY__INTERNET = eINSTANCE.getGateway_Internet();
 
     /**
      * The meta object literal for the '{@link it.csec.xtext.vsdl.impl.AtImpl <em>At</em>}' class.

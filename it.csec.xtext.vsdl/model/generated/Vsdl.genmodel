@@ -34,7 +34,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//NodeConstraint/triggerconstraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//NodeConstraint/nodeconstraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//NodeConstraint/software"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//NodeConstraint/vulnID"/>
     </genClasses>
     <genClasses ecoreClass="Vsdl.ecore#//SoftwareInstallation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//SoftwareInstallation/softwareID"/>
@@ -127,9 +126,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//IP/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IP/ipAddress"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IP/ipRange"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//IP/sameas"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IP/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IP/ip"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IP/node"/>
+    </genClasses>
+    <genClasses ecoreClass="Vsdl.ecore#//Gateway">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//Gateway/gatewayIP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//Gateway/internet"/>
+    </genClasses>
+    <genClasses ecoreClass="Vsdl.ecore#//DNS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//DNS/DNSIP"/>
     </genClasses>
     <genClasses ecoreClass="Vsdl.ecore#//OS">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//OS/version"/>
@@ -139,9 +143,6 @@
     </genClasses>
     <genClasses ecoreClass="Vsdl.ecore#//IPRange">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IPRange/range"/>
-    </genClasses>
-    <genClasses ecoreClass="Vsdl.ecore#//Gateway">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//Gateway/internet"/>
     </genClasses>
     <genClasses ecoreClass="Vsdl.ecore#//At">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//At/op"/>

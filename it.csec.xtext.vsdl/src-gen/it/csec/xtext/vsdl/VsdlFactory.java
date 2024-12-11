@@ -249,6 +249,24 @@ public interface VsdlFactory extends EFactory
   IP createIP();
 
   /**
+   * Returns a new object of class '<em>Gateway</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Gateway</em>'.
+   * @generated
+   */
+  Gateway createGateway();
+
+  /**
+   * Returns a new object of class '<em>DNS</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>DNS</em>'.
+   * @generated
+   */
+  DNS createDNS();
+
+  /**
    * Returns a new object of class '<em>OS</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -274,15 +292,6 @@ public interface VsdlFactory extends EFactory
    * @generated
    */
   IPRange createIPRange();
-
-  /**
-   * Returns a new object of class '<em>Gateway</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Gateway</em>'.
-   * @generated
-   */
-  Gateway createGateway();
 
   /**
    * Returns a new object of class '<em>At</em>'.

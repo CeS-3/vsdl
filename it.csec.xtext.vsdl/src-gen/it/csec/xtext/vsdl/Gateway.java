@@ -13,6 +13,7 @@ package it.csec.xtext.vsdl;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link it.csec.xtext.vsdl.Gateway#getGatewayIP <em>Gateway IP</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.Gateway#isInternet <em>Internet</em>}</li>
  * </ul>
  *
@@ -20,8 +21,30 @@ package it.csec.xtext.vsdl;
  * @model
  * @generated
  */
-public interface Gateway extends NetworkConstraint
+public interface Gateway extends NodeConstraint, NetworkConstraint
 {
+  /**
+   * Returns the value of the '<em><b>Gateway IP</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Gateway IP</em>' containment reference.
+   * @see #setGatewayIP(IPAddress)
+   * @see it.csec.xtext.vsdl.VsdlPackage#getGateway_GatewayIP()
+   * @model containment="true"
+   * @generated
+   */
+  IPAddress getGatewayIP();
+
+  /**
+   * Sets the value of the '{@link it.csec.xtext.vsdl.Gateway#getGatewayIP <em>Gateway IP</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Gateway IP</em>' containment reference.
+   * @see #getGatewayIP()
+   * @generated
+   */
+  void setGatewayIP(IPAddress value);
+
   /**
    * Returns the value of the '<em><b>Internet</b></em>' attribute.
    * <!-- begin-user-doc -->

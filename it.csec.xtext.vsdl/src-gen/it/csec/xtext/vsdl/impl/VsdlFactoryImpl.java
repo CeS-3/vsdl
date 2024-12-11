@@ -91,10 +91,11 @@ public class VsdlFactoryImpl extends EFactoryImpl implements VsdlFactory
       case VsdlPackage.RAM: return createRam();
       case VsdlPackage.FLAVOUR: return createFlavour();
       case VsdlPackage.IP: return createIP();
+      case VsdlPackage.GATEWAY: return createGateway();
+      case VsdlPackage.DNS: return createDNS();
       case VsdlPackage.OS: return createOS();
       case VsdlPackage.OS_FAMILY: return createOSFamily();
       case VsdlPackage.IP_RANGE: return createIPRange();
-      case VsdlPackage.GATEWAY: return createGateway();
       case VsdlPackage.AT: return createAt();
       case VsdlPackage.SWITCH: return createSwitch();
       case VsdlPackage.PLUS_MINUS: return createPlusMinus();
@@ -448,6 +449,30 @@ public class VsdlFactoryImpl extends EFactoryImpl implements VsdlFactory
    * @generated
    */
   @Override
+  public Gateway createGateway()
+  {
+    GatewayImpl gateway = new GatewayImpl();
+    return gateway;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DNS createDNS()
+  {
+    DNSImpl dns = new DNSImpl();
+    return dns;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public OS createOS()
   {
     OSImpl os = new OSImpl();
@@ -476,18 +501,6 @@ public class VsdlFactoryImpl extends EFactoryImpl implements VsdlFactory
   {
     IPRangeImpl ipRange = new IPRangeImpl();
     return ipRange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Gateway createGateway()
-  {
-    GatewayImpl gateway = new GatewayImpl();
-    return gateway;
   }
 
   /**
