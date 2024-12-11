@@ -2,56 +2,8 @@ package it.csec.xtext.vsdl.Terraform;
 
 import java.util.ArrayList;
 import org.eclipse.xtend.lib.annotations.Accessors;
-import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Pure;
 
-/**
- * per ogni rete creo un router
- * 
- * resource "openstack_networking_router_v2" "router_netX" {
- * name = "router_netX"
- * // se gateway.internet � true:
- * external_gateway = "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f"
- * // il valore � "cablato" preso da "neutron net-show FLOATING_IP_POOL", valore id
- * }
- * 
- * ci vuole una interfaccia fissa sulla rete (default gw della rete)
- * spero questa prenda SEMPRE gateway settato nella rete di default
- * resource "openstack_networking_router_interface_v2" "router_interface_1" {
- * router_id = "${openstack_networking_router_v2.[questo router].id}"
- * subnet_id = "${openstack_networking_subnet_v2.[questa sottorete].id}"
- * }
- * 
- * se dichiaro che "node.address" in cui il nodo � una rete (rete collegata ad una rete) ho come parametro l'ip
- * dichiaro una porta sulla rete
- * 
- * resource "openstack_networking_port_v2" "port_[questarete]_[nomealtrarete]" {
- * name = "port_[questarete]_[nomealtrarete]"
- * network_id = "${openstack_networking_network_v2.[questarete].id}"
- * admin_state_up = "true"
- * fixed_ip {
- * subnet_id = "${openstack_networking_network_v2.[questasottorete].id}"
- * ip_address = "parametro ip"
- * }
- * 
- * interfaccia sul router dell'altra rete
- * 
- * resource "openstack_networking_router_interface_v2" "router_interface_[questarete]" {
- * router_id = "${openstack_networking_router_v2.router_[altrarete].id}"
- * subnet_id = "${openstack_networking_subnet_v2.subnet_[questarete].id}"
- * port_id = "${port_[questarete]_[nomealtrarete]}"
- * }
- * 
- * una route [altrarete] -> "parametro ip" sul router dell'altra rete
- * resource "openstack_networking_router_route_v2" "router_route_altrarete_questarete" {
- * depends_on = ["openstack_networking_router_interface_v2."]
- * router_id = "${openstack_networking_router_v2.router_1.id}"
- * destination_cidr = "10.0.1.0/24"
- * next_hop = "192.168.199.254"
- * }
- * 
- * }
- */
 @SuppressWarnings("all")
 public class Router {
   @Accessors
@@ -80,124 +32,87 @@ public class Router {
     this.internet = false;
   }
 
-  public CharSequence toTerraformString() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("resource \"openstack_networking_router_v2\" \"router_�name�\" {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("name = \"router_�name�\"");
-    _builder.newLine();
-    _builder.append("�IF internet�");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("external_gateway = \"e041461b-0fba-4153-b186-3f5e9e140b3d\"");
-    _builder.newLine();
-    _builder.append("�ENDIF� ");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.newLine();
-    _builder.append("�IF interfaces !== null�");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("resource \"openstack_networking_router_interface_v2\" \"router_�name�_interface_�interfaces.get(0).networkid�\" {");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("router_id = \"${openstack_networking_router_v2.router_�name�.id}\"");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("subnet_id = \"${openstack_networking_subnet_v2.subnet_�interfaces.get(0).networkid�.id}\"");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("�FOR n : interfaces�");
-    _builder.newLine();
-    _builder.append("�IF n.networkid != interfaces.get(0).networkid�");
-    _builder.newLine();
-    _builder.append("resource \"openstack_networking_router_interface_v2\" \"router_�name�_interface_�n.networkid�\" {");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("router_id = \"${openstack_networking_router_v2.router_�name�.id}\"");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("# subnet_id = \"${openstack_networking_subnet_v2.subnet_�n.networkid�.id}\"");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("port_id = \"${openstack_networking_port_v2.port_�interfaces.get(0).networkid�.id}\"");
-    _builder.newLine();
-    _builder.append("}\t\t");
-    _builder.newLine();
-    _builder.append("�ENDIF�");
-    _builder.newLine();
-    _builder.append("�ENDFOR�");
-    _builder.newLine();
-    _builder.append("�ENDIF�");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("�IF ports !== null�");
-    _builder.newLine();
-    _builder.append("�FOR p : ports�");
-    _builder.newLine();
-    _builder.append("resource \"openstack_networking_port_v2\" \"port_�p.networkid�\" {");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("name = \"port_�p.networkid�\"");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("network_id = \"${openstack_networking_network_v2.�interfaces.get(0).networkid�.id}\"");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("admin_state_up = \"true\"");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("fixed_ip {");
-    _builder.newLine();
-    _builder.append("  \t");
-    _builder.append("subnet_id = \"${openstack_networking_subnet_v2.subnet_�interfaces.get(0).networkid�.id}\"");
-    _builder.newLine();
-    _builder.append("  \t");
-    _builder.append("ip_address = \"�p.address�\"");
-    _builder.newLine();
-    _builder.append("  ");
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("�ENDFOR�");
-    _builder.newLine();
-    _builder.append("�ENDIF�");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("�IF routes !== null�\t\t  ");
-    _builder.newLine();
-    _builder.append("�FOR r : routes�");
-    _builder.newLine();
-    _builder.append("resource \"openstack_networking_router_route_v2\" \"router_route_�r.name�\" {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("# depends_on = interfaccia? ");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("depends_on = [\"openstack_networking_port_v2.port_�r.name�\"]");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("router_id = \"${openstack_networking_router_v2.router_�name�.id}\"");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("destination_cidr = \"�r.address�/�r.netmask�\"");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("next_hop = \"�r.gateway�\"");
-    _builder.newLine();
-    _builder.append("} ");
-    _builder.newLine();
-    _builder.append("�ENDFOR�\t\t");
-    _builder.newLine();
-    _builder.append("�ENDIF�");
-    _builder.newLine();
-    return _builder;
+  public String toTerraformString() {
+    final StringBuilder builder = new StringBuilder();
+    builder.append((("resource \"openstack_networking_router_v2\" \"router_" + this.name) + "\" {"));
+    builder.append((("\n  name = \"router_" + this.name) + "\""));
+    if (this.internet) {
+      builder.append("\n  external_gateway = \"e041461b-0fba-4153-b186-3f5e9e140b3d\"");
+    }
+    builder.append("\n}\n\n");
+    if (((this.interfaces != null) && (!this.interfaces.isEmpty()))) {
+      for (final Interface n : this.interfaces) {
+        {
+          String _networkid = n.getNetworkid();
+          String _plus = ((("resource \"openstack_networking_router_interface_v2\" \"router_" + this.name) + "_interface_") + _networkid);
+          String _plus_1 = (_plus + "\" {");
+          builder.append(_plus_1);
+          builder.append((("\n  router_id = \"${openstack_networking_router_v2.router_" + this.name) + ".id}\""));
+          String _networkid_1 = n.getNetworkid();
+          String _plus_2 = ("\n  subnet_id = \"${openstack_networking_subnet_v2.subnet_" + _networkid_1);
+          String _plus_3 = (_plus_2 + ".id}\"");
+          builder.append(_plus_3);
+          builder.append("\n}\n\n");
+        }
+      }
+    }
+    if (((this.ports != null) && (!this.ports.isEmpty()))) {
+      for (final Port p : this.ports) {
+        {
+          String _networkid = p.getNetworkid();
+          String _plus = ("resource \"openstack_networking_port_v2\" \"port_" + _networkid);
+          String _plus_1 = (_plus + " {");
+          builder.append(_plus_1);
+          String _networkid_1 = p.getNetworkid();
+          String _plus_2 = ("\n  name = \"port_" + _networkid_1);
+          String _plus_3 = (_plus_2 + "\"");
+          builder.append(_plus_3);
+          String _networkid_2 = this.interfaces.get(0).getNetworkid();
+          String _plus_4 = ("\n  network_id = \"${openstack_networking_network_v2. + " + _networkid_2);
+          String _plus_5 = (_plus_4 + ".id} \"");
+          builder.append(_plus_5);
+          builder.append("\n  admin_state_up = \"true\"");
+          builder.append("\n  fixed_ip {");
+          String _networkid_3 = this.interfaces.get(0).getNetworkid();
+          String _plus_6 = ("\n    subnet_id = \"${openstack_networking_subnet_v2.subnet_" + _networkid_3);
+          String _plus_7 = (_plus_6 + ".id}\"");
+          builder.append(_plus_7);
+          String _address = p.getAddress();
+          String _plus_8 = ("\n    ip_address = \" " + _address);
+          String _plus_9 = (_plus_8 + "\"");
+          builder.append(_plus_9);
+          builder.append("\n  }\n}\n\n");
+        }
+      }
+    }
+    if (((this.routes != null) && (!this.routes.isEmpty()))) {
+      for (final Route r : this.routes) {
+        {
+          String _name = r.getName();
+          String _plus = ("resource \"openstack_networking_router_route_v2\" \"router_route_" + _name);
+          String _plus_1 = (_plus + " {");
+          builder.append(_plus_1);
+          String _name_1 = r.getName();
+          String _plus_2 = ("\n  depends_on = [\"openstack_networking_port_v2.port_" + _name_1);
+          String _plus_3 = (_plus_2 + "\"]");
+          builder.append(_plus_3);
+          builder.append((("\n  router_id = \"${openstack_networking_router_v2.router_" + this.name) + ".id}\""));
+          String _address = r.getAddress();
+          String _plus_4 = ("\n  destination_cidr = \"" + _address);
+          String _plus_5 = (_plus_4 + "/");
+          int _netmask = r.getNetmask();
+          String _plus_6 = (_plus_5 + Integer.valueOf(_netmask));
+          String _plus_7 = (_plus_6 + "\"");
+          builder.append(_plus_7);
+          String _gateway = r.getGateway();
+          String _plus_8 = ("\n  next_hop = \"" + _gateway);
+          String _plus_9 = (_plus_8 + "\"");
+          builder.append(_plus_9);
+          builder.append("\n}\n\n");
+        }
+      }
+    }
+    return builder.toString();
   }
 
   @Pure

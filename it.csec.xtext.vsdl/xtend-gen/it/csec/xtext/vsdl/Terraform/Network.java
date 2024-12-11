@@ -1,7 +1,6 @@
 package it.csec.xtext.vsdl.Terraform;
 
 import org.eclipse.xtend.lib.annotations.Accessors;
-import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Pure;
 
 @SuppressWarnings("all")
@@ -42,84 +41,38 @@ public class Network extends ScenElem {
   }
 
   public String toTerraformString() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("resource \"openstack_networking_network_v2\" \"");
+    final StringBuilder builder = new StringBuilder();
     String _name = this.getName();
-    String _plus = (_builder.toString() + _name);
-    StringConcatenation _builder_1 = new StringConcatenation();
-    _builder_1.append("\" {");
-    _builder_1.newLine();
-    _builder_1.append("\t  ");
-    _builder_1.append("name = \"");
-    String _plus_1 = (_plus + _builder_1);
+    String _plus = ("resource \"openstack_networking_network_v2\" \"" + _name);
+    String _plus_1 = (_plus + "\" {");
+    builder.append(_plus_1);
     String _name_1 = this.getName();
-    String _plus_2 = (_plus_1 + _name_1);
-    StringConcatenation _builder_2 = new StringConcatenation();
-    _builder_2.append("\"");
-    _builder_2.newLine();
-    _builder_2.append("\t  ");
-    _builder_2.append("admin_state_up = \"true\"");
-    _builder_2.newLine();
-    _builder_2.append("\t");
-    _builder_2.append("}");
-    _builder_2.newLine();
-    _builder_2.append("\t");
-    _builder_2.newLine();
-    _builder_2.append("\t");
-    _builder_2.append("resource \"openstack_networking_subnet_v2\" \"subnet_");
-    String _plus_3 = (_plus_2 + _builder_2);
+    String _plus_2 = ("\n  name = \"" + _name_1);
+    String _plus_3 = (_plus_2 + "\"");
+    builder.append(_plus_3);
+    builder.append("\n  admin_state_up = \"true\"");
+    builder.append("\n}\n\n");
     String _name_2 = this.getName();
-    String _plus_4 = (_plus_3 + _name_2);
-    StringConcatenation _builder_3 = new StringConcatenation();
-    _builder_3.append("\" {");
-    _builder_3.newLine();
-    _builder_3.append("\t  ");
-    _builder_3.append("name = \"subnet_");
-    String _plus_5 = (_plus_4 + _builder_3);
+    String _plus_4 = ("resource \"openstack_networking_subnet_v2\" \"subnet_" + _name_2);
+    String _plus_5 = (_plus_4 + "\" {");
+    builder.append(_plus_5);
     String _name_3 = this.getName();
-    String _plus_6 = (_plus_5 + _name_3);
-    StringConcatenation _builder_4 = new StringConcatenation();
-    _builder_4.append("\"");
-    _builder_4.newLine();
-    _builder_4.append("\t  ");
-    _builder_4.append("network_id = \"${openstack_networking_network_v2. ");
-    String _plus_7 = (_plus_6 + _builder_4);
+    String _plus_6 = ("\n  name = \"subnet_" + _name_3);
+    String _plus_7 = (_plus_6 + "\"");
+    builder.append(_plus_7);
     String _name_4 = this.getName();
-    String _plus_8 = (_plus_7 + _name_4);
-    StringConcatenation _builder_5 = new StringConcatenation();
-    _builder_5.append(".id}\"");
-    _builder_5.newLine();
-    _builder_5.append("\t  ");
-    _builder_5.append("cidr = \"");
-    String _plus_9 = (_plus_8 + _builder_5);
-    String _plus_10 = (_plus_9 + this.address);
-    StringConcatenation _builder_6 = new StringConcatenation();
-    _builder_6.append("/");
-    String _plus_11 = (_plus_10 + _builder_6);
-    String _plus_12 = (_plus_11 + Integer.valueOf(this.netmask));
-    StringConcatenation _builder_7 = new StringConcatenation();
-    _builder_7.append("\"");
-    _builder_7.newLine();
-    _builder_7.append("\t  ");
-    _builder_7.append("ip_version = 4");
-    _builder_7.newLine();
-    _builder_7.append("\t  ");
-    _builder_7.append("dns_nameservers = [\"8.8.8.8\", \"8.8.4.4\"]");
-    _builder_7.newLine();
-    _builder_7.append("\t  ");
-    _builder_7.append("# enable_dhcp = \"true\"");
-    _builder_7.newLine();
-    _builder_7.append("\t  ");
-    _builder_7.append("gateway_ip = \"");
-    String _plus_13 = (_plus_12 + _builder_7);
-    String _plus_14 = (_plus_13 + this.gwaddress);
-    StringConcatenation _builder_8 = new StringConcatenation();
-    _builder_8.append("\"\t ");
-    _builder_8.newLine();
-    _builder_8.append("\t");
-    _builder_8.append("} ");
-    _builder_8.newLine();
-    return (_plus_14 + _builder_8);
+    String _plus_8 = ("\n  network_id = \"${openstack_networking_network_v2." + _name_4);
+    String _plus_9 = (_plus_8 + ".id}\"");
+    builder.append(_plus_9);
+    builder.append((((("\n  cidr = \"" + this.address) + "/") + Integer.valueOf(this.netmask)) + "\""));
+    builder.append("\n  ip_version = 4");
+    builder.append("\n  dns_nameservers = [\"8.8.8.8\", \"8.8.4.4\"]");
+    if ((this.gwaddress != "")) {
+      builder.append((("\n  gateway_ip = \"" + this.gwaddress) + "\""));
+    }
+    builder.append("\n}\n\n");
+    builder.append(this.router.toTerraformString());
+    return builder.toString();
   }
 
   @Pure

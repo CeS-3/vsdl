@@ -52,6 +52,7 @@ class Scenario {
         tenant_name = "''' + VsdlResources.OStenant + '''"
         password  = "''' + VsdlResources.OSpassword + '''"
         auth_url  = "''' + VsdlResources.OSurl + '''"
+        domain_name = "''' + VsdlResources.OSdomain + '''"
     }
     '''
 	}

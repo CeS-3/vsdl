@@ -1,6 +1,5 @@
 package it.csec.xtext.vsdl.Terraform;
 
-import it.csec.xtext.VsdlResources;
 import it.csec.xtext.generator.VsdlConsole;
 import java.io.ByteArrayInputStream;
 import java.util.Hashtable;
@@ -67,44 +66,8 @@ public class Scenario {
   }
 
   public String doTerraformProvider() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("provider \"openstack\" {");
-    _builder.newLine();
-    _builder.append("    ");
-    _builder.append("user_name  = \"");
-    String _oSuser = VsdlResources.getOSuser();
-    String _plus = (_builder.toString() + _oSuser);
-    StringConcatenation _builder_1 = new StringConcatenation();
-    _builder_1.append("\"");
-    _builder_1.newLine();
-    _builder_1.append("        ");
-    _builder_1.append("tenant_name = \"");
-    String _plus_1 = (_plus + _builder_1);
-    String _oStenant = VsdlResources.getOStenant();
-    String _plus_2 = (_plus_1 + _oStenant);
-    StringConcatenation _builder_2 = new StringConcatenation();
-    _builder_2.append("\"");
-    _builder_2.newLine();
-    _builder_2.append("        ");
-    _builder_2.append("password  = \"");
-    String _plus_3 = (_plus_2 + _builder_2);
-    String _oSpassword = VsdlResources.getOSpassword();
-    String _plus_4 = (_plus_3 + _oSpassword);
-    StringConcatenation _builder_3 = new StringConcatenation();
-    _builder_3.append("\"");
-    _builder_3.newLine();
-    _builder_3.append("        ");
-    _builder_3.append("auth_url  = \"");
-    String _plus_5 = (_plus_4 + _builder_3);
-    String _oSurl = VsdlResources.getOSurl();
-    String _plus_6 = (_plus_5 + _oSurl);
-    StringConcatenation _builder_4 = new StringConcatenation();
-    _builder_4.append("\"");
-    _builder_4.newLine();
-    _builder_4.append("    ");
-    _builder_4.append("}");
-    _builder_4.newLine();
-    return (_plus_6 + _builder_4);
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field OSdomain is undefined for the type Class<VsdlResources>");
   }
 
   public CharSequence doTerraformBogusNet() {
