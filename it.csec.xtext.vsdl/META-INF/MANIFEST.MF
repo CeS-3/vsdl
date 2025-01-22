@@ -41,4 +41,4 @@ Bundle-ClassPath: .,
  lib/slf4j-simple-2.0.13.jar,
  lib/openstack4j-3.12.jar,
  lib/openstack4j-jersey2-1.0.26.jar,
- lib/openstack4j-3.12-withdeps.jar
+ lib/openstack4j-3.0.3.jar
