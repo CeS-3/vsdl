@@ -4,7 +4,6 @@
 	<classpathentry kind="src" path="src-gen"/>
 	<classpathentry kind="src" path="xtend-gen"/>
 	<classpathentry kind="src" path="lib"/>
-	<classpathentry exported="true" kind="lib" path="lib/openstack4j-3.12-withdeps.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/openstack4j-jersey2-1.0.26.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/openstack4j-3.12.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/slf4j-simple-2.0.13.jar"/>

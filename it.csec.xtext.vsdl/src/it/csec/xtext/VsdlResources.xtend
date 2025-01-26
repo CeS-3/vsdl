@@ -195,6 +195,10 @@ class VsdlResources {
 		return getConfig.getProperty("ttustep")
 	}
 	
+	def static getOSdomain() {
+		return getConfig.getProperty("osdomain")
+	}
+	
 //	def static getOSClient() {
 //		var prop = getConfig
 //		

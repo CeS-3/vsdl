@@ -220,6 +220,10 @@ public class VsdlResources {
     return VsdlResources.getConfig().getProperty("ttustep");
   }
 
+  public static String getOSdomain() {
+    return VsdlResources.getConfig().getProperty("osdomain");
+  }
+
   public static OSClient.OSClientV3 getOSClient() {
     Properties prop = VsdlResources.getConfig();
     return OSFactory.builderV3().endpoint(prop.getProperty("openstack_url")).credentials(prop.getProperty("openstack_user"), prop.getProperty("openstack_password"), Identifier.byName("Default")).authenticate();
