@@ -658,16 +658,19 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     NodeNetworkConstraintA returns DNS
 	 *
 	 * Constraint:
-	 *     DNSIP=IPAddress
+	 *     (id=ID DNSIP=IPAddress)
 	 * </pre>
 	 */
 	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, DNS semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VsdlPackage.Literals.DNS__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VsdlPackage.Literals.DNS__ID));
 			if (transientValues.isValueTransient(semanticObject, VsdlPackage.Literals.DNS__DNSIP) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VsdlPackage.Literals.DNS__DNSIP));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_3_0(), semanticObject.getDNSIP());
+		feeder.accept(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_4_1_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_4_0(), semanticObject.getDNSIP());
 		feeder.finish();
 	}
 	
@@ -710,7 +713,7 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     NodeNetworkConstraintA returns IP
 	 *
 	 * Constraint:
-	 *     ((op='equal' ipAddress=IPAddress) | (op='in' ipRange=IPRangeA) | (op='connected' node=[Node|ID]))
+	 *     ((id=ID op='equal' ipAddress=IPAddress) | (id=ID op='in' ipRange=IPRangeA) | (id=ID op='connected' node=[Node|ID]))
 	 * </pre>
 	 */
 	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, IP semanticObject) {

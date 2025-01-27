@@ -1,39 +1,23 @@
 package it.csec.xtext.generator;
 
-import java.util.Collections;
-import org.eclipse.ui.console.ConsolePlugin;
-import org.eclipse.ui.console.IConsole;
-import org.eclipse.ui.console.IConsoleManager;
-import org.eclipse.ui.console.MessageConsole;
-import org.eclipse.ui.console.MessageConsoleStream;
-import org.eclipse.xtext.xbase.lib.CollectionLiterals;
-import org.eclipse.xtext.xbase.lib.Conversions;
+import java.io.PrintStream;
 
 @SuppressWarnings("all")
 public class VsdlConsole {
-  private MessageConsoleStream stream;
+  private PrintStream stream;
 
   public VsdlConsole(final String name) {
-    this.stream = this.findConsole(name).newMessageStream();
+    this.stream = this.findConsole(name);
   }
 
-  private MessageConsole findConsole(final String name) {
-    final ConsolePlugin cplugin = ConsolePlugin.getDefault();
-    final IConsoleManager conMan = cplugin.getConsoleManager();
-    final IConsole[] existing = conMan.getConsoles();
-    for (int i = 0; (i < existing.length); i++) {
-      boolean _equals = name.equals((existing[i]).getName());
-      if (_equals) {
-        IConsole _get = existing[i];
-        return ((MessageConsole) _get);
-      }
-    }
-    final MessageConsole console = new MessageConsole(name, null);
-    conMan.addConsoles(((IConsole[]) ((IConsole[])Conversions.unwrapArray(Collections.<MessageConsole>unmodifiableList(CollectionLiterals.<MessageConsole>newArrayList(console)), IConsole.class))));
-    return console;
+  /**
+   * 原本在 Eclipse 里是找到命名Console，这里改为直接返回System.out
+   */
+  private PrintStream findConsole(final String name) {
+    return System.out;
   }
 
-  public MessageConsoleStream getStream() {
+  public PrintStream getStream() {
     return this.stream;
   }
 }

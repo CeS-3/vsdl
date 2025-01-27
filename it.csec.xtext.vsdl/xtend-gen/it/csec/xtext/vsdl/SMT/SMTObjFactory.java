@@ -1,9 +1,9 @@
 package it.csec.xtext.vsdl.SMT;
 
+import java.io.PrintStream;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.ui.console.MessageConsoleStream;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.smtlib.IExpr;
 
@@ -57,7 +57,7 @@ public class SMTObjFactory {
             if (_t_1 instanceof Exception) {
               Method[] _methods = cls.getMethods();
               for (final Method m : _methods) {
-                MessageConsoleStream _stream = context.getConsole().getStream();
+                PrintStream _stream = context.getConsole().getStream();
                 String _sMTName = this.getSMTName();
                 String _plus = (_sMTName + ": ");
                 String _string = m.toString();

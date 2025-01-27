@@ -1326,13 +1326,22 @@ public interface VsdlPackage extends EPackage
   int IP__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IP__ID = NODE_CONSTRAINT_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IP__OP = NODE_CONSTRAINT_FEATURE_COUNT + 0;
+  int IP__OP = NODE_CONSTRAINT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Ip Address</b></em>' containment reference.
@@ -1341,7 +1350,7 @@ public interface VsdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IP__IP_ADDRESS = NODE_CONSTRAINT_FEATURE_COUNT + 1;
+  int IP__IP_ADDRESS = NODE_CONSTRAINT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Ip Range</b></em>' containment reference.
@@ -1350,7 +1359,7 @@ public interface VsdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IP__IP_RANGE = NODE_CONSTRAINT_FEATURE_COUNT + 2;
+  int IP__IP_RANGE = NODE_CONSTRAINT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Node</b></em>' reference.
@@ -1359,7 +1368,7 @@ public interface VsdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IP__NODE = NODE_CONSTRAINT_FEATURE_COUNT + 3;
+  int IP__NODE = NODE_CONSTRAINT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>IP</em>' class.
@@ -1368,7 +1377,7 @@ public interface VsdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IP_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 4;
+  int IP_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link it.csec.xtext.vsdl.impl.GatewayImpl <em>Gateway</em>}' class.
@@ -1517,13 +1526,22 @@ public interface VsdlPackage extends EPackage
   int DNS__SOFTWARE = NODE_CONSTRAINT__SOFTWARE;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNS__ID = NODE_CONSTRAINT_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>DNSIP</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DNS__DNSIP = NODE_CONSTRAINT_FEATURE_COUNT + 0;
+  int DNS__DNSIP = NODE_CONSTRAINT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>DNS</em>' class.
@@ -1532,7 +1550,7 @@ public interface VsdlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DNS_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 1;
+  int DNS_FEATURE_COUNT = NODE_CONSTRAINT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link it.csec.xtext.vsdl.impl.OSImpl <em>OS</em>}' class.
@@ -2816,6 +2834,17 @@ public interface VsdlPackage extends EPackage
   EClass getIP();
 
   /**
+   * Returns the meta object for the attribute '{@link it.csec.xtext.vsdl.IP#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see it.csec.xtext.vsdl.IP#getId()
+   * @see #getIP()
+   * @generated
+   */
+  EAttribute getIP_Id();
+
+  /**
    * Returns the meta object for the attribute '{@link it.csec.xtext.vsdl.IP#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2900,6 +2929,17 @@ public interface VsdlPackage extends EPackage
    * @generated
    */
   EClass getDNS();
+
+  /**
+   * Returns the meta object for the attribute '{@link it.csec.xtext.vsdl.DNS#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see it.csec.xtext.vsdl.DNS#getId()
+   * @see #getDNS()
+   * @generated
+   */
+  EAttribute getDNS_Id();
 
   /**
    * Returns the meta object for the containment reference '{@link it.csec.xtext.vsdl.DNS#getDNSIP <em>DNSIP</em>}'.
@@ -3812,6 +3852,14 @@ public interface VsdlPackage extends EPackage
     EClass IP = eINSTANCE.getIP();
 
     /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IP__ID = eINSTANCE.getIP_Id();
+
+    /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3878,6 +3926,14 @@ public interface VsdlPackage extends EPackage
      * @generated
      */
     EClass DNS = eINSTANCE.getDNS();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DNS__ID = eINSTANCE.getDNS_Id();
 
     /**
      * The meta object literal for the '<em><b>DNSIP</b></em>' containment reference feature.

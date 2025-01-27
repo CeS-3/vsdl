@@ -54,11 +54,11 @@ NodeHardwareConstraintA returns NodeConstraint:
 
 // 节点网络约束
 NodeNetworkConstraintA returns NodeConstraint:
-    {IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
-    {IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA |
-    {IP} =>'ip' 'address' 'is' op='connected' 'to' node=[Node]|
-	{Gateway} =>"gateway" 'is' gatewayIP = IPAddress|
-    {DNS} => 'DNS' 'is' DNSIP = IPAddress;
+    {IP} id=ID 'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
+    {IP} id=ID 'ip' 'address' op='in' 'range' ipRange=IPRangeA |
+    {IP} id=ID 'ip' 'address' 'is' op='connected' 'to' node=[Node] |
+    {Gateway} =>"gateway" 'is' gatewayIP = IPAddress |
+    {DNS} id=ID => 'DNS' 'is' DNSIP = IPAddress;
     
 NodeSoftwareConstraintA returns NodeConstraint:
 	'node' {OS} =>'OS' 'is' version=OSVersionE |

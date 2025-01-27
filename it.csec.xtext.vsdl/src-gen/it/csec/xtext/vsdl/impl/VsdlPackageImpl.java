@@ -1265,7 +1265,7 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
-  public EAttribute getIP_Op()
+  public EAttribute getIP_Id()
   {
     return (EAttribute)ipEClass.getEStructuralFeatures().get(0);
   }
@@ -1276,9 +1276,9 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
-  public EReference getIP_IpAddress()
+  public EAttribute getIP_Op()
   {
-    return (EReference)ipEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)ipEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1287,7 +1287,7 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
-  public EReference getIP_IpRange()
+  public EReference getIP_IpAddress()
   {
     return (EReference)ipEClass.getEStructuralFeatures().get(2);
   }
@@ -1298,9 +1298,20 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
-  public EReference getIP_Node()
+  public EReference getIP_IpRange()
   {
     return (EReference)ipEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getIP_Node()
+  {
+    return (EReference)ipEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1353,9 +1364,20 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
    * @generated
    */
   @Override
+  public EAttribute getDNS_Id()
+  {
+    return (EAttribute)dnsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getDNS_DNSIP()
   {
-    return (EReference)dnsEClass.getEStructuralFeatures().get(0);
+    return (EReference)dnsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1681,6 +1703,7 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     createEAttribute(flavourEClass, FLAVOUR__PROFILE);
 
     ipEClass = createEClass(IP);
+    createEAttribute(ipEClass, IP__ID);
     createEAttribute(ipEClass, IP__OP);
     createEReference(ipEClass, IP__IP_ADDRESS);
     createEReference(ipEClass, IP__IP_RANGE);
@@ -1691,6 +1714,7 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     createEAttribute(gatewayEClass, GATEWAY__INTERNET);
 
     dnsEClass = createEClass(DNS);
+    createEAttribute(dnsEClass, DNS__ID);
     createEReference(dnsEClass, DNS__DNSIP);
 
     osEClass = createEClass(OS);
@@ -1879,6 +1903,7 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     initEAttribute(getFlavour_Profile(), this.getHardwareProfile(), "profile", null, 0, 1, Flavour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ipEClass, it.csec.xtext.vsdl.IP.class, "IP", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIP_Id(), ecorePackage.getEString(), "id", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIP_Op(), ecorePackage.getEString(), "op", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIP_IpAddress(), this.getIPAddress(), null, "ipAddress", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIP_IpRange(), this.getIPRangeA(), null, "ipRange", null, 0, 1, it.csec.xtext.vsdl.IP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1889,6 +1914,7 @@ public class VsdlPackageImpl extends EPackageImpl implements VsdlPackage
     initEAttribute(getGateway_Internet(), ecorePackage.getEBoolean(), "internet", null, 0, 1, Gateway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dnsEClass, it.csec.xtext.vsdl.DNS.class, "DNS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDNS_Id(), ecorePackage.getEString(), "id", null, 0, 1, it.csec.xtext.vsdl.DNS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDNS_DNSIP(), this.getIPAddress(), null, "DNSIP", null, 0, 1, it.csec.xtext.vsdl.DNS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(osEClass, it.csec.xtext.vsdl.OS.class, "OS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

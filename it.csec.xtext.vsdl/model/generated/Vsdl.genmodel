@@ -123,6 +123,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//Flavour/profile"/>
     </genClasses>
     <genClasses ecoreClass="Vsdl.ecore#//IP">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//IP/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//IP/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IP/ipAddress"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//IP/ipRange"/>
@@ -133,6 +134,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//Gateway/internet"/>
     </genClasses>
     <genClasses ecoreClass="Vsdl.ecore#//DNS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vsdl.ecore#//DNS/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vsdl.ecore#//DNS/DNSIP"/>
     </genClasses>
     <genClasses ecoreClass="Vsdl.ecore#//OS">

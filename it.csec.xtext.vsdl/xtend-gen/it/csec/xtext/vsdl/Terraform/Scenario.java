@@ -3,6 +3,7 @@ package it.csec.xtext.vsdl.Terraform;
 import it.csec.xtext.VsdlResources;
 import it.csec.xtext.generator.VsdlConsole;
 import java.io.ByteArrayInputStream;
+import java.io.PrintStream;
 import java.util.Hashtable;
 import java.util.Objects;
 import org.eclipse.core.resources.IFile;
@@ -10,7 +11,6 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.ui.console.MessageConsoleStream;
 import org.eclipse.xtend.lib.annotations.Accessors;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Exceptions;
@@ -315,7 +315,7 @@ public class Scenario {
                 if (_containsKey) {
                   boolean _xblockexpression_1 = false;
                   {
-                    MessageConsoleStream _stream = this.console.getStream();
+                    PrintStream _stream = this.console.getStream();
                     String _get_5 = params[0];
                     String _plus = ("NETWORK: " + _get_5);
                     String _plus_1 = (_plus + ",");

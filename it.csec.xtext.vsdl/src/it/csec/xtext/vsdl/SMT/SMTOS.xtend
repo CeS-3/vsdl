@@ -30,10 +30,16 @@ class SMTOS extends SMTObjFun<OS> {
 		}
 
 		for (var i = 0; i <= context.ttu; i += context.ttuStep) {
+			val valueExpr = if (id < 0) {
+			    context.efactory.fcn(context.efactory.symbol("-"), context.efactory.numeral(-id))
+			} else {
+			    context.efactory.numeral(id)
+			}
+			
 			exprArr.add(k, context.efactory.fcn(
-				context.efactory.symbol("="),
-				context.efactory.fcn(context.efactory.symbol(funName), context.efactory.numeral(i), context.efactory.symbol(name)),
-				context.efactory.numeral(id)
+			    context.efactory.symbol("="),
+			    context.efactory.fcn(context.efactory.symbol(funName), context.efactory.numeral(i), context.efactory.symbol(name)),
+			    valueExpr
 			))
 			k++
 		}

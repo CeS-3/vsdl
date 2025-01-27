@@ -6,6 +6,7 @@ import it.csec.xtext.vsdl.Terraform.Node;
 import it.csec.xtext.vsdl.Terraform.Scenario;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.PrintStream;
 import java.util.Set;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -13,7 +14,6 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.ui.console.MessageConsoleStream;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 
@@ -34,7 +34,7 @@ public class VsdlScriptGenerator extends AbstractHandler {
         String _substring = file.getName().substring(0, file.getName().indexOf("_"));
         Scenario scenario = new Scenario(_substring);
         String line = null;
-        MessageConsoleStream _stream = scenario.getConsole().getStream();
+        PrintStream _stream = scenario.getConsole().getStream();
         String _name = scenario.getName();
         String _plus = ("Generating Terraform scripts for scenario " + _name);
         _stream.println(_plus);
@@ -43,7 +43,7 @@ public class VsdlScriptGenerator extends AbstractHandler {
         }
         br.close();
         scenario.getConsole().getStream().println("Done.");
-        MessageConsoleStream _stream_1 = scenario.getConsole().getStream();
+        PrintStream _stream_1 = scenario.getConsole().getStream();
         int _ttu = scenario.getTtu();
         String _plus_1 = ("ttu: " + Integer.valueOf(_ttu));
         _stream_1.println(_plus_1);

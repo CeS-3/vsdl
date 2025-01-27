@@ -25,7 +25,7 @@ class SMTIP extends SMTObjFun<IP> {
 				exprArr.add(k, context.efactory.fcn(
 					context.efactory.symbol(">"),
 					context.efactory.fcn(context.efactory.symbol(funName), context.efactory.numeral(i),
-						context.efactory.symbol(name), context.efactory.symbol(ip.getId().name)),
+						context.efactory.symbol(name), context.efactory.symbol(ip.getId())),
 					context.efactory.numeral(0)
 				))
 			}
@@ -41,7 +41,7 @@ class SMTIP extends SMTObjFun<IP> {
 				exprArr.add(k, context.efactory.fcn(
 					context.efactory.symbol("="),
 					context.efactory.fcn(context.efactory.symbol(funName), context.efactory.numeral(i),
-						context.efactory.symbol(name), context.efactory.symbol(ip.id.name)),
+						context.efactory.symbol(name), context.efactory.symbol(ip.id)),
 					context.efactory.numeral(addr)
 				))
 			}

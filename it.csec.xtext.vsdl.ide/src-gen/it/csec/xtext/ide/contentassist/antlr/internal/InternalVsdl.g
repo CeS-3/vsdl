@@ -4614,9 +4614,9 @@ rule__NodeNetworkConstraintA__Group_0__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_0_1()); }
-	('ip')
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_0_1()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_0_1()); }
+	(rule__NodeNetworkConstraintA__IdAssignment_0_1)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_0_1()); }
 )
 ;
 finally {
@@ -4641,9 +4641,9 @@ rule__NodeNetworkConstraintA__Group_0__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_0_2()); }
-	'address'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_0_2()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_0_2()); }
+	'ip'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_0_2()); }
 )
 ;
 finally {
@@ -4668,9 +4668,9 @@ rule__NodeNetworkConstraintA__Group_0__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_0_3()); }
-	(rule__NodeNetworkConstraintA__OpAssignment_0_3)
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_0_3()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_0_3()); }
+	'address'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_0_3()); }
 )
 ;
 finally {
@@ -4695,9 +4695,9 @@ rule__NodeNetworkConstraintA__Group_0__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_0_4()); }
-	'to'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_0_4()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_0_4()); }
+	(rule__NodeNetworkConstraintA__OpAssignment_0_4)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_0_4()); }
 )
 ;
 finally {
@@ -4710,6 +4710,7 @@ rule__NodeNetworkConstraintA__Group_0__5
 	}
 :
 	rule__NodeNetworkConstraintA__Group_0__5__Impl
+	rule__NodeNetworkConstraintA__Group_0__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4721,9 +4722,35 @@ rule__NodeNetworkConstraintA__Group_0__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressAssignment_0_5()); }
-	(rule__NodeNetworkConstraintA__IpAddressAssignment_0_5)
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressAssignment_0_5()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_0_5()); }
+	'to'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_0_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_0__6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__NodeNetworkConstraintA__Group_0__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_0__6__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressAssignment_0_6()); }
+	(rule__NodeNetworkConstraintA__IpAddressAssignment_0_6)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressAssignment_0_6()); }
 )
 ;
 finally {
@@ -4776,9 +4803,9 @@ rule__NodeNetworkConstraintA__Group_1__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_1_1()); }
-	('ip')
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_1_1()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_1_1()); }
+	(rule__NodeNetworkConstraintA__IdAssignment_1_1)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_1_1()); }
 )
 ;
 finally {
@@ -4803,9 +4830,9 @@ rule__NodeNetworkConstraintA__Group_1__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_1_2()); }
-	'address'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_1_2()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_1_2()); }
+	'ip'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_1_2()); }
 )
 ;
 finally {
@@ -4830,9 +4857,9 @@ rule__NodeNetworkConstraintA__Group_1__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_1_3()); }
-	(rule__NodeNetworkConstraintA__OpAssignment_1_3)
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_1_3()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_1_3()); }
+	'address'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_1_3()); }
 )
 ;
 finally {
@@ -4857,9 +4884,9 @@ rule__NodeNetworkConstraintA__Group_1__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getRangeKeyword_1_4()); }
-	'range'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getRangeKeyword_1_4()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_1_4()); }
+	(rule__NodeNetworkConstraintA__OpAssignment_1_4)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_1_4()); }
 )
 ;
 finally {
@@ -4872,6 +4899,7 @@ rule__NodeNetworkConstraintA__Group_1__5
 	}
 :
 	rule__NodeNetworkConstraintA__Group_1__5__Impl
+	rule__NodeNetworkConstraintA__Group_1__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4883,9 +4911,35 @@ rule__NodeNetworkConstraintA__Group_1__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeAssignment_1_5()); }
-	(rule__NodeNetworkConstraintA__IpRangeAssignment_1_5)
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeAssignment_1_5()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getRangeKeyword_1_5()); }
+	'range'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getRangeKeyword_1_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_1__6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__NodeNetworkConstraintA__Group_1__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_1__6__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeAssignment_1_6()); }
+	(rule__NodeNetworkConstraintA__IpRangeAssignment_1_6)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeAssignment_1_6()); }
 )
 ;
 finally {
@@ -4938,9 +4992,9 @@ rule__NodeNetworkConstraintA__Group_2__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_2_1()); }
-	('ip')
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_2_1()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_2_1()); }
+	(rule__NodeNetworkConstraintA__IdAssignment_2_1)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_2_1()); }
 )
 ;
 finally {
@@ -4965,9 +5019,9 @@ rule__NodeNetworkConstraintA__Group_2__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_2_2()); }
-	'address'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_2_2()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_2_2()); }
+	'ip'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpKeyword_2_2()); }
 )
 ;
 finally {
@@ -4992,9 +5046,9 @@ rule__NodeNetworkConstraintA__Group_2__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_2_3()); }
-	'is'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_2_3()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_2_3()); }
+	'address'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getAddressKeyword_2_3()); }
 )
 ;
 finally {
@@ -5019,9 +5073,9 @@ rule__NodeNetworkConstraintA__Group_2__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_2_4()); }
-	(rule__NodeNetworkConstraintA__OpAssignment_2_4)
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_2_4()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_2_4()); }
+	'is'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_2_4()); }
 )
 ;
 finally {
@@ -5046,9 +5100,9 @@ rule__NodeNetworkConstraintA__Group_2__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_2_5()); }
-	'to'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_2_5()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_2_5()); }
+	(rule__NodeNetworkConstraintA__OpAssignment_2_5)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpAssignment_2_5()); }
 )
 ;
 finally {
@@ -5061,6 +5115,7 @@ rule__NodeNetworkConstraintA__Group_2__6
 	}
 :
 	rule__NodeNetworkConstraintA__Group_2__6__Impl
+	rule__NodeNetworkConstraintA__Group_2__7
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -5072,9 +5127,35 @@ rule__NodeNetworkConstraintA__Group_2__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getNodeAssignment_2_6()); }
-	(rule__NodeNetworkConstraintA__NodeAssignment_2_6)
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getNodeAssignment_2_6()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_2_6()); }
+	'to'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getToKeyword_2_6()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_2__7
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__NodeNetworkConstraintA__Group_2__7__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_2__7__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getNodeAssignment_2_7()); }
+	(rule__NodeNetworkConstraintA__NodeAssignment_2_7)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getNodeAssignment_2_7()); }
 )
 ;
 finally {
@@ -5235,9 +5316,9 @@ rule__NodeNetworkConstraintA__Group_4__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getDNSKeyword_4_1()); }
-	('DNS')
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getDNSKeyword_4_1()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_4_1()); }
+	(rule__NodeNetworkConstraintA__IdAssignment_4_1)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdAssignment_4_1()); }
 )
 ;
 finally {
@@ -5262,9 +5343,9 @@ rule__NodeNetworkConstraintA__Group_4__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_4_2()); }
-	'is'
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_4_2()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getDNSKeyword_4_2()); }
+	('DNS')
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getDNSKeyword_4_2()); }
 )
 ;
 finally {
@@ -5277,6 +5358,7 @@ rule__NodeNetworkConstraintA__Group_4__3
 	}
 :
 	rule__NodeNetworkConstraintA__Group_4__3__Impl
+	rule__NodeNetworkConstraintA__Group_4__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -5288,9 +5370,35 @@ rule__NodeNetworkConstraintA__Group_4__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPAssignment_4_3()); }
-	(rule__NodeNetworkConstraintA__DNSIPAssignment_4_3)
-	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPAssignment_4_3()); }
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_4_3()); }
+	'is'
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIsKeyword_4_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_4__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__NodeNetworkConstraintA__Group_4__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__Group_4__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPAssignment_4_4()); }
+	(rule__NodeNetworkConstraintA__DNSIPAssignment_4_4)
+	{ after(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPAssignment_4_4()); }
 )
 ;
 finally {
@@ -9960,106 +10068,151 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__NodeNetworkConstraintA__OpAssignment_0_3
+rule__NodeNetworkConstraintA__IdAssignment_0_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_3_0()); }
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_0_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_0_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__OpAssignment_0_4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_4_0()); }
 		(
-			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_3_0()); }
+			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_4_0()); }
 			'equal'
-			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_3_0()); }
+			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_4_0()); }
 		)
-		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_3_0()); }
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpEqualKeyword_0_4_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__NodeNetworkConstraintA__IpAddressAssignment_0_5
+rule__NodeNetworkConstraintA__IpAddressAssignment_0_6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressIPAddressParserRuleCall_0_5_0()); }
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressIPAddressParserRuleCall_0_6_0()); }
 		ruleIPAddress
-		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressIPAddressParserRuleCall_0_5_0()); }
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpAddressIPAddressParserRuleCall_0_6_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__NodeNetworkConstraintA__OpAssignment_1_3
+rule__NodeNetworkConstraintA__IdAssignment_1_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_3_0()); }
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_1_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_1_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__OpAssignment_1_4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_4_0()); }
 		(
-			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_3_0()); }
+			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_4_0()); }
 			'in'
-			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_3_0()); }
+			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_4_0()); }
 		)
-		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_3_0()); }
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpInKeyword_1_4_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__NodeNetworkConstraintA__IpRangeAssignment_1_5
+rule__NodeNetworkConstraintA__IpRangeAssignment_1_6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeIPRangeAParserRuleCall_1_5_0()); }
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeIPRangeAParserRuleCall_1_6_0()); }
 		ruleIPRangeA
-		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeIPRangeAParserRuleCall_1_5_0()); }
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIpRangeIPRangeAParserRuleCall_1_6_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__NodeNetworkConstraintA__OpAssignment_2_4
+rule__NodeNetworkConstraintA__IdAssignment_2_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_4_0()); }
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_2_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_2_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__OpAssignment_2_5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_5_0()); }
 		(
-			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_4_0()); }
+			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_5_0()); }
 			'connected'
-			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_4_0()); }
+			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_5_0()); }
 		)
-		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_4_0()); }
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getOpConnectedKeyword_2_5_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__NodeNetworkConstraintA__NodeAssignment_2_6
+rule__NodeNetworkConstraintA__NodeAssignment_2_7
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeCrossReference_2_6_0()); }
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeCrossReference_2_7_0()); }
 		(
-			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeIDTerminalRuleCall_2_6_0_1()); }
+			{ before(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeIDTerminalRuleCall_2_7_0_1()); }
 			RULE_ID
-			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeIDTerminalRuleCall_2_6_0_1()); }
+			{ after(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeIDTerminalRuleCall_2_7_0_1()); }
 		)
-		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeCrossReference_2_6_0()); }
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getNodeNodeCrossReference_2_7_0()); }
 	)
 ;
 finally {
@@ -10081,15 +10234,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__NodeNetworkConstraintA__DNSIPAssignment_4_3
+rule__NodeNetworkConstraintA__IdAssignment_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_3_0()); }
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_4_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getIdIDTerminalRuleCall_4_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__NodeNetworkConstraintA__DNSIPAssignment_4_4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_4_0()); }
 		ruleIPAddress
-		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_3_0()); }
+		{ after(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_4_0()); }
 	)
 ;
 finally {

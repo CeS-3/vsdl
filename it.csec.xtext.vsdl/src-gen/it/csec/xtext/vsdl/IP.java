@@ -13,6 +13,7 @@ package it.csec.xtext.vsdl;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link it.csec.xtext.vsdl.IP#getId <em>Id</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.IP#getOp <em>Op</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.IP#getIpAddress <em>Ip Address</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.IP#getIpRange <em>Ip Range</em>}</li>
@@ -25,6 +26,28 @@ package it.csec.xtext.vsdl;
  */
 public interface IP extends NodeConstraint
 {
+  /**
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see it.csec.xtext.vsdl.VsdlPackage#getIP_Id()
+   * @model
+   * @generated
+   */
+  String getId();
+
+  /**
+   * Sets the value of the '{@link it.csec.xtext.vsdl.IP#getId <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
+   * @generated
+   */
+  void setId(String value);
+
   /**
    * Returns the value of the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->

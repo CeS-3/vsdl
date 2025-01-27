@@ -3,7 +3,6 @@ package it.csec.xtext.vsdl.SMT;
 import it.csec.xtext.VsdlResources;
 import it.csec.xtext.vsdl.OSFamily;
 import java.util.ArrayList;
-import java.util.List;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.smtlib.IExpr;
 
@@ -29,7 +28,7 @@ public class SMTOSFamily extends SMTObj<OSFamily> {
     String _family = os.getFamily();
     int _length = os.getFamily().length();
     int _minus = (_length - 1);
-    List<Integer> fl = VsdlResources.getOssFamilyIds(_family.substring(1, _minus));
+    ArrayList<Integer> fl = VsdlResources.getOssFamilyIds(_family.substring(1, _minus));
     int _size = fl.size();
     boolean _equals = (_size == 1);
     if (_equals) {

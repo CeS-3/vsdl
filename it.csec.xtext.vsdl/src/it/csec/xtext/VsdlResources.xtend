@@ -1,244 +1,246 @@
 package it.csec.xtext
 
+import java.io.IOException
+import java.io.InputStream
 import java.net.URL
-import java.util.Properties
-import org.openstack4j.openstack.OSFactory
-import org.openstack4j.model.common.Identifier;
-import org.openstack4j.model.compute.Flavor
-
-import java.util.List
 import java.util.ArrayList
+import java.util.HashSet
+import java.util.List
+import java.util.Properties
+import java.util.Set
+
 import javax.xml.parsers.DocumentBuilderFactory
 
-import org.w3c.dom.Node;
-import org.w3c.dom.Element;
-import java.util.Set
-import java.util.HashSet
+import org.openstack4j.model.common.Identifier
+import org.openstack4j.model.compute.Flavor
+import org.openstack4j.openstack.OSFactory
+import org.w3c.dom.Element
+import org.w3c.dom.Node
+
 import it.csec.xtext.vsdl.HardwareProfile
 
+/**
+ * 去掉了 "platform:/plugin/it.csec.xtext.vsdl/..." 的 Eclipse 依赖，
+ * 改用 classpath 内的 "/it/csec/xtext/vsdl/resources.xml" 与 config.properties。
+ */
 class VsdlResources {
-	private static def getResourceInputStream() {
-		var url = new URL("platform:/plugin/it.csec.xtext.vsdl/resources.xml");
-		return url.openConnection().getInputStream();
-	}
-	
-	static def getOssFamilyIds(String family) {
-		var List<Integer> res = new ArrayList<Integer>()
 
-		var inputStream = getResourceInputStream
+    /**
+     * 读取 resources.xml 的输入流。
+     * 
+     * 注意：资源文件 "/resources.xml" 
+     */
+    private static def getResourceInputStream() {
+        val path = "/resources.xml"
+        val stream = typeof(VsdlResources).getResourceAsStream(path)
+        if (stream == null) {
+            throw new IOException("Cannot find resource file: " + path)
+        }
+        return stream
+    }
 
-		var dbFactory = DocumentBuilderFactory.newInstance;
-		var dBuilder = dbFactory.newDocumentBuilder();
-		var doc = dBuilder.parse(inputStream);
+    /**
+     * 读取 config.properties
+     */
+    private static def getConfig() {
+        val path = "/config.properties"
+        val input = typeof(VsdlResources).getResourceAsStream(path)
+        if (input == null) {
+            throw new IOException("Cannot find config file: " + path)
+        }
+        val prop = new Properties
+        prop.load(input)
+        input.close
+        return prop
+    }
 
-		var nList = doc.getElementsByTagName("os")
-		for (var i = 0; i < nList.getLength(); i++) {
-			var Node nNode = nList.item(i);
+    // -----------------------------------
+    // 以下方法基本逻辑不变，只把原先 platform:/plugin/... 改为使用 getResourceInputStream()
+    // -----------------------------------
 
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				var Element eElement = nNode as Element;
-				
-				if (eElement.getElementsByTagName("family").item(0).getTextContent().equals(family)) {
-					res.add(Integer.parseInt(eElement.getAttribute("id")))
-				}
-			}
-		}
+    static def getOssFamilyIds(String family) {
+        val res = new ArrayList<Integer>()
+        val inputStream = getResourceInputStream
 
-		inputStream.close
-		return res
-	}
-	
-	static def getOsId(String name) {
-		var inputStream = getResourceInputStream
+        val dbFactory = DocumentBuilderFactory.newInstance
+        val dBuilder = dbFactory.newDocumentBuilder
+        val doc = dBuilder.parse(inputStream)
 
-		var dbFactory = DocumentBuilderFactory.newInstance;
-		var dBuilder = dbFactory.newDocumentBuilder();
-		var doc = dBuilder.parse(inputStream);
+        val nList = doc.getElementsByTagName("os")
+        for (i : 0..<(nList.length)) {
+            val nNode = nList.item(i)
+            if (nNode.nodeType == Node.ELEMENT_NODE) {
+                val eElement = nNode as Element
+                if (eElement.getElementsByTagName("family").item(0).textContent.equals(family)) {
+                    res.add(Integer.parseInt(eElement.getAttribute("id")))
+                }
+            }
+        }
+        inputStream.close
+        return res
+    }
 
-		var nList = doc.getElementsByTagName("os")
-		var i = 0
-		while (i < nList.getLength()) {
-			var Node nNode = nList.item(i);
+    static def getOsId(String name) {
+        val inputStream = getResourceInputStream
+        val dbFactory = DocumentBuilderFactory.newInstance
+        val dBuilder = dbFactory.newDocumentBuilder
+        val doc = dBuilder.parse(inputStream)
 
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				var Element eElement = nNode as Element;
+        val nList = doc.getElementsByTagName("os")
+        var i = 0
+        while (i < nList.length) {
+            val nNode = nList.item(i)
+            if (nNode.nodeType == Node.ELEMENT_NODE) {
+                val eElement = nNode as Element
+                if (eElement.getElementsByTagName("name").item(0).textContent.equals(name)) {
+                    inputStream.close
+                    return Integer.parseInt(eElement.getAttribute("id"))
+                }
+            }
+            i++
+        }
+        inputStream.close
+        return -1 // 如果没找到就返回 -1（或者自行处理）
+    }
 
-				if (eElement.getElementsByTagName("name").item(0).getTextContent().equals(name)) {
-					inputStream.close
-					return Integer.parseInt(eElement.getAttribute("id"))
-				}
-			}
+    static def getOsImage(int id) {
+        val inputStream = getResourceInputStream
+        val dbFactory = DocumentBuilderFactory.newInstance
+        val dBuilder = dbFactory.newDocumentBuilder
+        val doc = dBuilder.parse(inputStream)
 
-			i++
-		}
+        val nList = doc.getElementsByTagName("os")
+        var i = 0
+        while (i < nList.length) {
+            val nNode = nList.item(i)
+            if (nNode.nodeType == Node.ELEMENT_NODE) {
+                val eElement = nNode as Element
+                if (Integer.parseInt(eElement.getAttribute("id")) == id) {
+                    inputStream.close
+                    return eElement.getElementsByTagName("image").item(0).textContent
+                }
+            }
+            i++
+        }
+        inputStream.close
+        return ""
+    }
 
-		inputStream.close
-		return i
-	}
-	
-	static def getOsImage(int id) {
-		var inputStream = getResourceInputStream
+    static def getOssName() {
+        val res = new ArrayList<String>()
+        val inputStream = getResourceInputStream
+        val dbFactory = DocumentBuilderFactory.newInstance
+        val dBuilder = dbFactory.newDocumentBuilder
+        val doc = dBuilder.parse(inputStream)
 
-		var dbFactory = DocumentBuilderFactory.newInstance;
-		var dBuilder = dbFactory.newDocumentBuilder();
-		var doc = dBuilder.parse(inputStream);
+        val nList = doc.getElementsByTagName("os")
+        for (i : 0..<(nList.length)) {
+            val nNode = nList.item(i)
+            if (nNode.nodeType == Node.ELEMENT_NODE) {
+                val eElement = nNode as Element
+                res.add(eElement.getElementsByTagName("name").item(0).textContent)
+            }
+        }
+        inputStream.close
+        return res
+    }
 
-		var nList = doc.getElementsByTagName("os")
-		var i = 0
-		while (i < nList.getLength()) {
-			var Node nNode = nList.item(i);
+    static def getOssFamily() {
+        val res = new ArrayList<String>()
+        val hs = new HashSet<String>()
 
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				var Element eElement = nNode as Element;
+        val inputStream = getResourceInputStream
+        val dbFactory = DocumentBuilderFactory.newInstance
+        val dBuilder = dbFactory.newDocumentBuilder
+        val doc = dBuilder.parse(inputStream)
 
-				if (Integer.parseInt(eElement.getAttribute("id")) == id) {
-					inputStream.close
-					return eElement.getElementsByTagName("image").item(0).getTextContent()
-				}
-			}
+        val nList = doc.getElementsByTagName("os")
+        for (i : 0..<(nList.length)) {
+            val nNode = nList.item(i)
+            if (nNode.nodeType == Node.ELEMENT_NODE) {
+                val eElement = nNode as Element
+                res.add(eElement.getElementsByTagName("family").item(0).textContent)
+            }
+        }
+        inputStream.close
 
-			i++
-		}
+        hs.addAll(res)
+        res.clear
+        res.addAll(hs)
+        return res
+    }
 
-		inputStream.close
-		return ""
-	}
-			
-	static def getOssName() {
-		var List<String> res = new ArrayList<String>()
-		
-		var inputStream = getResourceInputStream
+    // -------------------------------
+    // config.properties 对应的属性
+    // -------------------------------
 
-		var dbFactory = DocumentBuilderFactory.newInstance;
-		var dBuilder = dbFactory.newDocumentBuilder();
-		var doc = dBuilder.parse(inputStream);
+    static def getOSuser() {
+        return getConfig.getProperty("openstack_user")
+    }
 
-		var nList = doc.getElementsByTagName("os")
-		for (var i = 0; i < nList.getLength(); i++) {
-			var Node nNode = nList.item(i);
+    static def getOSpassword() {
+        return getConfig.getProperty("openstack_password")
+    }
 
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				var Element eElement = nNode as Element;
-				res.add(eElement.getElementsByTagName("name").item(0).getTextContent())
-			}
-		}
+    static def getOSurl() {
+        return getConfig.getProperty("openstack_url")
+    }
 
-		inputStream.close
-		return res
-	}
-		
-	static def getOssFamily() {
-		var List<String> res = new ArrayList<String>()
-		var Set<String> hs = new HashSet<String>();
-		
-		var inputStream = getResourceInputStream
+    static def getOStenant() {
+        return getConfig.getProperty("openstack_tenant_name")
+    }
 
-		var dbFactory = DocumentBuilderFactory.newInstance;
-		var dBuilder = dbFactory.newDocumentBuilder();
-		var doc = dBuilder.parse(inputStream);
+    static def getSolver() {
+        return getConfig.getProperty("solver")
+    }
 
-		var nList = doc.getElementsByTagName("os")
-		for (var i = 0; i < nList.getLength(); i++) {
-			var Node nNode = nList.item(i);
+    static def getTtu() {
+        return getConfig.getProperty("ttu")
+    }
 
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				var Element eElement = nNode as Element;
-				res.add(eElement.getElementsByTagName("family").item(0).getTextContent())
-				// env.console.stream.print("Curr: " + eElement.getAttribute("id"));
-			}
-		}
+    static def getTtuStep() {
+        return getConfig.getProperty("ttustep")
+    }
 
-		inputStream.close
-		hs.addAll(res);
-		res.clear();
-		res.addAll(hs);
-		
-		return res	
-	}
-	
-	private static def getConfig() {
-		var url = new URL("platform:/plugin/it.csec.xtext.vsdl/config.properties");
-		
- 		var input = url.openConnection().getInputStream()
-		var prop = new Properties()
-		prop.load(input)
-		input.close
-		
-		return prop
-	}
-	
-	def static getOSuser() {
-		return getConfig.getProperty("openstack_user")
-	}
-	
-	def static getOSpassword() {
-		return getConfig.getProperty("openstack_password")		
-	}
+    static def getOSdomain() {
+        return getConfig.getProperty("osdomain")
+    }
 
-	def static getOSurl() {
-		return getConfig.getProperty("openstack_url")		
-	}
+    // -------------------------------
+    // OpenStack 客户端相关
+    // -------------------------------
 
-	def static getOStenant() {
-		return getConfig.getProperty("openstack_tenant_name")		
-	}
+    static def getOSClient() {
+        val prop = getConfig
+        return OSFactory.builderV3()
+            .endpoint(prop.getProperty("openstack_url"))
+            .credentials(
+                prop.getProperty("openstack_user"),
+                prop.getProperty("openstack_password"),
+                Identifier.byName("Default")
+            )
+            .authenticate()
+    }
 
-	def static getSolver() {		
-		return getConfig.getProperty("solver")
-	}
+    static def getFlavors() {
+        return getOSClient.compute.flavors.list
+    }
 
-	def static getTtu() {		
-		return getConfig.getProperty("ttu")
-	}
+    static def getFlavor(HardwareProfile name) {
+        val fs = getFlavors
+        for (f : fs) {
+            if (f.name.equals(name.toString)) {
+                return f
+            }
+        }
+        return null
+    }
 
-	def static getTtuStep() {		
-		return getConfig.getProperty("ttustep")
-	}
-	
-	def static getOSdomain() {
-		return getConfig.getProperty("osdomain")
-	}
-	
-//	def static getOSClient() {
-//		var prop = getConfig
-//		
-//		return OSFactory.builderV3().endpoint(prop.getProperty("openstack_url")).credentials(
-//			prop.getProperty("openstack_user"), prop.getProperty("openstack_password"),Identifier.byId("domainId")).authenticate()
-//	}
-	def static getOSClient() {
-		var prop = getConfig
-		
-		return OSFactory.builderV3()
-		.endpoint(prop.getProperty("openstack_url"))
-		.credentials(prop.getProperty("openstack_user"), prop.getProperty("openstack_password"),Identifier.byName("Default"))
-		.authenticate()
-	}
-
-	def static getFlavors() {		
-		return getOSClient.compute.flavors().list()
-	}
-	
-	def static getFlavor(HardwareProfile  name) {		
-		var fs = getFlavors
-		
-		var i = 0		
-		while (i < fs.size) {
-			if (fs.get(i).name.equals(name)) {
-				return fs.get(i)
-			}
-			i++			
-		}
-
-		return null
-	}
-	
-	def static getFlavorsName() {
-		var List<String> res = new ArrayList<String>()
-					
-		for (Flavor f : getOSClient.compute.flavors().list()) {
-			 res.add(f.name)
-		}				
-		
-		return res
-	}
+    static def getFlavorsName() {
+        val res = new ArrayList<String>()
+        for (Flavor f : getOSClient.compute.flavors.list) {
+            res.add(f.name)
+        }
+        return res
+    }
 }

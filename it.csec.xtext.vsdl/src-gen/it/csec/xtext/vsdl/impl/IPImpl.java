@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getId <em>Id</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getOp <em>Op</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getIpAddress <em>Ip Address</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getIpRange <em>Ip Range</em>}</li>
@@ -35,6 +36,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class IPImpl extends NodeConstraintImpl implements IP
 {
+  /**
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected static final String ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected String id = ID_EDEFAULT;
+
   /**
    * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -104,6 +125,31 @@ public class IPImpl extends NodeConstraintImpl implements IP
   protected EClass eStaticClass()
   {
     return VsdlPackage.Literals.IP;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getId()
+  {
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setId(String newId)
+  {
+    String oldId = id;
+    id = newId;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__ID, oldId, id));
   }
 
   /**
@@ -304,6 +350,8 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        return getId();
       case VsdlPackage.IP__OP:
         return getOp();
       case VsdlPackage.IP__IP_ADDRESS:
@@ -327,6 +375,9 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        setId((String)newValue);
+        return;
       case VsdlPackage.IP__OP:
         setOp((String)newValue);
         return;
@@ -353,6 +404,9 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        setId(ID_EDEFAULT);
+        return;
       case VsdlPackage.IP__OP:
         setOp(OP_EDEFAULT);
         return;
@@ -379,6 +433,8 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
       case VsdlPackage.IP__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
       case VsdlPackage.IP__IP_ADDRESS:
@@ -402,7 +458,9 @@ public class IPImpl extends NodeConstraintImpl implements IP
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (op: ");
+    result.append(" (id: ");
+    result.append(id);
+    result.append(", op: ");
     result.append(op);
     result.append(')');
     return result.toString();
