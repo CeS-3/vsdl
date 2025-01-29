@@ -51,10 +51,6 @@
         eType="#//UpdateTriggerConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="networkconstraint" eType="#//NetworkConstraint"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//Node"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ip" eType="#//IPAddress"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UpdateTriggerConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="TimeExpr">
@@ -109,6 +105,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AndOr" eSuperTypes="#//NodeConstraint #//NetworkConstraint #//UpdateTriggerConstraint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
@@ -140,23 +137,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Flavour" eSuperTypes="#//NodeConstraint">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="profile" eType="#//HardwareProfile"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IP" eSuperTypes="#//NodeConstraint">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ipAddress" eType="#//IPAddress"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ipRange" eType="#//IPRangeA"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="node" eType="#//Node"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gateway" eSuperTypes="#//NodeConstraint #//NetworkConstraint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gatewayIP" eType="#//IPAddress"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="internet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DNS" eSuperTypes="#//NodeConstraint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="DNSIP" eType="#//IPAddress"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OS" eSuperTypes="#//NodeConstraint">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -165,6 +145,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IPRange" eSuperTypes="#//NetworkConstraint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//IPRangeA"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gateway" eSuperTypes="#//NetworkConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="internet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IP" eSuperTypes="#//NetworkConstraint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//ScenElem"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//IPAddress"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="At" eSuperTypes="#//UpdateTriggerConstraint">

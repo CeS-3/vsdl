@@ -327,19 +327,16 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final Keyword cRightParenthesisKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
 		private final RuleCall cNodeHardwareConstraintAParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cNodeSoftwareConstraintAParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cNodeNetworkConstraintAParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//SimpleNodeConstraintA returns NodeConstraint:
 		//    "(" SimpleNodeConstraint ")" |
 		//    NodeHardwareConstraintA |
-		//    NodeSoftwareConstraintA |
-		//    NodeNetworkConstraintA;
+		//    NodeSoftwareConstraintA ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//"(" SimpleNodeConstraint ")" |
 		//NodeHardwareConstraintA |
-		//NodeSoftwareConstraintA |
-		//NodeNetworkConstraintA
+		//NodeSoftwareConstraintA
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//"(" SimpleNodeConstraint ")"
@@ -359,9 +356,6 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		
 		//NodeSoftwareConstraintA
 		public RuleCall getNodeSoftwareConstraintAParserRuleCall_2() { return cNodeSoftwareConstraintAParserRuleCall_2; }
-		
-		//NodeNetworkConstraintA
-		public RuleCall getNodeNetworkConstraintAParserRuleCall_3() { return cNodeNetworkConstraintAParserRuleCall_3; }
 	}
 	public class NodeHardwareConstraintAElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "it.csec.xtext.Vsdl.NodeHardwareConstraintA");
@@ -826,190 +820,6 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//HardwareProfile
 		public RuleCall getProfileHardwareProfileEnumRuleCall_12_2_0() { return cProfileHardwareProfileEnumRuleCall_12_2_0; }
 	}
-	public class NodeNetworkConstraintAElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "it.csec.xtext.Vsdl.NodeNetworkConstraintA");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Action cIPAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final Keyword cIpKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Keyword cAddressKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Assignment cOpAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final Keyword cOpEqualKeyword_0_3_0 = (Keyword)cOpAssignment_0_3.eContents().get(0);
-		private final Keyword cToKeyword_0_4 = (Keyword)cGroup_0.eContents().get(4);
-		private final Assignment cIpAddressAssignment_0_5 = (Assignment)cGroup_0.eContents().get(5);
-		private final RuleCall cIpAddressIPAddressParserRuleCall_0_5_0 = (RuleCall)cIpAddressAssignment_0_5.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Action cIPAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Keyword cIpKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Keyword cAddressKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
-		private final Assignment cOpAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final Keyword cOpInKeyword_1_3_0 = (Keyword)cOpAssignment_1_3.eContents().get(0);
-		private final Keyword cRangeKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
-		private final Assignment cIpRangeAssignment_1_5 = (Assignment)cGroup_1.eContents().get(5);
-		private final RuleCall cIpRangeIPRangeAParserRuleCall_1_5_0 = (RuleCall)cIpRangeAssignment_1_5.eContents().get(0);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Action cIPAction_2_0 = (Action)cGroup_2.eContents().get(0);
-		private final Keyword cIpKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Keyword cAddressKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Keyword cIsKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Assignment cOpAssignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
-		private final Keyword cOpConnectedKeyword_2_4_0 = (Keyword)cOpAssignment_2_4.eContents().get(0);
-		private final Keyword cToKeyword_2_5 = (Keyword)cGroup_2.eContents().get(5);
-		private final Assignment cNodeAssignment_2_6 = (Assignment)cGroup_2.eContents().get(6);
-		private final CrossReference cNodeNodeCrossReference_2_6_0 = (CrossReference)cNodeAssignment_2_6.eContents().get(0);
-		private final RuleCall cNodeNodeIDTerminalRuleCall_2_6_0_1 = (RuleCall)cNodeNodeCrossReference_2_6_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Action cGatewayAction_3_0 = (Action)cGroup_3.eContents().get(0);
-		private final Keyword cGatewayKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Keyword cIsKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		private final Assignment cGatewayIPAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
-		private final RuleCall cGatewayIPIPAddressParserRuleCall_3_3_0 = (RuleCall)cGatewayIPAssignment_3_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
-		private final Action cDNSAction_4_0 = (Action)cGroup_4.eContents().get(0);
-		private final Keyword cDNSKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Keyword cIsKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
-		private final Assignment cDNSIPAssignment_4_3 = (Assignment)cGroup_4.eContents().get(3);
-		private final RuleCall cDNSIPIPAddressParserRuleCall_4_3_0 = (RuleCall)cDNSIPAssignment_4_3.eContents().get(0);
-		
-		//// 节点网络约束
-		//NodeNetworkConstraintA returns NodeConstraint:
-		//    {IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
-		//    {IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA |
-		//    {IP} =>'ip' 'address' 'is' op='connected' 'to' node=[Node]|
-		//    {Gateway} =>"gateway" 'is' gatewayIP = IPAddress|
-		//    {DNS} => 'DNS' 'is' DNSIP = IPAddress;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
-		//{IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA |
-		//{IP} =>'ip' 'address' 'is' op='connected' 'to' node=[Node]|
-		//{Gateway} =>"gateway" 'is' gatewayIP = IPAddress|
-		//{DNS} => 'DNS' 'is' DNSIP = IPAddress
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//{IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress
-		public Group getGroup_0() { return cGroup_0; }
-		
-		//{IP}
-		public Action getIPAction_0_0() { return cIPAction_0_0; }
-		
-		//=>'ip'
-		public Keyword getIpKeyword_0_1() { return cIpKeyword_0_1; }
-		
-		//'address'
-		public Keyword getAddressKeyword_0_2() { return cAddressKeyword_0_2; }
-		
-		//op='equal'
-		public Assignment getOpAssignment_0_3() { return cOpAssignment_0_3; }
-		
-		//'equal'
-		public Keyword getOpEqualKeyword_0_3_0() { return cOpEqualKeyword_0_3_0; }
-		
-		//'to'
-		public Keyword getToKeyword_0_4() { return cToKeyword_0_4; }
-		
-		//ipAddress=IPAddress
-		public Assignment getIpAddressAssignment_0_5() { return cIpAddressAssignment_0_5; }
-		
-		//IPAddress
-		public RuleCall getIpAddressIPAddressParserRuleCall_0_5_0() { return cIpAddressIPAddressParserRuleCall_0_5_0; }
-		
-		//{IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//{IP}
-		public Action getIPAction_1_0() { return cIPAction_1_0; }
-		
-		//=>'ip'
-		public Keyword getIpKeyword_1_1() { return cIpKeyword_1_1; }
-		
-		//'address'
-		public Keyword getAddressKeyword_1_2() { return cAddressKeyword_1_2; }
-		
-		//op='in'
-		public Assignment getOpAssignment_1_3() { return cOpAssignment_1_3; }
-		
-		//'in'
-		public Keyword getOpInKeyword_1_3_0() { return cOpInKeyword_1_3_0; }
-		
-		//'range'
-		public Keyword getRangeKeyword_1_4() { return cRangeKeyword_1_4; }
-		
-		//ipRange=IPRangeA
-		public Assignment getIpRangeAssignment_1_5() { return cIpRangeAssignment_1_5; }
-		
-		//IPRangeA
-		public RuleCall getIpRangeIPRangeAParserRuleCall_1_5_0() { return cIpRangeIPRangeAParserRuleCall_1_5_0; }
-		
-		//{IP} =>'ip' 'address' 'is' op='connected' 'to' node=[Node]
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//{IP}
-		public Action getIPAction_2_0() { return cIPAction_2_0; }
-		
-		//=>'ip'
-		public Keyword getIpKeyword_2_1() { return cIpKeyword_2_1; }
-		
-		//'address'
-		public Keyword getAddressKeyword_2_2() { return cAddressKeyword_2_2; }
-		
-		//'is'
-		public Keyword getIsKeyword_2_3() { return cIsKeyword_2_3; }
-		
-		//op='connected'
-		public Assignment getOpAssignment_2_4() { return cOpAssignment_2_4; }
-		
-		//'connected'
-		public Keyword getOpConnectedKeyword_2_4_0() { return cOpConnectedKeyword_2_4_0; }
-		
-		//'to'
-		public Keyword getToKeyword_2_5() { return cToKeyword_2_5; }
-		
-		//node=[Node]
-		public Assignment getNodeAssignment_2_6() { return cNodeAssignment_2_6; }
-		
-		//[Node]
-		public CrossReference getNodeNodeCrossReference_2_6_0() { return cNodeNodeCrossReference_2_6_0; }
-		
-		//ID
-		public RuleCall getNodeNodeIDTerminalRuleCall_2_6_0_1() { return cNodeNodeIDTerminalRuleCall_2_6_0_1; }
-		
-		//{Gateway} =>"gateway" 'is' gatewayIP = IPAddress
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//{Gateway}
-		public Action getGatewayAction_3_0() { return cGatewayAction_3_0; }
-		
-		//=>"gateway"
-		public Keyword getGatewayKeyword_3_1() { return cGatewayKeyword_3_1; }
-		
-		//'is'
-		public Keyword getIsKeyword_3_2() { return cIsKeyword_3_2; }
-		
-		//gatewayIP = IPAddress
-		public Assignment getGatewayIPAssignment_3_3() { return cGatewayIPAssignment_3_3; }
-		
-		//IPAddress
-		public RuleCall getGatewayIPIPAddressParserRuleCall_3_3_0() { return cGatewayIPIPAddressParserRuleCall_3_3_0; }
-		
-		//{DNS} => 'DNS' 'is' DNSIP = IPAddress
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//{DNS}
-		public Action getDNSAction_4_0() { return cDNSAction_4_0; }
-		
-		//=> 'DNS'
-		public Keyword getDNSKeyword_4_1() { return cDNSKeyword_4_1; }
-		
-		//'is'
-		public Keyword getIsKeyword_4_2() { return cIsKeyword_4_2; }
-		
-		//DNSIP = IPAddress
-		public Assignment getDNSIPAssignment_4_3() { return cDNSIPAssignment_4_3; }
-		
-		//IPAddress
-		public RuleCall getDNSIPIPAddressParserRuleCall_4_3_0() { return cDNSIPIPAddressParserRuleCall_4_3_0; }
-	}
 	public class NodeSoftwareConstraintAElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "it.csec.xtext.Vsdl.NodeSoftwareConstraintA");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -1034,6 +844,7 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final Assignment cSoftwareAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
 		private final RuleCall cSoftwareSoftwareInstallationParserRuleCall_2_2_0 = (RuleCall)cSoftwareAssignment_2_2.eContents().get(0);
 		
+		//// 节点网络约束
 		//NodeSoftwareConstraintA returns NodeConstraint:
 		//    'node' {OS} =>'OS' 'is' version=OSVersionE |
 		//    'node' 'OS' {OSFamily} =>'family' 'is' family=OSFamilyE|
@@ -1323,12 +1134,6 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final RuleCall cConstraintsNetworkConstraintParserRuleCall_3_0 = (RuleCall)cConstraintsAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// Define IP as a part of your Node or Network
-		////IP:
-		////    'node' 'has' 'IP' 'address' ipAddress=IPAddress
-		////    ('op' op=IPOperation)?
-		////    ('id' id=[Node])?;
-		////
 		//Network:
 		//    'network' name=ID '{' constraints += NetworkConstraint* '}';
 		@Override public ParserRule getRule() { return rule; }
@@ -1658,86 +1463,94 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "it.csec.xtext.Vsdl.NetworkParticipantsConstraint");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cNodeKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cIdAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final CrossReference cIdNodeCrossReference_0_1_0 = (CrossReference)cIdAssignment_0_1.eContents().get(0);
-		private final RuleCall cIdNodeIDTerminalRuleCall_0_1_0_1 = (RuleCall)cIdNodeCrossReference_0_1_0.eContents().get(1);
-		private final Keyword cIsKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Assignment cOpAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final Keyword cOpConnectedKeyword_0_3_0 = (Keyword)cOpAssignment_0_3.eContents().get(0);
+		private final Action cIPAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Keyword cNodeKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cIdAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final CrossReference cIdScenElemCrossReference_0_2_0 = (CrossReference)cIdAssignment_0_2.eContents().get(0);
+		private final RuleCall cIdScenElemIDTerminalRuleCall_0_2_0_1 = (RuleCall)cIdScenElemCrossReference_0_2_0.eContents().get(1);
+		private final Keyword cIsKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
+		private final Assignment cOpAssignment_0_4 = (Assignment)cGroup_0.eContents().get(4);
+		private final Keyword cOpConnectedKeyword_0_4_0 = (Keyword)cOpAssignment_0_4.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cNodeKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cIdAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final CrossReference cIdNodeCrossReference_1_1_0 = (CrossReference)cIdAssignment_1_1.eContents().get(0);
-		private final RuleCall cIdNodeIDTerminalRuleCall_1_1_0_1 = (RuleCall)cIdNodeCrossReference_1_1_0.eContents().get(1);
-		private final Keyword cHasKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
-		private final Assignment cOpAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final Keyword cOpIPKeyword_1_3_0 = (Keyword)cOpAssignment_1_3.eContents().get(0);
-		private final Assignment cIpAssignment_1_4 = (Assignment)cGroup_1.eContents().get(4);
-		private final RuleCall cIpIPAddressParserRuleCall_1_4_0 = (RuleCall)cIpAssignment_1_4.eContents().get(0);
+		private final Action cIPAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Keyword cNodeKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cIdAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final CrossReference cIdScenElemCrossReference_1_2_0 = (CrossReference)cIdAssignment_1_2.eContents().get(0);
+		private final RuleCall cIdScenElemIDTerminalRuleCall_1_2_0_1 = (RuleCall)cIdScenElemCrossReference_1_2_0.eContents().get(1);
+		private final Keyword cHasKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Assignment cOpAssignment_1_4 = (Assignment)cGroup_1.eContents().get(4);
+		private final Keyword cOpIPKeyword_1_4_0 = (Keyword)cOpAssignment_1_4.eContents().get(0);
+		private final Assignment cAddressAssignment_1_5 = (Assignment)cGroup_1.eContents().get(5);
+		private final RuleCall cAddressIPAddressParserRuleCall_1_5_0 = (RuleCall)cAddressAssignment_1_5.eContents().get(0);
 		
 		//NetworkParticipantsConstraint returns NetworkConstraint:
-		//    "node" id=[Node] "is" op="connected" |
-		//    "node" id=[Node] "has" op="IP" ip=IPAddress;
+		//    {IP} =>"node" id=[ScenElem] "is" op="connected" |
+		//    {IP} =>"node" id=[ScenElem] "has" op="IP" address=IPAddress;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"node" id=[Node] "is" op="connected" |
-		//"node" id=[Node] "has" op="IP" ip=IPAddress
+		//{IP} =>"node" id=[ScenElem] "is" op="connected" |
+		//{IP} =>"node" id=[ScenElem] "has" op="IP" address=IPAddress
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//"node" id=[Node] "is" op="connected"
+		//{IP} =>"node" id=[ScenElem] "is" op="connected"
 		public Group getGroup_0() { return cGroup_0; }
 		
-		//"node"
-		public Keyword getNodeKeyword_0_0() { return cNodeKeyword_0_0; }
+		//{IP}
+		public Action getIPAction_0_0() { return cIPAction_0_0; }
 		
-		//id=[Node]
-		public Assignment getIdAssignment_0_1() { return cIdAssignment_0_1; }
+		//=>"node"
+		public Keyword getNodeKeyword_0_1() { return cNodeKeyword_0_1; }
 		
-		//[Node]
-		public CrossReference getIdNodeCrossReference_0_1_0() { return cIdNodeCrossReference_0_1_0; }
+		//id=[ScenElem]
+		public Assignment getIdAssignment_0_2() { return cIdAssignment_0_2; }
+		
+		//[ScenElem]
+		public CrossReference getIdScenElemCrossReference_0_2_0() { return cIdScenElemCrossReference_0_2_0; }
 		
 		//ID
-		public RuleCall getIdNodeIDTerminalRuleCall_0_1_0_1() { return cIdNodeIDTerminalRuleCall_0_1_0_1; }
+		public RuleCall getIdScenElemIDTerminalRuleCall_0_2_0_1() { return cIdScenElemIDTerminalRuleCall_0_2_0_1; }
 		
 		//"is"
-		public Keyword getIsKeyword_0_2() { return cIsKeyword_0_2; }
+		public Keyword getIsKeyword_0_3() { return cIsKeyword_0_3; }
 		
 		//op="connected"
-		public Assignment getOpAssignment_0_3() { return cOpAssignment_0_3; }
+		public Assignment getOpAssignment_0_4() { return cOpAssignment_0_4; }
 		
 		//"connected"
-		public Keyword getOpConnectedKeyword_0_3_0() { return cOpConnectedKeyword_0_3_0; }
+		public Keyword getOpConnectedKeyword_0_4_0() { return cOpConnectedKeyword_0_4_0; }
 		
-		//"node" id=[Node] "has" op="IP" ip=IPAddress
+		//{IP} =>"node" id=[ScenElem] "has" op="IP" address=IPAddress
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//"node"
-		public Keyword getNodeKeyword_1_0() { return cNodeKeyword_1_0; }
+		//{IP}
+		public Action getIPAction_1_0() { return cIPAction_1_0; }
 		
-		//id=[Node]
-		public Assignment getIdAssignment_1_1() { return cIdAssignment_1_1; }
+		//=>"node"
+		public Keyword getNodeKeyword_1_1() { return cNodeKeyword_1_1; }
 		
-		//[Node]
-		public CrossReference getIdNodeCrossReference_1_1_0() { return cIdNodeCrossReference_1_1_0; }
+		//id=[ScenElem]
+		public Assignment getIdAssignment_1_2() { return cIdAssignment_1_2; }
+		
+		//[ScenElem]
+		public CrossReference getIdScenElemCrossReference_1_2_0() { return cIdScenElemCrossReference_1_2_0; }
 		
 		//ID
-		public RuleCall getIdNodeIDTerminalRuleCall_1_1_0_1() { return cIdNodeIDTerminalRuleCall_1_1_0_1; }
+		public RuleCall getIdScenElemIDTerminalRuleCall_1_2_0_1() { return cIdScenElemIDTerminalRuleCall_1_2_0_1; }
 		
 		//"has"
-		public Keyword getHasKeyword_1_2() { return cHasKeyword_1_2; }
+		public Keyword getHasKeyword_1_3() { return cHasKeyword_1_3; }
 		
 		//op="IP"
-		public Assignment getOpAssignment_1_3() { return cOpAssignment_1_3; }
+		public Assignment getOpAssignment_1_4() { return cOpAssignment_1_4; }
 		
 		//"IP"
-		public Keyword getOpIPKeyword_1_3_0() { return cOpIPKeyword_1_3_0; }
+		public Keyword getOpIPKeyword_1_4_0() { return cOpIPKeyword_1_4_0; }
 		
-		//ip=IPAddress
-		public Assignment getIpAssignment_1_4() { return cIpAssignment_1_4; }
+		//address=IPAddress
+		public Assignment getAddressAssignment_1_5() { return cAddressAssignment_1_5; }
 		
 		//IPAddress
-		public RuleCall getIpIPAddressParserRuleCall_1_4_0() { return cIpIPAddressParserRuleCall_1_4_0; }
+		public RuleCall getAddressIPAddressParserRuleCall_1_5_0() { return cAddressIPAddressParserRuleCall_1_5_0; }
 	}
 	public class UpdateTriggerConstraintElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "it.csec.xtext.Vsdl.UpdateTriggerConstraint");
@@ -2584,7 +2397,6 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	private final SimpleNodeConstraintNotElements pSimpleNodeConstraintNot;
 	private final SimpleNodeConstraintAElements pSimpleNodeConstraintA;
 	private final NodeHardwareConstraintAElements pNodeHardwareConstraintA;
-	private final NodeNetworkConstraintAElements pNodeNetworkConstraintA;
 	private final NodeSoftwareConstraintAElements pNodeSoftwareConstraintA;
 	private final SoftwareInstallationElements pSoftwareInstallation;
 	private final VersionNumberElements pVersionNumber;
@@ -2638,7 +2450,6 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		this.pSimpleNodeConstraintNot = new SimpleNodeConstraintNotElements();
 		this.pSimpleNodeConstraintA = new SimpleNodeConstraintAElements();
 		this.pNodeHardwareConstraintA = new NodeHardwareConstraintAElements();
-		this.pNodeNetworkConstraintA = new NodeNetworkConstraintAElements();
 		this.pNodeSoftwareConstraintA = new NodeSoftwareConstraintAElements();
 		this.pSoftwareInstallation = new SoftwareInstallationElements();
 		this.pVersionNumber = new VersionNumberElements();
@@ -2788,8 +2599,7 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	//SimpleNodeConstraintA returns NodeConstraint:
 	//    "(" SimpleNodeConstraint ")" |
 	//    NodeHardwareConstraintA |
-	//    NodeSoftwareConstraintA |
-	//    NodeNetworkConstraintA;
+	//    NodeSoftwareConstraintA ;
 	public SimpleNodeConstraintAElements getSimpleNodeConstraintAAccess() {
 		return pSimpleNodeConstraintA;
 	}
@@ -2821,20 +2631,6 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//// 节点网络约束
-	//NodeNetworkConstraintA returns NodeConstraint:
-	//    {IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
-	//    {IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA |
-	//    {IP} =>'ip' 'address' 'is' op='connected' 'to' node=[Node]|
-	//    {Gateway} =>"gateway" 'is' gatewayIP = IPAddress|
-	//    {DNS} => 'DNS' 'is' DNSIP = IPAddress;
-	public NodeNetworkConstraintAElements getNodeNetworkConstraintAAccess() {
-		return pNodeNetworkConstraintA;
-	}
-	
-	public ParserRule getNodeNetworkConstraintARule() {
-		return getNodeNetworkConstraintAAccess().getRule();
-	}
-	
 	//NodeSoftwareConstraintA returns NodeConstraint:
 	//    'node' {OS} =>'OS' 'is' version=OSVersionE |
 	//    'node' 'OS' {OSFamily} =>'family' 'is' family=OSFamilyE|
@@ -2903,12 +2699,6 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		return getConfigPairAccess().getRule();
 	}
 	
-	//// Define IP as a part of your Node or Network
-	////IP:
-	////    'node' 'has' 'IP' 'address' ipAddress=IPAddress
-	////    ('op' op=IPOperation)?
-	////    ('id' id=[Node])?;
-	////
 	//Network:
 	//    'network' name=ID '{' constraints += NetworkConstraint* '}';
 	public NetworkElements getNetworkAccess() {
@@ -2996,8 +2786,8 @@ public class VsdlGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//NetworkParticipantsConstraint returns NetworkConstraint:
-	//    "node" id=[Node] "is" op="connected" |
-	//    "node" id=[Node] "has" op="IP" ip=IPAddress;
+	//    {IP} =>"node" id=[ScenElem] "is" op="connected" |
+	//    {IP} =>"node" id=[ScenElem] "has" op="IP" address=IPAddress;
 	public NetworkParticipantsConstraintElements getNetworkParticipantsConstraintAccess() {
 		return pNetworkParticipantsConstraint;
 	}

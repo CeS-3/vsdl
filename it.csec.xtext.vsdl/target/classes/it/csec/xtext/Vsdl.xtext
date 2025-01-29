@@ -34,8 +34,7 @@ SimpleNodeConstraintNot returns NodeConstraint:
 SimpleNodeConstraintA returns NodeConstraint:
 	"(" SimpleNodeConstraint ")" |
 	NodeHardwareConstraintA |
-	NodeSoftwareConstraintA |
-	NodeNetworkConstraintA;
+	NodeSoftwareConstraintA ;
 
 NodeHardwareConstraintA returns NodeConstraint:	
 	{CPU} =>'cpu' 'speed' op='equal' 'to' value=CPUFrequency |
@@ -53,12 +52,8 @@ NodeHardwareConstraintA returns NodeConstraint:
 	{Flavour} =>'flavour' profile=HardwareProfile;
 
 // 节点网络约束
-NodeNetworkConstraintA returns NodeConstraint:
-    {IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
-    {IP} =>'ip' 'address' op='in' 'range' ipRange=IPRangeA |
-    {IP} =>'ip' 'address' 'is' op='connected' 'to' node=[Node]|
-	{Gateway} =>"gateway" 'is' gatewayIP = IPAddress|
-    {DNS} => 'DNS' 'is' DNSIP = IPAddress;
+
+
     
 NodeSoftwareConstraintA returns NodeConstraint:
 	'node' {OS} =>'OS' 'is' version=OSVersionE |
@@ -86,12 +81,6 @@ ConfigOptions:
 ConfigPair:
 	key=ID '=' value=STRING;
 
-// Define IP as a part of your Node or Network
-//IP:
-//    'node' 'has' 'IP' 'address' ipAddress=IPAddress 
-//    ('op' op=IPOperation)?
-//    ('id' id=[Node])?; 
-//
 
 Network:
 	'network' name=ID '{' constraints += NetworkConstraint* '}';
@@ -124,8 +113,8 @@ NetworkGatewayConstraint returns NetworkConstraint:
 	{Gateway} =>"gateway" "has" "direct" "access" "to" "the" internet ?="Internet";
 
 NetworkParticipantsConstraint returns NetworkConstraint:
-	"node" id=[Node] "is" op="connected" |
-    "node" id=[Node] "has" op="IP" ip=IPAddress;
+	{IP} =>"node" id=[ScenElem] "is" op="connected" |
+    {IP} =>"node" id=[ScenElem] "has" op="IP" address=IPAddress;
 
 UpdateTriggerConstraint:
 	UpdateTriggerConstraintAndOr;

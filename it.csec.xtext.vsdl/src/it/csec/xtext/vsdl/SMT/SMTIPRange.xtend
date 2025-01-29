@@ -21,7 +21,8 @@ class SMTIPRange extends SMTObj<IPRange> {
 			bitwiseOr(Byte.toUnsignedLong(bAddr.get(2)) * 256).bitwiseOr(Byte.toUnsignedLong(bAddr.get(3)))
 
 		var netmask = 0xffffffff << (32 - ipr.range.bitmask)
-
+		
+		//处理子网掩码
 		var first = addr.bitwiseAnd(netmask)
 		var last = addr.bitwiseOr(netmask.bitwiseNot)
 

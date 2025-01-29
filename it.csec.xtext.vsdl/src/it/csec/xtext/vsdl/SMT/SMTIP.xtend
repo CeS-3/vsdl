@@ -31,7 +31,7 @@ class SMTIP extends SMTObjFun<IP> {
 			}
 		} else {
 			var bAddr = InetAddress.getByName(
-				ip.ipAddress.octet1 + "." + ip.ipAddress.octet2 + "." + ip.ipAddress.octet3 + "." + ip.ipAddress.octet4
+				ip.address.octet1 + "." + ip.address.octet2 + "." + ip.address.octet3 + "." + ip.address.octet4
 			).address
 
 			var addr = (Byte.toUnsignedLong(bAddr.get(0)) * 16777216).bitwiseOr(Byte.toUnsignedLong(bAddr.get(1)) *
@@ -41,7 +41,7 @@ class SMTIP extends SMTObjFun<IP> {
 				exprArr.add(k, context.efactory.fcn(
 					context.efactory.symbol("="),
 					context.efactory.fcn(context.efactory.symbol(funName), context.efactory.numeral(i),
-						context.efactory.symbol(name)),
+						context.efactory.symbol(name), context.efactory.symbol(ip.id.name)),
 					context.efactory.numeral(addr)
 				))
 			}

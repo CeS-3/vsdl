@@ -13,18 +13,39 @@ package it.csec.xtext.vsdl;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link it.csec.xtext.vsdl.IP#getId <em>Id</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.IP#getOp <em>Op</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.IP#getIpAddress <em>Ip Address</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.IP#getIpRange <em>Ip Range</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.IP#getNode <em>Node</em>}</li>
+ *   <li>{@link it.csec.xtext.vsdl.IP#getAddress <em>Address</em>}</li>
  * </ul>
  *
  * @see it.csec.xtext.vsdl.VsdlPackage#getIP()
  * @model
  * @generated
  */
-public interface IP extends NodeConstraint
+public interface IP extends NetworkConstraint
 {
+  /**
+   * Returns the value of the '<em><b>Id</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Id</em>' reference.
+   * @see #setId(ScenElem)
+   * @see it.csec.xtext.vsdl.VsdlPackage#getIP_Id()
+   * @model
+   * @generated
+   */
+  ScenElem getId();
+
+  /**
+   * Sets the value of the '{@link it.csec.xtext.vsdl.IP#getId <em>Id</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Id</em>' reference.
+   * @see #getId()
+   * @generated
+   */
+  void setId(ScenElem value);
+
   /**
    * Returns the value of the '<em><b>Op</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -48,69 +69,25 @@ public interface IP extends NodeConstraint
   void setOp(String value);
 
   /**
-   * Returns the value of the '<em><b>Ip Address</b></em>' containment reference.
+   * Returns the value of the '<em><b>Address</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ip Address</em>' containment reference.
-   * @see #setIpAddress(IPAddress)
-   * @see it.csec.xtext.vsdl.VsdlPackage#getIP_IpAddress()
+   * @return the value of the '<em>Address</em>' containment reference.
+   * @see #setAddress(IPAddress)
+   * @see it.csec.xtext.vsdl.VsdlPackage#getIP_Address()
    * @model containment="true"
    * @generated
    */
-  IPAddress getIpAddress();
+  IPAddress getAddress();
 
   /**
-   * Sets the value of the '{@link it.csec.xtext.vsdl.IP#getIpAddress <em>Ip Address</em>}' containment reference.
+   * Sets the value of the '{@link it.csec.xtext.vsdl.IP#getAddress <em>Address</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ip Address</em>' containment reference.
-   * @see #getIpAddress()
+   * @param value the new value of the '<em>Address</em>' containment reference.
+   * @see #getAddress()
    * @generated
    */
-  void setIpAddress(IPAddress value);
-
-  /**
-   * Returns the value of the '<em><b>Ip Range</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Ip Range</em>' containment reference.
-   * @see #setIpRange(IPRangeA)
-   * @see it.csec.xtext.vsdl.VsdlPackage#getIP_IpRange()
-   * @model containment="true"
-   * @generated
-   */
-  IPRangeA getIpRange();
-
-  /**
-   * Sets the value of the '{@link it.csec.xtext.vsdl.IP#getIpRange <em>Ip Range</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ip Range</em>' containment reference.
-   * @see #getIpRange()
-   * @generated
-   */
-  void setIpRange(IPRangeA value);
-
-  /**
-   * Returns the value of the '<em><b>Node</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Node</em>' reference.
-   * @see #setNode(Node)
-   * @see it.csec.xtext.vsdl.VsdlPackage#getIP_Node()
-   * @model
-   * @generated
-   */
-  Node getNode();
-
-  /**
-   * Sets the value of the '{@link it.csec.xtext.vsdl.IP#getNode <em>Node</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Node</em>' reference.
-   * @see #getNode()
-   * @generated
-   */
-  void setNode(Node value);
+  void setAddress(IPAddress value);
 
 } // IP

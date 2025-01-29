@@ -11,7 +11,6 @@ import it.csec.xtext.vsdl.CPU;
 import it.csec.xtext.vsdl.CPUFrequency;
 import it.csec.xtext.vsdl.ConfigOptions;
 import it.csec.xtext.vsdl.ConfigPair;
-import it.csec.xtext.vsdl.DNS;
 import it.csec.xtext.vsdl.Disk;
 import it.csec.xtext.vsdl.DiskSize;
 import it.csec.xtext.vsdl.Flavour;
@@ -106,9 +105,6 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case VsdlPackage.CONFIG_PAIR:
 				sequence_ConfigPair(context, (ConfigPair) semanticObject); 
 				return; 
-			case VsdlPackage.DNS:
-				sequence_NodeNetworkConstraintA(context, (DNS) semanticObject); 
-				return; 
 			case VsdlPackage.DISK:
 				sequence_NodeHardwareConstraintA(context, (Disk) semanticObject); 
 				return; 
@@ -119,29 +115,10 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_NodeHardwareConstraintA(context, (Flavour) semanticObject); 
 				return; 
 			case VsdlPackage.GATEWAY:
-				if (rule == grammarAccess.getNetworkConstraintRule()
-						|| rule == grammarAccess.getSimpleNetworkConstraintRule()
-						|| rule == grammarAccess.getSimpleNetworkConstraintAndOrRule()
-						|| action == grammarAccess.getSimpleNetworkConstraintAndOrAccess().getAndOrLeftAction_1_0_0()
-						|| rule == grammarAccess.getSimpleNetworkConstraintNotRule()
-						|| rule == grammarAccess.getSimpleNetworkConstraintARule()
-						|| rule == grammarAccess.getNetworkGatewayConstraintRule()) {
-					sequence_NetworkGatewayConstraint(context, (Gateway) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getNodeConstraintRule()
-						|| rule == grammarAccess.getSimpleNodeConstraintRule()
-						|| rule == grammarAccess.getSimpleNodeConstraintAndOrRule()
-						|| action == grammarAccess.getSimpleNodeConstraintAndOrAccess().getAndOrLeftAction_1_0_0()
-						|| rule == grammarAccess.getSimpleNodeConstraintNotRule()
-						|| rule == grammarAccess.getSimpleNodeConstraintARule()
-						|| rule == grammarAccess.getNodeNetworkConstraintARule()) {
-					sequence_NodeNetworkConstraintA(context, (Gateway) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_NetworkGatewayConstraint(context, (Gateway) semanticObject); 
+				return; 
 			case VsdlPackage.IP:
-				sequence_NodeNetworkConstraintA(context, (IP) semanticObject); 
+				sequence_NetworkParticipantsConstraint(context, (IP) semanticObject); 
 				return; 
 			case VsdlPackage.IP_ADDRESS:
 				sequence_IPAddress(context, (IPAddress) semanticObject); 
@@ -162,24 +139,8 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_Network(context, (Network) semanticObject); 
 				return; 
 			case VsdlPackage.NETWORK_CONSTRAINT:
-				if (rule == grammarAccess.getGuardedNetworkConstraintRule()) {
-					sequence_GuardedNetworkConstraint(context, (NetworkConstraint) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getNetworkConstraintRule()) {
-					sequence_GuardedNetworkConstraint_NetworkParticipantsConstraint(context, (NetworkConstraint) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getSimpleNetworkConstraintRule()
-						|| rule == grammarAccess.getSimpleNetworkConstraintAndOrRule()
-						|| action == grammarAccess.getSimpleNetworkConstraintAndOrAccess().getAndOrLeftAction_1_0_0()
-						|| rule == grammarAccess.getSimpleNetworkConstraintNotRule()
-						|| rule == grammarAccess.getSimpleNetworkConstraintARule()
-						|| rule == grammarAccess.getNetworkParticipantsConstraintRule()) {
-					sequence_NetworkParticipantsConstraint(context, (NetworkConstraint) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_GuardedNetworkConstraint(context, (NetworkConstraint) semanticObject); 
+				return; 
 			case VsdlPackage.NODE:
 				sequence_Node(context, (Node) semanticObject); 
 				return; 
@@ -333,6 +294,7 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     NetworkConstraint returns NetworkConstraint
 	 *     GuardedNetworkConstraint returns NetworkConstraint
 	 *
 	 * Constraint:
@@ -350,24 +312,6 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getGuardedNetworkConstraintAccess().getNetworktriggerconstraintUpdateTriggerConstraintParserRuleCall_1_0(), semanticObject.getNetworktriggerconstraint());
 		feeder.accept(grammarAccess.getGuardedNetworkConstraintAccess().getNetworkconstraintSimpleNetworkConstraintParserRuleCall_4_0(), semanticObject.getNetworkconstraint());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     NetworkConstraint returns NetworkConstraint
-	 *
-	 * Constraint:
-	 *     (
-	 *         (networktriggerconstraint=UpdateTriggerConstraint networkconstraint=SimpleNetworkConstraint) | 
-	 *         (id=[Node|ID] op='connected') | 
-	 *         (id=[Node|ID] op='IP' ip=IPAddress)
-	 *     )
-	 * </pre>
-	 */
-	protected void sequence_GuardedNetworkConstraint_NetworkParticipantsConstraint(ISerializationContext context, NetworkConstraint semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -529,18 +473,19 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     SimpleNetworkConstraint returns NetworkConstraint
-	 *     SimpleNetworkConstraintAndOr returns NetworkConstraint
-	 *     SimpleNetworkConstraintAndOr.AndOr_1_0_0 returns NetworkConstraint
-	 *     SimpleNetworkConstraintNot returns NetworkConstraint
-	 *     SimpleNetworkConstraintA returns NetworkConstraint
-	 *     NetworkParticipantsConstraint returns NetworkConstraint
+	 *     NetworkConstraint returns IP
+	 *     SimpleNetworkConstraint returns IP
+	 *     SimpleNetworkConstraintAndOr returns IP
+	 *     SimpleNetworkConstraintAndOr.AndOr_1_0_0 returns IP
+	 *     SimpleNetworkConstraintNot returns IP
+	 *     SimpleNetworkConstraintA returns IP
+	 *     NetworkParticipantsConstraint returns IP
 	 *
 	 * Constraint:
-	 *     ((id=[Node|ID] op='connected') | (id=[Node|ID] op='IP' ip=IPAddress))
+	 *     ((id=[ScenElem|ID] op='connected') | (id=[ScenElem|ID] op='IP' address=IPAddress))
 	 * </pre>
 	 */
-	protected void sequence_NetworkParticipantsConstraint(ISerializationContext context, NetworkConstraint semanticObject) {
+	protected void sequence_NetworkParticipantsConstraint(ISerializationContext context, IP semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -642,78 +587,6 @@ public class VsdlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * </pre>
 	 */
 	protected void sequence_NodeHardwareConstraintA(ISerializationContext context, Ram semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     NodeConstraint returns DNS
-	 *     SimpleNodeConstraint returns DNS
-	 *     SimpleNodeConstraintAndOr returns DNS
-	 *     SimpleNodeConstraintAndOr.AndOr_1_0_0 returns DNS
-	 *     SimpleNodeConstraintNot returns DNS
-	 *     SimpleNodeConstraintA returns DNS
-	 *     NodeNetworkConstraintA returns DNS
-	 *
-	 * Constraint:
-	 *     DNSIP=IPAddress
-	 * </pre>
-	 */
-	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, DNS semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, VsdlPackage.Literals.DNS__DNSIP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VsdlPackage.Literals.DNS__DNSIP));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNodeNetworkConstraintAAccess().getDNSIPIPAddressParserRuleCall_4_3_0(), semanticObject.getDNSIP());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     NodeConstraint returns Gateway
-	 *     SimpleNodeConstraint returns Gateway
-	 *     SimpleNodeConstraintAndOr returns Gateway
-	 *     SimpleNodeConstraintAndOr.AndOr_1_0_0 returns Gateway
-	 *     SimpleNodeConstraintNot returns Gateway
-	 *     SimpleNodeConstraintA returns Gateway
-	 *     NodeNetworkConstraintA returns Gateway
-	 *
-	 * Constraint:
-	 *     gatewayIP=IPAddress
-	 * </pre>
-	 */
-	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, Gateway semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, VsdlPackage.Literals.GATEWAY__GATEWAY_IP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VsdlPackage.Literals.GATEWAY__GATEWAY_IP));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNodeNetworkConstraintAAccess().getGatewayIPIPAddressParserRuleCall_3_3_0(), semanticObject.getGatewayIP());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     NodeConstraint returns IP
-	 *     SimpleNodeConstraint returns IP
-	 *     SimpleNodeConstraintAndOr returns IP
-	 *     SimpleNodeConstraintAndOr.AndOr_1_0_0 returns IP
-	 *     SimpleNodeConstraintNot returns IP
-	 *     SimpleNodeConstraintA returns IP
-	 *     NodeNetworkConstraintA returns IP
-	 *
-	 * Constraint:
-	 *     ((op='equal' ipAddress=IPAddress) | (op='in' ipRange=IPRangeA) | (op='connected' node=[Node|ID]))
-	 * </pre>
-	 */
-	protected void sequence_NodeNetworkConstraintA(ISerializationContext context, IP semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

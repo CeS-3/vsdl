@@ -16,9 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link it.csec.xtext.vsdl.NetworkConstraint#getNetworktriggerconstraint <em>Networktriggerconstraint</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.NetworkConstraint#getNetworkconstraint <em>Networkconstraint</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.NetworkConstraint#getId <em>Id</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.NetworkConstraint#getOp <em>Op</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.NetworkConstraint#getIp <em>Ip</em>}</li>
  * </ul>
  *
  * @see it.csec.xtext.vsdl.VsdlPackage#getNetworkConstraint()
@@ -70,71 +67,5 @@ public interface NetworkConstraint extends EObject
    * @generated
    */
   void setNetworkconstraint(NetworkConstraint value);
-
-  /**
-   * Returns the value of the '<em><b>Id</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Id</em>' reference.
-   * @see #setId(Node)
-   * @see it.csec.xtext.vsdl.VsdlPackage#getNetworkConstraint_Id()
-   * @model
-   * @generated
-   */
-  Node getId();
-
-  /**
-   * Sets the value of the '{@link it.csec.xtext.vsdl.NetworkConstraint#getId <em>Id</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id</em>' reference.
-   * @see #getId()
-   * @generated
-   */
-  void setId(Node value);
-
-  /**
-   * Returns the value of the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Op</em>' attribute.
-   * @see #setOp(String)
-   * @see it.csec.xtext.vsdl.VsdlPackage#getNetworkConstraint_Op()
-   * @model
-   * @generated
-   */
-  String getOp();
-
-  /**
-   * Sets the value of the '{@link it.csec.xtext.vsdl.NetworkConstraint#getOp <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Op</em>' attribute.
-   * @see #getOp()
-   * @generated
-   */
-  void setOp(String value);
-
-  /**
-   * Returns the value of the '<em><b>Ip</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Ip</em>' containment reference.
-   * @see #setIp(IPAddress)
-   * @see it.csec.xtext.vsdl.VsdlPackage#getNetworkConstraint_Ip()
-   * @model containment="true"
-   * @generated
-   */
-  IPAddress getIp();
-
-  /**
-   * Sets the value of the '{@link it.csec.xtext.vsdl.NetworkConstraint#getIp <em>Ip</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ip</em>' containment reference.
-   * @see #getIp()
-   * @generated
-   */
-  void setIp(IPAddress value);
 
 } // NetworkConstraint

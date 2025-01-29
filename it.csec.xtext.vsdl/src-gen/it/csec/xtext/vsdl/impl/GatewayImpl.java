@@ -4,17 +4,11 @@
 package it.csec.xtext.vsdl.impl;
 
 import it.csec.xtext.vsdl.Gateway;
-import it.csec.xtext.vsdl.IPAddress;
-import it.csec.xtext.vsdl.NetworkConstraint;
-import it.csec.xtext.vsdl.Node;
-import it.csec.xtext.vsdl.UpdateTriggerConstraint;
 import it.csec.xtext.vsdl.VsdlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -26,89 +20,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link it.csec.xtext.vsdl.impl.GatewayImpl#getNetworktriggerconstraint <em>Networktriggerconstraint</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.GatewayImpl#getNetworkconstraint <em>Networkconstraint</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.GatewayImpl#getId <em>Id</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.GatewayImpl#getOp <em>Op</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.GatewayImpl#getIp <em>Ip</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.GatewayImpl#getGatewayIP <em>Gateway IP</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.impl.GatewayImpl#isInternet <em>Internet</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GatewayImpl extends NodeConstraintImpl implements Gateway
+public class GatewayImpl extends NetworkConstraintImpl implements Gateway
 {
-  /**
-   * The cached value of the '{@link #getNetworktriggerconstraint() <em>Networktriggerconstraint</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNetworktriggerconstraint()
-   * @generated
-   * @ordered
-   */
-  protected UpdateTriggerConstraint networktriggerconstraint;
-
-  /**
-   * The cached value of the '{@link #getNetworkconstraint() <em>Networkconstraint</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNetworkconstraint()
-   * @generated
-   * @ordered
-   */
-  protected NetworkConstraint networkconstraint;
-
-  /**
-   * The cached value of the '{@link #getId() <em>Id</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getId()
-   * @generated
-   * @ordered
-   */
-  protected Node id;
-
-  /**
-   * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOp()
-   * @generated
-   * @ordered
-   */
-  protected static final String OP_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOp()
-   * @generated
-   * @ordered
-   */
-  protected String op = OP_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getIp() <em>Ip</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIp()
-   * @generated
-   * @ordered
-   */
-  protected IPAddress ip;
-
-  /**
-   * The cached value of the '{@link #getGatewayIP() <em>Gateway IP</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGatewayIP()
-   * @generated
-   * @ordered
-   */
-  protected IPAddress gatewayIP;
-
   /**
    * The default value of the '{@link #isInternet() <em>Internet</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -156,276 +74,6 @@ public class GatewayImpl extends NodeConstraintImpl implements Gateway
    * @generated
    */
   @Override
-  public UpdateTriggerConstraint getNetworktriggerconstraint()
-  {
-    return networktriggerconstraint;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetNetworktriggerconstraint(UpdateTriggerConstraint newNetworktriggerconstraint, NotificationChain msgs)
-  {
-    UpdateTriggerConstraint oldNetworktriggerconstraint = networktriggerconstraint;
-    networktriggerconstraint = newNetworktriggerconstraint;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT, oldNetworktriggerconstraint, newNetworktriggerconstraint);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setNetworktriggerconstraint(UpdateTriggerConstraint newNetworktriggerconstraint)
-  {
-    if (newNetworktriggerconstraint != networktriggerconstraint)
-    {
-      NotificationChain msgs = null;
-      if (networktriggerconstraint != null)
-        msgs = ((InternalEObject)networktriggerconstraint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT, null, msgs);
-      if (newNetworktriggerconstraint != null)
-        msgs = ((InternalEObject)newNetworktriggerconstraint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT, null, msgs);
-      msgs = basicSetNetworktriggerconstraint(newNetworktriggerconstraint, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT, newNetworktriggerconstraint, newNetworktriggerconstraint));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NetworkConstraint getNetworkconstraint()
-  {
-    return networkconstraint;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetNetworkconstraint(NetworkConstraint newNetworkconstraint, NotificationChain msgs)
-  {
-    NetworkConstraint oldNetworkconstraint = networkconstraint;
-    networkconstraint = newNetworkconstraint;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__NETWORKCONSTRAINT, oldNetworkconstraint, newNetworkconstraint);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setNetworkconstraint(NetworkConstraint newNetworkconstraint)
-  {
-    if (newNetworkconstraint != networkconstraint)
-    {
-      NotificationChain msgs = null;
-      if (networkconstraint != null)
-        msgs = ((InternalEObject)networkconstraint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__NETWORKCONSTRAINT, null, msgs);
-      if (newNetworkconstraint != null)
-        msgs = ((InternalEObject)newNetworkconstraint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__NETWORKCONSTRAINT, null, msgs);
-      msgs = basicSetNetworkconstraint(newNetworkconstraint, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__NETWORKCONSTRAINT, newNetworkconstraint, newNetworkconstraint));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Node getId()
-  {
-    if (id != null && id.eIsProxy())
-    {
-      InternalEObject oldId = (InternalEObject)id;
-      id = (Node)eResolveProxy(oldId);
-      if (id != oldId)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VsdlPackage.GATEWAY__ID, oldId, id));
-      }
-    }
-    return id;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Node basicGetId()
-  {
-    return id;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setId(Node newId)
-  {
-    Node oldId = id;
-    id = newId;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__ID, oldId, id));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getOp()
-  {
-    return op;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setOp(String newOp)
-  {
-    String oldOp = op;
-    op = newOp;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__OP, oldOp, op));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public IPAddress getIp()
-  {
-    return ip;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetIp(IPAddress newIp, NotificationChain msgs)
-  {
-    IPAddress oldIp = ip;
-    ip = newIp;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__IP, oldIp, newIp);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setIp(IPAddress newIp)
-  {
-    if (newIp != ip)
-    {
-      NotificationChain msgs = null;
-      if (ip != null)
-        msgs = ((InternalEObject)ip).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__IP, null, msgs);
-      if (newIp != null)
-        msgs = ((InternalEObject)newIp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__IP, null, msgs);
-      msgs = basicSetIp(newIp, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__IP, newIp, newIp));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public IPAddress getGatewayIP()
-  {
-    return gatewayIP;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetGatewayIP(IPAddress newGatewayIP, NotificationChain msgs)
-  {
-    IPAddress oldGatewayIP = gatewayIP;
-    gatewayIP = newGatewayIP;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__GATEWAY_IP, oldGatewayIP, newGatewayIP);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setGatewayIP(IPAddress newGatewayIP)
-  {
-    if (newGatewayIP != gatewayIP)
-    {
-      NotificationChain msgs = null;
-      if (gatewayIP != null)
-        msgs = ((InternalEObject)gatewayIP).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__GATEWAY_IP, null, msgs);
-      if (newGatewayIP != null)
-        msgs = ((InternalEObject)newGatewayIP).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.GATEWAY__GATEWAY_IP, null, msgs);
-      msgs = basicSetGatewayIP(newGatewayIP, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.GATEWAY__GATEWAY_IP, newGatewayIP, newGatewayIP));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public boolean isInternet()
   {
     return internet;
@@ -451,45 +99,10 @@ public class GatewayImpl extends NodeConstraintImpl implements Gateway
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT:
-        return basicSetNetworktriggerconstraint(null, msgs);
-      case VsdlPackage.GATEWAY__NETWORKCONSTRAINT:
-        return basicSetNetworkconstraint(null, msgs);
-      case VsdlPackage.GATEWAY__IP:
-        return basicSetIp(null, msgs);
-      case VsdlPackage.GATEWAY__GATEWAY_IP:
-        return basicSetGatewayIP(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
-      case VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT:
-        return getNetworktriggerconstraint();
-      case VsdlPackage.GATEWAY__NETWORKCONSTRAINT:
-        return getNetworkconstraint();
-      case VsdlPackage.GATEWAY__ID:
-        if (resolve) return getId();
-        return basicGetId();
-      case VsdlPackage.GATEWAY__OP:
-        return getOp();
-      case VsdlPackage.GATEWAY__IP:
-        return getIp();
-      case VsdlPackage.GATEWAY__GATEWAY_IP:
-        return getGatewayIP();
       case VsdlPackage.GATEWAY__INTERNET:
         return isInternet();
     }
@@ -506,24 +119,6 @@ public class GatewayImpl extends NodeConstraintImpl implements Gateway
   {
     switch (featureID)
     {
-      case VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT:
-        setNetworktriggerconstraint((UpdateTriggerConstraint)newValue);
-        return;
-      case VsdlPackage.GATEWAY__NETWORKCONSTRAINT:
-        setNetworkconstraint((NetworkConstraint)newValue);
-        return;
-      case VsdlPackage.GATEWAY__ID:
-        setId((Node)newValue);
-        return;
-      case VsdlPackage.GATEWAY__OP:
-        setOp((String)newValue);
-        return;
-      case VsdlPackage.GATEWAY__IP:
-        setIp((IPAddress)newValue);
-        return;
-      case VsdlPackage.GATEWAY__GATEWAY_IP:
-        setGatewayIP((IPAddress)newValue);
-        return;
       case VsdlPackage.GATEWAY__INTERNET:
         setInternet((Boolean)newValue);
         return;
@@ -541,24 +136,6 @@ public class GatewayImpl extends NodeConstraintImpl implements Gateway
   {
     switch (featureID)
     {
-      case VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT:
-        setNetworktriggerconstraint((UpdateTriggerConstraint)null);
-        return;
-      case VsdlPackage.GATEWAY__NETWORKCONSTRAINT:
-        setNetworkconstraint((NetworkConstraint)null);
-        return;
-      case VsdlPackage.GATEWAY__ID:
-        setId((Node)null);
-        return;
-      case VsdlPackage.GATEWAY__OP:
-        setOp(OP_EDEFAULT);
-        return;
-      case VsdlPackage.GATEWAY__IP:
-        setIp((IPAddress)null);
-        return;
-      case VsdlPackage.GATEWAY__GATEWAY_IP:
-        setGatewayIP((IPAddress)null);
-        return;
       case VsdlPackage.GATEWAY__INTERNET:
         setInternet(INTERNET_EDEFAULT);
         return;
@@ -576,68 +153,10 @@ public class GatewayImpl extends NodeConstraintImpl implements Gateway
   {
     switch (featureID)
     {
-      case VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT:
-        return networktriggerconstraint != null;
-      case VsdlPackage.GATEWAY__NETWORKCONSTRAINT:
-        return networkconstraint != null;
-      case VsdlPackage.GATEWAY__ID:
-        return id != null;
-      case VsdlPackage.GATEWAY__OP:
-        return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case VsdlPackage.GATEWAY__IP:
-        return ip != null;
-      case VsdlPackage.GATEWAY__GATEWAY_IP:
-        return gatewayIP != null;
       case VsdlPackage.GATEWAY__INTERNET:
         return internet != INTERNET_EDEFAULT;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == NetworkConstraint.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT: return VsdlPackage.NETWORK_CONSTRAINT__NETWORKTRIGGERCONSTRAINT;
-        case VsdlPackage.GATEWAY__NETWORKCONSTRAINT: return VsdlPackage.NETWORK_CONSTRAINT__NETWORKCONSTRAINT;
-        case VsdlPackage.GATEWAY__ID: return VsdlPackage.NETWORK_CONSTRAINT__ID;
-        case VsdlPackage.GATEWAY__OP: return VsdlPackage.NETWORK_CONSTRAINT__OP;
-        case VsdlPackage.GATEWAY__IP: return VsdlPackage.NETWORK_CONSTRAINT__IP;
-        default: return -1;
-      }
-    }
-    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == NetworkConstraint.class)
-    {
-      switch (baseFeatureID)
-      {
-        case VsdlPackage.NETWORK_CONSTRAINT__NETWORKTRIGGERCONSTRAINT: return VsdlPackage.GATEWAY__NETWORKTRIGGERCONSTRAINT;
-        case VsdlPackage.NETWORK_CONSTRAINT__NETWORKCONSTRAINT: return VsdlPackage.GATEWAY__NETWORKCONSTRAINT;
-        case VsdlPackage.NETWORK_CONSTRAINT__ID: return VsdlPackage.GATEWAY__ID;
-        case VsdlPackage.NETWORK_CONSTRAINT__OP: return VsdlPackage.GATEWAY__OP;
-        case VsdlPackage.NETWORK_CONSTRAINT__IP: return VsdlPackage.GATEWAY__IP;
-        default: return -1;
-      }
-    }
-    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**
@@ -651,9 +170,7 @@ public class GatewayImpl extends NodeConstraintImpl implements Gateway
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (op: ");
-    result.append(op);
-    result.append(", internet: ");
+    result.append(" (internet: ");
     result.append(internet);
     result.append(')');
     return result.toString();

@@ -34,8 +34,7 @@ SimpleNodeConstraintNot returns NodeConstraint:
 SimpleNodeConstraintA returns NodeConstraint:
 	"(" SimpleNodeConstraint ")" |
 	NodeHardwareConstraintA |
-	NodeSoftwareConstraintA |
-	NodeNetworkConstraintA;
+	NodeSoftwareConstraintA ;
 
 NodeHardwareConstraintA returns NodeConstraint:	
 	{CPU} =>'cpu' 'speed' op='equal' 'to' value=CPUFrequency |
@@ -53,9 +52,7 @@ NodeHardwareConstraintA returns NodeConstraint:
 	{Flavour} =>'flavour' profile=HardwareProfile;
 
 // 节点网络约束
-NodeNetworkConstraintA returns NodeConstraint:
-    {IP} =>'ip' 'address' op='equal' 'to' ipAddress=IPAddress |
-    {IP} =>'net' 'is' op='connected' 'to' id=[Network];
+
 
     
 NodeSoftwareConstraintA returns NodeConstraint:
@@ -113,11 +110,11 @@ SimpleNetworkConstraintA returns NetworkConstraint:
 
 NetworkGatewayConstraint returns NetworkConstraint:
 	{IPRange} =>"addresses" "range" "is" range=IPRangeA |
-	{Gateway} =>"gateway" "is" internet ?=IPAddress;
+	{Gateway} =>"gateway" "has" "direct" "access" "to" "the" internet ?="Internet";
 
 NetworkParticipantsConstraint returns NetworkConstraint:
-	"node" id=[Node] "is" op="connected" |
-    "node" id=[Node] "has" op="IP" ip=IPAddress;
+	{IP} =>"node" id=[ScenElem] "is" op="connected" |
+    {IP} =>"node" id=[ScenElem] "has" op="IP" address=IPAddress;
 
 UpdateTriggerConstraint:
 	UpdateTriggerConstraintAndOr;

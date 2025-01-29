@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link it.csec.xtext.vsdl.AndOr#getLeft <em>Left</em>}</li>
+ *   <li>{@link it.csec.xtext.vsdl.AndOr#getOp <em>Op</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.AndOr#getRight <em>Right</em>}</li>
  * </ul>
  *
@@ -45,6 +46,28 @@ public interface AndOr extends NodeConstraint, NetworkConstraint, UpdateTriggerC
    * @generated
    */
   void setLeft(EObject value);
+
+  /**
+   * Returns the value of the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Op</em>' attribute.
+   * @see #setOp(String)
+   * @see it.csec.xtext.vsdl.VsdlPackage#getAndOr_Op()
+   * @model
+   * @generated
+   */
+  String getOp();
+
+  /**
+   * Sets the value of the '{@link it.csec.xtext.vsdl.AndOr#getOp <em>Op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Op</em>' attribute.
+   * @see #getOp()
+   * @generated
+   */
+  void setOp(String value);
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.

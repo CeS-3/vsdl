@@ -5,8 +5,7 @@ package it.csec.xtext.vsdl.impl;
 
 import it.csec.xtext.vsdl.IP;
 import it.csec.xtext.vsdl.IPAddress;
-import it.csec.xtext.vsdl.IPRangeA;
-import it.csec.xtext.vsdl.Node;
+import it.csec.xtext.vsdl.ScenElem;
 import it.csec.xtext.vsdl.VsdlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -25,16 +24,25 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getId <em>Id</em>}</li>
  *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getOp <em>Op</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getIpAddress <em>Ip Address</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getIpRange <em>Ip Range</em>}</li>
- *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link it.csec.xtext.vsdl.impl.IPImpl#getAddress <em>Address</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IPImpl extends NodeConstraintImpl implements IP
+public class IPImpl extends NetworkConstraintImpl implements IP
 {
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected ScenElem id;
+
   /**
    * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -56,34 +64,14 @@ public class IPImpl extends NodeConstraintImpl implements IP
   protected String op = OP_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIpAddress() <em>Ip Address</em>}' containment reference.
+   * The cached value of the '{@link #getAddress() <em>Address</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIpAddress()
+   * @see #getAddress()
    * @generated
    * @ordered
    */
-  protected IPAddress ipAddress;
-
-  /**
-   * The cached value of the '{@link #getIpRange() <em>Ip Range</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIpRange()
-   * @generated
-   * @ordered
-   */
-  protected IPRangeA ipRange;
-
-  /**
-   * The cached value of the '{@link #getNode() <em>Node</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNode()
-   * @generated
-   * @ordered
-   */
-  protected Node node;
+  protected IPAddress address;
 
   /**
    * <!-- begin-user-doc -->
@@ -104,6 +92,51 @@ public class IPImpl extends NodeConstraintImpl implements IP
   protected EClass eStaticClass()
   {
     return VsdlPackage.Literals.IP;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ScenElem getId()
+  {
+    if (id != null && id.eIsProxy())
+    {
+      InternalEObject oldId = (InternalEObject)id;
+      id = (ScenElem)eResolveProxy(oldId);
+      if (id != oldId)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VsdlPackage.IP__ID, oldId, id));
+      }
+    }
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ScenElem basicGetId()
+  {
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setId(ScenElem newId)
+  {
+    ScenElem oldId = id;
+    id = newId;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__ID, oldId, id));
   }
 
   /**
@@ -137,9 +170,9 @@ public class IPImpl extends NodeConstraintImpl implements IP
    * @generated
    */
   @Override
-  public IPAddress getIpAddress()
+  public IPAddress getAddress()
   {
-    return ipAddress;
+    return address;
   }
 
   /**
@@ -147,13 +180,13 @@ public class IPImpl extends NodeConstraintImpl implements IP
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIpAddress(IPAddress newIpAddress, NotificationChain msgs)
+  public NotificationChain basicSetAddress(IPAddress newAddress, NotificationChain msgs)
   {
-    IPAddress oldIpAddress = ipAddress;
-    ipAddress = newIpAddress;
+    IPAddress oldAddress = address;
+    address = newAddress;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__IP_ADDRESS, oldIpAddress, newIpAddress);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__ADDRESS, oldAddress, newAddress);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -165,115 +198,20 @@ public class IPImpl extends NodeConstraintImpl implements IP
    * @generated
    */
   @Override
-  public void setIpAddress(IPAddress newIpAddress)
+  public void setAddress(IPAddress newAddress)
   {
-    if (newIpAddress != ipAddress)
+    if (newAddress != address)
     {
       NotificationChain msgs = null;
-      if (ipAddress != null)
-        msgs = ((InternalEObject)ipAddress).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.IP__IP_ADDRESS, null, msgs);
-      if (newIpAddress != null)
-        msgs = ((InternalEObject)newIpAddress).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.IP__IP_ADDRESS, null, msgs);
-      msgs = basicSetIpAddress(newIpAddress, msgs);
+      if (address != null)
+        msgs = ((InternalEObject)address).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.IP__ADDRESS, null, msgs);
+      if (newAddress != null)
+        msgs = ((InternalEObject)newAddress).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.IP__ADDRESS, null, msgs);
+      msgs = basicSetAddress(newAddress, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__IP_ADDRESS, newIpAddress, newIpAddress));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public IPRangeA getIpRange()
-  {
-    return ipRange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetIpRange(IPRangeA newIpRange, NotificationChain msgs)
-  {
-    IPRangeA oldIpRange = ipRange;
-    ipRange = newIpRange;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__IP_RANGE, oldIpRange, newIpRange);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setIpRange(IPRangeA newIpRange)
-  {
-    if (newIpRange != ipRange)
-    {
-      NotificationChain msgs = null;
-      if (ipRange != null)
-        msgs = ((InternalEObject)ipRange).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.IP__IP_RANGE, null, msgs);
-      if (newIpRange != null)
-        msgs = ((InternalEObject)newIpRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VsdlPackage.IP__IP_RANGE, null, msgs);
-      msgs = basicSetIpRange(newIpRange, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__IP_RANGE, newIpRange, newIpRange));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Node getNode()
-  {
-    if (node != null && node.eIsProxy())
-    {
-      InternalEObject oldNode = (InternalEObject)node;
-      node = (Node)eResolveProxy(oldNode);
-      if (node != oldNode)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VsdlPackage.IP__NODE, oldNode, node));
-      }
-    }
-    return node;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Node basicGetNode()
-  {
-    return node;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setNode(Node newNode)
-  {
-    Node oldNode = node;
-    node = newNode;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__NODE, oldNode, node));
+      eNotify(new ENotificationImpl(this, Notification.SET, VsdlPackage.IP__ADDRESS, newAddress, newAddress));
   }
 
   /**
@@ -286,10 +224,8 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
-      case VsdlPackage.IP__IP_ADDRESS:
-        return basicSetIpAddress(null, msgs);
-      case VsdlPackage.IP__IP_RANGE:
-        return basicSetIpRange(null, msgs);
+      case VsdlPackage.IP__ADDRESS:
+        return basicSetAddress(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -304,15 +240,13 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        if (resolve) return getId();
+        return basicGetId();
       case VsdlPackage.IP__OP:
         return getOp();
-      case VsdlPackage.IP__IP_ADDRESS:
-        return getIpAddress();
-      case VsdlPackage.IP__IP_RANGE:
-        return getIpRange();
-      case VsdlPackage.IP__NODE:
-        if (resolve) return getNode();
-        return basicGetNode();
+      case VsdlPackage.IP__ADDRESS:
+        return getAddress();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -327,17 +261,14 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        setId((ScenElem)newValue);
+        return;
       case VsdlPackage.IP__OP:
         setOp((String)newValue);
         return;
-      case VsdlPackage.IP__IP_ADDRESS:
-        setIpAddress((IPAddress)newValue);
-        return;
-      case VsdlPackage.IP__IP_RANGE:
-        setIpRange((IPRangeA)newValue);
-        return;
-      case VsdlPackage.IP__NODE:
-        setNode((Node)newValue);
+      case VsdlPackage.IP__ADDRESS:
+        setAddress((IPAddress)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -353,17 +284,14 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        setId((ScenElem)null);
+        return;
       case VsdlPackage.IP__OP:
         setOp(OP_EDEFAULT);
         return;
-      case VsdlPackage.IP__IP_ADDRESS:
-        setIpAddress((IPAddress)null);
-        return;
-      case VsdlPackage.IP__IP_RANGE:
-        setIpRange((IPRangeA)null);
-        return;
-      case VsdlPackage.IP__NODE:
-        setNode((Node)null);
+      case VsdlPackage.IP__ADDRESS:
+        setAddress((IPAddress)null);
         return;
     }
     super.eUnset(featureID);
@@ -379,14 +307,12 @@ public class IPImpl extends NodeConstraintImpl implements IP
   {
     switch (featureID)
     {
+      case VsdlPackage.IP__ID:
+        return id != null;
       case VsdlPackage.IP__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case VsdlPackage.IP__IP_ADDRESS:
-        return ipAddress != null;
-      case VsdlPackage.IP__IP_RANGE:
-        return ipRange != null;
-      case VsdlPackage.IP__NODE:
-        return node != null;
+      case VsdlPackage.IP__ADDRESS:
+        return address != null;
     }
     return super.eIsSet(featureID);
   }
